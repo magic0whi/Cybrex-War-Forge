@@ -4,6 +4,7 @@ lang: zh-cn
 category: mathematics
 date: 2020-03-16 15:56:18
 tags:
+mathjax: true
 ---
 
 ## 二次函数 Quadratic function

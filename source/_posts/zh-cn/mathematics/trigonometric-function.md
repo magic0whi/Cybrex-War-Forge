@@ -4,6 +4,7 @@ lang: zh-cn
 category: mathematics
 date: 2020-03-16 16:14:18
 tags:
+mathjax: true
 ---
 
 ## 诱导公式 Induction formula
