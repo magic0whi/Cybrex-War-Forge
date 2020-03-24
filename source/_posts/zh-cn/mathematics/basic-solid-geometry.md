@@ -1,5 +1,5 @@
 ---
-title: geometric
+title: basic-solid-geometry
 lang: zh-cn
 category: mathematics
 mathjax: 'true'
