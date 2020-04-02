@@ -56,10 +56,11 @@ $$
 
 ### 柱坐标/球坐标
 
-## 参数方程
+柱坐标: 在极坐标的基础上增加垂直于此平面的$Oz$轴, 类似一条圈起来的纸带,某一点P坐标为$(\rho, \theta, z) z为点P在z轴高度$
 
-TODO: 以下语段并不完整
-参数方程补充: 若给出直线 $l$ 的标准参数方程(过定点 $M(x_0, y_0)$). 且与曲线 C 相交于 A, B 两点
+球坐标: 类似于地球经纬度, 某点P坐标$(r, \theta, \varphi)$, 其中$r$为矢径, $\theta$ 为纬度, $\varphi$为经度. xOz中, 一般极轴Oz朝上, Ox水平
+
+## 参数方程
 
 参数方程的求法:
 1. 建系, 设点 $(x, y)$
@@ -91,20 +92,67 @@ TODO: 以下语段并不完整
 圆心坐标为 $M(a, b)$, 半径 $r_0$. 以圆心为顶点且与x轴同向的射线按逆时针方向旋转到与圆上一点所在半径成的角 $\alpha$ 为参数的圆
 的参数方程为:
 $$\begin{cases}
-    x=a+r\cos\alpha \quad (\alpha为参数, \alpha \in [0, x]) \\
+    x=a+r\cos\alpha \quad (\alpha为参数,\, \alpha \in [0, x]) \\
     y=b+r\sin\alpha
 \end{cases}
 $$
 
 ### 圆锥曲线的参数方程
 
-椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1 \quad (a>b>0) 的一个参数方程为xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx$
+#### 椭圆
 
-双曲线
+$$
+\begin{aligned}
+    &\frac{x^2}{a^2}+\frac{y^2}{b^2}=1 \quad (a>b>0) \, 的一个参数方程为
+    \begin{cases}
+        x=a\cos\varphi \quad &(\varphi为参数) \, (a>b>0) \\
+        y=b\sin\varphi &焦点在x轴
+    \end{cases} \\ 
+    &\frac{x^2}{b^2}+\frac{y^2}{a^2}=1 \quad (a>b>0) \, 的一个参数方程为
+    \begin{cases}
+        x=b\cos\varphi \quad &(\varphi为参数) \, (a>b>0) \\
+        y=a\sin\varphi &焦点在y轴
+    \end{cases}
+\end{aligned}
+$$
 
-抛物线
+#### 双曲线
 
-### 平摆法\渐开线
+$$
+\begin{aligned}
+    &\frac{x^2}{a^2}-\frac{y^2}{b^2}=1 \quad (a,b>0) \, 的一个参数方程为
+    \begin{cases}
+        x=a\sec\varphi \quad &(\varphi为参数) \, (a,b>0) \quad \rArr x=\frac{a}{\cos\varphi} \\
+        y=b\tan\varphi &焦点在x轴
+    \end{cases} \\
+    &\frac{x}{a^2}-\frac{y}{b^2}=1 \quad (a,b>0) \, 的一个参数方程为
+    \begin{cases}
+        x=b\tan\varphi \quad &(\varphi为参数) \, (a,b>0) \\
+        y=a\sec\varphi &焦点在y轴 \quad \rArr y=\frac{a}{\cos\varphi}
+    \end{cases}
+\end{aligned}
+$$
 
-### 其他摆线
+#### 抛物线
 
+$$
+y^2=2px \, 的一个参数方程
+\begin{cases}
+    x=2pt^2 \quad (t为参数) \\
+    y=2pt
+\end{cases}
+$$
+
+### 平摆线\渐开线
+
+平摆线: 某一个车轮上的一点P因车轮滚动而绘制的轨迹(或称旋轮线)
+车轮周上一点P的轨迹的参数方程是 $\begin{cases}
+    x=r(\theta-\sin\theta) \\
+    y=r(1-\cos\theta)
+\end{cases}$
+
+渐开线: 一条动直线(发生线)沿着一个固定的圆(基圆)作纯滚动时，此动直线上一点的轨迹
+参数方程为$\begin{cases}
+    x=r(\cos\theta+\theta\sin\theta) \\
+    y=r(\sin\theta-\theta\cos\theta)
+\end{cases}$
