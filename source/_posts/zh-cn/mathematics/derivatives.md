@@ -33,7 +33,7 @@ $$
 
 $$\begin{cases}
     [f(x) \pm g(x)]' = f'(x) \pm g'(x) \\
-    [f(x)g(x)]' = f'(x)g(x) + f(x)g'(x)
+    [f(x)g(x)]' = f'(x)g(x) + f(x)g'(x) \\
     [\frac{f(x)}{g(x)}]' = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2} \quad (g(x) \neq 0)
 \end{cases}
 $$
