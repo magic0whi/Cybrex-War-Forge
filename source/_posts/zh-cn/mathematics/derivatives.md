@@ -67,9 +67,23 @@ $$
 
 ## 定积分与微积分基本定理
 
+先来看看微分的概念
+微分本身定义 $dx = \lim\limits_{\varDelta x \to 0}\varDelta x$
+
+结合导数的定义, 有 $f'(x)=\dfrac{dy}{dx} \rArr dy=f'(x)dx$
+
+将 $y=f(x)$ 带入上式
+就有关于微分的公式:
+1. $df(x) = f'(x)dx$
+2. $d(ax + b) = adx$
+
 ## 定积分
 
-定积分四部曲: 1. 分割 2. 近似代替 3. 求和 4. 取极限
+定积分四部曲:
+1. 分割
+2. 近似代替
+3. 求和
+4. 取极限
 
 定积分概念: 
 $$\begin{aligned}
@@ -77,10 +91,8 @@ $$\begin{aligned}
     &a 与 b 分别叫做积分下限和积分上限, 区间 [a, b] 叫做积分区间 \\
     &函数 f(x) 叫做被积函数, x 叫做积分变量 \\
     &f(x)dx 叫做被积式 \\
-    &dx = \lim\limits_{\varDelta x \to 0}\varDelta x = 上式中的 \frac{b - a}{n}
+    &上式中\enspace dx \enspace与\enspace \frac{b - a}{n} \enspace对应
 \end{aligned}$$
-
-结合导数的定义, 关于微分的公式有 $d(ax + b) = adx \quad df(x) = f'(x)dx$
 
 定积分公式:
 $$\begin{aligned}
