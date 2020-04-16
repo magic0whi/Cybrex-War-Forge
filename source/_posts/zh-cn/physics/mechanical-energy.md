@@ -43,6 +43,8 @@ tags:
 
 单位: $\text{J}$ , $1\enspace\text{J} = 1\enspace\text{N}\cdot\text{m}$
 
+物理意义: 把物体从相对0速度加速到速度 $v$ 需要的能量
+
 #### 动能定理
 
 内容: 力对物体做了多少功, 动能就变化了多少
