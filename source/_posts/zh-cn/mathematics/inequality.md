@@ -117,7 +117,7 @@ $$
 (例)用数学归纳法证明伯努利不等式:
 1. 当 $n=1$ 时显然成立 $1+x\geqslant 1+x$
 2. 假设 $n=k$ 时成立, 那么当 $n=k+1$ 时, 由假设:
-   $(1+x)^{k+1}=(1+x)^k(1+x)\geqslant(1+kx)(1+x) (带入(1+x)^k\geqslant(1+kx))$
+   $(1+x)^{k+1}=(1+x)^k(1+x) \underrightarrow{\small 带入 (1+x)^k\geqslant(1+kx)} (1+x)^k(1+x)\geqslant(1+kx)(1+x)$
    展开得到:
    $(1+x)^{k+1}\geqslant kx^2 + 1 + (k+1)x \geqslant 1 + (k+1)x$
    所以命题对于 $n\in N^+$ 成立
