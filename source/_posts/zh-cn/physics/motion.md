@@ -31,7 +31,7 @@ tags:
 
 加速度描述速度的变化量, 通常用 $a$ 表示
 
-公式: $a=\dfrac{\varDelta v}{\varDelta t}$
+定义式: $a=\dfrac{\varDelta v}{\varDelta t}$
 
 加速度是矢量
 
