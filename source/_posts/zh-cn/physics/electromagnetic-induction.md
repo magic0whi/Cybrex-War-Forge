@@ -5,6 +5,7 @@ category: physics
 mathjax: 'true'
 date: 2020-04-09 15:39:14
 tags:
+toc: true
 ---
 
 ## 磁通量
@@ -12,15 +13,15 @@ tags:
 TODO: 补充图片, 以更形象地描述磁通量
 磁通量表示穿过某个面的磁感线条数, 且受磁感应方向与该平面的夹角影响.
 
-公式: $\phi=BS\sin\alpha$
-其中, $B$ 为磁感应强度, $S$ 为平面面积, $\alpha$ 为 $B$ 与 $S$ 的夹角
+公式: \\(\phi=BS\sin\alpha\\)
+其中, \\(B\\) 为磁感应强度, \\(S\\) 为平面面积, \\(\alpha\\) 为 \\(B\\) 与 \\(S\\) 的夹角
 
 ## 法拉第电磁感应定律
 
 电路中感应电动势的大小, 跟穿过这一电路的磁通量的变化率成正比
 
-表达式: $E=n\dfrac{\varDelta\phi}{\varDelta t}$
-其中, $n$ 为线圈匝数
+表达式: \\(E=n\dfrac{\varDelta\phi}{\varDelta t}\\)
+其中, \\(n\\) 为线圈匝数
 
 ## 楞次定律
 
@@ -32,10 +33,10 @@ TODO: 补充图片, 以更形象地描述磁通量
 2. "阻碍" 也不是阻止, 而是延缓了磁通量的变化
 
 导线切割磁感线时的感应电动势:
-设在磁场中的导线长度为 $L$ , 导线移动速度 $v$, 磁感应强度 $B$ , **速度 $v$ 与 $B$ 夹角为 $\theta$**
-回路在时间t内扫过面积为 $\varDelta S=L(v\varDelta t)$
-穿过回路的磁通量的变化量为 $\varDelta\phi=B\varDelta S\sin\theta=BLv\varDelta t\sin\theta$
-产生的感应电动势为: $E=\dfrac{\varDelta\phi}{\varDelta t}=\dfrac{BLv\varDelta t\sin\theta}{\varDelta t}=BLv\sin\theta$
+设在磁场中的导线长度为 \\(L\\) , 导线移动速度 \\(v\\), 磁感应强度 \\(B\\) , **速度 \\(v\\) 与 \\(B\\) 夹角为 \\(\theta\\)**
+回路在时间t内扫过面积为 \\(\varDelta S=L(v\varDelta t)\\)
+穿过回路的磁通量的变化量为 \\(\varDelta\phi=B\varDelta S\sin\theta=BLv\varDelta t\sin\theta\\)
+产生的感应电动势为: \\(E=\dfrac{\varDelta\phi}{\varDelta t}=\dfrac{BLv\varDelta t\sin\theta}{\varDelta t}=BLv\sin\theta\\)
 
 ## 自感/涡流
 
@@ -45,11 +46,11 @@ TODO: 补充图片, 以更形象地描述磁通量
 2. 自感电动势:
    定义: 由于自感而产生的感应电动势叫自感电动势
    作用: 阻碍导体中原来电流的变化
-   大小: $E=L\dfrac{\varDelta L}{\varDelta t}$ , 可见其跟电流的变化率成正比
+   大小: \\(E=L\dfrac{\varDelta L}{\varDelta t}\\) , 可见其跟电流的变化率成正比
 3. 自感系数:
-   在电流变化率相同的情况下, 不同的线圈产生的感应电动势不同的特性, 用符号 $L$ 表示
-   大小: 线圈长度越大, 横截面积越大, 单位长度匝数越多, 线圈的自感系数 $L$ 就越大; 线圈有铁芯比无铁芯时自感系数 $L$ 大得多
-   单位: 亨利, 符号 $\text{H}$
+   在电流变化率相同的情况下, 不同的线圈产生的感应电动势不同的特性, 用符号 \\(L\\) 表示
+   大小: 线圈长度越大, 横截面积越大, 单位长度匝数越多, 线圈的自感系数 \\(L\\) 就越大; 线圈有铁芯比无铁芯时自感系数 \\(L\\) 大得多
+   单位: 亨利, 符号 \\(\text{H}\\)
 
 电感元件就是应用了自感现象
 

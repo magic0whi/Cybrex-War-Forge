@@ -5,6 +5,7 @@ category: chemistry
 mathjax: 'true'
 date: 2020-05-01 18:57:58
 tags:
+toc: true
 ---
 
 ## 基础化学知识
@@ -42,18 +43,18 @@ tags:
 负一硝酸氢氧根, 负二硫酸碳酸根,
 负三记住磷酸根, 正一价的是铵根
 
-硫酸根: $\text{SO}_4 \enspace -2价$
-碳酸根: $\text{CO}_3 \enspace -2价$
-硝酸根: $\text{NO}_3 \enspace -1价$
-氢氧根: $\text{OH}_3 \enspace -1价$
-铵根: $\text{NH}_4 \enspace +1价$
-亚硫酸根: $\text{SO}_3 \enspace -2价$
-亚硝酸根: $\text{NO}_2 \enspace -1价$
-氯酸根: $\text{ClO}_3 \enspace -1价$
-次氯酸根: $\text{ClO} \enspace -1价$
-锰酸根: $\text{MnO}_4 \enspace -2价$
-高锰酸根: $\text{MnO}_4 \enspace -1价$
-磷酸根: $\text{PO}_4 \enspace -3价$
+硫酸根: \\(\ce{SO4} \enspace -2价\\)
+碳酸根: \\(\ce{CO3} \enspace -2价\\)
+硝酸根: \\(\ce{NO3} \enspace -1价\\)
+氢氧根: \\(\ce{OH3} \enspace -1价\\)
+铵根: \\(\ce{NH4} \enspace +1价\\)
+亚硫酸根: \\(\ce{SO3} \enspace -2价\\)
+亚硝酸根: \\(\ce{NO2} \enspace -1价\\)
+氯酸根: \\(\ce{ClO3} \enspace -1价\\)
+次氯酸根: \\(\ce{ClO} \enspace -1价\\)
+锰酸根: \\(\ce{MnO4} \enspace -2价\\)
+高锰酸根: \\(\ce{MnO4} \enspace -1价\\)
+磷酸根: \\(\ce{PO4} \enspace -3价\\)
 
 ### 酸/碱/盐
 
@@ -71,7 +72,7 @@ K Ca Na Mg Al Zn Fe Sn Pb (H) Cu Hg Ag Pt Au
 
 ## 前置化学反应
 
-化合反应: 两个或多个反应物经过化学反应生成一种产物 $\text{A}+\text{B}\rarr\text{A-B}$
-分解反应: 化合物在一定条件下分解成二种或二种以上的元素化合物 $\text{A-B}\rarr\text{A}+\text{B}$
-置换反应: 一种元素或化合物的离子根与一种离子化合物发生的反应 $\text{A}+\text{B-C}\rarr\text{A-C}+\text{B}$
-复分解反应: 由两种化合物通过互相交换成分并生成两种新化合物的反应. $\text{A-B}+\text{C-D}\rarr\text{A-D}+\text{C-B}$
+化合反应: 两个或多个反应物经过化学反应生成一种产物 \\(\ce{A + B -> AB}\\)
+分解反应: 化合物在一定条件下分解成二种或二种以上的元素化合物 \\(\ce{AB -> A + B}\\)
+置换反应: 一种元素或化合物的离子根与一种离子化合物发生的反应 \\(\ce{A + BC -> AC + B}\\)
+复分解反应: 由两种化合物通过互相交换成分并生成两种新化合物的反应. \\(\ce{AB + CD -> AD + CB}\\)

@@ -5,6 +5,7 @@ category: mathematics
 mathjax: 'true'
 date: 2020-03-19 15:36:00
 tags:
+toc: true
 ---
 
 ## 程序框图 Block diagram

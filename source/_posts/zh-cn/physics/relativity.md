@@ -5,6 +5,7 @@ category: physics
 mathjax: 'true'
 date: 2020-04-09 15:58:06
 tags:
+toc: true
 ---
 
 ## 相对论
@@ -22,4 +23,4 @@ tags:
 
 ### 质能关系
 
-质能方程: $E=mc^2$
+质能方程: \\(E=mc^2\\)
