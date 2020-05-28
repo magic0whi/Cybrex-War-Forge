@@ -420,10 +420,125 @@ tags:
 ## 碳的多样性 含硅矿物与信息材料
 
 1. 碳的单质
+   <table>
+   <thead>
+     <tr>
+       <th colspan="2">种类</th>
+       <th>主要有金刚石, 石墨, \(\ce{C_60}\) 或富勒烯等</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td colspan="2">结构</td>
+       <td>金刚石: 正四面体空间网状结构<br>石墨: 平面正六边形层状结构</td>
+     </tr>
+     <tr>
+       <td colspan="2">物理性质</td>
+       <td>金刚石: 熔点高, 硬度大, 不导电<br>石墨: 熔点高, 质软, 有滑腻感, 能导电</td>
+     </tr>
+     <tr>
+       <td rowspan="3">化学性质</td>
+       <td>与 \(\ce{O2}\) 反应</td>
+       <td>\(\ce{O2}\) 充足时: \(\ce{C + O2 -&gt;[{点燃}] CO2}\)<br>\(\ce{O2}\) 不足时: \(\ce{2C + O2 -&gt;[{点燃}] 2CO}\)</td>
+     </tr>
+     <tr>
+       <td>与氧化物反应</td>
+       <td>\(\ce{CuO: 2CuO + C -&gt;[{高温}] 2Cu + CO2 ^}\) (冶炼金属)<br>\(\ce{SiO2: SiO2 + 2C -&gt;[{高温}] Si + 2CO ^}\) (制取粗硅)<br>\(\ce{H2O: C + H2O(g) -&gt;[{高温}] CO + H2}\) (制取水煤气)</td>
+     </tr>
+     <tr>
+       <td>与强氧化性酸反应</td>
+       <td>浓 \(\ce{H2SO4: C + H2SO4(浓) -&gt;[\Delta] CO2 ^ + 2SO2 ^ + 2H2O}\)</td>
+     </tr>
+     <tr>
+       <td colspan="2">用途</td>
+       <td>金刚石用作切削刀具, 装饰品等;<br>石墨用作电机, 润滑剂, 铅笔芯等</td>
+     </tr>
+   </tbody>
+   </table>
 2. 碳的化合物
+   <div>
+   $$
+   碳的氧化物
+   \begin{cases}
+     \ce{
+       CO: 一种无色无味的有毒气体, 具有较强的还原性, \\
+       \qquad 还原 Fe2O3, CuO 的化学方程式为: \\
+       \qquad Fe2O3 + 3CO ->[{高温}] 2Fe + 3CO2 \enspace, CO + CuO ->[\Delta] Cu + CO2 \\
+       CO2: 一种无色无味的气体, 能溶于水, 固态 CO2 俗称干冰. \\
+       \qquad 与 H2O , Na2O , Ca(OH)2 (足量, 澄清) , Mg \\
+       \qquad 反应的化学方程式分别为: \\
+       \qquad CO2 + H2O <=> H2CO3 \enspace, Na2O + CO2 = Na2CO3 \\
+       \qquad CO2 + Ca(OH)2 = CaCO3 v + H2O \enspace, 2Mg + CO2 ->[{点燃}] 2MgO + C
+     }
+   \end{cases}
+   $$
+   </div>
 3. 二氧化碳与盐溶液反应的规律
+   1. \\(\ce{CO2}\\) 气体通入 \\(\ce{Na2SiO3}\\) , \\(\ce{Ca(ClO)2}\\)  , \\(\ce{C17H35COONa}\\) , \\(\ce{NaAlO2}\\) 等酸性比 \\(\ce{H2CO3}\\) 弱的酸对应的盐溶液中, 均能发生反应而生成相应的弱酸和碳酸(氢)盐, 这是"较强酸制较弱酸"原理的应用.
+      <div>
+      $$
+      \begin{aligned}
+        \ce{
+          Na2SiO3 + CO3 + H2O = Na2CO3 + H2SiO3 v \\
+          Ca(ClO)2 + CO2 + H2O = CaCO3 v + 2HClO \\
+          2NaAlO2 + CO2 (少量) + 3H2O = 2Al(OH)3 v + Na2CO3 \\
+          NaAlO2 + CO2 (过量) + H2O = Al(OH)3 v + NaHCO3
+        }
+      \end{aligned}
+      $$
+      </div>
+    2. \\(\ce{CO2}\\) 通入 \\(\ce{CaCl2 , Ba(NO3)2 , (CH3COO)2Ca}\\) 等酸性比 \\(\ce{H2CO3}\\) 强的酸对应的盐溶液中不能发生反应.
+    3. \\(\ce{CO2}\\) 通入碳酸的正盐溶液中能发生反应生成相应的酸式盐, 如:
+      <div>
+      $$
+      \begin{aligned}
+        \ce{
+          Na2CO + CO2 + H2O = 2NaHCO3 \\
+          CaCO3 + CO2 + H2O = Ca(HCO3)2
+        }
+      \end{aligned}
+      $$
+      </div>
 4. 硅
+   1. 存在, 结构, 物理性质
+      TODO: 补充53P171
+   2. 化学性质
 5. 硅的重要化合物
+   1. 二氧化硅
+      <div>
+      $$
+      \ce{SiO2}
+      \begin{cases}
+        \ce{
+          存在: 石英, 水解, 玛瑙, 沙子等 \\
+          物理性质: 熔点高, 硬度大, 不溶于水 \\
+          化学性质
+          \begin{cases}
+            酸性氧化物的性质: SiO2 + CaO ->[{高温}] CaSiO3 , \\
+            \mskip{9em} SiO2 + 2NaOH = NaSiO3 + H2O \\
+            特性: SiO2 + 4HF = SiF4 ^ + 2H2O (腐蚀玻璃) \\
+          \end{cases}
+          用途: 制造光导纤维, 化学仪器, 光学仪器, 饰品等
+        }
+      \end{cases}
+      $$
+      </div>
+   2. 硅酸
+      <div>
+      $$
+      \ce{
+        H2SiO3
+        \begin{cases}
+        物理性质: 难溶于水, 无色透明, 胶状 \\
+        化学性质: \begin{aligned}
+          酸性氧化物的性质: SiO2 + CaO ->[{高温}] CaSiO3 , \\
+          \qquad\qquad xxxxxxxxxxxxxxxxxxxx \\
+          xxxxxxxxxxxxxxxxx
+          \end{aligned}
+        \end{cases}
+      }
+      $$
+      </div>
 6. 传统无机非金属材料
 7. 新型无机非金属材料
 
