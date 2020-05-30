@@ -9,6 +9,95 @@ tags:
 ## 有机物的组成, 结构, 分类和命名
 
 1. 有机化合物中常见的官能团
+<table>
+<thead>
+  <tr>
+    <th>官能团符号</th>
+    <th>官能团名称</th>
+    <th>典型有机化合物</th>
+    <th>物质名称</th>
+    <th>所谓类别</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td>碳碳双键</td>
+    <td>\(\ce{CH2\bond{=}CH2}\)</td>
+    <td>乙烯</td>
+    <td>烯烃</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>碳碳三键</td>
+    <td>\(\ce{CH\bond{3}CH}\)</td>
+    <td>乙炔</td>
+    <td>炔烃</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>卤素原子</td>
+    <td>\(\ce{CH3CH2\bond{-}Cl}\)</td>
+    <td>氯乙烷</td>
+    <td>卤代烃</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td rowspan="2">羟基</td>
+    <td>\(\ce{CH3CH2\bond{-}OH}\)</td>
+    <td>乙醇</td>
+    <td>醇</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>苯酚</td>
+    <td>酚</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>醚键</td>
+    <td>\(\ce{CH3CH2\bond{-}O\bond{-}CH2CH3}\)</td>
+    <td>乙醚</td>
+    <td>醚</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>醛基</td>
+    <td></td>
+    <td>乙醛</td>
+    <td>醛</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>羰基</td>
+    <td></td>
+    <td>丙酮</td>
+    <td>酮</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>羧基</td>
+    <td></td>
+    <td>乙酸</td>
+    <td>羧酸</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>氨基</td>
+    <td>\(\ce{CH3\bond{=}NH2}\)</td>
+    <td>甲胺</td>
+    <td>胺</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>酯基</td>
+    <td></td>
+    <td>乙酸乙酯</td>
+    <td>酯</td>
+  </tr>
+</tbody>
+</table>
 2. 有机化合物的命名
 3. 同系物 同分异构体
 4. 手性碳原子和手性分子
