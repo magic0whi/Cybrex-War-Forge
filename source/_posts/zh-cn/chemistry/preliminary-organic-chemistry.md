@@ -21,28 +21,28 @@ tags:
 </thead>
 <tbody>
   <tr>
-    <td></td>
+    <td>{% asset_img CH2CH2.png [title] %}</td>
     <td>碳碳双键</td>
     <td>\(\ce{CH2\bond{=}CH2}\)</td>
     <td>乙烯</td>
     <td>烯烃</td>
   </tr>
   <tr>
-    <td></td>
+    <td>\(\ce{\bond{-}C\bond{3}C\bond{-}}\)</td>
     <td>碳碳三键</td>
     <td>\(\ce{CH\bond{3}CH}\)</td>
     <td>乙炔</td>
     <td>炔烃</td>
   </tr>
   <tr>
-    <td></td>
+    <td>{% asset_img Halide-group.png [title] %}</td>
     <td>卤素原子</td>
     <td>\(\ce{CH3CH2\bond{-}Cl}\)</td>
     <td>氯乙烷</td>
     <td>卤代烃</td>
   </tr>
   <tr>
-    <td></td>
+    <td rowspan="2">\(\ce{\bond{-}OH}\)</td>
     <td rowspan="2">羟基</td>
     <td>\(\ce{CH3CH2\bond{-}OH}\)</td>
     <td>乙醇</td>
@@ -50,47 +50,46 @@ tags:
   </tr>
   <tr>
     <td></td>
-    <td></td>
     <td>苯酚</td>
     <td>酚</td>
   </tr>
   <tr>
-    <td></td>
+    <td>\(\ce{\bond{-}O\bond{-}}\)</td>
     <td>醚键</td>
     <td>\(\ce{CH3CH2\bond{-}O\bond{-}CH2CH3}\)</td>
     <td>乙醚</td>
     <td>醚</td>
   </tr>
   <tr>
-    <td></td>
+    <td>{% asset_img Skeletal_formula_of_an_aldehyde_group.svg [title] %}</td>
     <td>醛基</td>
     <td></td>
     <td>乙醛</td>
     <td>醛</td>
   </tr>
   <tr>
-    <td></td>
+    <td>{% asset_img 800px-Ketone-skeletal.png [title] %}</td>
     <td>羰基</td>
     <td></td>
     <td>丙酮</td>
     <td>酮</td>
   </tr>
   <tr>
-    <td></td>
+    <td>{% asset_img Carboxylic-acid-skeletal.svg [title] %}</td>
     <td>羧基</td>
     <td></td>
     <td>乙酸</td>
     <td>羧酸</td>
   </tr>
   <tr>
-    <td></td>
+    <td>\(\ce{\bond{-}NH2}\)</td>
     <td>氨基</td>
     <td>\(\ce{CH3\bond{=}NH2}\)</td>
     <td>甲胺</td>
     <td>胺</td>
   </tr>
   <tr>
-    <td></td>
+    <td>{% asset_img Ester-skeletal.svg [title] %}</td>
     <td>酯基</td>
     <td></td>
     <td>乙酸乙酯</td>
