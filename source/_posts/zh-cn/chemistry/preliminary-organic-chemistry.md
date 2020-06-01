@@ -49,7 +49,7 @@ tags:
     <td>醇</td>
   </tr>
   <tr>
-    <td></td>
+    <td>{% asset_img Phenol2.svg [title] %}</td>
     <td>苯酚</td>
     <td>酚</td>
   </tr>
@@ -63,19 +63,19 @@ tags:
   <tr>
     <td>{% asset_img Skeletal_formula_of_an_aldehyde_group.svg [title] %}</td>
     <td>醛基</td>
-    <td></td>
+    <td>{% asset_img 1024px-Acetaldehyde-2D-flat.svg [title] %}</td>
     <td>乙醛</td>
     <td>醛</td>
   </tr>
   <tr>
     <td>{% asset_img 800px-Ketone-skeletal.png [title] %}</td>
     <td>羰基</td>
-    <td></td>
+    <td>{% asset_img Acetone-CRC-MW-ED-dimensions-2D.png %}</td>
     <td>丙酮</td>
     <td>酮</td>
   </tr>
   <tr>
-    <td>{% asset_img Carboxylic-acid-skeletal.svg [title] %}</td>
+    <td>{% asset_img 320px-Carbonic-acid-2D.png [title] %}</td>
     <td>羧基</td>
     <td></td>
     <td>乙酸</td>
