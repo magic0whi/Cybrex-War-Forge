@@ -12,6 +12,9 @@ tags:
 \\(\exist\\) ------ 存在
 \\(\exist 1\\) ---- 存在且唯一
 
+函数:
+\\(\text{max}\\{N_1, N_2\\}\\) ---- 返回两者中较大者
+
 ## 函数
 
 1. **函数**:
@@ -39,7 +42,7 @@ $$
 
 4. **初等函数**: 由 常数\基本初等函数, 经过 四则运算\复合运算 而成的式子
 
-## 初等性质
+### 初等性质
 
 1. 奇偶性
    有 \\(y=f(x) \quad(x\in D,  D 关于原点对称)\\)
@@ -58,3 +61,52 @@ $$
    有 \\(y=f(x) \quad(x\in D)\\) ,
    若 \\(\exist T>0\\) , 使 \\(\forall x\in D \quad(x+T\in D)\\)
    有 \\(f(x+T)=f(x)\\) , 称 f(x) 为周期函数
+
+## 数列极限
+
+1. 数列收敛定义(ε−N):
+   **(建议先看例子)**
+   设 \\({a_n}\\) 为数列, A为极限值, 最大误差\\(\varepsilon\\), \\(a_N\\)后极限有效(即之后的数列元素与极限值的误差进入容许范围),
+   若 \\(\forall\varepsilon > 0 , \exist N > 0\\) ,
+   且当 \\(n > N\\) 时. \\(|a_n - A| < \varepsilon\\)
+
+   由此发现数列收敛于极限A, 用 \\(\lim\limits_{n\to\infty} = A\\) 或 \\(a_n \to A \quad(n\to\infty)\\) 表示
+
+   举个例子:
+   如有通项公式 \\(a_n=\dfrac{n+1}{2n}\\), 具体值为 \\(\dfrac{3}{4}, \dfrac{2}{3}, \dfrac{5}{8}, \dfrac{3}{5}, \text{...}\\) , 观察得极限 \\(a_n\to\dfrac{1}{2}\\)
+
+   设最大容许误差 \\(\varepsilon = \dfrac{1}{10} > 0\\), 则误差值 \\(|a_n - \dfrac{1}{2}| = \dfrac{1}{2n} < \dfrac{1}{10} \Harr n > 5\\).
+   同理:
+   \\(\varepsilon= \frac{1}{100} > 0\\), 则 \\(\frac{1}{2n} < \frac{1}{100} \Harr n > 50\\)
+   \\(\varepsilon= \frac{1}{1000} > 0\\), 则 \\(\frac{1}{2n} < \frac{1}{1000} \Harr n > 500\\)
+   
+   由此发现该数列有极限: \\(n\to\infty , a_n\to\dfrac{1}{2}\\)
+2. 性质
+   1. 唯一性: 数列有极限必唯一(极限值只有一个)
+      证(反证法):
+      设数列有两个极限 \\(\lim\limits_{n\to\infty}a_n=A ,\enspace \lim\limits_{n\to\infty}a_n = B \\) , 且 \\(A\neq B\\)
+      再设 \\(A>B\\) , \\(\varepsilon=-\dfrac{A+B}{2}\\) (误差值的定义由 \\(\varepsilon+A=-\varepsilon-B\\) 解出, 目的是让下面两个\\(a_n\\)的值域没有交集)
+      \\(\because\lim\limits_{n\to\infty}a_n=A,\enspace \therefore \exist N_1 > 0\\) , 当 \\(n>N_1\\) 时, \\(|a_n-A|<\varepsilon \quad\Harr\quad \frac{3A+B}{2}<a_n<\frac{A-B}{2}\\) (\*)
+      \\(\because\lim\limits_{n\to\infty}a_n=B,\enspace \therefore \exist N_2 > 0\\) , 当 \\(n>N_2\\) 时, \\(|a_n-B|<\varepsilon \quad\Harr\quad \frac{A-B}{2}<a_n<\frac{-A+B}{2}\\) (\*\*)
+      取 \\(N=\text{max}\\{N_1 , N_2\\}\\) , 当 \\(n < N_2\\) 时, (\*) (\*\*) 都成立, 但这两个不等式没有交集, 矛盾, 所以 \\(A>B\\) 不对, 同理 \\(B>A\\) 也不对.
+      \\(\therefore A=B\\), 极限值只有一个.
+   2. 有界性:
+      xxxxxxxxxxxx
+   3. 保号性:
+      xxxxxxxxxxxxxxxxxxx
+
+## 函数极限
+
+## 无穷小与无穷大
+
+## 极限的运算法则
+
+## 极限存在法则 两个重要极限
+
+## 无穷小的比较
+
+## 函数的连续性与间断点
+
+## 连续函数运算及初等函数连续性
+
+## 闭区间上连续函数的性质
