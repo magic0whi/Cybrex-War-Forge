@@ -109,6 +109,23 @@ $$
    \\(|f(x) - A| < \varepsilon\\) , 称 f(x) 当 \\(x\to 0\\) 时以A为极限
    记作 \\(\lim\limits_{x\to a}f(x) = A\\) 或 \\(f(x)\to A \qquad(x\to a)\\)
 
+Notes:
+1. \\(x\to a\\) 时 \\(x\neq a\\) ; x 趋向于a, x绝对不取a
+2. \\(\{x|0<|x-a|<\delta\}\\) 可用 \\(\mathring{\text{U}}(a\cdot \delta)\\) 表示, 读作 a的取心δ邻域.
+3. \\(x\to a\\) 时 \\(\begin{cases} x\to a^- \\\ x\to a^+ \end{cases}\\)
+4. 左极限与右极限
+   若 \\(\forall\varepsilon>0 ,\enspace \exist\delta > 0\\) ,
+   1. 当 \\(x\in (a-\delta, a)\\) 时 \\(|f(x)-A| < \varepsilon\\) ,
+      此时A称为 f(x) 在 x=a 处左极限,
+      记 \\(lim\limits_{x\to a^-}f(x)=A\\) 或 \\(f(a-0)=A\\)
+   2. 当 \\(x\in (a , a+\delta)\\) 时 \\(|f(x-B)| < \varepsilon\\) ,
+      此时B称为 f(x) 在 x=a出右极限,
+      记 \\(lim\limits_{x\to a^+}f(x)=B\\) 或 \\(f(a+0)=B\\)
+5. \\(\lim\limits_{x\to a}f(x)\\) 存在 \\(\hArr f(a-0) , f(a+0) 存在且相等\\)
+6. \\(\lim\limits_{x\to a}f(x)\\) 与 \\(f(a)\\) 无关
+   1. 如 \\(\lim\limits_{x\to 2}\frac{x^2-4}{x-2}=\lim\limits_{x\to 2}(x+2)=4\\)
+   2. 左极限与右极限不同(此时 \\(\lim\limits_{x\to a}f(x)\\) 不存在)
+
 ## 无穷小与无穷大
 
 ## 极限的运算法则
