@@ -85,15 +85,43 @@ $$
    1. 唯一性: 数列有极限必唯一(极限值只有一个)
       证(反证法):
       设数列有两个极限 \\(\lim\limits_{n\to\infty}a_n=A ,\enspace \lim\limits_{n\to\infty}a_n = B \\) , 且 \\(A\neq B\\)
-      再设 \\(A>B\\) , \\(\varepsilon=-\dfrac{A+B}{2}\\) (误差值的定义由 \\(\varepsilon+A=-\varepsilon-B\\) 解出, 目的是让下面两个\\(a_n\\)的值域没有交集)
+      再设 \\(A>B\\) , \\(\varepsilon=-\dfrac{A+B}{2}\\) (误差值的定义由 \\(\varepsilon + A=-\varepsilon - B\\) 解出, 目的是让下面两个\\(a_n\\)的值域没有交集)
       \\(\because\lim\limits_{n\to\infty}a_n=A,\enspace \therefore \exist N_1 > 0\\) , 当 \\(n>N_1\\) 时, \\(|a_n-A|<\varepsilon \quad\Harr\quad \frac{3A+B}{2}<a_n<\frac{A-B}{2}\\) (\*)
       \\(\because\lim\limits_{n\to\infty}a_n=B,\enspace \therefore \exist N_2 > 0\\) , 当 \\(n>N_2\\) 时, \\(|a_n-B|<\varepsilon \quad\Harr\quad \frac{A-B}{2}<a_n<\frac{-A+B}{2}\\) (\*\*)
       取 \\(N=\text{max}\\{N_1 , N_2\\}\\) , 当 \\(n < N_2\\) 时, (\*) (\*\*) 都成立, 但这两个不等式没有交集, 矛盾, 所以 \\(A>B\\) 不对, 同理 \\(B>A\\) 也不对.
       \\(\therefore A=B\\), 极限值只有一个.
    2. 有界性:
-      xxxxxxxxxxxx
+      若 \\(\lim\limits_{n\to\infty}a_n = A\\) , 则 \\(\exist M > 0\\) , 使得 \\(|a_n| \leqslant M\\) , **反之不成立**.
+      证明: 
+      <div>
+      $$
+      \begin{aligned}
+         & "\rArr" \enspace 取 \varepsilon = 1 > 0 \\
+         &\because \lim\limits_{n\to\infty}a_n=A \\
+         &\therefore \exist N > 0,\enspace 当 n > N 时 , |a_n - A | < 1 \\
+         &\because ||a_n|-|A|| \leqslant |a_n-A| \\
+         &\therefore 当 n > N 时,\enspace ||a_n| - |A_1|| < 1 \rArr |a_n| < 1 + |A| 在 n>N 时成立 \\
+         &取 \text{M} = \text{max}\{|a_1| ,\enspace |a_2| ,\enspace \text{...} ,\enspace |a_n| ,\enspace 1+|A|\} \\
+         &\forall n ,\enspace 有 |a_n| \leqslant M \\
+         &"\nLeftarrow" \enspace a_n = 1+ (-1)^n \enspace |a_n| \leqslant 2 ,\enspace 但 \lim\limits_{n\to\infty}a_n 不存在
+      \end{aligned}
+      $$
+      </div>
+
    3. 保号性:
-      xxxxxxxxxxxxxxxxxxx
+      若 \\(\lim\limits_{n\to\infty}a_n = A \begin{cases} >0 \\\ <0 \end{cases}\\) , 则 \\(\exist N > 0\\) , 当 \\(n > N\\) 时 , \\(a_n\begin{cases} >0 \\\ <0  \end{cases}\\)
+      **极限正, 分界线往后就正; 极限负, 分界线往后就负**
+      证明:
+      <div>
+      $$
+      \begin{aligned}
+         &设 A > 0 ,\enspace 取 \varepsilon = \frac{A}{2} > 0 \\
+         &\because \lim\limits_{n\to\infty}a_n=A ,\enspace \therefore \exist N > 0 ,\enspace 当 n>N 时 ,\enspace |a_n - A| < \frac{A}{2} \rArr \frac{A}{2} < a_n < \frac{3A}{2} \quad\rArr\quad a_n > \frac{A}{2} > 0 \\
+         &设 A < 0 , 取 \varepsilon = -\frac{A}{2} > 0 \\
+         &\because \lim\limits{n\to\infty}a_n=A ,\enspace \therefore \exist N > 0 ,\enspace 当 n>N 时 ,\enspace |a_n - A| < -\frac{A}{2} \hArr \frac{3A}{2} < a_n < \frac{A}{2} \quad\rArr\quad a_n < \frac{A}{2} < 0
+      \end{aligned}
+      $$
+      </div>
 
 ## 函数极限
 
