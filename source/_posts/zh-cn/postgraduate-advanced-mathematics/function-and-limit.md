@@ -4,6 +4,7 @@ category: postgraduate-advanced-mathematics
 lang: zh-cn
 date: 2020-05-22 16:54:13
 tags:
+toc: true
 ---
 
 ## 前置知识
@@ -85,7 +86,7 @@ $$
    1. 唯一性: 数列有极限必唯一(极限值只有一个)
       证(反证法):
       设数列有两个极限 \\(\lim\limits_{n\to\infty}a_n=A ,\enspace \lim\limits_{n\to\infty}a_n = B \\) , 且 \\(A\neq B\\)
-      再设 \\(A>B\\) , \\(\varepsilon=-\dfrac{A+B}{2}\\) (误差值的定义由 \\(\varepsilon + A=-\varepsilon - B\\) 解出, 目的是让下面两个\\(a_n\\)的值域没有交集)
+      不妨设 \\(A>B\\) , \\(\varepsilon=-\dfrac{A+B}{2}\\) (误差值的定义由 \\(\varepsilon + A=-\varepsilon - B\\) 解出, 目的是让下面两个\\(a_n\\)的值域没有交集)
       \\(\because\lim\limits_{n\to\infty}a_n=A,\enspace \therefore \exist N_1 > 0\\) , 当 \\(n>N_1\\) 时, \\(|a_n-A|<\varepsilon \quad\Harr\quad \frac{3A+B}{2}<a_n<\frac{A-B}{2}\\) (\*)
       \\(\because\lim\limits_{n\to\infty}a_n=B,\enspace \therefore \exist N_2 > 0\\) , 当 \\(n>N_2\\) 时, \\(|a_n-B|<\varepsilon \quad\Harr\quad \frac{A-B}{2}<a_n<\frac{-A+B}{2}\\) (\*\*)
       取 \\(N=\text{max}\\{N_1 , N_2\\}\\) , 当 \\(n < N_2\\) 时, (\*) (\*\*) 都成立, 但这两个不等式没有交集, 矛盾, 所以 \\(A>B\\) 不对, 同理 \\(B>A\\) 也不对.
@@ -145,9 +146,35 @@ $$
    情况3. 当 \\(|x|>X\\) 时, \\(\lim\limits_{x\to \infty}f(x)=A\\)
 2. 性质
    1. 唯一性(函数有极限必唯一)
+      证明: 设 \\(\lim\limits_{x\to a}f(x)=A \enspace,\enspace \lim\limits_{x\to a}f(x)=B\\)
+      不妨设 A > B , 取 \\(\varepsilon=\frac{A-B}{2}>0\\) (凑出矛盾的结果)
+      \\(\because \lim\limits_{x\to a}f(x)=A\\)
+      \\(\therefore \exist\delta_1>0\\) , 当 \\(0<|x-a|<\delta_1\\) 时,
+      \\(\mskip{1em}|f(x)-A|<\frac{A-B}{2} \hArr \frac{A+B}{2}<f(x)<\frac{3A-B}{2}\\) (\*)
+      又 \\(\because \lim\limits_{x\to a}f(x)=B\\)
+      \\(\therefore \exist\delta_2>0\\) , 当 \\(0<|x-a|<\delta_2\\) 时.
+      \\(\mskip{1em}|f(x)-B|<\frac{A-B}{2} \hArr \frac{3B-A}{2}<f(x)<\frac{A+B}{2}\\) (\*\*)
+      取 \\(\delta=\text{min}\\{\delta_1 , \delta_2\\}\\) , 当 \\(0<|x-a|<\delta\\) 时 (**)(*) 皆成立, 矛盾.
+      \\(\therefore A>B\\) 不对, 同理 \\(A<B\\) 也不对.
+      \\(\therefore A=B\\), 极限值只有一个.
    2. 局部有界性: 设 \\(\lim\limits_{x\to a}f(x)=A\\) , 则 \\(\exist\delta>0 ,\enspace M>0\\) , 当 \\(0<|x-a|<\delta\\) 时, \\(|f(x)|\leqslant M\\)
-      证明: 证明目标是找出 \\(|f(x)|\leqslant\\) 某个确切的值xxxxxxxxxxxxx
+      证明: 证明目标是找出 \\(|f(x)|\leqslant\\) 某个确切的值
+      取 \\(\varepsilon=1>0\\)
+      \\(\because \lim\limits_{x\to a}f(x)=A\\)
+      \\(\therefore \exist\delta>0\\) , 当 \\(0<|x-a|<\delta\\) 时. \\(\mskip{1em} |f(x)-A|<1\\)
+      又 \\(\because ||f(x)|-|A||\leqslant|f(x)-A|\\) (不等式公式)
+      \\(\therefore 当 0<|x-a|<\delta 时 \enspace,\enspace ||f(x)|-|A||<1 \rArr |f(x)|<1+|A|=M\\)
+      即, \\(当 0<\|x-a|<\delta 时 \enspace,\enspace |f(x)|\leqslant M\\)
    3. (废话)保号性: 设 \\(\lim\limits_{x\to a}f(x)=A \begin{cases} >0 \\\ <0 \end{cases}\\) , 则 \\(\exist\delta>0\\) , 当 \\(0<|x-a|<\delta\\) 时, \\(f(x) \begin{cases} >0 \\\ <0 \end{cases}\\)
+      证明:
+      1. 若 A>0 , 取 \\(\varepsilon=\frac{A}{2}>0\\)
+         \\(\because \lim\limits_{x\to a}f(x)=A\\)
+         \\(\therefore \exist\delta>0)
+         当 \\(0<|x-a|<\delta\\) 时, \\(|f(x)-A|<\frac{A}{2} \rArr f(x)>\frac{A}{2}>0\\)
+      2. 若 A<0 , 取 \\(\varepsilon=-\frac{A}{2}>0\\)
+         \\(\because \lim\limits_{x\to a}f(x)=A\\)
+         \\(\therefore \exist\delta>0)
+         当 \\(0<|x-a|<\delta\\) 时, \\(|f(x)-A|<-\frac{A}{2} \rArr f(x)>\frac{A}{2}>0\\)
 
 Notes:
 1. \\(\\{x|0<|x-a|<\delta\\}\\) 可用 \\(\mathring{\text{U}}(a\cdot \delta)\\) 表示, 读作 a的取心δ邻域.
@@ -168,9 +195,57 @@ Notes:
 
 ## 无穷小与无穷大
 
+### 无穷小
+
+1. 定义: 若 \\(\lim\limits_{x\to x_0}\alpha(x)=0\\) , 称 \\(\alpha(x)\\) 在 \\(x\to x_0\\) 时无穷小
+   ε-δ语言定义: 若 \\(\forall\varepsilon>0 \enspace,\enspace \exist\delta>0\\) , 当 \\(0<|x-x_0|<\delta\\) 时 , \\(|\alpha(x)-0|<\varepsilon\\) , 即 \\(\lim\limits_{x\to x_0}\alpha(x)=0\\)
+2. 常规性质:
+   1. \\(\lim\limits_{x\to x_0}\alpha(x)=0 \enspace,\enspace \lim\limits_{x\to x_0}\beta(x)=0\\) , 则 \\(\lim\limits_{x\to x_0}[\alpha(x)+\beta(x)]=0\\)
+   2. \\(\lim\limits_{x\to x_0}\alpha(x)=0\\) 则 \\(\lim\limits_{x\to x_0}k\alpha(x)=0 \quad (k为常数)\\)
+   3. (重要) \\(\lim\limits_{x\to x_0}f(x)=A \hArr \lim\limits_{x\to x_0}f(x)=A+\alpha \quad (\alpha\to 0)\\)
+
+Notes:
+1. 0是无穷小的充分但不必要条件x_0
+
+### 无穷大
+
+1. 定义:
+   ε-δ语言定义: 若 \\(\forall M>0 \enspace,\enspace \exist\delta>0\\) , 当 \\(0<|x-x_0|<\delta\\) 时, \\(|f(x)|\geqslant M \thickspace \rArr\\) 称 f(x) 在 \\(x\to x_0\\) 时无穷大, 记 \\(\lim\limits_{x\to x_0}f(x)=\infty\\)
+   ε-X语言定义: 若 \\(\forall M>0 \enspace,\enspace \exist X>0\\) , 当 \\(x>X\\) 时, \\(|f(x)|\geqslant M \rArr\\) 称 f(x) 在 \\(x\to +\infty\\) 时无穷大, 记 \\(\lim\limits_{x\to +\infty}f(x)=\infty\\)
+
+### 无穷小与无穷大的关系
+
+性质: \\(\lim\limits_{x\to x_0}f(x)=0 \hArr \lim\limits_{x\to x_0}\frac{1}{f(x)}=\infty\\)
+
 ## 极限的运算法则
 
+### 四则求导法则
+
+有 \\(\lim\limits_{x\to x_0}f(x)=A \enspace,\enspace \lim\limits_{x\to x_0}g(x)=B\\)
+
+1. 加减: \\(\lim\limits_{x\to x_0}[f(x)\pm g(x)]=\lim\limits_f(x)\pm \lim\limits_{x\to x_0}g(x)=A\pm B\\)
+2. 乘(常数): \\(\lim\limits_{x\to x_0}kf(x)=k\lim\limits_{x\to x_0}f(x)=kA\\)
+3. 乘(另一极限): \\(\lim\limits_{x\to x_0}[f(x)g(x)]=\lim\limits_{x\to x_0}f(x)+\lim\limits_{x\to x_0}g(x)=AB\\)
+4. 除: \\(\lim\limits_{x\to x_0}\frac{f(x)}{g(x)}=\frac{\lim\limits_{x\to x_0}f(x)}{\lim\limits_{x\to x_0}g(x)}=\frac{A}{B}\\)
+
+Notes:
+\\(P(x)=a_nx^n + \text{...} + a_1x + a_0\\)
+\\(Q(x)=b_mx^m + \text{...} + b_1x + b_0\\)
+\\(\lim\limits_{x\to \infty}\frac{P(x)}{Q(x)}=\begin{cases} \frac{a_n}{b_m} , &n=m \\\ \infty , &n>m \\\ 0 , &n<m \end{cases}\\)
+
+### 复合运算极限法则
+
+有 \\(u=\varphi(x) \enspace,\enspace \varphi(x)\neq a\\)
+若 \\(\lim\limits_{u\to a}f(u)=A \enspace,\enspace \lim\limits_{x\to x_0}\varphi(x)=a \enspace,\enspace 则 \lim\limits_{x\to x_0}f[g(x)]=A\\)
+
 ## 极限存在法则 两个重要极限
+
+### 极限存在准则
+
+1. 夹逼定理
+2. 单调有界数列必有极限
+
+### 两个重要极限
 
 ## 无穷小的比较
 
