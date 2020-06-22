@@ -169,11 +169,11 @@ $$
       证明:
       1. 若 A>0 , 取 \\(\varepsilon=\frac{A}{2}>0\\)
          \\(\because \lim\limits_{x\to a}f(x)=A\\)
-         \\(\therefore \exist\delta>0)
+         \\(\therefore \exist\delta>0\\)
          当 \\(0<|x-a|<\delta\\) 时, \\(|f(x)-A|<\frac{A}{2} \rArr f(x)>\frac{A}{2}>0\\)
       2. 若 A<0 , 取 \\(\varepsilon=-\frac{A}{2}>0\\)
          \\(\because \lim\limits_{x\to a}f(x)=A\\)
-         \\(\therefore \exist\delta>0)
+         \\(\therefore \exist\delta>0\\)
          当 \\(0<|x-a|<\delta\\) 时, \\(|f(x)-A|<-\frac{A}{2} \rArr f(x)>\frac{A}{2}>0\\)
 
 Notes:
@@ -200,8 +200,8 @@ Notes:
 1. 定义: 若 \\(\lim\limits_{x\to x_0}\alpha(x)=0\\) , 称 \\(\alpha(x)\\) 在 \\(x\to x_0\\) 时无穷小
    ε-δ语言定义: 若 \\(\forall\varepsilon>0 \enspace,\enspace \exist\delta>0\\) , 当 \\(0<|x-x_0|<\delta\\) 时 , \\(|\alpha(x)-0|<\varepsilon\\) , 即 \\(\lim\limits_{x\to x_0}\alpha(x)=0\\)
 2. 常规性质:
-   1. \\(\lim\limits_{x\to x_0}\alpha(x)=0 \enspace,\enspace \lim\limits_{x\to x_0}\beta(x)=0\\) , 则 \\(\lim\limits_{x\to x_0}[\alpha(x)+\beta(x)]=0\\)
-   2. \\(\lim\limits_{x\to x_0}\alpha(x)=0\\) 则 \\(\lim\limits_{x\to x_0}k\alpha(x)=0 \quad (k为常数)\\)
+   1. 若 \\(\alpha\to0 , \beta\to0\\) , 则 \\(\begin{cases} \alpha\pm\beta\to0 \\\ k\alpha\to0 \quad (k为任意常数) \\\ \alpha\beta\to0 \end{cases}\\)
+   2. 无穷小乘以有界函数还是无穷小: \\(\alpha\to0\\) , \\(|\beta|\leqslant M\\) , 则 \\(\alpha\beta\to0\\)
    3. (重要) \\(\lim\limits_{x\to x_0}f(x)=A \hArr \lim\limits_{x\to x_0}f(x)=A+\alpha \quad (\alpha\to 0)\\)
 
 Notes:
@@ -271,10 +271,95 @@ Notes:
    \\(\therefore \lim\limits_{x\to0}\frac{1}{\cos x}=1 , \lim\limits_{x\to0}1=1 \rArr \lim\limits_{x\to0}\frac{x}{\sin x}=1\\) (夹逼定理) \\(\rArr \lim\limits_{x\to0}\frac{\sin x}{x}=1\\)
 2. \\(\lim\limits_{n\to\infty}(1+\frac{1}{n})^n=e\\)
 
-## 无穷小的比较
+## 无穷小的比较(相除)
+
+### 无穷小的比较
+
+有 \\(\alpha\to0 , \beta\to0\\)
+1. \\(\lim\frac{\beta}{\alpha}=0\\) , 称 \\(\beta\\) 为 \\(\alpha\\) 的高阶无穷小, 记 \\(\beta=\circ(\alpha)\\)
+   \\(\lim\frac{\beta}{\alpha}=\infty\\) , 称 \\(beta\\) 为 \\(\alpha\\) 的低阶无穷小
+   \\(\lim\frac{\beta}{\alpha^k}=k \quad (k\neq0,\infty)\\) , 称 \\(\beta\\) 为 \\(\alpha\\) 的 k 阶无穷小
+   \\(\lim\frac{\beta}{\alpha}=k \quad (k\neq0,\infty)\\) , 称 \\(\beta\\) 为 \\(\alpha\\) 的同阶无穷小, 记 \\(\beta=\bigcirc(\alpha)\\)
+   \\(\lim\frac{\beta}{\alpha}=1\\) , 称 \\(\beta\\) 为 \\(\alpha\\) 的等价无穷小, 记 \\(\beta\text{\textasciitilde}\alpha\\)
+   等价无穷小是同阶无穷小的充分不必要条件
+
+### 等价无穷小的性质及常用等价无穷小
+
+1. 等价无穷小的性质
+   有 \\(\alpha\to0\\) , \\(\beta\to0\\)
+   1. \\(\alpha\text{\textasciitilde}\beta \hArr \beta=\alpha+\circ(\alpha)\\)
+   2. 若 \\(\begin{cases} \alpha\text{\textasciitilde}\alpha_1 , \beta\text{\textasciitilde}\beta_1 \\\ \lim\frac{\beta_1}{\alpha_1}=A \end{cases}\\)
+      则 \\(\lim\frac{\beta}{\alpha}=A\\)
+2. 常用等价无穷小
+   (\\(x\to0\\))
+   1. \\(x\text{\textasciitilde}\sin x \enspace,\enspace x\text{\textasciitilde}\tan x \enspace,\enspace x\text{\textasciitilde}\arcsin x \enspace,\enspace x\text{\textasciitilde}\arctan x \enspace,\enspace x\text{\textasciitilde}\ln(1+x) \enspace,\enspace x \enspace\text{\textasciitilde}\enspace e^x-1\\)
+   2. \\(1-\cos x \enspace\text{\textasciitilde}\enspace \frac{x^2}{2}\\)
+   3. \\((1+x)^a-1 \enspace\text{\textasciitilde}\enspace ax\\)
 
 ## 函数的连续性与间断点
 
+连续是极限存在的充分不必要条件, 因为间断不代表极限不存在
+
+### 连续
+
+1. 函数在一点连续: 
+   若 \\(\lim\limits_{x\to a}f(x)=f(a)\\) 或 \\(f(a-0)=f(a+0)=f(a)\\)
+2. f(x) 在闭区间上连续:
+   设 f(x) 在 [a, b] 上有定义, 若:
+   1. f(x) 在 (a, b) 内处处连续
+   2. f(a)=f(a+0), f(b)=f(b-0)
+   则称 f(x) 在 [a, b] 上连续, 记 \\(f(x)\in c[a,b]\\)
+
+Note:
+若 f(a-0)=f(a) , 称f(a)在x=a左连续
+若 f(a+0)=f(a) , 称f(a)在x=a右连续
+
+### 间断点及分类
+
+1. 间断: 若 \\(\lim\limits_{x\to a}f(x)\neq f(a)\\) , 称 f(x) 在 x=a 间断
+2. 分类:
+   1. 第一类间断点: f(a-0) , f(a+0) 皆存在
+      * 可去间断点: f(a-0)=f(a+0)
+      * 跳跃间断点: f(a-0)≠f(a+0)
+   2. 第二类间断点: f(a-0) , f(a+0) 至少一个不存在
+
+Note:
+\\(\lim\limits_{x\to0^-}e^\frac{1}{x}=0\\) , \\(\lim\limits_{x\to0^+}e^\frac{1}{x}=+\infty\\)
+
 ## 连续函数运算及初等函数连续性
 
+### 连续函数运算
+
+1. 四则运算
+   设f(x) , g(x) 在 \\(x=x_0\\) 处连续, 则
+   1. \\(f(x)\pm g(x)\\) 在 \\(x=x_0\\) 处连续
+   2. \\(f(x)g(x)\\) 在 \\(x=x_0\\) 处连续
+   3. \\(\frac{f(x)}{g(x)}\\) 在 \\(x=x_0\\) 处连续 (\\(g(x)\neq0\\))
+   (证明思路是证明该点处极限与函数实际取该点值相等, 也就是上节讲到的函数连续定义)
+2. 复合运算
+   设 \\(f(u) , u=\varphi(x) , \varphi(x)\neq a\\)
+   若 \\(\lim\limits_{u\to a}f(u)=f(a) , \lim\limits_{x\to x_0}\varphi(x)=a\\) , 则 \\(\lim\limits_{x\to x_0}f[\varphi(x)]=f[\lim\limits_{x\to x_0}\varphi(x)]=f(a)\\)
+
+### 初等函数连续性
+
+基本初等函数/初等函数在其定义域内连续
+
 ## 闭区间上连续函数的性质
+
+(基本就是废话)
+
+1. 最值定理
+   设 \\(f(x)\in c[a, b]\\)
+   则 f(x) 在 [a, b] 上取到 最小值m 和 最大值M
+   即 \\(\exist x_1, x_2 \in[a, b]\\) , 使 \\(f(x_1)=m , f(x_2)=M\\)
+2. 有界定理
+   设 \\(f(x)\in c[a, b]\\)
+   则 \\(\exist k>0\\) , 使 \\(\forall x\in[a, b]\\) , 有 \\(|f(x)|\leqslant k\\)
+3. 零点定理
+   设 \\(f(x)\in c[a, b]\\)
+   若 \\(f(a)f(b)<0\\) , 则 \\(\exist c\in[a, b]\\) , 使 \\(f\(c\)=0\\)
+   (高中的零点存在定理)
+4. 界值定理
+   设 \\(f(x)\in c[a, b]\\)
+   则 \\(\forall\eta\in[m, M] , \exist\xi\in[a, b]\\) , 使 \\(f(\xi)=\eta\\)
+   (即介于 m 和 M 之间的 f(x) 皆可取到)
