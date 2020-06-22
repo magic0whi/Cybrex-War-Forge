@@ -58,13 +58,17 @@ toc: true
 #### 回归直线方程
 
 1. 最小平方法: 如果有n个样本点 \\((x_1, y_1), (x_2), (y_2), ..., (x_n, y_n)\\) , 若要求一条最能拟合这些点的直线 \\(\hat{y} = bx + a\\), 可通过下面的表达式:
-   \\(\\)[y_1 - (a + bx_1)]^2 + [y_2 - (a + bx_2)]^2 + ... + [y_n - (a + bx_n)]^2\\(\\)
+   \\([y_1 - (a + bx_1)]^2 + [y_2 - (a + bx_2)]^2 + ... + [y_n - (a + bx_n)]^2\\)
    若上述表达式能取得最小值, 将得到的 a, b 的值带入 \\(\hat{y} = bx + a\\) 就是我要所要的最拟合直线. 这种方法也叫**最小二乘法**.
 2. 线性回归方程: 将上面那条表达式使用配方法化简, 我们就得到了
-   \\(\\)\begin{cases}
+   <div>
+   $$\begin{cases}
        \hat{b} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} = \frac{\sum_{i=1}^n x_i y_i - n\bar{x}\bar{y}}{\sum_{i=1}^n x_i^2 - n\bar{x}^2} \\
        \hat{a} = \bar{y} - \hat{b}\bar{x}
-   \end{cases}\\(\\)
+   \end{cases}
+   $$
+   </div>
+
    带入即可得目标式 \\(\hat{y} = \hat{b}x + \hat{a}\\).
    此方程恒经过样本的\\((\bar{x}, \bar{y})\\), 即**样本中心点**
 
@@ -78,84 +82,78 @@ toc: true
 
 #### 排列与组合
 
-1. 排列: 从n个不同元素中取出 \\(m \quad (m \geqslant n)\\), 按照一定的顺序排成一列, 叫做从n 个不同元素中取出 m 个元素的一个排列 (互异性 有异性)
+1. 排列: 从n个不同元素中取出 \\(m \enspace (m \leqslant n)\\), 按照一定的顺序排成一列 (互异性 有异性)
 2. 排列数: \\(A_n^m = n(n-1)(n-2)...(n-m+1) = \frac{n!}{(n-m)!} \qquad (m \leqslant n, m,n \in N^+)\\)
-   将n个不同元素全部取出的一个排列, 叫做n个元素的一个排列, 记作\\(A_n^n = n! \quad (规定 0! = 1)\\)
+   将n个不同元素全部取出的一个排列, 记作\\(A_n^n = n! \quad (规定 0! = 1)\\)
 
-3. 组合: 从n个不同的元素中取出 \\(m \quad (m \leqslant n)\\) 个元素合成一组, 叫做从n个不同元素中取出 m 个元素的一个组合 (与顺序无关, 只取不排)
-4. 组合数: \\(C_n^m = \frac{A_n^m}{A_m^m} = \frac{n(n-1)(n-2)...(n-m+1)}{m!} = \frac{n!}{m!(n-m)!} \qquad (m \leqslant n, m,n \in N^+)\\)
-   $组合式性质公式 \begin{cases}
-      C_n^m = C_n^{n-m} \\
-      C_{n+1}^m = C_n^m + C_n^{m-1}
-   \end{cases}$
-
+3. 组合: 从n个不同的元素中取出 \\(m \quad (m \leqslant n)\\) 个元素合成一组 (与顺序无关, 只取不排)
+4. 组合数:
+   \\(C_n^m = \frac{A_n^m}{A_m^m} = \frac{n(n-1)(n-2)...(n-m+1)}{m!} = \frac{n!}{m!(n-m)!} \qquad (m \leqslant n, m,n \in N^+)\\)
+   \\(组合式性质公式 \begin{cases} C_n^m = C_n^{n-m} \\\ C_{n+1}^m = C_n^m + C_n^{m-1} \end{cases}\\)
 #### 二项式定理
 
-二项式定理: \\((a+b)^n = C_n^0 a^n + C_n^1 a^{n-1}b + C_n^2 a^{n-2}b^2 + ... + C_n^nb^n\\)
-
-##### 二项式系数的性质
-
-结合"杨辉三角"研究推出
-
-二项式系数: \\(C_n^k (k \in 1, 2, 3, ..., n) \qquad (a+b)^n共有 n+1 项\\)
-
-1. 对称性: 与首末两端"等距离"的两个二项式系式相等.
-   直线 \\(r = \frac{n}{2}\\) 为对称轴将二项式系数所表示出的图像分成对称的两部分
-
-2. 增减性与最大值: 
-   $\begin{aligned}
-   &k < \frac{n+1}{2} \rArr 二项式系数为增 \\
-   &k > \frac{n+1}{2} \rArr 二项式系数为减 \\
-   &n 为偶数时, 其最大的二项式系数为 C_n^{\frac{n}{2}} \\
-   &n 为奇数时, 其最大的二项式系数为 C_n^{\frac{n-1}{n}}, C_n^{\frac{n+1}{2}}
-\end{aligned}$
-
-1. 各二项式系数的和 \\(2^n = C_n^0 + C_n^1 + C_n^2 + ... + C_n^n\\)
+1. 二项式定理: \\((a+b)^n = C_n^0 a^n + C_n^1 a^{n-1}b + C_n^2 a^{n-2}b^2 + ... + C_n^nb^n\\)
+2. 二项式系数的性质 (结合"杨辉三角"研究推出)
+   二项式系数: \\(C_n^k (k \in 1, 2, 3, ..., n) \qquad (共有 n+1 项)\\)
+   1. 对称性: 与首末两端"等距离"的两个二项式系式相等.
+      直线 \\(r = \frac{n}{2}\\) 为对称轴将二项式系数所表示出的图像分成对称的两部分
+   2. 增减性与最大值:
+      <div>
+      $$
+      \begin{aligned}
+          &k < \frac{n+1}{2} \rArr 二项式系数为增 \\
+          &k > \frac{n+1}{2} \rArr 二项式系数为减 \\
+          &n 为偶数时, 其最大的二项式系数为 C_n^{\frac{n}{2}} \\
+          &n 为奇数时, 其最大的二项式系数为 C_n^{\frac{n-1}{n}}, C_n^{\frac{n+1}{2}}
+      \end{aligned}
+      $$
+      </div>
+   3. 各二项式系数的和 \\(C_n^0 + C_n^1 + C_n^2 + ... + C_n^n=2^n\\)
 
 ### 统计案例
 
 #### 独立性检验
 
 独立性检验的基本方法:
-一般地, 对于两个研究对象I和II, I 有两类取值, 即类 A 和类 B; II 也有两类取值, 即类 1 和 类. 得到如下列联表所示的抽样数据:
+一般地, 对于两个研究对象I和II,
+I 有两类取值, 即类 A 和类 B;
+II 也有两类取值, 即类 1 和 类 2.
+得到如下列联表所示的抽样数据:
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-</style>
-<table class="tg">
+<table>
+<thead>
   <tr>
-    <th class="tg-c3ow" colspan="2" rowspan="2"></th>
-    <th class="tg-c3ow" colspan="2">II</th>
-    <th class="tg-c3ow"></th>
+    <th colspan="2" rowspan="2"></th>
+    <th colspan="2">II</th>
+    <th></th>
   </tr>
   <tr>
-    <td class="tg-c3ow">类1</td>
-    <td class="tg-c3ow">类2</td>
-    <td class="tg-c3ow">合计</td>
+    <td>类1</td>
+    <td>类2</td>
+    <td>合计</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">I</td>
+    <td>类A</td>
+    <td>a</td>
+    <td>b</td>
+    <td>a+b</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="2">I</td>
-    <td class="tg-c3ow">类A</td>
-    <td class="tg-c3ow">a</td>
-    <td class="tg-c3ow">b</td>
-    <td class="tg-c3ow">a+b</td>
+    <td>类B</td>
+    <td>c</td>
+    <td>d</td>
+    <td>c+d</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">类B</td>
-    <td class="tg-c3ow">c</td>
-    <td class="tg-c3ow">d</td>
-    <td class="tg-c3ow">c+d</td>
+    <td colspan="2">合计</td>
+    <td>a+c</td>
+    <td>b+d</td>
+    <td>a+b+c+d</td>
   </tr>
-  <tr>
-    <td class="tg-baqh" colspan="2">合计</td>
-    <td class="tg-baqh">a+c</td>
-    <td class="tg-baqh">b+d</td>
-    <td class="tg-baqh">a+b+c+d</td>
-  </tr>
+</tbody>
 </table>
 
 要推断"I和II"没有关系, 可按下面步骤进行
@@ -168,7 +166,7 @@ toc: true
    若\\(X^2 > 10.828\\), 则有 99.9% 的把握认为"I 与 II 有关系"
    若\\(X^2 > 6.635\\), 则有 99% 的把握认为"I 与 II 有关系"
    若\\(X^2 > 2.706\\), 则有 90% 的把握认为"I 与 II 有关系"
-   若\\(X^2 \leqslant 2.706\\), 则认为没有充分的证据显示"I 与 II 有关系", **但也不能作出结论\\(H_0\\)成立, 即 I 与 II 没有关系, 只能说有\\(\geqslant 10\%\\)的把握认为"I 与 II 无关系"**
+   若\\(X^2 \leqslant 2.706\\), 则认为没有充分的证据显示"I 与 II 有关系", **但也不能作出结论\\(H_0\\)成立, 即 I 与 II 没有关系, 只能说证据不足**
 
 #### 回归分析
 

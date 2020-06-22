@@ -243,9 +243,26 @@ Notes:
 ### 极限存在准则
 
 1. 夹逼定理
+   1. 数列型:
+      有 \\(\begin{cases} a_n \leqslant b_n \leqslant c_n \\\ \lim\limits_{n\to\infty}a_n=\lim\limits_{n\to\infty}c_n=A \end{cases}\\)
+      则 \\(\lim\limits_{n\to\infty}b_n=A\\)
+      (证明方法: 利用ε−N语言推出 \\(A-\varepsilon<b_n<A+\varepsilon \rArr |b_n-A|<\varepsilon\\))
+   2. 函数型:
+      有 \\(\begin{cases} f(x)\leqslant g(x)\leqslant h(x) \\\ \lim f(x)=\lim h(x)=A \end{cases}\\)
+      则 \\(\lim g(x)=A\\)
 2. 单调有界数列必有极限
+   Notes:
+   * \\(\\{a_n\\}\\) 有界 \\(\hArr \\{a_n\\}\\) 有上下界
+   * 若 \\(\\{a_n\\}\\) 单调递增: \\(\begin{cases} 有上界 \rArr \lim\limits_{n\to\infty}a_n 存在 \\\ 无上界 \rArr \lim\limits_{n\to\infty}a_n 不存在\end{cases}\\)
+   * 若 \\(\\{a_n\\}\\) 单调递减: \\(\begin{cases} 有下界 \rArr \lim\limits_{n\to\infty}a_n 存在 \\\ 无下界 \rArr \lim\limits_{n\to\infty}a_n 不存在\end{cases}\\)
 
 ### 两个重要极限
+
+1. \\(\lim\limits_{x\to0}\frac{\sin x}{x}=1\\)
+   证明: TODO: 补充证明
+   设 \\(0<x<\frac{\pi}{2}\\)
+2. \\(\lim\limits_{n\to\infty}(1+\frac{1}{n})^n=e\\)
+   证明: TODO: 补充, 注意这边作者写错了第三项分母n少了2次方
 
 ## 无穷小的比较
 
