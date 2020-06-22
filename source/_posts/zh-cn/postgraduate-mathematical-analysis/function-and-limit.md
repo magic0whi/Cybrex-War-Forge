@@ -259,10 +259,17 @@ Notes:
 ### 两个重要极限
 
 1. \\(\lim\limits_{x\to0}\frac{\sin x}{x}=1\\)
-   证明: TODO: 补充证明
+   证明:
+   {% asset_img 1.png [title] %}
+   
    设 \\(0<x<\frac{\pi}{2}\\)
+   \\(S_{\triangle AOB}=\frac{1}{2}\sin x\\)
+   \\(S_{扇形AOB}=\frac{1}{2}x\\)
+   \\(S_{RT\triangle AOC}=\frac{1}{2}\tan x\\)
+   \\(\therefore \sin x<x<\tan x \rArr 1<\frac{x}{\sin x}<\frac{1}{\cos x}\\)
+   \\(\because \lim\limits_{x\to0}cos x=1\\)
+   \\(\therefore \lim\limits_{x\to0}\frac{1}{\cos x}=1 , \lim\limits_{x\to0}1=1 \rArr \lim\limits_{x\to0}\frac{x}{\sin x}=1\\) (夹逼定理) \\(\rArr \lim\limits_{x\to0}\frac{\sin x}{x}=1\\)
 2. \\(\lim\limits_{n\to\infty}(1+\frac{1}{n})^n=e\\)
-   证明: TODO: 补充, 注意这边作者写错了第三项分母n少了2次方
 
 ## 无穷小的比较
 
