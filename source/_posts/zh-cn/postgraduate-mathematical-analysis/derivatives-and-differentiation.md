@@ -28,6 +28,8 @@ Notes:
 2. \\(f(x)=x^n ,\quad f'(x)=nx^{n-1}\\)
 3. \\(f(x)=a^x ,\quad f'(x)=a^x\ln a\\)
 
+TODO: 补充求导法则1例题中三角函数的求导
+
 推导:
 首先是套路 \\(f'(x)=\lim\limits_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\\)
 1. \\(=\lim\limits_{\Delta x\to0}\frac{c-c}{\Delta x}=0 \rArr \(c\)'=0\\)
@@ -37,6 +39,28 @@ Notes:
    \*特别地 \\((e^x)'=e^x\\)
 
 ## 求导法则
+
+### 四则法则
+
+设 \\(u(x) , v(x)\\) 可导, 则
+1. 加减: \\([u(x)\pm v(x)]'=u'(x)\pm v'(x)\\)
+2. 乘: \\([u(x)v(x)]'=u'(x)v(x)+u(x)v'(x)\\)
+3. 除: \\([\frac{u(x)}{v(x)}]'=\frac{u'(x)v(x)-u(x)v'(x)}{v^2(x)} \quad (v(x)\neq0)\\)
+
+证明:
+1. 令 \\(\varphi(x)=u(x)+v(x)\\)
+   则 \\(\Delta\varphi=\varphi(x+\Delta x)-\varphi(x)=u(x+\Delta x)+v(x+\Delta x)-u(x)-v(x)=\Delta u+\Delta v\\)
+   进而 \\(\lim\limits_{\Delta x\to0}\frac{\Delta\varphi}{\Delta x}=\lim\limits_{\Delta x\to0}\frac{\Delta u}{\Delta x}+\lim\limits_{\Delta x\to0}\frac{\Delta v}{\Delta x}=u'(x) + v'(x)\\)
+2. 令 \\(\varphi(x)=u(x)v(x)\\)\
+   \\(\begin{aligned} \Delta\varphi&=\varphi(x+\Delta x)-\varphi(x) \\\ &=u(x+\Delta x)v(x+\Delta x)-u(x)v(x) \\\ &=u(x+\Delta x)v(x+\Delta x)-u(x)v(x+\Delta x)+u(x)v(x+\Delta x)-u(x)v(x) \quad (提示: 加一个[u(x)v(x+\Delta x)-u(x)v(x+\Delta x)]) \\\ &=\Delta u\cdot v(x+\Delta x)+u(x)\Delta v \end{aligned}\\) 
+   进而 \\(\lim\limits_{\Delta x\to0}\frac{\Delta\varphi}{\Delta x}=\lim\limits_{\Delta x\to0}\frac{\Delta u}{\Delta x}\cdot\lim\limits_{\Delta x\to0}v(x+\Delta x)+u(x)\cdot\lim\limits_{\Delta x\to0}\frac{\Delta v}{\Delta x}=u'(x)v(x)+u(x)v'(x) \quad (提示: \lim\limits_{\Delta x\to0}v(x+\Delta x)=v(x))\\)
+3. 令 \\(\varphi(x)=\dfrac{u(x)}{v(x)} \quad (v(x)\neq0)\\)
+   \\(\begin{aligned} \Delta\varphi=\varphi(x+\Delta x)-\varphi(x)&=\frac{u(x+\Delta x)}{v(x+\Delta x)}-\frac{u(x)}{v(x)} \\\ &=\frac{u(x+\Delta x)v(x)-v(x+\Delta x)u(x)}{v(x+\Delta x)v(x)} \\\ &=\frac{[u(x+\Delta x)v(x)-u(x)v(x)]-[u(x)v(x+\Delta x)-u(x)v(x)]}{v(x+\Delta x)v(x)} \quad (提示: 加一个[u(x)v(x)-u(x)v(x)]) \\\ &=\frac{\Delta u\cdot v(x)-u(x)\Delta v}{v(x+\Delta x)v(x)} \end{aligned}\\)
+   进而 \\(\lim\limits_{\Delta x\to0}\frac{\Delta\varphi}{\Delta x}=\frac{\lim\limits_{\Delta x\to0}\frac{\Delta u}{\Delta x}\cdot v(x)-u(x)\cdot\lim\limits_{\Delta x\to0}\frac{\Delta v}{\Delta x}}{v(x)\lim\limits_{\Delta x\to0}v(x+\Delta x)}=\frac{u'(x)v(x)-u(x)v'(x)}{v^2(x)} \quad (提示: \lim\limits_{\Delta x\to0}v(x+\Delta x)=v(x))\\)
+
+推论:
+1. \\((ku)'=ku'\\) (k是常数)
+2. \\((uvw)'=u'vw+uv'w+uvw'\\)
 
 ## 高阶导数
 
