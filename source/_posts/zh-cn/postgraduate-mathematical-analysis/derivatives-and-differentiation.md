@@ -4,6 +4,7 @@ category: postgraduate-advanced-mathematics
 lang: zh-cn
 date: 2020-05-22 16:54:47
 tags:
+toc: true
 ---
 
 ## 导数的概念
@@ -40,6 +41,10 @@ Notes:
    \\((\arctan x)'=\frac{1}{1+x^2}\\)
    \\((\text{arccot } x)'=-\frac{1}{1+x^2}\\) <!-- katex好像没有\arccot -->
 
+6. \\((\sin x)^{(n)}=\sin(x+\frac{nx}{2})\\)
+   \\((\cos x)^{(n)}=\cos(x+\frac{nx}{2})\\)
+   \\((\frac{1}{ax+b})^{(n)}=(-1)^n n! \frac{a^n}{(ax+b)^{n+1}}\\)
+
 推导:
 首先是套路 \\(f'(x)=\lim\limits_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\\)
 1. \\(=\lim\limits_{\Delta x\to0}\frac{c-c}{\Delta x}=0 \rArr \(c\)'=0\\)
@@ -55,6 +60,18 @@ Notes:
    这里只证明 \\(\arcsin x\\)
    \\(f(x): y=\arcsin x \quad \varphi(y): x=\sin y\\)
    \\(f'(x)=\frac{1}{\varphi'(y)} \rArr (\arcsin x)'=\dfrac{1}{\cos y}=\underbrace{\frac{1}{\sqrt{1-\sin^2 y}}}_{平方关系式}=\underbrace{\frac{1}{\sqrt{1-x^2}}}\_{带入 x=\sin y}\\)
+6. 使用[高阶导数-归纳法](#induction_method)
+   1. \\(f(x)=\sin x\\)
+      \\(f'(x)=\cos x=\sin(x+\frac{\pi}{2})\\)
+      \\(f''(x)=-\sin x=\sin(x+\frac{2\pi}{2})\\)
+      \\(f'''(x)=-\cos x=\sin\(x+\frac{3\pi}{2}\\)
+      \\(f^{(4)}(x)=\sin x=\sin\(x+\frac{4\pi}{2}\\)
+      \\(\therefore f^{(n)}(x)=\sin(x+\frac{nx}{2})\\)
+      同理 \\((\cos x)^{(n)}=\cos(x+\frac{nx}{2})\\)
+   2. \\(f(x)=(2x+1)^{-1}\\)
+      \\(f'(x)=(-1)(2x+1)^{-2}\times 2\\)
+      \\(f''(x)=(-1)(-2)(2x+1)^{-3}\times 2^2\\)
+      \\(\therefore f^{(n)}(x)=(-1)^n\times n! \times 2^n \times (2x+1)^{-(n+1)}\\)
 
 ## 求导法则
 
@@ -93,6 +110,8 @@ Notes:
 
 ## 复合函数求导法则
 
+(如何判断复合函数: 自变量项外面是否还有初等函数)
+
 \\(y=f(u\\) 可导, \\(u=\varphi(x)\\) 可导且 \\(\varphi'(x)\neq0\\) , 则 \\(y=f(\varphi(x)\\) 可导
 且 \\(\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}=f'(u)\cdot\varphi'(x)=f'[\varphi(x)]\varphi'(x)\\)
 
@@ -102,6 +121,24 @@ Notes:
 
 ## 高阶导数
 
+二阶及以上的导数称为高阶导数.
+对导数再求导一次就是二阶导数:
+\\([f'(x)]'=f''(x)=\dfrac{d(\frac{dy}{dx})}{dx}=\dfrac{d^2y}{dx^2}\\)
+同理三阶导数 \\(\dfrac{d^3y}{dx^3}\\) , n阶导数 \\(f^{(n)}=\dfrac{d^ny}{dx^n}\\)
+
+高阶导数求导方法:
+<span id="induction_method"></span>
+1. 归纳法
+2. 公式法
+   如:
+   \\((uv)'=u'v+uv' \rArr (uv)''=(u'v)'+(uv')'=u''v+2u'v'+uv''\\) <!-- 这边 '' 渲染错误 -->
+   莱布尼茨公式(请记住)
+   \\((uv)^{(n)}=C_n^0 u^{(n)}v + C_n^1 u^{(n-1)}v' + C_n^2 u^{(n-2)}v'' + \text{...} + C_n^n uv^{(n)}\\)
+
 ## 隐函数及由参数方程确定的函数求导
+
+### 隐函数求导
+
+### 参数方程确定的函数求导
 
 ## 微分
