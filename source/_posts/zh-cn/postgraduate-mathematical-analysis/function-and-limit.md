@@ -233,7 +233,7 @@ Notes:
 \\(Q(x)=b_mx^m + \text{...} + b_1x + b_0\\)
 \\(\lim\limits_{x\to \infty}\frac{P(x)}{Q(x)}=\begin{cases} \frac{a_n}{b_m} , &n=m \\\ \infty , &n>m \\\ 0 , &n<m \end{cases}\\)
 
-### 复合运算极限法则
+### 复合函数极限法则
 
 有 \\(u=\varphi(x) \enspace,\enspace \varphi(x)\neq a\\)
 若 \\(\lim\limits_{u\to a}f(u)=A \enspace,\enspace \lim\limits_{x\to x_0}\varphi(x)=a \enspace,\enspace 则 \lim\limits_{x\to x_0}f[g(x)]=A\\)
