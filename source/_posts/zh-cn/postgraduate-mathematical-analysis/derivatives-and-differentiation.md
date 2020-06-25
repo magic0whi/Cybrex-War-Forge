@@ -28,20 +28,21 @@ Notes:
 1. \\(f(x)=C ,\quad f(x)'=0\\)
 2. \\(f(x)=x^n ,\quad f'(x)=nx^{n-1}\\)
 3. \\(f(x)=a^x ,\quad f'(x)=a^x\ln a\\)
+4. \\(f(x)=\log_a x ,\quad f'(x)=\frac{1}{x\ln a}\\)
 
-4. \\((\sin x)'=\cos x\\)
+5. \\((\sin x)'=\cos x\\)
    \\((\cos x)'=-\sin x\\)
    \\((\tan x)'=\sec^2x\\)
    \\((\cot x)'=-\csc^2x\\)
    \\((\sec x)'=\sec x\tan x\\)
    \\((\csc x)'=-\csc x\cot x\\)
 
-5. \\((\arcsin x)'=\frac{1}{\sqrt{1-x^2}}\\)
+6. \\((\arcsin x)'=\frac{1}{\sqrt{1-x^2}}\\)
    \\((\arccos x)'=-\frac{1}{\sqrt{1-x^2}}\\)
    \\((\arctan x)'=\frac{1}{1+x^2}\\)
    \\((\text{arccot } x)'=-\frac{1}{1+x^2}\\) <!-- katex好像没有\arccot -->
 
-6. \\((\sin x)^{(n)}=\sin(x+\frac{nx}{2})\\)
+7. \\((\sin x)^{(n)}=\sin(x+\frac{nx}{2})\\)
    \\((\cos x)^{(n)}=\cos(x+\frac{nx}{2})\\)
    \\((\frac{1}{ax+b})^{(n)}=(-1)^n n! \frac{a^n}{(ax+b)^{n+1}}\\)
 
@@ -52,15 +53,17 @@ Notes:
    (你不会忘了二项式展开式了吧)
 3. \\(=\lim\limits_{\Delta x\to0}\frac{a^{x+\Delta x}-a^x}{\Delta x}=\lim\limits_{\Delta x\to0}\frac{a^x(a^{\Delta x}-1)}{\Delta x}=\underbrace{\lim\limits_{\Delta x\to0}\frac{a^x(e^{\Delta x\ln a}-1)}{\Delta x}}_{\normalsize a^{\Delta x}=e^{\ln a^{\Delta x}}=e^{\Delta x\ln a}}=\underbrace{\lim\limits\_{\Delta x\to0}\frac{a^x(\Delta x\ln a)}{\Delta x}=a^x\ln a}\_{\large\text{常用等价无穷小}x\text{\textasciitilde}(e^x-1)} \rArr (a^x)'=a^x\ln a\\) <!-- 这边katex和markdown兼容问题一些"_"前面加了"\" -->
    \*特别地 \\((e^x)'=e^x\\)
+4. 用微分代替极限表示以显得简洁
+   \\(f'(x)=\dfrac{dy}{dx}=\dfrac{\log_a(x+dx)-\log_a x}{dx}=\overbrace{\dfrac{\log_a (\frac{x+dx}{x})}{dx}}^{\log_a \frac{M}{N}=\log_a M - \log_a N}=\dfrac{\log_a(1+\frac{dx}{x})}{dx}=\overbrace{\dfrac{\frac{\ln(1+\frac{dx}{x})}{\ln a}}{dx}}^{\log_a N=\frac{\log_b N}{\log_b a}}=\overbrace{\dfrac{\frac{\frac{dx}{x}}{\ln a}}{dx}}^{等价无穷小}=\dfrac{1}{x\ln a}\\)
 
-4. \\(=\lim\limits_{\Delta x\to0}\frac{\sin(x+\Delta x)-\sin x}{\Delta x}=\underbrace{\lim\limits_{\Delta x\to0}\frac{\sin x\cos\Delta x+\cos x\sin\Delta x-\sin x}{\Delta x}}_{和差角公式}=\lim\limits\_{\Delta x\to0}\frac{\sin x(\cos\Delta x-1)}{\Delta x}+\cos x\lim\limits\_{\Delta x\to0}\underbrace{\frac{\sin\Delta x}{\Delta x}}\_{等价无穷小}=\cos x \\) <!-- 这边katex和markdown兼容问题一些"_"前面加了"\" -->
+5. \\(=\lim\limits_{\Delta x\to0}\frac{\sin(x+\Delta x)-\sin x}{\Delta x}=\underbrace{\lim\limits_{\Delta x\to0}\frac{\sin x\cos\Delta x+\cos x\sin\Delta x-\sin x}{\Delta x}}_{和差角公式}=\lim\limits\_{\Delta x\to0}\frac{\sin x(\cos\Delta x-1)}{\Delta x}+\cos x\lim\limits\_{\Delta x\to0}\underbrace{\frac{\sin\Delta x}{\Delta x}}\_{等价无穷小}=\cos x \\) <!-- 这边katex和markdown兼容问题一些"_"前面加了"\" -->
    \\((\cos x)'\\) 的推导也同理
    后面的都是将其化为\\(\sin x\\) 和 \\(\cos x\\)的形式然后利用求导的四则运算法则推导 (提示: \\(\sec x=\frac{1}{\cos x} \quad\csc x=\frac{1}{\sin x}\\))
-5. (参考求导法则-反函数求导法则)
+6. (参考求导法则-反函数求导法则)
    这里只证明 \\(\arcsin x\\)
    \\(f(x): y=\arcsin x \quad \varphi(y): x=\sin y\\)
    \\(f'(x)=\frac{1}{\varphi'(y)} \rArr (\arcsin x)'=\dfrac{1}{\cos y}=\underbrace{\frac{1}{\sqrt{1-\sin^2 y}}}_{平方关系式}=\underbrace{\frac{1}{\sqrt{1-x^2}}}\_{带入 x=\sin y}\\)
-6. 使用[高阶导数-归纳法](#induction_method)
+7. 推导使用[高阶导数-归纳法](#induction_method)
    1. \\(f(x)=\sin x\\)
       \\(f'(x)=\cos x=\sin(x+\frac{\pi}{2})\\)
       \\(f''(x)=-\sin x=\sin(x+\frac{2\pi}{2})\\)
@@ -139,6 +142,66 @@ Notes:
 
 ### 隐函数求导
 
+显函数: \\(y=f(x)\\)
+隐函数: \\(F(x,y)=0 \enspace\underrightarrow{显式化}\enspace y=f(x)\\)
+方法: \\(F(x,y)=0\\) 确定y为x的函数, 两边对x求导. 求导时, \\(y'\\) 可看成 \\(f(x)\\) , 最终化为 \\(\frac{dy}{dx}\\)
+
 ### 参数方程确定的函数求导
 
+设 \\(\begin{cases} x=\varphi(t) \\\ y=\psi(t) \end{cases}\\) , 若其中 \\(\varphi(t) , \psi(t)\\) 可导,
+则 \\(\dfrac{\psi'(t)}{\varphi'(t)}=\dfrac{\frac{dy}{dt}}{\frac{dx}{dt}}=\dfrac{dy}{dx}\\) ,且 \\(\varphi(t)\neq0\\)
+
 ## 微分
+
+### 微分的定义
+
+1. 什么是微分
+   设 \\(y=f(x) \quad(x\in D)\\) ,
+   \\(\Delta y=f(x_0+\Delta x)-f(x_0)\quad(x_0\in D)\\) , \\(x_0+\Delta x\in D\\)
+   若\\(\Delta y\\) 能最终化为 \\(\Delta y=A\Delta x+\circ(\Delta x)\\) 的形式
+   称 \\(y=f(x)\\) 在 \\(x=x_0\\) 可微, \\(dy|_{x=x_0}=A\Delta x=Adx\\) 为该函数在 \\(x=x_0\\) 的微分.
+2. 结合导数定义, 则 \\(A=f'(x)\\)可得:
+   * \\(dy=df(x)=f'(x)dx\\)
+   * \\(\Delta x=dx\\)
+   
+   可以发现: 可导 \\(\hArr\\) 可微
+   (一般情况下都是先有导数后求微分, 微分就是在知道导数的情况下求 \\(\Delta y\\) 的近似值)
+3. 近似计算:
+   要求 \\(f(x)\\) 的值, 可以找距离\\(x\\) 较近的点 \\(x_0\\) , 且已知 \\(f(x_0)\\) 的值
+   可用\\(f(x)=f(x_0+\Delta x)\approx f(x_0)+f'(x_0)\Delta x\\) 求出其近似值
+   
+   推导:
+   \\(\begin{cases} f(x)=f(x_0+\Delta x)=f(x_0) + \Delta y \quad&(由导数定义得到) \\\ \Delta y\approx (dy=f'(x_0)\Delta x) &(由微分定义得到) \end{cases}\\)
+
+   此外, 利用 0 的特殊性还能发现一些东西...
+   \\(x\to0\\) 时, \\(f(x)=f(0+x)\approx f(0)+f'(0)x\\)
+   1. \\(\sqrt[n]{1+x}\approx 1+\frac{x}{n}\\)
+   2. \\(e^x\approx 1+x\\)
+   3. \\(\ln(1+x)\approx x\\)
+
+### 微分工具
+
+1. 公式
+   1. \\(d\(c\)=c'dx=0\\)
+   2. \\(d(x^a)=ax^{a-1}dx\\)
+   3. \\(d(a^x)=a^x\ln a dx\\)
+   4. \\(d(\log_a x)=\frac{1}{x\ln a}dx\\)
+   5. \\(d(\sin x)=\cos x dx\\)
+      \\(d(\cos x)=-\sin x dx\\)
+      \\(d(\tan x)=\sec^2 x dx\\)
+      \\(d(\cot x)=-csc^2 x dx\\)
+      \\(d(\sec x)=\sec x\tan x dx\\)
+      \\(d(\csc x)=-\csc x\cot x dx\\)
+   6. \\(d(\arcsin x)=\frac{1}{\sqrt{1-x^2}}dx\\)
+      \\(d(\arccos x)=-\frac{1}{\sqrt{1-x^2}}dx\\)
+      \\(d(\arctan x)=\frac{1}{1+x^2}dx\\)
+      \\(d(\text{arccot } x)=-\frac{1}{1+x^2}dx\\)
+2. 四则
+   \\(u, v\\) 为函数
+   1. 加减: \\(d(u\pm v)=du\pm dv\\)
+   2. 乘: \\(d(uv)=du\cdot v + u\cdot dv\\)
+   3. 除: \\(d(\dfrac{u}{v})=\dfrac{du\cdot v-u\cdot dv}{v^2}\\)
+3. 复合
+   设 \\(y=f(u)\\) , \\(u=\varphi(x)\\)
+   则 \\(dy=f'[\varphi(x)]\varphi'(x)dx=f'[\varphi(x)]d\varphi(x)=f'(u)du\\)
+   (证明: 由 \\(\dfrac{dy}{dx}=f'[\varphi(x)]\cdot \varphi'(x)\\) 变换)
