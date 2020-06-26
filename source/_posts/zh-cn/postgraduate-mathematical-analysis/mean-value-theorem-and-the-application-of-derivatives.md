@@ -65,13 +65,51 @@ TODO: 补充图片
 \\(原式=\lim\limits_{x\to0}\frac{x-x}{x^3}=0\\) . 不行(精确度不够)
 同样使用等价无限小, 却得到了不同的结果.
 说明对于存在 无穷小比无穷小(\\(\frac{0}{0}\\)) 的极限 , 用**等价无穷小解极限有局限性**
+(Q:具体为什么局限? A: 分子分母经过等价无穷小转化后不同阶, 导数精确度不够)
 
 洛必达法则目标: 解 \\(\frac{0}{0} , \frac{\infty}{\infty}\\) 类型极限新方法
 
-1. 解 \\(\frac{0}{0}\\) 型极限
-2. 若 xxxxxxxxxxxxxxxxxxxx
+洛必达法则:
+若:
+1. f(x), g(x) 在 \\(x=a\\) 的去心领域内可导且 \\(g'(x)\neq0\\)
+2. \\(\frac{0}{0}型: \lim\limits_{x\to a}f(x)=0 , \lim\limits_{x\to a}g(x)=0 ,\quad \frac{\infty}{\infty}型: \lim\limits_{x\to a}f(x)=\infty , \lim\limits_{x\to a}g(x)=\infty\\)
+3. \\(\lim\limits_{x\to a}\frac{f'(x)}{g'(x)}=A\\)
+
+则 \\(\lim\limits_{x\to a}\frac{f(x)}{g(x)}=A\\)
+
+证明: (令 \\(f(a)=0 , g(a)=0\\))
+则 \\(\frac{f'(\xi)}{g'(\xi)}=\frac{f(x)-f(a)}{g(x)-g(a)}=\frac{f(x)}{g(x)} \quad (\xi 介于 a 与 x 之间, 柯西中值定理)\\)
+\\(\therefore \lim\limits_{x\to a}\frac{f(x)}{g(x)}=\lim\limits_{x\to a}\frac{f'(\xi)}{g'(\xi)}=\lim\limits_{\xi\to a}\frac{f'(\xi)}{g'(\xi)}=A\\) 
+(\\(x\\)趋向于\\(a\\) , \\(\xi\\) 介于 \\(a\\) 与 \\(x\\) 之间 \\(\rArr \xi\\) 也趋向于 \\(a\\) , 且 \\(\xi\approx x\\))
+
+Notes:
+1. 若 \\(\lim\limits_{x\to a}\frac{f'(x)}{g'(x)}\\) 不存在, 只能表明洛必达法则不能使用, 不代表极限 \\(\lim\limits_{x\to a}\frac{f(x)}{g(x)}\\) 一定不存在
+2. \\(\lim\limits_{x\to +\infty}\frac{\ln x}{x^a}=0 \enspace(a>0)\\)
+   \\(\lim\limits_{x\to +\infty}\frac{x^a}{b^x}=0 \enspace(a>0 , b>1)\\)
 
 ## 泰勒公式
+
+设 \\(f(x)\\) 在 \\(x=x_0\\) 邻域内 \\(n+1\\) 阶可导.
+则 \\(f(x)=P_n(x)+R_n(x)\\)
+\\(\begin{aligned} 其中:\enspace &P_n(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\text{...}+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n \\\ &R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1} \quad (\xi 介于 x_0 与 x 之间)\end{aligned}\\)
+如果 \\(x_0=0\\) , 这个式子被称为麦克劳林公式
+
+证明:
+1. \\(P_n(x)\\) 部分
+   设 \\(f(x)=a_0+a_1(x-x_0)+a_2(x-x_0)^2+a_3(x-x_0)^3+\text{...}+a_n(x-x_0)^n\\)
+   要使这个式子派用场, 得找到 \\(a_0, a_1, \text{...}\\) 这些系数的值, 怎么做呢?
+   要得到 \\(a_0\\) , 我们可以使 \\(x=x_0\\), 这样其他项就消除了.
+   那其他的 \\(a_1, a_2, a_3\\) 呢?
+   我们可以不断对该式求它的一阶, 二阶, 三阶, ... 导数:
+   \\(\begin{aligned} &f'(x)=a_1+2a_2(x-x_0)+3a_3(x-x_0)^2+\text{...}+na_n(x-x_0)^{n-1} \\\ &f''(x)=2a_2+3\cdot2a_3(x-x_0)^2+\text{...}+n\cdot (n-1)(x-x_0)^{n-2} \\\ &\text{...} \end{aligned}\\)
+   发现规律了吗, 将 \\(x=x_0\\) 带入, 可以轻松得到对应项的系数值: \\(a_1=\frac{f'(x_0)}{1} , a_2=\frac{f''(x_0)}{1\cdot2}, a_3=\frac{f'''(x_0)}{1\cdot2\cdot3} \rArr a_n=\frac{f^{(n)}(x_0)}{n!}\\)
+   然后式子就能写成 \\(f(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\text{...}+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\\)
+2. \\(R_n(x)\\) 部分
+   令 \\(R_n(x)=f(x)-P_n(x)\\)
+   \\(R_n(x)=f(x)-P_n(x)\\)
+   \\(R_n(x_0)=0 , R_n'(x_0)=0,\text{...},R_n^{(n)}(x_0)=0\\)
+   \\(\\)
+   \\(\begin{aligned}\dfrac{R_n(x)}{(x-x_0)^{n+1}}=\dfrac{R_n(x)-R_n(x_0)}{(x-x_0)^{n+1}-(x_0-x_0)^{n+1}}&=\dfrac{R_n'(\xi_1)}{(n+1)(\xi_1+x_0)^n} \quad(\xi_1 在 x 与 x_0 内, 使用柯西中值定理) \\\ &=\dfrac{R_n'(\xi_1)-R_n'(x_0)}{(n+1)(\xi_1-x_0)^n-(n+1)(x_0-x_0)^n} \\\ &=\dfrac{R_n''(\xi_2)}{(n+1)\cdot n(\xi_2-x_0)^{n-1}} \quad(\xi_2 在 x_0 与 \xi_1 内, 再次使用柯西中值定理) \\\ &=\text{...} \\\ &=\frac{R_n^{(n)}(\xi_n)}{(n+1)\cdot n(\xi_2-x_0)^{n-1}\cdot\text{...}\cdot2(\xi_n-x_0)^1} \\\ &=\frac{R_n^{(n)}(\xi_n)-R_n^{(n)}(x_0)}{(n+1)!(\xi_n-x_0)-(n+1)!(x_0-x_0)} \\\ &=\frac{R_n^{(n+1)}(\xi)}{(n+1)!} \quad(\xi 在 x_0 与 \xi_n 内) \\\  &=\frac{f^{(n+1)}(\xi)}{(n+1)!} \\\ &\rArr R_n(x)=\frac{f^{(n+1)(\xi)}}{(n+1)!}(x-x_0)^{n+1} \end{aligned}\\)
 
 ## 函数单调性与曲线凹凸性
 
