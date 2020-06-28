@@ -65,7 +65,7 @@ toc: true
 ### 换元积分法
 
 1. 第一类换元积分法
-   \\(f(u)\\) 存在原函数, \\(\varphi(x)\\) 可导, \\(F(u)\\) 为 \\(f(u)\\) 为 \\(f(u)\\) 的原函数, 则
+   \\(f(u)\\) 存在原函数, \\(\varphi(x)\\) 可导, \\(F(u)\\) 为 \\(f(u)\\) 的原函数, 则
    \\(\int f[\varphi(x)]\underbrace{\varphi'(x)dx}_{f'(x)dx=df(x)}=\int\underbrace{f[\varphi(x)]d\varphi(x)}\_{设 \varphi(x)=t}=\int f(t)dt=F(t)+c=F[\varphi(x)]+c\\)
 2. 第二类换元积分法
    \\(x=\psi(t)\\) 可导且 \\(\psi'(t)\neq0\\)
