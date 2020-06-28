@@ -88,4 +88,69 @@ Notes:
 
 ## 定积分的换元积分法与分部积分法
 
+### 换元积分法
+
+\\(f(x)\in c[a, b] , x=\varphi(t)\\) 满足:
+1. \\(\varphi(t)\\) 为单调函数且 \\(\varphi(\alpha)=a , \varphi(\beta)=b\\)
+2. \\(x=\varphi(t)\\) 连续可导
+
+则 \\(\int_a^b f(x)dx=\int_\alpha^\beta f[\varphi(t)]\varphi'(t)dt\\)
+
+证明:
+令 F(x) 为 f(x) 的原函数
+\\(\int_a^b f(x)dx=F(x)|\_a^b=F(b)-F(a) \quad\\) 
+\\(\because (F[\varphi(t)])'=F'[\varphi(t)]\cdot\varphi'(t)=f[\varphi(t)]\cdot\varphi'(t) , \\)
+\\(\therefore \int_\alpha^\beta f[\varphi(t)]\varphi'(t)dt=F[\varphi(t)]|_\alpha^\beta=F[\varphi(\beta)]-F[\varphi(\alpha)]=F(b)-F(a)=\int\_a^b f(x)dx\\) (牛顿莱布尼茨公式)
+
+### 分部积分法
+
+\\(\int_a^b udv=uv|_a^b-\int_a^b vdu\\)
+
 ## 反常积分
+
+正常积分标准:
+1. 区间有限
+2. f(x) 在区间上连续或第一类间断点(即有限个间断点)
+
+### 积分区间无限
+
+1. \\(f(x)\in c[a, +\infty]\\)
+   1. \\(\lim\limits_{b\to+\infty}[F(b)-F(a)]\\) 与 \\(\int_a^{+\infty} f(x)dx\\) 相同
+   2. 若 \\(\lim\limits_{b\to+\infty}[F(b)-F(a)]\\) 存在, 称 \\(\int_a^{+\infty} f(x)dx\\) 收敛
+      有 \\(\lim\limits_{b\to+\infty}[F(b)-F(a)]=\int_a^{+\infty} f(x)dx=A\\)
+   3. 若 \\(\lim\limits_{b\to+\infty}[F(b)-F(a)]\\) 不存在, 沉 \\(\int_a^{+\infty} f(x)dx\\) 发散
+2. \\(f(x)\in c(-\infty, a]\\)
+   1. \\(\lim\limits_{b\to-\infty}[F(a)-F(b)]\\) 与 \\(\int_{-\infty}^a f(x)dx\\) 相同
+   2. \\(\lim\limits_{b\to-\infty}[F(a)-F(b)]\\) 存在, 称 \\(\int_{-\infty}^a f(x)dx\\) 收敛
+      有 \\(\lim\limits_{b\to-\infty}[F(a)-F(b)]=\int_{-\infty}^a f(x)dx=A\\)
+   3. \\(\lim\limits_{b\to-\infty}[F(a)-F(b)]\\) 不存在, 称 \\(\int_{-\infty}^a f(x)dx\\) 发散
+3. \\(f(x)\in c(-\infty, +\infty\\)
+   \\(若 \int_{-\infty}^{+\infty}f(x)dx 收敛 \hArr \int_{-\infty}^{a}f(x)dx 与 \int_{a}^{+\infty}f(x)dx 收敛\\)
+   且 \\(\int_{-\infty}^{+\infty}f(x)dx=\int_{-\infty}^a f(x)dx+\int_a^{+\infty}f(x)dx\\)
+
+Notes:
+\\(\Gamma\\) 函数
+1. 定义:
+   形如 \\(\int_0^{+\infty}x^{\alpha-1}\cdot e^{-x}dx=\Gamma(\alpha)\\)
+   如 \\(\int_0^{+\infty}x^5e^{-x}dx=\Gamma(6)\\)
+   又如 \\(\int_0^{+\infty}x^\frac{1}{2}e^{-x}dx=\Gamma(\frac{3}{2})\\)
+2. 特性:
+   1. \\(\Gamma(\alpha+1)=\alpha\Gamma(\alpha)\\)
+   2. \\(\Gamma(n+1)=n! \quad(n\in Z\\)
+   3. \\(\Gamma(\frac{1}{2})=\sqrt{\pi}\\)
+
+### 无界函数反常积分
+
+1. 左无界: \\(f(x)\in c(a, b]\\) 且 \\(f(a+0)=\infty \quad\\) (a 被称作瑕点)
+   1. \\(\forall\varepsilon>0 ,\enspace \lim\limits_{\varepsilon\to0^+}[F(b)-F(a+\varepsilon)]=\int_{a+\varepsilon}^b f(x)dx\\) 相同
+   2. 若 \\(\lim\limits_{\epsilon\to0^+}[F(b)-F(a+\varepsilon)]\\) 存在, 称 \\(\int_a^b f(x)dx\\) 收敛
+      若极限是有限实数, 则 \\(\lim\limits_{\varepsilon\to0^+}[F(b)-F(a+\varepsilon)]=\int_a^b f(x)dx=A\\)
+   3. 若 \\(\lim\limits_{\varepsilon\to0^+}[F(b)-F(a+\varepsilon)]\\) 不存在, 称 \\(\int_a^b f(x)dx\\) 发散
+2. 右无界: \\(f(x)\in c[a, b)\\) 且 \\(f(b-0)=\infty \quad\\)
+   1. \\(\forall\varepsilon>0 ,\enspace F(b-\varepsilon)-F(a)=\int_a^{b-\varepsilon} f(x)dx\\\)
+   2. 若 \\(\lim\limits_{\epsilon\to0^+}[F(b-\varepsilon)-F(a)]\\) 存在, 称 \\(\int_a^b f(x)dx\\) 收敛
+      若极限是有限实数, 则 \\(\lim\limits_{\varepsilon\to0^+}[F(b-\varepsilon)-F(a)]=\int_a^b f(x)dx=A\\)
+   3. 若 \\(\lim\limits_{\epsilon\to0^+}[F(b-\varepsilon)-F(a)]\\) 不存在, 称 \\(\int_a^b f(x)dx\\) 发散
+3. 中无界: \\(f(x)\in c[a, c)\cup(c, b]\\) 且 \\(\lim\limits_{x\to c}f(x)=\infty\\)
+   \\(若 \int_a^b f(x)dx 收敛 \hArr \int_a^c f(x)dx 与 \int_c^b f(x)dx 收敛\\)
+   且 \\(\int_a^b f(x)dx=\int_a^c f(x)dx+\int_c^b f(x)dx\\)
