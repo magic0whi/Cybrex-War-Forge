@@ -106,6 +106,10 @@ Notes:
 
 \\(\int_a^b udv=uv|_a^b-\int_a^b vdu\\)
 
+Notes:
+\\(I_n=\int_0^{\frac{\pi}{2}}\sin^n xdx=\int_0^{\frac{\pi}{2}}\cos^n xdx=\frac{n-1}{n}I_{n-2}\\)
+\\(I_0=\frac{\pi}{2} , I_1=1\\)
+
 ## 反常积分
 
 正常积分标准:
