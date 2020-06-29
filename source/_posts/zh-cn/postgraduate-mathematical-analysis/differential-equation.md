@@ -22,6 +22,13 @@ tags:
 
 ## 可分离变量的微分方程
 
+1. 定义:
+   \\(\frac{dy}{dx}=f(x, y)\\) (\*)
+   若 \\(f(x, y)=\varphi_1(x)\varphi_2(y)\\) , 称 (\*) 为可分离变量的微分方程
+2. 解法
+   \\(\frac{dy}{dx}=f(x, y) \rArr \frac{dy}{dx}=\varphi_1(x)\varphi_2(y) \rArr \frac{dy}{\varphi_2(y)}=\varphi_1(x)dx\\)
+   \\(\int\frac{dy}{\varphi_2(y)}=\int\varphi_1(x)dx+c\\) (\\(\int f'(x)dx=f(x)+c\\))
+
 ## 齐次微分方程
 
 ## 一阶线性微分方程

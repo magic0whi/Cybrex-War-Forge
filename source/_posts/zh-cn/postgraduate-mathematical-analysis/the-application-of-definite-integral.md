@@ -30,7 +30,8 @@ tags:
    1. 取 \\([x, x+dx]\subset[a, b]\\)
    2. \\(dA=[f(x)-g(x)]dx\\)
    3. \\(A=\int_a^b[f(x)-g(x)]dx\\)
-3. 曲线围成的图形 TODO: 补充图片\\(L=\Gamma(\theta) \quad(\alpha\leqslant\theta\leqslant\beta)\\)
+3. 曲边扇形面积 \\(L=\Gamma(\theta) \quad(\alpha\leqslant\theta\leqslant\beta)\\) TODO: 补充图片
+   (这里的 \\(\Gamma\\) 不是指 \\(\Gamma\\) 函数)
    1. 取 \\([\theta, \theta+d\theta]\subset[\alpha, \beta]\\)
    2. \\(dA=\frac{1}{2}\Gamma^2(\theta)d\theta\\)
    3. \\(A=\int_\alpha^\beta dA=\int_\alpha^\beta \frac{1}{2}\Gamma^2(\theta)d\theta\\)
@@ -38,11 +39,11 @@ tags:
 ### 体积
 
 1. 旋转体的体积 TODO: 补充图片
-   1. \\(V_x\\) :
+   1. \\(V_x\\) : (旋转x轴)
       1. 取 \\([x, x+dx]\subset[a, b]\\)
-      2. \\(dV_x=\pi y^2dx=\pi f^2(x)dx\\)
+      2. \\(dV_x=\pi f^2(x)dx\\)
       3. \\(V_x=\pi\int_a^b f^2(x)dx\\)
-   2. \\(V_y\\) :
+   2. \\(V_y\\) : (旋转y轴)
       1. 取 \\([x, x+dx]\subset[a, b]\\)
       2. \\(dV_y=2\pi|x|\cdot|f(x)|\cdot dx\\)
       3. \\(V_y=2\pi\int_a^b |x|\cdot|f(x)|dx\\)

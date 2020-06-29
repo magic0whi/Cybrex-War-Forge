@@ -128,19 +128,16 @@ Notes:
    2. \\(\lim\limits_{b\to-\infty}[F(a)-F(b)]\\) 存在, 称 \\(\int_{-\infty}^a f(x)dx\\) 收敛
       有 \\(\lim\limits_{b\to-\infty}[F(a)-F(b)]=\int_{-\infty}^a f(x)dx=A\\)
    3. \\(\lim\limits_{b\to-\infty}[F(a)-F(b)]\\) 不存在, 称 \\(\int_{-\infty}^a f(x)dx\\) 发散
-3. \\(f(x)\in c(-\infty, +\infty\\)
+3. \\(f(x)\in c(-\infty, +\infty)\\)
    \\(若 \int_{-\infty}^{+\infty}f(x)dx 收敛 \hArr \int_{-\infty}^{a}f(x)dx 与 \int_{a}^{+\infty}f(x)dx 收敛\\)
    且 \\(\int_{-\infty}^{+\infty}f(x)dx=\int_{-\infty}^a f(x)dx+\int_a^{+\infty}f(x)dx\\)
 
 Notes:
 \\(\Gamma\\) 函数
-1. 定义:
-   形如 \\(\int_0^{+\infty}x^{\alpha-1}\cdot e^{-x}dx=\Gamma(\alpha)\\)
-   如 \\(\int_0^{+\infty}x^5e^{-x}dx=\Gamma(6)\\)
-   又如 \\(\int_0^{+\infty}x^\frac{1}{2}e^{-x}dx=\Gamma(\frac{3}{2})\\)
+1. 定义: \\(\int_0^{+\infty}x^{\alpha-1}\cdot e^{-x}dx=\Gamma(\alpha)\\)
 2. 特性:
    1. \\(\Gamma(\alpha+1)=\alpha\Gamma(\alpha)\\)
-   2. \\(\Gamma(n+1)=n! \quad(n\in Z\\)
+   2. \\(\Gamma(n+1)=n! \quad(n\in Z)\\)
    3. \\(\Gamma(\frac{1}{2})=\sqrt{\pi}\\)
 
 ### 无界函数反常积分
