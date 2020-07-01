@@ -22,14 +22,22 @@ tags:
 
 ## 可分离变量的微分方程
 
-1. 定义:
+1. 定义
    \\(\frac{dy}{dx}=f(x, y)\\) (\*)
    若 \\(f(x, y)=\varphi_1(x)\varphi_2(y)\\) , 称 (\*) 为可分离变量的微分方程
 2. 解法
    \\(\frac{dy}{dx}=f(x, y) \rArr \frac{dy}{dx}=\varphi_1(x)\varphi_2(y) \rArr \frac{dy}{\varphi_2(y)}=\varphi_1(x)dx\\)
-   \\(\int\frac{dy}{\varphi_2(y)}=\int\varphi_1(x)dx+c\\) (\\(\int f'(x)dx=f(x)+c\\))
+   \\(\int\frac{dy}{\varphi_2(y)}=\int\varphi_1(x)dx+c\\) (不定积分中我们不要求+c, 但在微分方程中要加) 
 
 ## 齐次微分方程
+
+1. 定义
+   设 \\(\frac{dy}{dx}=f(x, y)\\) (\*)
+   若 \\(f(x, y)=\varphi(\frac{y}{x})\\) , 称 (\*) 为齐次微分方程
+2. 解法
+   \\(\frac{dy}{dx}=f(x, y) \rArr \frac{dy}{dx}=\varphi(\frac{y}{x})\\)
+   令 \\(u=\frac{y}{x}\\) , 则 \\(y=ux \rArr y'=u'x+ux' \rArr \frac{dy}{dx}=x\frac{du}{dx}+u\\) 代入上面的方程 (这里把u看成是x的函数)
+   \\(u+x\frac{du}{dx}=\varphi(u) \rArr x\frac{du}{dx}=\varphi(u)-u \rArr \int\frac{dx}{x}=\frac{du}{\varphi(u)-u}+c\\)
 
 ## 一阶线性微分方程
 
