@@ -4,6 +4,7 @@ category: postgraduate-advanced-mathematics
 lang: zh-cn
 date: 2020-05-22 17:00:04
 tags:
+toc: true
 ---
 
 微分方程求解就求原函数 
@@ -100,16 +101,16 @@ tags:
 ### 结构
 
 设:
-\\(y''+a(x)y'+b(x)y=0\\) (1)
-\\(y''+a(x)y'+b(x)y=c(x)\\) (2)
-\\(y''+a(x)y'+b(x)y=f(x)\\) (3)
+(1) \\(y''+a(x)y'+b(x)y=0\\)
+(2) \\(y''+a(x)y'+b(x)y=c(x)\\)
+(3) \\(y''+a(x)y'+b(x)y=f(x)\\)
 若 \\(f(x)=f_1(x)+f_2(x)\\) 则
-\\(y''+a(x)y'+b(x)y=f_1(x)\\) (3)'
-\\(y''+a(x)y'+b(x)y=f_2(x)\\) (3)''
+(3)'\\(\enspace y''+a(x)y'+b(x)y=f_1(x)\\)
+(3)''\\(\enspace y''+a(x)y'+b(x)y=f_2(x)\\)
 
 1. 若 \\(\varphi_1(x) , \varphi_2(x)\\) 为 (1) 的解, 则 \\(y=c_1\varphi_1(x)+c_2\varphi_2(x)\\) (线性组合)仍为 (1) 的解
 2. 若 \\(\varphi_1(x) , \varphi_2(x)\\) 分别为 (1), (2) 的解, 则 \\(y=\varphi_1(x)+\varphi_2(x)\\) 为 (2) 的解
-3. \\(\varphi_1(x) , \varphi_2(x)\\) 为 (2) 的解, 则 \\(y=\varphi_2(x)-\varphi_1(x)\\) 为 (1) 的解
+3. 若 \\(\varphi_1(x) , \varphi_2(x)\\) 为 (2) 的解, 则 \\(y=\varphi_2(x)-\varphi_1(x)\\) 为 (1) 的解
 4. 若 \\(\varphi_1(x) , \varphi_2(x)\\) 为 (3)', (3)'' 的解, 则 \\(y=\varphi_1(x)+\varphi_2(x)\\) 为 (3) 的解
 5. 1. 设 \\(\varphi_1(x) , \varphi_2(x)\\) 为 (1) 的两个线性无关解
       则 (1) 通解为 \\(y=c_1\varphi_1(x)+c_2\varphi_2(x)\\)
@@ -117,7 +118,23 @@ tags:
       则 (2) 的通解为
       \\(y=c_1\varphi_1(x)+c_2\varphi_2(x)+\varphi_0(x)\\)
 
-证明: TODO: 补充证明
+证明: 
+1. \\(\begin{cases} \varphi_1''+a(x)\varphi_1'+b(x)\varphi_1=0 \\\ \varphi_2''+a(x)\varphi_2'+b(x)\varphi_2=0 \end{cases}\\)
+   将 \\(y=c_1\varphi_1(x)+c_2\varphi_2(x)\\) 代入 (1) 得
+   \\(\begin{aligned} &(c_1\varphi_1+c_2\varphi_2)''+a(x)(c_1\varphi_1+c_2\varphi_2)'+b(x)(c_1\varphi_1+c_2\varphi_2) \\\ =&c_1(\varphi_1''+a(x)\varphi_1'+b(x)\varphi_1)+c_2(\varphi_2''+a(x)\varphi_2'+b(x)\varphi_2) \\\ =&c_1\cdot0+c_2\cdot0=0 \end{aligned}\\)
+   \\(\therefore y=c_1\varphi_1(x)+c_2\varphi_2(x)\\) 为 (1) 的解
+2. \\(\begin{cases} \varphi_1''+a(x)\varphi_1'+b(x)\varphi_1=0 \\\ \varphi_2''+a(x)\varphi_2'+b(x)\varphi_2=c(x) \end{cases}\\)
+   将 \\(y=\varphi_1(x)+\varphi_2(x)\\) 代入 (2) 得
+   \\(\begin{aligned} (\varphi_1+\varphi_2)''+a(x)(\varphi_1+\varphi_2)'+b(x)(\varphi_1+\varphi_2)&=c(x) \\\ \rArr (\varphi_1''+a(x)\varphi_1'+b(x)\varphi_1)+(\varphi_2''+a(x)\varphi_2'+b(x)\varphi_2)&=c(x) \\\ 0+c(x)&=c(x)\end{aligned}\\)
+   \\(\therefore y=\varphi_1(x)+\varphi_2(x)\\) 为 (2) 的解
+3. \\(\begin{cases} \varphi_1''+a(x)\varphi_1'+b(x)\varphi_1=c(x) \\\ \varphi_2''+a(x)\varphi_2'+b(x)\varphi_2=c(x) \end{cases}\\)
+   将 \\(y=\varphi_2(x)-\varphi_1(x)\\) 代入 (2) 得
+   \\(\begin{aligned} &(\varphi_2-\varphi_1)''+a(x)(\varphi_2-\varphi_1)'+b(x)(\varphi_2-\varphi_1) \\\ =&(\varphi_2''+a(x)\varphi_2'+b(x)\varphi_2)-(\varphi_1''+a(x)\varphi_1'+b(x)\varphi_1) \\\ =&c(x)-c(x)=0 \end{aligned}\\)
+   \\(\therefore y=\varphi_2(x)-\varphi_1(x)\\) 为 (1) 的解
+4. \\(\begin{cases} \varphi_1''+a(x)\varphi_1'+b(x)\varphi_1(x)=f_1(x) \\\ \varphi_2''+a(x)\varphi_2'+b(x)\varphi_2(x)=f_2(x) \end{cases}\\)
+   将 \\(y=\varphi_1(x)+\varphi_2(x)\\) 代入 (3) 得
+   \\(\begin{aligned} (\varphi_1+\varphi_2)''+a(x)(\varphi_1+\varphi_2)'+b(x)(\varphi_1+\varphi_2)&=f(x) \\\ \rArr (\varphi_1''+a(x)\varphi_1'+b(x)\varphi_1)+(\varphi_1''+a(x)\varphi_2'+b(x)\varphi_2)&=f(x) \\\ \rArr f_1(x)+f_2(x)&=f(x) \end{aligned}\\)
+   \\(\therefore y=\varphi_1(x)+\varphi_2(x)\\) 为 (3) 的解
 
 ## 常系数齐次线性微分方程
 
