@@ -4,6 +4,7 @@ category: postgraduate-advanced-mathematics
 lang: zh-cn
 date: 2020-05-22 17:01:57
 tags:
+toc: true
 ---
 
 ## 向量及其线性运算
@@ -116,6 +117,43 @@ tags:
 ## 向量应用
 
 ### 平面及其方程
+
+#### 空间曲面
+
+(概念, 了解一下就好)
+设 \\(F(x, y, z)=0\\) 为一个三元方程, \\(\Sigma\\) 为曲面
+若 \\(F(x, y, z)=0\\) 的任意解 \\((x_0, y_0, z_0)\\) 对应的点 \\(M_0(x_0, y_0, z_0)\\) 在曲面上
+或者反之, 曲面上任一点 \\(M(x_0, y_0, z_0)\\) 有 \\(F(x_0, y_0, z_0)=0\\)
+称 \\(F(x, y, z)=0\\) 为曲面 \\(\Sigma\\) 方程, \\(\Sigma\\) 为方程 \\(F(x, y, z)=0\\) 对应的曲面
+记 \\(\Sigma: F(x, y, z)=0\\)
+
+#### 曲面的特殊情形 -- 平面
+
+1. 平面的点法式方程 TODO: 补充图片
+   设 \\(M_0(x_0, y_0, z_0)\in\pi \enspace,\enspace 法向量 \vec{n}=\\{A, B, C\\}\perp\pi\\)
+   \\(\forall M(x, y, z)\\) , 有 \\(M(x, y, z)\in\pi \rArr \vec{n}\perp\overrightarrow{M_0M} \rArr \vec{n}\cdot\overrightarrow{M_0M}=0\\)
+   而 \\(\overrightarrow{M_0M}=\\{x-x_0, y-y_0, z-z_0\\}\\)
+   \\(\therefore \pi: A(x-x_0)+B(y-y_0)+C(z-z_0)=0\\)
+2. 截距式方程 TODO: 补充图片
+   \\(\overrightarrow{AB}=\\{-a, b, 0\\} \enspace,\enspace \overrightarrow{AC}=\\{-a, 0, c\\}\\)
+   法向量 \\(\vec{n}=\overrightarrow{AB}\times\overrightarrow{AC}=\\{bc, ac, ab\\}\\)
+   xxxxxxxxxxxxxxxxxxxxxxxxx
+3. 一般式方程
+
+#### 两个平面夹角
+
+TODO: 补充图片
+平面 \\(\pi_1: A_1x+B_1y+C_1z+D_1=0\\)
+平面 \\(\pi_2: A_2X+B_2y+C_2z+D_2=0\\)
+\\(\vec{n_1}=\\{A_1, B_1, C_1\\}\\)
+\\(\vec{n_2}=\\{A_2, B_2, C_2\\}\\)
+
+1. \\((\widehat{\vec{n_1}, \vec{n_2}})\in[0, \frac{\pi}{2}]\\) , 则 \\(\theta=(\widehat{\vec{n_1}, \vec{n_2}})\\)
+   \\(\cos\theta=\cos(\widehat{\vec{n_1}, \vec{n_2}})=\frac{\vec{n_1}\cdot\vec{n_2}}{|\vec{n_1}|\cdot|\vec{n_2}|}\\)
+2. \\((\widehat{\vec{n_1}, \vec{n_2}})\in[\frac{\pi}{2}, \pi]\\) , 则 \\(\theta=\pi-(\widehat{\vec{n_1}, \vec{n_2}})\\)
+   \\(\cos\theta=\cos(\pi-(\widehat{\vec{n_1}, \vec{n_2}}))=-\cos(\widehat{\vec{n_1}, \vec{n_2}})=-\frac{\vec{n_1}\cdot\vec{n_2}}{|\vec{n_1}|\cdot|\vec{n_2}|}\\)
+
+1, 2综合得: \\(\cos\theta=|\frac{\vec{n_1}\vec{n_2}}{|\vec{n_1}|\cdot|\vec{n_2}|}|\\)
 
 ### 空间直线
 
