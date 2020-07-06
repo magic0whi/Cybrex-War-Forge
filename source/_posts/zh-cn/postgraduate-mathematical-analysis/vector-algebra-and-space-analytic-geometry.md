@@ -18,7 +18,7 @@ tags:
       * 若 \\(|\vec{a}|=1\\) , 称 \\(\vec{a}\\) 为单位向量
    4. 向量的夹角:
       设 \\(\vec{a} , \vec{b}\\) 为两个向量, 如图 TODO: 补充图片
-      \\(\vec{a} , \vec{b}\\) 夹角为 \\(\theta\\) , 记 \\((\widehat{\vec{a} , \vec{b}})=0 \quad (0\leqslant\theta\leqslant\pi)\\)
+      \\(\vec{a} , \vec{b}\\) 夹角为 \\(\theta\\) , 记 \\((\widehat{\vec{a} , \vec{b}})=0 \enspace (0\leqslant\theta\leqslant\pi)\\)
 2. 向量的线性运算
    1. \\(\vec{a}+\vec{b}\\) :
       平行四边形法则 TODO: 补充图片
@@ -70,7 +70,48 @@ tags:
          记 \\(Pr j_u\overrightarrow{AB}\\)
       3. 设 \\(\overrightarrow{AB}\\) 与 u 轴夹角为 \\(\theta\\) , 则
          \\(Pr j_u\overrightarrow{AB}=|\overrightarrow{AB}|\cdot\cos\theta\\)
+
 ## 向量的数量积与向量积
+
+### 向量的数量积
+
+1. 产生的背景: 做功 TODO: 补充图片
+   \\(W=|\vec{F}|\cdot\cos\theta\cdot|\overrightarrow{AB}|=|\vec{F}|\cdot|\overrightarrow{AB}|\cdot\cos(\widehat{\overrightarrow{AB}, \vec{F}}) \rArr \vec{F}\cdot\overrightarrow{AB}\\)
+2. 向量的数量积定义(几何)
+   \\(\vec{a}\cdot\vec{b}\\) 称为 \\(\vec{a}, \vec{b}\\) 的数量积
+   \\(\vec{a}\cdot\vec{b}=|\vec{a}|\cdot|\vec{b}|\cdot\cos(\widehat{\vec{a}, \vec{b}})\\)
+3. 性质
+   1. \\(\vec{a}\cdot\vec{b}=\vec{b}\cdot\vec{a}\\)
+   2. \\(\vec{a}\cdot\vec{a}=|\vec{a}|^2\\)
+      若 \\(\vec{a}\cdot\vec{a}=0 \hArr \vec{a}=\vec{0}\\)
+   3. \\(\vec{a}\cdot\vec{b}=0 \hArr \vec{a}\perp\vec{b}\\)
+4. 向量数量积的代数描述
+   设 \\(\begin{aligned} &\vec{a}=\\{a_1, b_1, c_1\\}=a_1\vec{i}+b_1\vec{j}+c_1\vec{k} \\\ &\vec{b}=\\{a_2, b_2, c_2\\}=a_2\vec{i}+b_2\vec{j}+c_2\vec{k} \end{aligned}\\)
+   则
+   \\(\vec{a}\cdot\vec{b}=(a_1\vec{i}+b_1\vec{j}+c_1\vec{k})\cdot(a_2\vec{i}+b_2\vec{j}+c_2\vec{k})=a_1a_2+b_1b_2+c_1c_2 \enspace\\) (提示: \\(\vec{i}, \vec{j}, \vec{k}\\) 三个向量为正交单位向量)
+   推论: \\(\vec{a}\cdot\vec{b}=0 \hArr \vec{a}\perp\vec{b} \hArr a_1a_2+b_1b_2+c_1c_2=0\\)
+
+### 向量的向量积
+
+(参与运算的是向量, 结果还是向量)
+
+1. 产生的背景: 法向量(垂直于某一平面的向量) TODO: 补充图片
+2. 向量的向量积定义
+   \\(\vec{a}\times\vec{b}\\) 称为 \\(\vec{a}, \vec{b}\\) 的向量积
+   1. 几何刻划:
+      \\(\vec{a}\times\vec{b}\begin{cases} 方向: 右手准则(拇指食指中指分别对应\vec{a}, \vec{b}, \vec{c}) \\\ 大小: |\vec{a}\times\vec{b}|=|\vec{a}|\cdot|\vec{b}|\cdot\sin(\widehat{\vec{a}, \vec{b}}) \end{cases}\\)
+   2. 代数刻划:
+      设 \\(\begin{aligned} &\vec{a}=\\{a_1, b_1, c_1\\}=a_1\vec{i}+b_1\vec{j}+c_1\vec{k} \\\ &\vec{b}=\\{a_2, b_2, c_2\\}=a_2\vec{i}+b_2\vec{j}+c_2\vec{k} \end{aligned}\\)
+      则
+      \\(\begin{aligned} \vec{a}\times\vec{b}=&(a_1\vec{i}+b_1\vec{j}+c_1\vec{k})\times(a_2\vec{i}+b_2\vec{j}+c_2\vec{k}) \\\ =&\mskip{1.2em}a_1a_2\vec{i}\times\vec{i}+a_1b_2\vec{i}\times\vec{j}+a_1c_2\vec{i}\times\vec{k} \\\ &+b_1a_2\vec{j}\times\vec{i}+b_1b_2\vec{j}\times\vec{j}+b_1c_2\vec{j}\times\vec{k} \\\ &+c_1a_2\vec{k}\times\vec{i}+c_1b_2\vec{k}\times\vec{j}+c_1c_2\vec{k}\times\vec{k} \\\ =&a_1b_2\vec{i}\times\vec{j}+a_1c_2\vec{i}\times\vec{k}+b_1a_2\vec{j}\times\vec{i}+b_1c_2\vec{j}\times\vec{k}+c_1a_2\vec{k}\times\vec{i}+c_1b_2\vec{k}\times\vec{j} \enspace(平行或相同向量的向量积为无意义的零向量, 舍去) \\\ =&a_1b_2\vec{k}-a_1c_2\vec{j}-b_1a_2\vec{k}+b_1c_2\vec{i}+c_1a_2\vec{j}-c_1b_2\vec{i} \enspace(提示: 右手准则用起来) \\\ =&(a_1b_2-b_1a_2)\vec{k}+(c_1a_2-a_1c_2)\vec{j}+(b_1c_2-c_1b_2)\vec{i} \\\ =&\\{b_1c_2-b_2c_1, -(a_1c_2-a_2c_1), a_1b_2-a_2b_1\\} \end{aligned}\\)
+      即 \\(\vec{a}\times\vec{b}=\\{b_1c_2-b_2c_1, -(a_1c_2-a_2c_1), a_1b_2-a_2b_1\\}\\)
+3. 性质
+   1. \\(\vec{a}\times\vec{b}=\vec{0} \hArr \vec{a}\parallel\vec{b}\\)
+   2. \\(\vec{a}\times\vec{b}\perp\vec{a}, \vec{b}\\)
+   3. 向量积不适用乘法交换律 \\(\vec{a}\times\vec{b}=-\vec{b}\times\vec{a}\\) TODO: 补充图片
+   4. \\(|\vec{a}\times\vec{b}|=2S_\Delta\\) TODO: 补充图片
+      证明:
+      \\(\begin{aligned} S_\Delta&=\frac{1}{2}|\vec{a}|\cdot|\vec{b}|\cdot\sin(\widehat{\vec{a}, \vec{b}}) \\\ &=\frac{1}{2}|\vec{a}\times\vec{b}| \end{aligned}\\)
 
 ## 向量应用
 
