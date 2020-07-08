@@ -280,21 +280,21 @@ Notes:
    \\(\lim\frac{\beta}{\alpha}=\infty\\) , 称 \\(beta\\) 为 \\(\alpha\\) 的低阶无穷小
    \\(\lim\frac{\beta}{\alpha^k}=k \quad (k\neq0,\infty)\\) , 称 \\(\beta\\) 为 \\(\alpha\\) 的 k 阶无穷小
    \\(\lim\frac{\beta}{\alpha}=k \quad (k\neq0,\infty)\\) , 称 \\(\beta\\) 为 \\(\alpha\\) 的同阶无穷小, 记 \\(\beta=\bigcirc(\alpha)\\)
-   \\(\lim\frac{\beta}{\alpha}=1\\) , 称 \\(\beta\\) 为 \\(\alpha\\) 的等价无穷小, 记 \\(\beta\text{\textasciitilde}\alpha\\)
+   \\(\lim\frac{\beta}{\alpha}=1\\) , 称 \\(\beta\\) 为 \\(\alpha\\) 的等价无穷小, 记 \\(\beta\sim\alpha\\)
    等价无穷小是同阶无穷小的充分不必要条件
 
 ### 等价无穷小的性质及常用等价无穷小
 
 1. 等价无穷小的性质
    有 \\(\alpha\to0\\) , \\(\beta\to0\\)
-   1. \\(\alpha\text{\textasciitilde}\beta \hArr \beta=\alpha+\circ(\alpha)\\)
-   2. 若 \\(\begin{cases} \alpha\text{\textasciitilde}\alpha_1 , \beta\text{\textasciitilde}\beta_1 \\\ \lim\frac{\beta_1}{\alpha_1}=A \end{cases}\\)
+   1. \\(\alpha\sim\beta \hArr \beta=\alpha+\circ(\alpha)\\)
+   2. 若 \\(\begin{cases} \alpha\sim\alpha_1 , \beta\sim\beta_1 \\\ \lim\frac{\beta_1}{\alpha_1}=A \end{cases}\\)
       则 \\(\lim\frac{\beta}{\alpha}=A\\)
 2. 常用等价无穷小
    (\\(x\to0\\))
-   1. \\(x\text{\textasciitilde}\sin x \enspace,\enspace x\text{\textasciitilde}\tan x \enspace,\enspace x\text{\textasciitilde}\arcsin x \enspace,\enspace x\text{\textasciitilde}\arctan x \enspace,\enspace x\text{\textasciitilde}\ln(1+x) \enspace,\enspace x \enspace\text{\textasciitilde}\enspace e^x-1\\)
-   2. \\(1-\cos x \enspace\text{\textasciitilde}\enspace \frac{x^2}{2}\\)
-   3. \\((1+x)^a-1 \enspace\text{\textasciitilde}\enspace ax\\)
+   1. \\(x\sim\sin x \enspace,\enspace x\sim\tan x \enspace,\enspace x\sim\arcsin x \enspace,\enspace x\sim\arctan x \enspace,\enspace x\sim\ln(1+x) \enspace,\enspace x \enspace\sim\enspace e^x-1\\)
+   2. \\(1-\cos x \enspace\sim\enspace \frac{x^2}{2}\\)
+   3. \\((1+x)^a-1 \enspace\sim\enspace ax\\)
 
 ## 函数的连续性与间断点
 

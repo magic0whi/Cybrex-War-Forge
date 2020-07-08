@@ -232,7 +232,7 @@ II 也有两类取值, 即类 1 和 类 2.
 | - | - | - | - | - | - |
 | P | \\(\frac{C_M^0 C_{N-M}^n}{C_N^n}\\) | \\(\frac{C_M^1 C_{N-M}^{n-1}}{C_N^n}\\) | \\(\frac{C_M^2 C_{N-M}^{n-2}}{C_N^n}\\) | ... | \\(\frac{C_M^l C_{N-M}^{n-l}}{C_N^n}\\) |
 \\(其中l = min(M, n). 且 n \leqslant N, M \leqslant N, n、m、N \in N^+\\)
-此时称随机变量X服从参数为n, M, N的二项分布; 记作\\(X\text{\textasciitilde}H(n, M, N)\\)
+此时称随机变量X服从参数为n, M, N的二项分布; 记作\\(X\sim H(n, M, N)\\)
 
 ### n次重复试验(伯努利试验)
 
@@ -244,7 +244,7 @@ II 也有两类取值, 即类 1 和 类 2.
 在n次独立重复试验中, 用X表示事件A发生的次数. 设每次试验中事件A发生的概率为p, 
 即 \\(P(A)=p, \, P(\bar{A})=1-p=q, \, p+q=1\\). 则
 \\(P(X=k)=C_n^k p^k q^{n-k} \qquad (k=0, 1, 2, ..., n)\\)
-此时称随机变量X<u>服从</u>参数为n、p的二项分布; 记作\\(X\text{\textasciitilde}B(n,p)\\)
+此时称随机变量X<u>服从</u>参数为n、p的二项分布; 记作\\(X\sim B(n,p)\\)
 
 #### 离散均值和离散方差
 

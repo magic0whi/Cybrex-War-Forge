@@ -51,7 +51,7 @@ Notes:
 1. \\(=\lim\limits_{\Delta x\to0}\frac{c-c}{\Delta x}=0 \rArr \(c\)'=0\\)
 2. \\(=\lim\limits_{\Delta x\to0}\frac{(x+\Delta x)^n-x^n}{\Delta x}=\lim\limits_{\Delta x\to0}\frac{(C_n^0x^n+C_n^1x^{n-1}\Delta x+\text{...}+C_n^n\Delta x^n)-x^n}{\Delta x}=\lim\limits_{\Delta x\to0}[C_n^1x^{n-1}+\frac{C_n^2x^{n-2}\Delta x^2+\text{...}+C_n^n\Delta x^{n}}{\Delta x})]=nx^{n-1} \rArr (x^n)'=nx^{n-1}\\)
    (你不会忘了二项式展开式了吧)
-3. \\(=\lim\limits_{\Delta x\to0}\frac{a^{x+\Delta x}-a^x}{\Delta x}=\lim\limits_{\Delta x\to0}\frac{a^x(a^{\Delta x}-1)}{\Delta x}=\underbrace{\lim\limits_{\Delta x\to0}\frac{a^x(e^{\Delta x\ln a}-1)}{\Delta x}}_{\normalsize a^{\Delta x}=e^{\ln a^{\Delta x}}=e^{\Delta x\ln a}}=\underbrace{\lim\limits\_{\Delta x\to0}\frac{a^x(\Delta x\ln a)}{\Delta x}=a^x\ln a}\_{\large\text{常用等价无穷小}x\text{\textasciitilde}(e^x-1)} \rArr (a^x)'=a^x\ln a\\) <!-- 这边katex和markdown兼容问题一些"_"前面加了"\" -->
+3. \\(=\lim\limits_{\Delta x\to0}\frac{a^{x+\Delta x}-a^x}{\Delta x}=\lim\limits_{\Delta x\to0}\frac{a^x(a^{\Delta x}-1)}{\Delta x}=\underbrace{\lim\limits_{\Delta x\to0}\frac{a^x(e^{\Delta x\ln a}-1)}{\Delta x}}_{\normalsize a^{\Delta x}=e^{\ln a^{\Delta x}}=e^{\Delta x\ln a}}=\underbrace{\lim\limits\_{\Delta x\to0}\frac{a^x(\Delta x\ln a)}{\Delta x}=a^x\ln a}\_{\text{常用等价无穷小}x\sim(e^x-1)} \rArr (a^x)'=a^x\ln a\\) <!-- 这边katex和markdown兼容问题一些"_"前面加了"\" -->
    \*特别地 \\((e^x)'=e^x\\)
 4. 用微分代替极限表示以显得简洁
    \\(f'(x)=\dfrac{dy}{dx}=\dfrac{\log_a(x+dx)-\log_a x}{dx}=\overbrace{\dfrac{\log_a (\frac{x+dx}{x})}{dx}}^{\log_a \frac{M}{N}=\log_a M - \log_a N}=\dfrac{\log_a(1+\frac{dx}{x})}{dx}=\overbrace{\dfrac{\frac{\ln(1+\frac{dx}{x})}{\ln a}}{dx}}^{\log_a N=\frac{\log_b N}{\log_b a}}=\overbrace{\dfrac{\frac{\frac{dx}{x}}{\ln a}}{dx}}^{等价无穷小}=\dfrac{1}{x\ln a}\\)
