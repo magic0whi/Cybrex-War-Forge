@@ -132,7 +132,30 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
 
 ## 多元复合函数求导法则
 
+1. 情形一: \\(z=f(u, v) \enspace\begin{cases} u=\varphi(t) \\\ v=\psi(t) \end{cases} \rArr z=f[\varphi(t), \psi(t)]\\)
+   z=f(u, v) 关于 u,v 连续可偏导, \\(\varphi(t) , \psi(t)\\) 可导
+   则 \\(z=f[\varphi(t), \psi(t)]\\) 可导,
+   且 \\(\frac{dz}{dt}=\frac{\partial f}{\partial u}\cdot\frac{du}{dt}+\frac{\partial f}{\partial v}\cdot\frac{dv}{dt}\\)
+   证明:
+   \\(\Delta u=\varphi(t+\Delta t)-\varphi(t)\\)
+   \\(\Delta v=\psi(t+\Delta t)-\psi(t)\\)
+   \\(\because z=f(u, v)\\) 关于 u,v 连续可偏导
+   \\(\therefore z=f(u, v)\\) 可微
+   \\(\Delta z=\frac{\partial f}{\partial u}\Delta u+\frac{\partial f}{\partial v}\Delta v+\circ(\rho)\\) , \\(\rho=\sqrt{(\Delta u)^2+(\Delta v)^2}\\)
+   \\(\rArr \frac{\Delta z}{\Delta t}=\frac{\partial f}{\partial u}\frac{\Delta u}{\Delta t}+\frac{\partial f}{\partial v}\frac{\Delta v}{\Delta t}+\frac{\circ(\rho)}{\Delta t}\\)
+   \\(\rArr \frac{dz}{dt}=\frac{\partial f}{\partial u}\cdot\frac{du}{dt}+\frac{\partial f}{\partial v}\cdot\frac{dv}{dt}\\)
+2. 情形二: \\(z=f(u, v) \enspace\begin{cases} u=\varphi(x, y) \\\ v=\psi(x, y) \end{cases} \rArr z=f[\varphi(x, y), \psi(x,  y)]\\)
+   z=f(u, v) 关于 u,v 连续可偏导, \\(\begin{cases} u=\varphi(x, y) \\\ v=\psi(x, y) \end{cases}\\) 对 (x, y) 可偏导
+   则 \\(z=f[\varphi(x, y), \psi(x, y)]\\) 关于 x, y 可偏导,
+   且
+   \\(\frac{\partial z}{\partial x}=\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial x}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial x}\\) ,
+   \\(\frac{\partial z}{\partial y}=\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial y}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial y}\\)
+
 ## 隐函数求导法则
+
+### 一个约束条件的情形
+
+
 
 ## 多元函数微分学的几何应用
 
