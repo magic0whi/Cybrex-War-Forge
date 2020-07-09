@@ -4,6 +4,7 @@ category: postgraduate-advanced-mathematics
 lang: zh-cn
 date: 2020-05-22 17:00:56
 tags:
+toc: true
 ---
 
 ## 多元函数的基本概念
@@ -73,7 +74,46 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
 
 ## 偏导数
 
+### 定义
+
+\\(z=f(x, y) \enspace((x, y)\in D), M_0(x_0, y_0)\in D\\)
+
+1. 偏增量
+   * f(x, y) 在 \\(M_0\\) 处关于 x 的偏增量 \\(\Delta Z_x=f(x_0+\Delta x, y_0)-f(x_0, y_0) \enspace(=f(x, y_0)-f(x_0, y_0))\\)
+   * f(x, y) 在 \\(M_0\\) 处关于 y 的偏增量 \\(\Delta Z_y=f(x_0, y_0+\Delta y)-f(x_0, y_0) \enspace(=f(x_0, y)-f(x_0, y_0))\\)
+   * f(x, y) 在 \\(M_0\\) 处的全增量 \\(\Delta Z=f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0) \enspace(=f(x, y)-f(x_0, y_0))\\)
+2. 偏导数
+   * 若 \\(\lim\limits_{\Delta x\to0}\frac{\Delta Z_x}{\Delta x}\\) 存在
+     称 f(x, y) 在 \\(M_0\\) 处关于 x 可偏导, 
+     该极限称为 f(x, y) 在 \\(M_0\\) 处关于 x 的偏导数, 记 \\(f_x^'(x_0, y_0)\\) 或 \\(\frac{\partial z}{\partial x}|_{(x_0, y_0)}\\)
+   * 若 \\(\lim\limits_{\Delta y\to0}\frac{\Delta Z_y}{\Delta y}\\) 存在
+     称 f(x, y) 在 \\(M_0\\) 处关于 y 可偏导,
+     该极限称为 f(x, y) 在 \\(M_0\\) 处关于 y 的偏导数, 记 \\(f_y^'(x_0, y_0)\\) 或 \\(\frac{\partial z}{\partial y}|_{(x_0, y_0)}\\)
+   * 若 \\(\forall(x, y)\in D\\) , f(x, y) 对 x, y 皆可偏导, 称 \\(f_x^'(x, y) , f_y^'(x, y)\\) 为 f(x, y) 对 x, y 的偏导数
+
+(求偏导数时, 其余参数视为常数)
+
+### 高阶偏导数
+
+定义:
+设\\(z=f(x, y)\\) 在 D 内对 x, y 可偏导,
+\\(\frac{\partial z}{\partial x}=f_x^'(x, y)\\) 为 f(x, y) 对 x 偏导数,
+\\(\frac{\partial z}{\partial y}=f_y^'(x, y)\\) 为 f(x, y) 对 y 偏导数.
+1. * 若 \\(f_x^'(x, y)\\) 对 x 可偏导, 其对 x 的偏导数称为 f(x, y) 对 x 的二阶偏导数, 记 \\(f_{xx}^{''}\\) 或 \\(\frac{\partial^2z}{\partial x^2}\\)
+   * 若 \\(f_y^'(x, y)\\) 对 y 可偏导, 其对 y 的偏导数称为 f(x, y) 对 y 的二阶偏导数, 记 \\(f_{yy}^{''}\\) 或 \\(\frac{\partial^2z}{\partial y^2}\\)
+2. * 若 \\(f_x^'(x, y)\\) 对 y 可偏导, 其对 y 的偏导数称为 f(x, y) 对先x后y的二阶混合偏导数, 记 \\(f_{xy}^{''}(x, y)\\) 或 \\(\frac{\partial^2z}{\partial x\partial y}\\)
+   * 若 \\(f_y^'(x, y)\\) 对 x 可偏导, 其对 x 的偏导数称为 f(x, y) 对先y后x的二阶混合偏导数, 记 \\(f_{yx}^{''}(x, y)\\) 或 \\(\frac{\partial^2z}{\partial y\partial x}\\)
+
+定理:
+若 z=f(x, y) 的二阶混合偏导数 \\(\frac{\partial^2z}{\partial x\partial y} , \frac{\partial^2z}{\partial y\partial x}\\) 皆连续,
+则 \\(\frac{\partial^2z}{\partial x\partial y}=\frac{\partial^2z}{\partial y\partial x}\\) ,
+即 \\(f_{xy}^{''}=f_{yx}^{''}\\)
+
 ## 全微分
+
+### 二元函数全微分定义
+
+### 结论
 
 ## 多元复合函数求导法则
 
