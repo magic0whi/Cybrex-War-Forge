@@ -79,14 +79,14 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
 \\(z=f(x, y) \enspace((x, y)\in D), M_0(x_0, y_0)\in D\\)
 
 1. 偏增量
-   * f(x, y) 在 \\(M_0\\) 处关于 x 的偏增量 \\(\Delta Z_x=f(x_0+\Delta x, y_0)-f(x_0, y_0) \enspace(=f(x, y_0)-f(x_0, y_0))\\)
-   * f(x, y) 在 \\(M_0\\) 处关于 y 的偏增量 \\(\Delta Z_y=f(x_0, y_0+\Delta y)-f(x_0, y_0) \enspace(=f(x_0, y)-f(x_0, y_0))\\)
-   * f(x, y) 在 \\(M_0\\) 处的全增量 \\(\Delta Z=f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0) \enspace(=f(x, y)-f(x_0, y_0))\\)
+   * f(x, y) 在 \\(M_0\\) 处关于 x 的偏增量 \\(\Delta z_x=f(x_0+\Delta x, y_0)-f(x_0, y_0) \enspace(=f(x, y_0)-f(x_0, y_0))\\)
+   * f(x, y) 在 \\(M_0\\) 处关于 y 的偏增量 \\(\Delta z_y=f(x_0, y_0+\Delta y)-f(x_0, y_0) \enspace(=f(x_0, y)-f(x_0, y_0))\\)
+   * f(x, y) 在 \\(M_0\\) 处的全增量 \\(\Delta z=f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0) \enspace(=f(x, y)-f(x_0, y_0))\\)
 2. 偏导数
-   * 若 \\(\lim\limits_{\Delta x\to0}\frac{\Delta Z_x}{\Delta x}\\) 存在
+   * 若 \\(\lim\limits_{\Delta x\to0}\frac{\Delta z_x}{\Delta x}\\) 存在
      称 f(x, y) 在 \\(M_0\\) 处关于 x 可偏导, 
      该极限称为 f(x, y) 在 \\(M_0\\) 处关于 x 的偏导数, 记 \\(f_x^'(x_0, y_0)\\) 或 \\(\frac{\partial z}{\partial x}|_{(x_0, y_0)}\\)
-   * 若 \\(\lim\limits_{\Delta y\to0}\frac{\Delta Z_y}{\Delta y}\\) 存在
+   * 若 \\(\lim\limits_{\Delta y\to0}\frac{\Delta z_y}{\Delta y}\\) 存在
      称 f(x, y) 在 \\(M_0\\) 处关于 y 可偏导,
      该极限称为 f(x, y) 在 \\(M_0\\) 处关于 y 的偏导数, 记 \\(f_y^'(x_0, y_0)\\) 或 \\(\frac{\partial z}{\partial y}|_{(x_0, y_0)}\\)
    * 若 \\(\forall(x, y)\in D\\) , f(x, y) 对 x, y 皆可偏导, 称 \\(f_x^'(x, y) , f_y^'(x, y)\\) 为 f(x, y) 对 x, y 的偏导数
@@ -113,7 +113,22 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
 
 ### 二元函数全微分定义
 
+设 \\(z=f(x, y) \enspace((x, y)\in D)\\) , \\(M_0(x_0, y_0)\in D\\)
+全增量 \\(\Delta z=f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0) \enspace(=f(x, y)-f(x_0, y_0))\\)
+若 \\(\Delta z=A\Delta x+B\Delta y+\circ(\rho)\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}\\)
+称 f(x, y) 在 \\((x_0, y_0)\\) 处可全微
+称 \\(A\Delta x+B\Delta y\\) 为 f(x, y) 在 \\(x_0, y_0\\) 处的全微分, 记 \\(dz|_{(x_0, y_0)}=Adx+Bdy\\)
+
+结合偏导数:
+\\(dz|_{(x_0, y_0)}=f_x^'(x_0, y_0)dx+f_y^'(x_0, y_0)dy\\)
+\\(dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy\\)
+
 ### 结论
+
+设 \\(z=f(x, y) \enspace((x, y)\in D)\\) , \\(M_0(x_0, y_0)\in D\\)
+1. 若 f(x, y) 在 \\(M_0\\) 处可微, 则 f(x, y) 在 \\(M_0\\) 连续, 反之不对
+2. 若 f(x, y) 在 \\(M_0\\) 处可微, 则 f(x, y) 在 \\(M_0\\) 可偏导, 反之不对
+3. (可微充分条件) 若 z=f(x, y) 的偏导数 \\(\frac{\partial z}{\partial x}\\) , \\(\frac{\partial z}{\partial y}\\) 连续(或连续可偏导) , 则 f(x, y) 可微
 
 ## 多元复合函数求导法则
 
