@@ -155,9 +155,48 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
 
 ### 一个约束条件的情形
 
+隐函数: f(x, y)=0
+隐函数显式化 \\(f(x, y)=0 \rArr y=\varphi(x)\\)
 
+1. 定理一:
+   设 \\(F(x, y)\\) 在点 \\(M_0(x_0, y_0)\\) 邻域内连续可偏导且 \\(F(x_0, y_0)=0\\) ,
+   若 \\(F_y^'(x_0, y_0)\neq0 \enspace\\) (表示y方向上连续),
+   则由 \\(F(x, y)=0\\) 在 \\(M_0\\) 邻域内确定唯一连续可导函数 \\(y=f(x)\\) ,
+   使 \\(y_0=f(x_0) , \dfrac{dy}{dx}=-\dfrac{F_x'}{F_y'}\\)
+   证明:
+   \\(F(x, y)=0\\) , 把 y 看成 x 的函数 \\(\varphi(x)\\) , 则 \\(F(x, \varphi(x))=0\\)
+   两边对 x 求导, \\(F_x^'+F_y^'\frac{dy}{dx}=0 \rArr \frac{dy}{dx}=-\frac{F_x'}{F_y'}\\)
+2. 定理二:
+   设 \\(F(x, y, z)\\) 在 \\(M_0(x_0, y_0, z_0)\\) 邻域内连续可偏导且 \\(F(x_0, y_0, z_0)=0\\)
+   若 \\(F_z^'(x_0, y_0, z_0)\neq0 \enspace\\) (表示z方向上连续),
+   则由 \\(F(x, y, z)=0\\) 在 \\(M_0\\) 邻域内确定唯一连续可偏导函数 \\(z=\varphi(x, y)\\) ,
+   使 \\(z_0=\varphi(x_0, y_0)\\) , \\(\dfrac{\partial z}{\partial x}=-\dfrac{F_x'}{F_z'}\\) , \\(\dfrac{\partial z}{\partial y}=-\dfrac{F_y'}{F_z'}\\)
+   证明:
+   \\(F(x, y, z)=0 \rArr z=\varphi(x, y)\\) , 把 z 看成 x 的函数 \\(\varphi(x)\\) , 则 \\(F(x, y, \varphi(x))=0\\)
+   两边对 x 求偏导, \\(F_x'+F_z'\frac{\partial z}{\partial x}=0 \rArr \frac{\partial z}{\partial x}=-\frac{F_x'}{F_z'} \enspace\\)
+   两边对 y 求偏导, \\(F_y'+F_z'\frac{\partial z}{\partial y}=0 \rArr \frac{\partial z}{\partial y}=-\frac{F_y'}{F_z'}\\)
 
 ## 多元函数微分学的几何应用
+
+### 空间曲线
+
+(空间曲线有切线和法平面)
+
+\\(M_0(x_0, y_0, z_0)\in L\\)
+\\(M(x_0+\Delta x, y_0+\Delta y, z_0+\Delta z)\in L\\)
+\\(\overrightarrow{M_0M}=\\{\Delta x, \Delta y, \Delta z\\}\\)
+直线 \\(\overline{M_0M}: \frac{x-x_0}{\Delta x}=\frac{y-y_0}{\Delta y}=\frac{z-z_0}{\Delta z}\\)
+
+1. 情况一 \\(L: \begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases} , t=t_0 \rArr M_0(x_0, y_0, z_0)\in L\\)
+   \\(t=t_0+\Delta t \rArr M(x_0+\Delta x, y_0+\Delta y, z_0+\Delta z)\in L\\)
+   \\(\overline{M_0M}=\frac{x-x_0}{\Delta x}=\frac{y-y_0}{\Delta y}=\frac{z-z_0}{\Delta z} \hArr \frac{x-x_0}{\frac{\Delta x}{\Delta t}}=\frac{y-y_0}{\frac{\Delta y}{\Delta t}}=\frac{z-z_0}{\frac{\Delta z}{\Delta t}}\\)
+   当 \\(\Delta t\to0\\) 时, \\(\overline{M_0M}\\) 即为切线
+   \\(\therefore 切线: \frac{x-x_0}{\varphi'(t_0)}=\frac{y-y_0}{\psi'(t_0)}=\frac{z-z_0}{\omega'(t_0)}\\)
+2. 情况二 \\(L: \begin{cases} F(x, y, z)=0 \\\ G(x, y, z)=0 \end{cases} , M_0(x_0, y_0, z_0)\in L\\)
+
+### 空间曲面
+
+(曲面有切平面和法线)
 
 ## 方向导数与梯度
 

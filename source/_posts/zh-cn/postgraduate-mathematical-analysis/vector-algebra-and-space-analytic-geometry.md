@@ -164,9 +164,9 @@ TODO: 补充图片
 
 1. 点向式方程 TODO: 补充图片
    直线上一点 \\(M_0(x_0, y_0, z_0)\in L\\)
-   \\(\vec{S}=\\{m, n, p\\}\parallel L\\)
+   有向量 \\(\vec{S}=\\{m, n, p\\}\parallel L\\)
    \\(\forall M(x, y, z)\\)
-   有 \\(M\in L \hArr \overrightarrow{M_0M}\parallel\vec{S}\qquad \overrightarrow{M_0M}=\\{x-x_0, y-y_0, z-z_0\\}\\)
+   若 \\(M\in L\\), 则 \\(\overrightarrow{M_0M}\parallel\vec{S}\qquad \overrightarrow{M_0M}=\\{x-x_0, y-y_0, z-z_0\\}\\)
    \\(\because \overrightarrow{M_0M}\parallel\vec{S} \hArr \frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}\\)
    \\(\therefore L: \frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}\\)
 2. 参数式方程
@@ -255,8 +255,7 @@ TODO: 补充图片
 1. 一般形式 TODO: 补充图片
    \\(L: \begin{cases} F(x, y, z)=0 \\\ G(x, y, z)=0 \end{cases}\\\)
 2. 参数式
-   如 \\(L: \begin{cases} x^2+y^2=1 \\\ x+y-z-2=0 \end{cases}\\)
-   化为参数式 \\(L: \begin{cases} x=\cos t \\\ y=\sin t \\\ z=\sin t+\cos t-2 \end{cases}\\)
+   \\(L: \begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases}\\)
 
 ### 曲线的特殊情形 -- 直线
 
