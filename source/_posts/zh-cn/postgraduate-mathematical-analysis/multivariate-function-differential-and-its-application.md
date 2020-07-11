@@ -260,9 +260,8 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
 
 后者是与 L 同向的单位向量, 设其为 \\(\vec{e}\\)
 则 \\(\frac{\partial u}{\partial L}|\_{M\_0}=\text{grad}u\cdot\vec{e}=\sqrt{(\frac{\partial u}{\partial x})^2+(\frac{\partial u}{\partial y})^2+(\frac{\partial u}{\partial z})^2}\cdot1\cdot\cos\theta \enspace\\) (\\(\theta\\) 为梯度u 与 \\(\vec{e}\\) 间的夹角)
-由该式可知当 \\(\cos\theta=1\\) , 即 \\(\theta=0\\) 时, \\(\frac{\partial u}{\partial L}|\_{M\_0}\\) 取最大值
-
-梯度的作用: 梯度的方向即函数增大速度最快的方向, 或方向导数取最大值的方向
+由该式可知当 \\(\cos\theta=1\\) , 即 \\(\theta=0\\) 时, \\(\frac{\partial u}{\partial L}|\_{M\_0}\\) 取最大值, 即这个点方向导数取最大值
+因此**梯度的方向即函数增大速度最快的方向, 或方向导数取最大值的方向**
 
 
 ## 代数应用 -- 多元函数的极值
