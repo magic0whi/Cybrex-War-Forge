@@ -135,7 +135,7 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
 1. 情形一: \\(z=f(u, v) \enspace\begin{cases} u=\varphi(t) \\\ v=\psi(t) \end{cases} \rArr z=f[\varphi(t), \psi(t)]\\)
    z=f(u, v) 关于 u,v 连续可偏导, \\(\varphi(t) , \psi(t)\\) 可导
    则 \\(z=f[\varphi(t), \psi(t)]\\) 可导,
-   且 \\(\frac{dz}{dt}=\frac{\partial f}{\partial u}\cdot\frac{du}{dt}+\frac{\partial f}{\partial v}\cdot\frac{dv}{dt}\\)
+   且 \\(\frac{dz}{dt}=\frac{\partial f}{\partial u}\cdot\frac{du}{dt}+\frac{\partial f}{\partial v}\cdot\frac{dv}{dt}=f_{u}'\cdot\varphi(t)'+f_{v}'\cdot\psi'(t)\\)
    证明:
    \\(\Delta u=\varphi(t+\Delta t)-\varphi(t)\\)
    \\(\Delta v=\psi(t+\Delta t)-\psi(t)\\)
@@ -193,11 +193,76 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
    当 \\(\Delta t\to0\\) 时, \\(\overline{M_0M}\\) 即为切线
    \\(\therefore 切线: \frac{x-x_0}{\varphi'(t_0)}=\frac{y-y_0}{\psi'(t_0)}=\frac{z-z_0}{\omega'(t_0)}\\)
 2. 情况二 \\(L: \begin{cases} F(x, y, z)=0 \\\ G(x, y, z)=0 \end{cases} , M_0(x_0, y_0, z_0)\in L\\)
+   \\(\vec{T}=\\{F_y'G_z'-F_z'G_y', F_z'G_x'-F_x'G_z', F_x'G_y'-F_y'G_x'\\}\\)
+   若将 \\(M_0\\) 代入 \\(\vec{T}=\\{a, b, c\\}\\) , 则
+   切线 \\(\frac{x-x_0}{a}=\frac{y-y_0}{b}=\frac{z-z_0}{c}\\)
+   法平面 \\(a(x-x_0)+b(y-y_0)+c(z-z_0) \enspace\\) (平面的点法式方程, 法平面指在该点垂直于切线的平面)
 
 ### 空间曲面
 
 (曲面有切平面和法线)
 
+求空间曲面上某一点的法向量:
+曲面 \\(\Sigma: F(x, y, z)=0 \enspace M_0(x_0, y_0, z_0)\in\Sigma\\)
+在 \\(\Sigma\\) 内过 \\(M_0\\) 任取一曲线 L
+\\(L: \begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases} \enspace M_0 \harr t=t_0\\)
+\\(\because L\subset\Sigma\\)
+\\(\therefore F[\varphi(t), \psi(t), \omega(t)]=0\\)
+两边对 t 求导得 \\(F_x'[\varphi(t), \psi(t), \omega(t)]\cdot\varphi'(t)+F_y'[\varphi(t), \psi(t), \omega(t)]\psi'(t)+F_z'[\varphi(t), \psi(t), \omega(t)]\omega'(t)=0 \enspace\\) (使用多元复合函数求导情形一)
+将 \\(t=t_0\\) 代入
+\\(F_x'(x_0, y_0, z_0)\varphi'(t_0)+F_y'(x_0, y_0, z_0)\psi'(t_0)+F_z'(x_0, y_0, z_0)\omega'(t_0)=0\\)
+可化为两个向量点乘 \\(\\{F_x', F_y', F_z'\\}_{M_0}\cdot\\{\varphi'(t_0), \psi'(t_0), \omega'(t_0)\\}=0\\)
+
+因此法向量 \\(\vec{n}=\\{F_x', F_y', F_z'\\}_{M_0}\\)
+
 ## 方向导数与梯度
+
+### 方向导数
+
+1. 定义
+   1. 二元函数
+      TODO: 补充图片
+      设 \\(z=f(x, y) \enspace((x, y)\in D)\\) , \\(M_0(x_0, y_0)\in D\\)
+      在 xOy 面内过 \\(M_0\\) 作射线 L,
+      取 \\(M(x_0+\Delta x, y_0+\Delta y)\in L\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}\\)
+      \\(\Delta z=f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0)\\)
+      若 \\(\lim\limits_{\rho\to0}\frac{\Delta z}{\rho}\\) 存在,
+      称此极限为函数 \\(z=f(x, y)\\) 在 \\(M_0\\) 处沿射线 L 的方向导数, 记 \\(\dfrac{\partial z}{\partial L}|_{M_0}\\)
+   2. 三元函数
+      设 \\(u=f(x, y, z) \enspace((x, y, z)\in\Omega)\\) , \\(M_0(x_0, y_0, z_0)\in\Omega\\)
+      过 \\(M_0\\) 作射线 L,
+      取 \\(M(x_0+\Delta x, y_0+\Delta y, z_0+\Delta z)\in L\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2+(\Delta z)^2}\\)
+      \\(\Delta u=f(x_0+\Delta x, y_0+\Delta y, z_0+\Delta z)-f(x_0, y_0, z_0)\\)
+      若 \\(\lim\limits_{\rho\to0}\frac{\Delta u}{p}\\) 存在, 称此极限为 \\(u=f(x, y, z)\\) 在 \\(M_0\\) 处沿射线 L 的方向导数, 记 \\(\frac{\partial u}{\partial L}|_{M_0}\\)
+2. 方向导数计算方法
+   1. \\(z=f(x, y)\\) 在 \\(M_0(x_0, y_0)\\) 可微,
+      TODO:补充图片
+      在 xOy 面内过 \\(M_0\\) 作射线 L , 方向角为 \\(\alpha, \beta\\) ,
+      则 \\(\frac{\partial z}{\partial L}|_{M_0}=f_x'(x_0, y_0)\cdot\cos\alpha+f_y'(x_0, y_0)\cos\beta\\)
+      
+      证明:
+      xOy 面内直线 L 的方向向量为 \\(\\{\cos\alpha, \cos\beta\\} \enspace\\) (向量的方向余弦)
+      可得直线 L 的参数方程 \\(L: \begin{cases} x=t\cos\alpha \\\ y=t\cos\beta \end{cases}\\)
+      代入 f(x, y) 关于 t 求导得 \\(\frac{\partial z}{\partial L}=f_L'(t\cos\alpha, t\cos\beta)=f_{x}'\cdot(t\cos\alpha)'+f_{y}\cdot(t\cos\beta)'=f_x'\cdot\cos\alpha+f_y'\cdot\cos\beta\\)
+   2. \\(u=f(x, y, z\\) 在 \\(M_0(x_0, y_0, z_0)\\) 可微,
+      过 \\(M_0\\) 作射线 L , 方向角为 \\(\alpha, \beta, \gamma\\) ,
+      则 \\(\frac{\partial u}{\partial L}|\_{M\_0}=\frac{\partial u}{\partial x}|\_{M\_0}\cos\alpha+\frac{\partial u}{\partial y}|\_{M\_0}\cos\beta+\frac{\partial u}{\partial z}|\_{M\_0}\cos\gamma\\)
+
+### 梯度
+
+\\(u=f(x, y, z)\\) , \\(M_0(x_0, y_0, z_0)\in\Omega\\) , 过 \\(M_0\\) 作射线 L, 方向角为 \\(\alpha, \beta, \gamma\\)
+\\(\frac{\partial u}{\partial L}|\_{M\_0}=\frac{\partial u}{\partial x}|\_{M\_0}\cos\alpha+\frac{\partial u}{\partial y}|\_{M\_0}\cos\beta+\frac{\partial u}{\partial z}|\_{M\_0}\cos\gamma\\)
+上式可分离为两个向量点乘:
+\\(\frac{\partial u}{\partial L}|\_{M\_0}=\\{\frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial u}{\partial z}\\}|\_{M\_0}\cdot\\{\cos\alpha, \cos\beta, \cos\gamma\\}\\)
+
+这两个向量中前者称作梯度, 即函数u的梯度:
+\\(\text{grad}u=\\{\frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial u}{\partial z}\\}|\_{M\_0}\\)
+
+后者是与 L 同向的单位向量, 设其为 \\(\vec{e}\\)
+则 \\(\frac{\partial u}{\partial L}|\_{M\_0}=\text{grad}u\cdot\vec{e}=\sqrt{(\frac{\partial u}{\partial x})^2+(\frac{\partial u}{\partial y})^2+(\frac{\partial u}{\partial z})^2}\cdot1\cdot\cos\theta \enspace\\) (\\(\theta\\) 为梯度u 与 \\(\vec{e}\\) 间的夹角)
+由该式可知当 \\(\cos\theta=1\\) , 即 \\(\theta=0\\) 时, \\(\frac{\partial u}{\partial L}|\_{M\_0}\\) 取最大值
+
+梯度的作用: 梯度的方向即函数增大速度最快的方向, 或方向导数取最大值的方向
+
 
 ## 代数应用 -- 多元函数的极值
