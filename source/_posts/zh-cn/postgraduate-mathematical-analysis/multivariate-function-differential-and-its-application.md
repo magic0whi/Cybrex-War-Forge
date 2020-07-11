@@ -263,5 +263,31 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
 由该式可知当 \\(\cos\theta=1\\) , 即 \\(\theta=0\\) 时, \\(\frac{\partial u}{\partial L}|\_{M\_0}\\) 取最大值, 即这个点方向导数取最大值
 因此**梯度的方向即函数增大速度最快的方向, 或方向导数取最大值的方向**
 
-
 ## 代数应用 -- 多元函数的极值
+
+1. 定义:
+   设\\(z=f(x, y) \enspace(x, y)\in D\\) , \\(M_0(x_0, y_0)\in D\\)
+   若 \\(\exist\delta>0\\) , 当 \\((x, y)\in\mathring{U}(M_0, \delta)\\) 时,
+   1. \\(f(x, y)>f(x_0, y_0)\\) , 称 \\((x_0, y_0)\\) 为极小点
+   2. \\(f(x, y)<f(x_0, y_0)\\) , 称 \\((x_0, y_0)\\) 为极大点
+2. 无条件极值
+   \\(z=f(x, y) \enspace(x, y)\in D\\) , D 为开区域
+   求 \\(z=f(x, y)\\) 在 D 内的极值称为无条件极值
+   1. 通过令 \\(\begin{cases} \frac{\partial z}{\partial x}=0 \\\ \frac{\partial z}{\partial y}=0 \end{cases}\\) 求对应 x, y 值
+   2. 判别法
+      设 \\((x_0, y_0)\\) 为驻点
+      \\(A=f_{xx}^{''}(x_0, y_0)\\) , \\(B=f_{xy}^{''}(x_0, y_0)\\) , \\(C=f_{yy}^{''}(x_0, y_0)\\)
+      1. 若 \\(AC-B^2>0 \rArr (x_0, y_0)\\) 为极值点
+         \\(\begin{cases} A<0 \rArr (x_0, y_0) 为极大点 \\\ A>0 \rArr (x_0, y_0) 为极小点 \end{cases}\\)
+      2. 若 \\(AC-B^2<0 \rArr (x_0, y_0)\\) 不是极值点
+3. 条件极值
+   1. 情况1 \\(z=f(x, y)\\) , 约束条件 \\(\varphi(x, y)=0\\)
+      解法:
+      设 \\(F=f(x, y)+\lambda\varphi(x, y)\\)
+      令 \\(\begin{cases} \frac{\partial F}{\partial x}=f_x'+\lambda\varphi_x'=0 \\\ \frac{\partial F}{\partial y}=f_y'+\lambda\varphi_y'=0 \\\ \frac{\partial F}{\partial\lambda}=\varphi(x, y)=0 \end{cases}\\)
+      解方程组, 求出 x,y 值
+   2. 情况2 \\(u=f(x, y, z)\\) , 约束条件 \\(\begin{cases} \varphi(x, y, z)=0 \\\ \psi(x, y, z)=0 \end{cases}\\)
+      解法:
+      设 \\(F=f+\lambda\varphi+\mu\psi\\)
+      令 \\(\begin{cases} F_x'=0 \\\ F_y'=0 \\\ F_z'=0 \\\ F_\lambda'=0 \\\ F_\mu'=0 \end{cases}\\)
+      解方程组, 求出 x,y,z 值
