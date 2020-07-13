@@ -38,6 +38,42 @@ tags:
 
 ## 二重积分的计算法
 
+### 直角坐标法计算二重积分
+
+1. 情况1 TODO: 补充图片
+   \\(D=\\{(x, y)|a\leqslant x\leqslant b, \varphi_1(x)\leqslant y\leqslant \varphi_2(x)\\}\\)\
+   则 \\(\iint_D f(x, y)d\sigma=\int_a^b dx\int_{\varphi_1(x)}^{\varphi_2(x)}f(x, y)dy\\)
+2. 情况2 TODO: 补充图片
+   \\(D=\\{(x, y)|c\leqslant y\leqslant d, \varphi_1(y)\leqslant x\leqslant\varphi_2(y)\\}\\)
+   则 \\(\iint_D f(x, y)d\sigma=\int_c^d dx\int_{\varphi_1(y)}^{\varphi_2(y)}f(x, y)dx\\)
+
+### 极坐标法计算二重积分
+
+1. 特征:
+   1. 区域 D 的边界含 \\(x^2+y^2\\)
+   2. \\(f(x, y)\\) 含 \\(x^2+y^2\\)
+2. 变换: TODO; 补充图片
+   \\(\begin{cases} x=r\cos\theta \\\ y=r\sin\theta \end{cases} \alpha\leqslant\theta\leqslant\beta , r_1(\theta)\leqslant r\leqslant r_2(\theta)\\)
+3. \\(d\sigma\\)
+   取 \\([\theta, \theta+d\theta]\\)
+   取 \\([r, r+dx]\\)
+   \\(d\sigma=rdrd\theta\\)
+   \\(\therefore \iint_D f(x, y)d\sigma=\int_\alpha^\beta d\theta\int_{r_1(\theta)}^{r_2(\theta)}r\cdot f(r\cos\theta, r\sin\theta)dr\\)
+
 ## 三重积分
+
+### 三重积分的定义
+
+设 \\(\Omega\\) 为空间有限几何体, \\(\f(x, y, z)\) 在 \\(\Omega\\) 上有界
+1. \\(\Omega\\)
+
+### 三重积分的性质
+
+### 三重积分的计算方法
+
+1. 直角坐标法
+2. 切片法
+3. 柱面坐标变换法
+4. 球面坐标变换法
 
 ## 重积分的应用
