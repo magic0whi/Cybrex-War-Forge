@@ -64,16 +64,78 @@ tags:
 
 ### 三重积分的定义
 
-设 \\(\Omega\\) 为空间有限几何体, \\(\f(x, y, z)\) 在 \\(\Omega\\) 上有界
-1. \\(\Omega\\)
+设 \\(\Omega\\) 为空间有限几何体, \\(f(x, y, z)\\) 在 \\(\Omega\\) 上有界
+
+\\(\Omega\\) 划分为 \\(\Delta V_1, \Delta V_2, \dots, \Delta V_n\\)
+\\(\forall(\xi_i, \eta_i, \zeta_i)\in\Delta V_i\\) , 作 \\(\displaystyle\sum_{i=1}^n f(\xi_i, \eta_i, \zeta_i)\Delta V_i\\)
+
+\\(\lambda\\) 为 \\(\Delta V_1, \Delta V_2, \dots, \Delta V_n\\) 直径最大值
+若 \\(\lim\limits_{a\to0}\displaystyle\sum_{i=1}^n f(\xi_i, n_i, \zeta_i)\Delta V_i\\)
+称此极限为 \\(f(x, y, z)\\) 在 \\(\Omega\\) 上的三重积分
+记 \\(\iiint_{\Omega}f(x, y, z)dV\\)
+即 \\(\iiint_{\Omega}f(x, y, z)dV=\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n f(\xi_1, \eta_i, \zeta_i)\Delta V_i\\)
 
 ### 三重积分的性质
+
+1. \\(\iiint_{\Omega} 1dV=V\\)
+2. \\(\Omega\\) 为有限闭区域, \\(f(x, y, z)\\) 在 \\(\Omega\\) 上连续, 则 \\(\exist(\xi, \eta, \zeta)\in\Omega\\) , 使 \\(\iiint_\Omega f(x, y, z)dV=f(\xi, \eta, \zeta)V\\)
 
 ### 三重积分的计算方法
 
 1. 直角坐标法
-2. 切片法
-3. 柱面坐标变换法
-4. 球面坐标变换法
+   1. 铅直投影法 TODO: 补充图片
+      \\(\Omega=\\{(x, y, z)|(x, y)\in Dxy , \varphi_1(x, y)\leqslant z\leqslant\varphi_2(x, y)\\}\\)
+      \\(\iiint_\Omega f(x, y, z)dv=\iint_{Dxy}dxdy\int_{\varphi_1(x, y)}^{\varphi_2(x, y)}f(x, y, z)dz\\)
+   2. 切片法 TODO: 补充图片
+      \\(\Omega=\\{(x, y, z)|(x, y)\in Dz, c\leqslant z\leqslant d\\}\\)
+      \\(\iiint_\Omega f(x, y, z)dv=\int_c^d dz\iint_{Dz} f(x, y, z)dxdy\\)
+2. 柱面坐标变换法
+   1. 特征: TODO: 补充图片
+      1. 区域 \\(\Omega\\) 的边界含 \\(x^2+y^2\\)
+      2. \\(f(x, y, z)\\) 含 \\(x^2+y^2\\)
+   2. 变换: TODO: 补充图片
+      \\(\Omega=\\{(x, y, z)|(x, y)\in Dxy , \varphi_1(x, y)\leqslant z\leqslant\varphi_2(x, y)\\}\\)
+      令 \\(\begin{cases} x=r\cos\theta \\\ y=r\sin\theta \\\ z=z \end{cases} \quad \begin{aligned} &\alpha\leqslant\theta\leqslant\beta \\\ &r_1(\theta)\leqslant r\leqslant r_2(\theta) \\\ &\varphi_1(r\cos\theta, r\sin\theta)\leqslant z\leqslant\varphi_2(r\cos\theta, r\sin\theta) \end{aligned}\\)
+   3. \\(dV=r dr d\theta dz\\) TODO: 补充图片
+      \\(\iiint_{\Omega}f(x, y, z)dV=\int_\alpha^\beta d\theta\int_{r_1(\theta)}^{r_2(\theta)}dr\int_{\varphi_1(r\cos\theta, r\sin\theta)}^{\varphi_2(r\cos\theta, r\sin\theta)}rf(r\cos\theta, r\sin\theta, z)dz\\)
+3. 球面坐标变换法
+   1. 特征:
+      1. \\(\Omega\\) 的表面含 \\(x^2+y^2+z^2\\)
+      2. \\(f(x, y, z)\\) 含 \\(x^2+y^2+z^2\\)
+   2. 变换
+      \\(\begin{cases} x=r\cos\theta\sin\varphi \\\ y=r\sin\theta\sin\varphi \\\ z=r\cos\varphi \end{cases}\\)
+   3. \\(dV=r^2\sin\varphi dr d\theta d\varphi\\)
 
 ## 重积分的应用
+
+### 几何应用
+
+1. 面积
+   1. D 为 xOy 面内有限闭区域, 则 D 的面积为 \\(A=\iint_D 1d\sigma\\)
+   2. 空间曲面的面积 TODO: 补充图片
+      1. \\(\forall d\sigma\subset D\\)
+      2. \\(\vec{n}=\\{-f_x^', -f_y^', 1\\}\\)
+         \\(\cos r=\frac{1}{\sqrt{1+f_x^2'+f_y^2'}}\\)
+         \\(\because ds\cos r=d\sigma\\)
+         \\(\therefore ds=\sqrt{1+f_x^2'+f_y^2'}d\sigma\\)
+      3. \\(A=\iint_D ds=\iint_D\sqrt{1+f_x^2'+f_y^2'}d\sigma\\)
+
+### 物理应用
+
+1. 质心
+   1. 二维 TODO: 补充图片
+      \\(m=\iint_D \rho(x, y)d\sigma\\)
+      \\(\bar{x}=\frac{\iint_D x\rho(x, y)d\sigma}{\iint_D\rho(x, y)d\sigma} , \bar{y}=\frac{\iint_D y\rho(x, y)d\sigma}{\iint_D \rho(x, y)d\sigma}\\)
+   2. 三维 TODO: 补充图片
+      \\(m=\iiint_\Omega \rho(x, y, z)dV\\)
+      \\(\bar{x}=\frac{\iiint_\Omega x\rho(x, y, z)dV}{\iiint_\Omega \rho(x, y, z)dV} , \bar{y}=\frac{\iiint_\Omega y\rho(x, y, z)dV}{\iiint_\Omega \rho(x, y, z)dV} , \bar{z}=\frac{\iiint_\Omega z\rho(x, y, z)dV}{\iiint_\Omega \rho(x, y, z)dV}\\)
+2. 转动惯量
+   1. 二维 TODO: 补充图片
+      \\(I_L=\iint_D d^2\rho(x, y)d\sigma\\)
+      \\(I_x=\iint_D y^2\rho(x, y)d\sigma\\)
+      \\(I_y=\iint_D x^2\rho(x, y)d\sigma\\)
+      \\(I_0=\iint_D(x^2+y^2)\rho(x, y)d\sigma\\)
+   2. 三维 TODO: 补充图片
+      \\(I_x=\iint_\Omega(y^2+z^2)\rho(x, y, z)dV\\)
+      \\(I_y=\iint_\Omega(x^2+z^2)\rho(x, y, z)dV\\)
+      \\(I_z=\iint_\Omega(x^2+y^2)\rho(x, y, z)dV\\)
