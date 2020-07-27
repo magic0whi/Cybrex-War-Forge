@@ -48,7 +48,7 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
 称 A 为 f(x) 当 \\(x\to x_0\\) 的极限, 记 \\(\lim\limits_{x\to x_0}f(x)=A\\)
 
 二元函数极限定义:
-设 \\(z=f(x, y) , ((x, y)\in D)\\) , \\(M_0(x_0, y_0)\\) ,
+设 \\(z=f(x, y) \enspace((x, y)\in D)\\) , \\(M_0(x_0, y_0)\in D\\)
 若 \\(\forall\varepsilon>0\\) ,
 \\(\exist\delta>0\\) , 当 \\(0<\sqrt{(x-x_0)^2-(y-y_0)^2}<\delta\\) 时, 有 \\(|f(x, y)-A|<\varepsilon\\)
 称 A 为 \\(f(x, y)\\) 当 \\((x, y)\to(x_0, y_0)\\) 的极限, 记 \\(\lim\limits_{\substack{x\to x_0 \\\ y\to y_0}}f(x, y)=A\\)
@@ -56,7 +56,7 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
 ### 多元函数连续性与性质
 
 定义
-\\(z=f(x, y) \enspace((x, y)\in D\\) , \\(M_0(x_0, y_0)\in D\\)
+设 \\(z=f(x, y) \enspace((x, y)\in D)\\) , \\(M_0(x_0, y_0)\in D\\)
 若 \\(\lim\limits_{\substack{x\to x_0 \\\ y\to y_0}}f(x, y)=f(x_0, y_0)\\) , 称 \\(f(x, y)\\) 在 \\((x_0, y_0)\\) 处连续
 
 ### 多元函数在有界闭区域上的性质
@@ -87,52 +87,49 @@ D 为定义域, 值域 \\(R=\\{z|z=f(x, y), (x, y)\in D\\}\\)
    * f(x, y) 在 \\(M_0\\) 处关于 y 的偏增量 \\(\Delta z_y=f(x_0, y_0+\Delta y)-f(x_0, y_0) \enspace(=f(x_0, y)-f(x_0, y_0))\\)
    * f(x, y) 在 \\(M_0\\) 处的全增量 \\(\Delta z=f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0) \enspace(=f(x, y)-f(x_0, y_0))\\)
 2. 偏导数
-   * 若 \\(\lim\limits_{\Delta x\to0}\frac{\Delta z_x}{\Delta x}\\) 存在
+  1. 某点偏导
+     * 若 \\(\lim\limits_{\Delta x\to0}\frac{\Delta z_x}{\Delta x}\\) 存在
      称 f(x, y) 在 \\(M_0\\) 处关于 x 可偏导, 
      该极限称为 f(x, y) 在 \\(M_0\\) 处关于 x 的偏导数, 记 \\(f_x^'(x_0, y_0)\\) 或 \\(\frac{\partial z}{\partial x}|_{(x_0, y_0)}\\)
-   * 若 \\(\lim\limits_{\Delta y\to0}\frac{\Delta z_y}{\Delta y}\\) 存在
+     * 若 \\(\lim\limits_{\Delta y\to0}\frac{\Delta z_y}{\Delta y}\\) 存在
      称 f(x, y) 在 \\(M_0\\) 处关于 y 可偏导,
      该极限称为 f(x, y) 在 \\(M_0\\) 处关于 y 的偏导数, 记 \\(f_y^'(x_0, y_0)\\) 或 \\(\frac{\partial z}{\partial y}|_{(x_0, y_0)}\\)
-   * 若 \\(\forall(x, y)\in D\\) , f(x, y) 对 x, y 皆可偏导, 称 \\(f_x^'(x, y) , f_y^'(x, y)\\) 为 f(x, y) 对 x, y 的偏导数
-
-(求偏导数时, 其余参数视为常数)
+   2. 偏导数
+      若 \\(\forall(x, y)\in D\\) , \\(f(x, y)\\) 对 x, y 皆可偏导, 称 \\(f_x^'(x, y) 、 f_y^'(x, y)\\) 为 \\(f(x, y)\\) 对 x、y 的偏导数
+      (技巧: 求偏导数时, 其余参数视为常数)
 
 ### 高阶偏导数
 
 定义:
 设\\(z=f(x, y)\\) 在 D 内对 x, y 可偏导,
-\\(\frac{\partial z}{\partial x}=f_x^'(x, y)\\) 为 f(x, y) 对 x 偏导数,
-\\(\frac{\partial z}{\partial y}=f_y^'(x, y)\\) 为 f(x, y) 对 y 偏导数.
-1. * 若 \\(f_x^'(x, y)\\) 对 x 可偏导, 其对 x 的偏导数称为 f(x, y) 对 x 的二阶偏导数, 记 \\(f_{xx}^{''}\\) 或 \\(\frac{\partial^2z}{\partial x^2}\\)
-   * 若 \\(f_y^'(x, y)\\) 对 y 可偏导, 其对 y 的偏导数称为 f(x, y) 对 y 的二阶偏导数, 记 \\(f_{yy}^{''}\\) 或 \\(\frac{\partial^2z}{\partial y^2}\\)
-2. * 若 \\(f_x^'(x, y)\\) 对 y 可偏导, 其对 y 的偏导数称为 f(x, y) 对先x后y的二阶混合偏导数, 记 \\(f_{xy}^{''}(x, y)\\) 或 \\(\frac{\partial^2z}{\partial x\partial y}\\)
-   * 若 \\(f_y^'(x, y)\\) 对 x 可偏导, 其对 x 的偏导数称为 f(x, y) 对先y后x的二阶混合偏导数, 记 \\(f_{yx}^{''}(x, y)\\) 或 \\(\frac{\partial^2z}{\partial y\partial x}\\)
+\\(f_x^'(x, y)=\frac{\partial z}{\partial x}\\) 为 \\(f(x, y)\\) 对 x 偏导数,
+\\(f_y^'(x, y)=\frac{\partial z}{\partial y}\\) 为 \\(f(x, y)\\) 对 y 偏导数.
+1. 若 \\(f_x^'(x, y)\\) 对 x 可偏导, 其对 x 的偏导数称为 \\(f(x, y)\\) 对 x 的二阶偏导数, 记 \\(f_{xx}^{''}\\) 或 \\(\frac{\partial^2z}{\partial x^2}\\)
+   若 \\(f_y^'(x, y)\\) 对 y 可偏导, 其对 y 的偏导数称为 \\(f(x, y)\\) 对 y 的二阶偏导数, 记 \\(f_{yy}^{''}\\) 或 \\(\frac{\partial^2z}{\partial y^2}\\)
+2. 若 \\(f_x^'(x, y)\\) 对 y 可偏导, 其对 y 的偏导数称为 \\(f(x, y)\\) 对先x后y的二阶混合偏导数, 记 \\(f_{xy}^{''}(x, y)\\) 或 \\(\frac{\partial^2z}{\partial x\partial y}\\)
+   若 \\(f_y^'(x, y)\\) 对 x 可偏导, 其对 x 的偏导数称为 \\(f(x, y)\\) 对先y后x的二阶混合偏导数, 记 \\(f_{yx}^{''}(x, y)\\) 或 \\(\frac{\partial^2z}{\partial y\partial x}\\)
 
 定理:
 若 z=f(x, y) 的二阶混合偏导数 \\(\frac{\partial^2z}{\partial x\partial y} , \frac{\partial^2z}{\partial y\partial x}\\) 皆连续,
-则 \\(\frac{\partial^2z}{\partial x\partial y}=\frac{\partial^2z}{\partial y\partial x}\\) ,
-即 \\(f_{xy}^{''}=f_{yx}^{''}\\)
+则 \\(\frac{\partial^2z}{\partial x\partial y}=\frac{\partial^2z}{\partial y\partial x}\\) , 即 \\(f_{xy}^{''}=f_{yx}^{''}\\)
 
 ## 全微分
 
 ### 二元函数全微分定义
 
-设 \\(z=f(x, y) \enspace((x, y)\in D)\\) , \\(M_0(x_0, y_0)\in D\\)
-全增量 \\(\Delta z=f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0) \enspace(=f(x, y)-f(x_0, y_0))\\)
-若 \\(\Delta z=A\Delta x+B\Delta y+\circ(\rho)\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}\\)
-称 f(x, y) 在 \\((x_0, y_0)\\) 处可全微
-称 \\(A\Delta x+B\Delta y\\) 为 f(x, y) 在 \\(x_0, y_0\\) 处的全微分, 记 \\(dz|_{(x_0, y_0)}=Adx+Bdy\\)
+设 \\(z=f(x, y) \enspace((x, y)\in D)\\) , \\(M_0(x_0, y_0)\in D\\), 全增量 \\(\Delta z=f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0)(=f(x, y)-f(x_0, y_0))\\)
+若 \\(\Delta z=A\Delta x+B\Delta y+\circ(\rho)\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}\\) (误差为两点距离的高阶无穷小)
+称 \\(f(x, y)\\) 在 \\((x_0, y_0)\\) 处可全微
+称 \\(A\Delta x+B\Delta y\\) 为 \\(f(x, y)\\) 在 \\((x_0, y_0)\\) 处的全微分, 记 \\(dz|_{(x_0, y_0)}=Adx+Bdy\\)
 
-结合偏导数:
-\\(dz|_{(x_0, y_0)}=f_x^'(x_0, y_0)dx+f_y^'(x_0, y_0)dy\\)
-\\(dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy\\)
+结合偏导数的内容可得:
+\\(dz|_{(x_0, y_0)}=f_x^'(x_0, y_0)dx+f_y^'(x_0, y_0)dy=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy\\)
 
 ### 结论
 
 设 \\(z=f(x, y) \enspace((x, y)\in D)\\) , \\(M_0(x_0, y_0)\in D\\)
-1. 若 f(x, y) 在 \\(M_0\\) 处可微, 则 f(x, y) 在 \\(M_0\\) 连续, 反之不对
-2. 若 f(x, y) 在 \\(M_0\\) 处可微, 则 f(x, y) 在 \\(M_0\\) 可偏导, 反之不对
-3. (可微充分条件) 若 z=f(x, y) 的偏导数 \\(\frac{\partial z}{\partial x}\\) , \\(\frac{\partial z}{\partial y}\\) 连续(或连续可偏导) , 则 f(x, y) 可微
+1. 若 \\(f(x, y)\\) 在 \\(M_0\\) 处可微, 则 \\(f(x, y)\\) 在 \\(M_0\\) 连续且可偏导, 反之不对
+2. (可微充分条件) 若 \\(z=f(x, y)\\) 连续可偏导(即导数是连续的) , 则 \\(f(x, y)\\) 可微
 
 ## 多元复合函数求导法则
 
