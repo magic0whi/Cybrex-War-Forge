@@ -41,7 +41,7 @@ TODO: 前章讲过, 属于冗余内容
 1. 定义: 设 \\(\displaystyle\sum_{n=1}^\infty a_n\\) , 若 \\(\forall n\\) , \\(a_n\geqslant0\\) , 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 为正向级数
 
 Note:
-\\(S_1\leqslant S_2\leqslant S_3\leqslant\dots\\) , 即 \\(\\{S_n\\}\uarr\\) ;
+\\(S_1\leqslant S_2\leqslant S_3\leqslant\dots\\) , 即 \\(\\{S_n\\}\uarr\\) (表示 \\(S_n\\) 单调递增);
 情况1：\\(\\{S_n\\}\\) 无上介 \\(\rArr \lim\limits_{n\to\infty} S_n=+\infty \rArr \displaystyle\sum_{n=1}^\infty a_n\\) 发散
 情况2: \\(S_n\leqslant M \rArr \lim\limits_{n\to\infty} S_n\\) 存在 \\(\rArr \displaystyle\sum_{n=1}^\infty a_n\\) 收敛
 2. 审敛法
@@ -70,7 +70,29 @@ Notes:
    若 \\(p=1\\) , 称 \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n}\\) 为调和级数
 2. \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n^p} \begin{cases} p>1 , 收敛 \\\ p\leqslant 1 , 发散 \end{cases}\\) (敛散性使用柯西判别法)
 
-## 幂级数
+### 交错级数及审敛法
+
+1. 定义
+   形如 \\(a_1-a_2+a_3-a_4+\dots\\) 或 \\(-a_1+a_2-a_3+a_4-\dots \quad(\forall n, a_n\geqslant0)\\)
+   即 \\(\displaystyle\sum_{n=1}^\infty (-1)^{n-1}a_n\\) 或 \\(\displaystyle\sum_{n=1}^\infty (-1)^n a_n \quad(\forall n, a_n\geqslant0)\\)
+2. 审敛性
+   1. 莱布尼茨法
+      对 \\(\displaystyle\sum_{n=1}^\infty (-1)^{n-1}a_n \quad(\forall n, a_n\geqslant0)\\)
+      若\\(\\{a_n\\}\darr\\) 且 \\(\lim\limits_{n\to\infty}a_n=0\\)
+      则 \\(\displaystyle\sum_{n=1}^\infty (-1)^{n-1}a_n\\) 收敛, 且 \\(S\leqslant a_1\\)
+
+### 绝对收敛与条件收敛
+
+0. 取绝对值(提高发散性): \\(\displaystyle\sum_{n=1}^\infty a_n \rarr \displaystyle\sum_{n=1}^\infty |a_n|\\)
+1. 定义
+   1. 当 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛, 而 \\(\displaystyle\sum_{n=1}^\infty |a_n|\\) 发散, 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 条件收敛
+      如 \\(\displaystyle\sum_{n=1}^\infty \dfrac{(-1)^{n-1}}{n}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\dots\\) 收敛
+      但 \\(\displaystyle\sum_{n=1}^\infty |\dfrac{(-1)^{n-1}}{n}|=\displaystyle\sum_{n=1}^\infty \frac{1}{n}\\) 发散 (原因见p-级数)
+   2. 当 \\(\displaystyle\sum_{n=1}^\infty |a_n|\\) 收敛, 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 绝对收敛
+2. 结论
+   若 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 绝对收敛 (即 \\(\displaystyle\sum_{n=1}^\infty |a_n|\\) 收敛), 则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛
+
+## 幂级数的概念与分析性质
 
 ## 函数展开成幂级数
 
