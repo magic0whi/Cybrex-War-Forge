@@ -94,6 +94,64 @@ Notes:
 
 ## 幂级数的概念与分析性质
 
+### 函数项级数的概念
+
+\\(\\{u_n(x)\\}\\) 为函数列, \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 称为函数项级数.
+对 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\)
+当 \\(x=x_0\\) 时, \\(\displaystyle\sum_{n=1}^\infty u_n(x_0)\\) 收敛, \\(x=x_0\\) 称为 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 收敛点
+当 \\(x=x_1\\) 时, \\(\displaystyle\sum_{n=1}^\infty u_n(x_1)\\) 发散, \\(x=x_1\\) 称为 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 发散点
+\\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 的一切收敛点而成的集合称为 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 的收敛域, 记为 \\(D\\)
+\\(\forall x\in D , \displaystyle\sum_{n=1}^\infty u_n(x)=S(x)\\) (S(x) 称为和函数)
+
+举个例子, 如 \\(x+x^2+x^3+x^4+\dots=\displaystyle\sum_{n=1}^\infty x^n\\)
+当 \\(x=\dfrac{2}{3}\\) 时, \\(\displaystyle\sum_{n=1}^\infty (\dfrac{2}{3})^n\\) 收敛, \\(x=\dfrac{2}{3}\\) 称为 \\(\displaystyle\sum_{n=1}^\infty x^n\\) 的收敛点;
+当 \\(x=2\\) 时, \\(\displaystyle\sum_{n=1}^\infty 2^n\\) 发散, \\(x=2\\) 称为 \\(\displaystyle\sum_{n=1}^\infty x^n\\) 的发散点;
+
+#### 幂级数概念与基本定理
+
+1. 定义:
+   形如 \\(\displaystyle\sum_{n=0}^\infty a_n x^n=a_0+a_1x+a_2x^2+\dots\\)
+   或 \\(\displaystyle\sum_{n=0}^\infty a_n(x-x_0)^n=a_0+a_1(x-x_0)+a_2(x-x_0)^2+\dots\\)
+   称为幂级数
+2. 基本定理(abel定理) TODO: 补充推导过程
+   对 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\)
+   1. 当 \\(x=x_0 (\neq0)\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x_0^n\\) 收敛. 则当 \\(|x|<|x_0|\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 绝对收敛;
+   2. 当 \\(x=x_1\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x_1^n\\) 发散. 则当 \\(|x|<|x_1|\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 发散;
+
+### 收敛半径与收敛域
+
+1. 定理1
+   对 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\)
+   设 \\(\lim\limits_{n\to\infty}|\dfrac{a_n+1}{a_n}|=\rho\\) , 收敛半径 \\(R\\)
+   1. 若\\(\rho=0 \rArr R=+\infty\\) ;
+   2. 若\\(\rho=+\infty \rArr R=0\\) ;
+   3. 若 \\(0<\rho<+\infty \rArr R=\dfrac{1}{\rho}\\)
+2. 定理2
+   对 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\)
+   设 \\(\lim\limits_{n\to\infty}\sqrt[n]{|a_n|}=\rho\\) , 收敛半径 \\(R\\)
+   1. 若\\(\rho=0 \rArr R=+\infty\\) ;
+   2. 若\\(\rho=+\infty \rArr R=0\\) ;
+   3. 若 \\(0<\rho<+\infty \rArr R=\dfrac{1}{\rho}\\)
+
+Note:
+对 \\(\displaystyle\sum_{n=0}^\infty a_n x^{2n+1}=a_0x+a_1x^3+a_2x^5+\dots\\)
+\\(\lim\limits_{n\to\infty}|\dfrac{a_n+1}{a_n}|=\rho\\)
+   1. 若\\(\rho=0 \rArr R=+\infty\\) ;
+   2. 若\\(\rho=+\infty \rArr R=0\\) ;
+   3. 若 \\(0<\rho<+\infty \rArr R=\sqrt{\dfrac{1}{\rho}}\\)
+
+### 幂级数和函数的分析性质
+
+设 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数为 \\(S(x)\\)
+1. 定理1
+   \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数 \\(S(x)\\) 在其收敛域上可积
+   则 \\(\int_0^x S(x)dx=\int_0^x (\displaystyle\sum_{n=0}^\infty a_n x^n)dx=\displaystyle\sum_{n=0}^\infty\int_0^x a_nx^ndx=\displaystyle\sum_{n=0}^\infty\dfrac{a_n}{n+1}x^{n+1}\\)
+   且 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 与 \\(\displaystyle\sum_{n=0}^\infty \dfrac{a_n}{n+1}x^{n+1}\\) 收敛半径相同(逐项可积性)
+2. 定理2
+   \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数 \\(S(x)\\) 在其收敛域上可积
+   则 \\((\displaystyle\sum_{n=0}^\infty a_n x^n)'=\displaystyle\sum_{n=0}^\infty (a_n x^n)'=\displaystyle\sum_{n=1}^\infty n a_n x^{n-1}\\)
+   且 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 与 \\(\displaystyle\sum_{n=1}^\infty n a_n x^{n-1}\\) 收敛半径相同(逐项可导性)
+
 ## 函数展开成幂级数
 
 ## 函数的幂级数展开式的应用
