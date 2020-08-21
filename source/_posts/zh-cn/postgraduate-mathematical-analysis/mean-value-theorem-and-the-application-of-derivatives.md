@@ -96,34 +96,28 @@ Notes:
 
 设 \\(f(x)\\) 在 \\(x=x_0\\) 邻域内 \\(n+1\\) 阶可导.
 则 \\(f(x)=P_n(x)+R_n(x)\\)
-\\(\begin{aligned} 其中:\enspace &P_n(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\text{...}+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n \\\ &R_n(x)=\circ((x-x_0)^n)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1} \quad (\xi 介于 x_0 与 x 之间)\end{aligned}\\)
+\\(\begin{aligned} 其中:\enspace &P_n(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\dots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n \\\ &R_n(x)=\circ((x-x_0)^n)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1} \quad (\xi 介于 x_0 与 x 之间)\end{aligned}\\)
 如果 \\(x_0=0\\) , 这个式子被称为麦克劳林公式
 
 证明:
 1. \\(P_n(x)\\) 部分
-   设 \\(f(x)=a_0+a_1(x-x_0)+a_2(x-x_0)^2+a_3(x-x_0)^3+\text{...}+a_n(x-x_0)^n\\)
-   要使这个式子派用场, 得找到 \\(a_0, a_1, \text{...}\\) 这些系数的值, 怎么做呢?
+   设 \\(f(x)=a_0+a_1(x-x_0)+a_2(x-x_0)^2+a_3(x-x_0)^3+\dots+a_n(x-x_0)^n\\)
+   要使这个式子派用场, 得找到 \\(a_0, a_1, \dots\\) 这些系数的值, 怎么做呢?
    要得到 \\(a_0\\) , 我们可以使 \\(x=x_0\\), 这样其他项就消除了.
    那其他的 \\(a_1, a_2, a_3\\) 呢?
    我们可以不断对该式求它的一阶, 二阶, 三阶, ... 导数:
-   \\(\begin{aligned} &f'(x)=a_1+2a_2(x-x_0)+3a_3(x-x_0)^2+\text{...}+na_n(x-x_0)^{n-1} \\\ &f''(x)=2a_2+3\cdot2a_3(x-x_0)^2+\text{...}+n\cdot (n-1)(x-x_0)^{n-2} \\\ &\text{...} \end{aligned}\\)
+   \\(\begin{aligned} &f'(x)=a_1+2a_2(x-x_0)+3a_3(x-x_0)^2+\dots+na_n(x-x_0)^{n-1} \\\ &f''(x)=2a_2+3\cdot2a_3(x-x_0)^2+\dots+n\cdot (n-1)(x-x_0)^{n-2} \\\ &\dots \end{aligned}\\)
    发现规律了吗, 将 \\(x=x_0\\) 带入, 可以轻松得到对应项的系数值: \\(a_1=\frac{f'(x_0)}{1} , a_2=\frac{f''(x_0)}{1\cdot2}, a_3=\frac{f'''(x_0)}{1\cdot2\cdot3} \rArr a_n=\frac{f^{(n)}(x_0)}{n!}\\)
-   然后式子就能写成 \\(f(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\text{...}+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\\)
+   然后式子就能写成 \\(f(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\dots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\\)
 2. \\(R_n(x)\\) 部分(拉格朗日型余项)
    TODO: 最后倒数4,3步的分母变化没看懂
    令 \\(R_n(x)=f(x)-P_n(x)\\)
    \\(R_n(x)=f(x)-P_n(x)\\)
-   \\(R_n(x_0)=0 , R_n'(x_0)=0,\text{...},R_n^{(n)}(x_0)=0\\)
+   \\(R_n(x_0)=0 , R_n'(x_0)=0,\dots,R_n^{(n)}(x_0)=0\\)
    \\(\\)
-   \\(\begin{aligned}\dfrac{R_n(x)}{(x-x_0)^{n+1}}=\dfrac{R_n(x)-R_n(x_0)}{(x-x_0)^{n+1}-(x_0-x_0)^{n+1}}&=\dfrac{R_n'(\xi_1)}{(n+1)(\xi_1+x_0)^n} \quad(\xi_1 在 x 与 x_0 内, 使用柯西中值定理) \\\ &=\dfrac{R_n'(\xi_1)-R_n'(x_0)}{(n+1)(\xi_1-x_0)^n-(n+1)(x_0-x_0)^n} \\\ &=\dfrac{R_n''(\xi_2)}{(n+1)\cdot n(\xi_2-x_0)^{n-1}} \quad(\xi_2 在 x_0 与 \xi_1 内, 再次使用柯西中值定理) \\\ &=\text{...} \\\ &=\frac{R_n^{(n)}(\xi_n)}{(n+1)\cdot n(\xi_2-x_0)^{n-1}\cdot\text{...}\cdot2(\xi_n-x_0)^1} \\\ &=\frac{R_n^{(n)}(\xi_n)-R_n^{(n)}(x_0)}{(n+1)!(\xi_n-x_0)-(n+1)!(x_0-x_0)} \\\ &=\frac{R_n^{(n+1)}(\xi)}{(n+1)!} \quad(\xi 在 x_0 与 \xi_n 内) \\\  &=\frac{f^{(n+1)}(\xi)}{(n+1)!} \\\ &\rArr R_n(x)=\frac{f^{(n+1)(\xi)}}{(n+1)!}(x-x_0)^{n+1} \end{aligned}\\)
+   \\(\begin{aligned}\dfrac{R_n(x)}{(x-x_0)^{n+1}}=\dfrac{R_n(x)-R_n(x_0)}{(x-x_0)^{n+1}-(x_0-x_0)^{n+1}}&=\dfrac{R_n'(\xi_1)}{(n+1)(\xi_1+x_0)^n} \quad(\xi_1 在 x 与 x_0 内, 使用柯西中值定理) \\\ &=\dfrac{R_n'(\xi_1)-R_n'(x_0)}{(n+1)(\xi_1-x_0)^n-(n+1)(x_0-x_0)^n} \\\ &=\dfrac{R_n''(\xi_2)}{(n+1)\cdot n(\xi_2-x_0)^{n-1}} \quad(\xi_2 在 x_0 与 \xi_1 内, 再次使用柯西中值定理) \\\ &=\dots \\\ &=\frac{R_n^{(n)}(\xi_n)}{(n+1)\cdot n(\xi_2-x_0)^{n-1}\cdot\dots\cdot2(\xi_n-x_0)^1} \\\ &=\frac{R_n^{(n)}(\xi_n)-R_n^{(n)}(x_0)}{(n+1)!(\xi_n-x_0)-(n+1)!(x_0-x_0)} \\\ &=\frac{R_n^{(n+1)}(\xi)}{(n+1)!} \quad(\xi 在 x_0 与 \xi_n 内) \\\  &=\frac{f^{(n+1)}(\xi)}{(n+1)!} \\\ &\rArr R_n(x)=\frac{f^{(n+1)(\xi)}}{(n+1)!}(x-x_0)^{n+1} \end{aligned}\\)
 
-Notes:
-1. \\(e^x=1+x+\frac{x^2}{2!}+\text{...}+\frac{x^n}{n!}+\circ(x^n)\\)
-2. \\(\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\text{...}+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+\circ(x^{2n+1})\\)
-3. \\(\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\text{...}+(-1)^n\frac{x^{2n}}{(2n)!}+\circ(x^{2n})\\)
-4. \\(\ln(1+x)=x-frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\text+(-1)^{n-1}\frac{x^n}{n}+\circ(x^n)\\)
-5. \\(\frac{1}{1-x}=1+x+x^2+x^3+\text{...}+x^n+\circ(x^n)\\)
-6. \\(\frac{1}{1+x}=1-x+x^2-x^3+\text{...}+(-1)^nx^n+\circ(x^n)\\)
+(常见泰勒展开式见章节 无穷级数->函数展开成幂级数)
 
 ## 导数与函数单调性和曲线凹凸性的关系
 

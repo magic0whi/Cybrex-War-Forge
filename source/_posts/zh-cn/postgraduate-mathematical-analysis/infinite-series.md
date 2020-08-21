@@ -144,13 +144,30 @@ Note:
    则 \\(\int_0^x S(x)dx=\int_0^x (\displaystyle\sum_{n=0}^\infty a_n x^n)dx=\displaystyle\sum_{n=0}^\infty\int_0^x a_nx^ndx=\displaystyle\sum_{n=0}^\infty\dfrac{a_n}{n+1}x^{n+1}\\)
    且 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 与 \\(\displaystyle\sum_{n=0}^\infty \dfrac{a_n}{n+1}x^{n+1}\\) 收敛半径相同(逐项可积性)
 2. 定理2
-   \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数 \\(S(x)\\) 在其收敛域上可积
+   \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数 \\(S(x)\\) 在其收敛域上可导
    则 \\((\displaystyle\sum_{n=0}^\infty a_n x^n)'=\displaystyle\sum_{n=0}^\infty (a_n x^n)'=\displaystyle\sum_{n=1}^\infty n a_n x^{n-1}\\)
    且 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 与 \\(\displaystyle\sum_{n=1}^\infty n a_n x^{n-1}\\) 收敛半径相同(逐项可导性)
 
 ## 函数展开成幂级数
 
+#### 直接法
 
+设 \\(f(x)\\)  在 \\(x=x_0\\) 邻域内任意阶可导.
+则 \\(f(x)\\) 在 \\(x=x_0\\) 邻域内展成 \\(\displaystyle\sum_{n=0}^\infty \dfrac{f^{(n)}(x_0)}{n!}(x-x_0)^n\\) 的充要条件是 \\(\lim\limits_{n\to\infty} R_n(x)=0\\)
+(参见泰勒级数)
+
+#### 间接法
+
+(基于直接法推导出来的已有公式进行展开)
+
+记(后面的展开不用记):
+1. \\(e^x=\displaystyle\sum_{n=0}^\infty \dfrac{x^n}{n!}=1+x+\frac{x^2}{2!}+\dots+\frac{x^n}{n!}+\circ(x^n) \quad(-1<x<1)\\)
+2. \\(\sin x=\displaystyle\sum_{n=0}^\infty \dfrac{(-1)^n}{(2n+1)!}x^{2n+1}=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dots+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+\circ(x^{2n+1}) \quad(-\infty<x<+\infty)\\)
+3. \\(\cos x=\displaystyle\sum_{n=0}^\infty \dfrac{(-1)^n}{(2n)!}x^{2n}=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots+(-1)^n\frac{x^{2n}}{(2n)!}+\circ(x^{2n}) \quad(-\infty<x<+\infty)\\)
+4. \\(\frac{1}{1-x}=\displaystyle\sum_{n=0}^\infty x^n=1+x+x^2+x^3+\dots+x^n+\circ(x^n) \quad(-1<x<1)\\)
+5. \\(\frac{1}{1+x}=\displaystyle\sum_{n=0}^\infty (-1)^n x^n=1-x+x^2-x^3+\dots+(-1)^nx^n+\circ(x^n) \quad(-1<x<1)\\)
+6. \\(\ln(1+x)=\displaystyle\sum_{n=1}^\infty \dfrac{(-1)^{n-1}}{n}x^n=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\dots+(-1)^{n-1}\frac{x^n}{n}+\circ(x^n) \quad(-1<x\leqslant1)\\)
+7. \\(-\ln(1-x)=\displaystyle\sum_{n=1}^\infty \dfrac{x^n}{n}=x+\frac{x^2}{2}+\frac{x^3}{3}+\frac{x^4}{4}+\dots+\frac{x^n}{n}+\circ(x^n) \quad(-1\leqslant x<1)\\)
 
 ## 函数的幂级数展开式的应用
 
