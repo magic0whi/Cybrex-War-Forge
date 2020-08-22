@@ -169,10 +169,34 @@ Note:
 6. \\(\ln(1+x)=\displaystyle\sum_{n=1}^\infty \dfrac{(-1)^{n-1}}{n}x^n=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\dots+(-1)^{n-1}\frac{x^n}{n}+\circ(x^n) \quad(-1<x\leqslant1)\\)
 7. \\(-\ln(1-x)=\displaystyle\sum_{n=1}^\infty \dfrac{x^n}{n}=x+\frac{x^2}{2}+\frac{x^3}{3}+\frac{x^4}{4}+\dots+\frac{x^n}{n}+\circ(x^n) \quad(-1\leqslant x<1)\\)
 
-## 函数的幂级数展开式的应用
-
 ## 函数项级数的一致收敛性及一致收敛级数的基本性质
 
 ## 傅里叶级数
+
+单一周期信号: \\(a_n\cos n\omega t+b_n\sin n\omega t\\)
+设 \\(f(x)\\) 以 \\(2\pi\\) 为周期的信号
+Q1: \\(f(x)\\) 可否分解为 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\)?
+\\(a_0=? \enspace a_n=? \enspace b_n=?\\)
+\\(\dfrac{a_0}{2}\\) - 直流成份
+\\(a_1\cos x+b_1\sin x\\) - 一次谐波
+\\(a_2\cos 2x+b_2\sin 2x\\) - 二次谐波
+
+Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) 何关系? (后面的级数被称作三角级数)
+
+### 三角函数 \\(\xi\\) 及正交性
+
+三角函数 \\(\xi\\) : \\(\cos 0x=\sin 0x=1 , \cos x , \sin x , \cos 2x , \sin 2x , \dots , \cos(nx) , \sin(nx)\\)
+
+正交性:
+1. \\(\int_{-\pi}^\pi 1\cdot\cos(nx) dx=0 \quad(n=1, 2, 3, \dots)\\)
+2. \\(\int_{-\pi}^\pi 1\cdot\cos(nx) dx=0 \quad(n=1, 2, 3, \dots)\\)
+3. \\(\int_{-\pi}^\pi \sin(mx)\cos(nx) dx=0 \quad(m, n=1, 2, 3, \dots)\\)
+4. \\(\int_{-\pi}^\pi \cos(mx)\cos(nx) dx=\begin{cases} 2\pi &, m=n=0 \\\ \pi &, m=n\geqslant 1 \\\ 0 &, m\neq n \end{cases}\\)
+5. \\(\int_{-\pi}^\pi \sin(mx)\sin(nx) dx=\begin{cases} \pi &, m=n\geqslant 1 \\\ 0 &, m\neq n \end{cases}\\)
+
+### 周期为 \\(2\pi\\) 的函数展开成傅里叶级数
+
+设 \\(f(x)\\) 以 \\(2\pi\\) 为周期
+Q1: \\(f(x)\\)
 
 ## 一般周期函数的傅里叶级数
