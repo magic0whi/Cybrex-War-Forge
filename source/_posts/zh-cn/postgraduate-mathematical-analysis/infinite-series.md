@@ -183,7 +183,7 @@ Q1: \\(f(x)\\) 可否分解为 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty 
 
 Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) 何关系? (后面的级数被称作三角级数)
 
-### 三角函数 \\(\xi\\) 及正交性
+### 三角函数 ξ 及正交性
 
 三角函数 \\(\xi\\) : \\(\cos 0x=\sin 0x=1 , \cos x , \sin x , \cos 2x , \sin 2x , \dots , \cos(nx) , \sin(nx)\\)
 
@@ -194,9 +194,32 @@ Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)
 4. \\(\int_{-\pi}^\pi \cos(mx)\cos(nx) dx=\begin{cases} 2\pi &, m=n=0 \\\ \pi &, m=n\geqslant 1 \\\ 0 &, m\neq n \end{cases}\\)
 5. \\(\int_{-\pi}^\pi \sin(mx)\sin(nx) dx=\begin{cases} \pi &, m=n\geqslant 1 \\\ 0 &, m\neq n \end{cases}\\)
 
-### 周期为 \\(2\pi\\) 的函数展开成傅里叶级数
+### 周期为 2π 的函数展开成傅里叶级数
 
 设 \\(f(x)\\) 以 \\(2\pi\\) 为周期
-Q1: \\(f(x)\\)
+Q1: \\(f(x)\\) 可否分解为三角级数 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) ?
+\\(a_0=? \enspace a_n=? \enspace b_n=?\\)
+Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) 什么关系?
+
+定理(狄利克雷充分条件):
+设 \\(f(x)\\) 是以 \\(2\pi\\) 为周期的周期级数. 若满足:
+1. \\(f(x)\\) 在 \\([-\pi, \pi]\\) 内连续或存在有限个第一类间断点;
+2. \\(f(x)\\) 在 \\([-\pi, \pi]\\) 内仅有有限个极值点.
+
+则:
+1. 结论1:
+   \\(f(x)\\) 可以展成 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) . 且
+   \\(a_0=\frac{1}{\pi}\int_{-\pi}^\pi f(x) dx\\)
+   \\(a_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\cos(nx) dx \quad(n=1, 2, 3, \dots)\\)
+   \\(b_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\sin(nx) dx \quad(n=1, 2, 3, \dots)\\\)
+2. 结论2:
+   1. \\(x\\) 为 \\(f(x)\\) 连续点时, 则
+      \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))=f(x)\\) ;
+   2. \\(x\\) 为 \\(f(x)\\) 间断点时, 则
+      \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))=\dfrac{f(x-0)+f(x+0)}{2}\\)
+
+### 定义于 [−π, π] 上函数的傅里叶级数(非周期函数)
+
+思想
 
 ## 一般周期函数的傅里叶级数
