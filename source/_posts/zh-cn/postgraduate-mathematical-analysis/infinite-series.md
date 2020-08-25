@@ -183,7 +183,7 @@ Q1: \\(f(x)\\) 可否分解为 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty 
 
 Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) 何关系? (后面的级数被称作三角级数)
 
-### 三角函数 ξ 及正交性
+### 三角函数 <span style="font-family: Consolas">ξ</span> 及正交性
 
 三角函数 \\(\xi\\) : \\(\cos 0x=\sin 0x=1 , \cos x , \sin x , \cos 2x , \sin 2x , \dots , \cos(nx) , \sin(nx)\\)
 
@@ -194,7 +194,7 @@ Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)
 4. \\(\int_{-\pi}^\pi \cos(mx)\cos(nx) dx=\begin{cases} 2\pi &, m=n=0 \\\ \pi &, m=n\geqslant 1 \\\ 0 &, m\neq n \end{cases}\\)
 5. \\(\int_{-\pi}^\pi \sin(mx)\sin(nx) dx=\begin{cases} \pi &, m=n\geqslant 1 \\\ 0 &, m\neq n \end{cases}\\)
 
-### 周期为 2π 的函数展开成傅里叶级数
+### 周期为 <span style="font-family: Consolas">2π</span> 的函数展开成傅里叶级数
 
 设 \\(f(x)\\) 以 \\(2\pi\\) 为周期
 Q1: \\(f(x)\\) 可否分解为三角级数 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) ?
@@ -218,8 +218,74 @@ Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)
    2. \\(x\\) 为 \\(f(x)\\) 间断点时, 则
       \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))=\dfrac{f(x-0)+f(x+0)}{2}\\)
 
-### 定义于 [−π, π] 上函数的傅里叶级数(非周期函数)
+### 定义于 <span style="font-family: Consolas">[−π, π]</span> 上函数的傅里叶级数(非周期函数)
 
-思想
+思想: \\(f(x)\\) 定义域 \\([-\pi, \pi]\\)
+1. TODO: 补充图片(周期延拓)
+2. \\(F(x)\\) 展成傅里叶级数
+   1. \\(a_0=\frac{1}{\pi}\int_{-\pi}^\pi F(x)dx=\frac{1}{\pi}\int_{-\pi}^\pi f(x) dx\\)
+      \\(a_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\cos(nx) dx\\)
+      \\(b_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\sin(nx) dx\\)
+   2. \\(F(x)=\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\cos(nx))\\)
+      \\((-\infty<x<+\infty , x\neq ?)\\) (问号表示间断点)
+3. \\(f(x)=\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\)
+   \\(\begin{pmatrix} -\pi \leqslant x \leqslant \pi , -\pi \leqslant x < \pi \\\ -\pi < x \leqslant \pi , -\pi < x < \pi \end{pmatrix}\\)
 
-## 一般周期函数的傅里叶级数
+Notes:
+1. 由 \\(0=\frac{\pi}{2}-\frac{4}{\pi}(\frac{1}{1^2}+\frac{1}{3^2}+\frac{1}{5^2}+\dots) \rArr \frac{1}{1^2}+\frac{1}{3^2}+\frac{1}{5^2}+\dots=\frac{\pi^2}{8}\\)
+   即 \\(\displaystyle\sum_{n=0}^\infty \frac{1}{(2n+1)^2}=\frac{\pi^2}{8}\\)
+2. \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n^2}=S\\)
+   \\(\begin{aligned} S&=\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\dots \\\ &=(\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{5^2}+\dots)+(\frac{1}{2^2}+\frac{1}{4^2}+\frac{1}{6^2}+\dots) \\\ &=\frac{\pi^2}{8}+\frac{1}{4}(\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\dots) \\\ &=\frac{\pi^2}{8}+\frac{1}{4}S \rArr S=\frac{\pi^2}{6} \end{aligned}\\)
+   即 \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n^2}=\frac{\pi^2}{6}\\)
+
+### 定义于 <span style="font-family: Consolas">[0, π]</span> 上函数的傅里叶级数
+
+思想: 先区间延拓, 再周期延拓.
+1. 区间延拓, 在 \\([-\pi, 0]\\) 上补充定义:
+   \\(\begin{cases} 奇延拓(补充后图像关于原点对称) \\\ 偶延拓(补充后图像关于y轴对称) \end{cases}\\)
+   TODO: 补充图片
+2. 周期延拓:
+   1. 奇延拓后的周期延拓
+      \\(a_0=0\\)
+      \\(a_n=0\\)
+      \\(b_n=\frac{2}{\pi}\int_0^\pi f(x)\sin x dx \quad(n=1, 2, 3, \dots)\\)
+      \\(f(x)=\displaystyle\sum_{n=1}^\infty b_n\sin(nx)\\) (正弦级数)
+      \\(\begin{pmatrix} 0 \leqslant x \leqslant \pi , 0 \leqslant x < \pi \\\ 0 < x \leqslant \pi , 0 < x < \pi \end{pmatrix}\\)
+   2. 偶延拓后的周期延拓
+      \\(a_0=\frac{2}{\pi}\int_0^\pi f(x) dx\\)
+      \\(a_n=\frac{2}{\pi}\int_0^\pi f(x)\cos(nx) dx\\)
+      \\(b_n=0\\)
+      \\(f(x)=\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty a_n\cos(nx)\\) (余弦级数)
+      \\((0 \leqslant x \leqslant \pi)\\)
+
+## 周期为 <span style="font-family: Consolas">2l</span> 的傅里叶级数
+
+### <span style="font-family: Consolas">f(x)</span> 以 <span style="font-family: Consolas">2π<span> 为周期
+
+\\(f(x) \xlongequal{x=\dfrac{l}{\pi}t} f(\frac{l}{\pi}t) \overset{\triangle}{=} F(t)\\)
+\\(F(t+2\pi) = f[\frac{l}{\pi}(t+2\pi)] = f(\frac{l}{\pi}t+2l) = f(\frac{l}{\pi}t+2l) = f(\frac{l}{\pi}t) = F(t)\\)
+\\(a_0 = \frac{1}{\pi}\int_{-\pi}^\pi F(t) dt \xlongequal{t=\dfrac{\pi}{l}x}=\frac{1}{\pi}\int_{-l}^l f(x)\cdot\frac{\pi}{l} dx = \frac{1}{l}\int_{-l}^l f(x) dx\\)
+\\(a_n=\frac{1}{\pi}\int_{-\pi}^\pi F(t)\cos(nt) dt \xlongequal{t=\dfrac{\pi}{l}x} \frac{1}{\pi}\int_{-l}^l f(x)\cos(\frac{n\pi x}{l})\cdot\frac{\pi}{l} dx = \frac{1}{l}\int_{-l}^l f(x)\cos(\frac{n\pi x}{l}) dx\\)
+\\(b_n=\frac{1}{l}\int_{-l}^l f(x)\sin(\frac{n\pi x}{l}) dx\\)
+
+\\(F(t)\\) 的傅里叶级数为
+\\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nt)+b_n\sin(nt)) \\\ =\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(\frac{n\pi x}{l})+b_n\sin(\frac{n\pi x}{l}))\\)
+
+定理: \\(f(x)\\) 以 \\(2l\\) 为周期, 在 \\([-l, l)\\) 上满足狄利克雷充分条件, 则:
+1. \\(f(x)\\) 可展成 \\(\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(\frac{n\pi x}{l})+b_n\sin(\frac{n\pi x}{l}))\\)
+   \\(a_0=\frac{1}{l}\int_{-l}^l f(x) dx\\)
+   \\(a_n=\frac{1}{l}\int_{-l}^l f(x)\cos(\frac{n\pi x}{l}) dx\\)
+   \\(b_n=\frac{1}{l}\int_{-l}^l f(x)\sin(\frac{n\pi x}{l}) dx\\)
+2. 1. 当 \\(x\\) 为 \\(f(x)\\) 连续点时
+      \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(\frac{n\pi x}{l})+b_n\sin(\frac{n\pi x}{l})) = f(x)\\)
+   2. 当 \\(x\\) 为 \\(f(x)\\) 间断点时
+      \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(\frac{n\pi x}{l})+b_n\sin(\frac{n\pi x}{l})) = \dfrac{f(?-0)+f(?+0)}{2}\\)
+
+### f(x) 定义于 [-l, l]
+
+解决思路: 周期延拓, 最后把 x 限制到 \\([-l, l]\\) , 左右端点是否存在看延拓后是否连续
+
+### f(x) 定义于 [-l, l]
+
+存在奇延拓和偶延拓
+解决思路同上面
