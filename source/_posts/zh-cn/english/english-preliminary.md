@@ -8,6 +8,19 @@ toc: true
 ---
 
 TODO: 后置定语; 介词后跟宾语; 祈使句; if引导条件状语从句和虚拟语气区别; 非谓语动词; 组动词; be 动词后表语从句充当宾语; 同位语从句
+祈使句动词在句首
+补语包括主语补足语和宾语补足语
+复合谓语: 情态动词+动词原形, 助动词+实意动词或动词短语, 助动词+动名词/过去分词(看适合接哪个), 系动词+表语(名词,代词宾格,形容词,介词短语, 副词, 动词不定式, 动名词(不是现在分词), 表语从句)
+
+介词短语: 介词+名词
+情态动词: can, may, must, need, ought to, dare, shall, will
+助动词: do, have, be, 情态动词
+系动词: be, turn, get, 感官动词
+
+使役动词: have, make, let, help, use
+助动词、使役动词后跟动词原形(不需要非谓语动词形式), have作使役动词不能直接跟动词
+
+能够充当主语的: 名词, 代词, 数词, 动词不定式, 动名词, 句子(主语从句)
 
 ## Words
 
@@ -112,7 +125,7 @@ Simple Future, Future Continuous, Future Perfect, Future Perfect Continous
 There are five basic sentence pattern:
 1. Subject + Predicate(intransitive verb)
    e.g. The sun shinning
-2. Subject + Copula(as Predicate) + Predicative(as Object, modify the Subject)
+2. Subject + Predicate(Copula + Predicative)
    e.g. This is an English-Chinese dictionary
    e.g. The dinner smells good
 3. Subject + Predicate + Object
