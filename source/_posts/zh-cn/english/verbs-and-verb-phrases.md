@@ -237,6 +237,7 @@ as还可引导:
 6. **presuade** into 说服 (persuade sb. into doing sth. ; 反义 persuade sb. out of doing sth.)
 7. **translate** into 翻译成
 8. **turn** into 变成
+9. **take** into 考虑进...
 
 ### 动词 + on
 

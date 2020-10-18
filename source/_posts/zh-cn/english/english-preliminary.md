@@ -13,14 +13,16 @@ TODO: 后置定语; 介词后跟宾语; 祈使句; if引导条件状语从句和
 复合谓语: 情态动词+动词原形, 助动词+实意动词或动词短语, 助动词+动名词/过去分词(看适合接哪个), 系动词+表语(名词,代词宾格,形容词,介词短语, 副词, 动词不定式, 动名词(不是现在分词), 表语从句)
 
 介词短语: 介词+名词
-情态动词: can, may, must, need, ought to, dare, shall, will
+情态动词: can, may, must, need, ought to, dare, shall, will, have to
 助动词: do, have, be, 情态动词
 系动词: be, turn, get, 感官动词
 
 使役动词: have, make, let, help, use
 助动词、使役动词后跟动词原形(不需要非谓语动词形式), have作使役动词不能直接跟动词
+不及物动词后不能直接跟名词
 
 能够充当主语的: 名词, 代词, 数词, 动词不定式, 动名词, 句子(主语从句)
+
 
 ## Words
 
@@ -223,3 +225,30 @@ e.g. Look forward to doing
   </tr>
 </tbody>
 </table>
+
+## Verb phrase
+
+apply to
+put forward
+take into
+set apart  // set us apart as beings
+
+compare to     // point out resemblances between objects regarded as essentially of a different order
+compare with   // point out different between objects regarded as essentially of the sane order
+
+respond to
+
+## Proposition phrase
+
+be relevant to
+
+change in     // emphasize the content of the change
+change of     // emphasize the action of change itself
+t
+change to     // apply change to sth.
+change into   // apply change to sth.
+
+## Conjunction
+
+whereas 然而; 鉴于
+whatever 任何
