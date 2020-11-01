@@ -23,6 +23,7 @@ TODO: 后置定语; 介词后跟宾语; 祈使句; if引导条件状语从句和
 
 能够充当主语的: 名词, 代词, 数词, 动词不定式, 动名词, 句子(主语从句)
 
+help 后面非谓语动词省略 to
 
 ## Words
 
@@ -238,7 +239,18 @@ compare with   // point out different between objects regarded as essentially of
 
 respond to
 
+inform...of
+
+eliminate...from
+
+hear of
+
+get used to (=be used to)
+
 ## Proposition phrase
+
+to后面常接对象
+for后面表示原因与目bai的
 
 be relevant to
 
@@ -247,6 +259,25 @@ change of     // emphasize the action of change itself
 t
 change to     // apply change to sth.
 change into   // apply change to sth.
+
+confident of
+
+have effect on (=affect)
+
+be bound to
+
+impact on
+carry out
+mastery over
+
+matter to 对...很重要
+cross out 删去
+
+so as to 以便于
+
+be up to 取决于
+
+an integral part of ...不可或缺的一部分
 
 ## Conjunction
 
