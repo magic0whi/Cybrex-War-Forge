@@ -188,6 +188,16 @@ Simple Future, Future Continuous, Future Perfect, Future Perfect Continous
 写作套路: 三段式写作(观点, 理由说明, 结论)
 考试特点: 七大题型(主观5个+客观2个)
 
+强调句结构: (that/who 不能省略)
+1. 强调名词 It is/was + 强调部分 + that/who + 剩余部分
+2. 强调动词: 人称代词 + do/did + 强调部分 + that 剩余部分
+
+虚拟语气:
+1. if 引导的虚拟语气: if条件句 + 结果句
+   对现在虚拟 If were/did (过去式), would + 动词原型
+   对过去虚拟 If had done (过去完成) , would have done
+   对将来虚拟 If would do (过去将来时) , world do
+
 ## Sentence components
 
 There are five basic sentence pattern:
