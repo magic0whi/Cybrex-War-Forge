@@ -9,6 +9,19 @@ toc: true
 
 <!-- more -->
 
+await (vt.) = wait (vi.) for
+
+hear sb doing和hear sb do
+
+need do 情态
+need to do 实意
+
+be worthy of being done
+worthwhile to do
+
+独立主格 比如 her eyes moist and red
+
+something 为先行词定语从句不能用which
 TODO: 后置定语; 介词后跟宾语; 祈使句; if引导条件状语从句和虚拟语气区别; 非谓语动词; 组动词; be 动词后表语从句充当宾语; 同位语从句
 祈使句动词在句首
 补语包括主语补足语和宾语补足语
@@ -26,6 +39,56 @@ TODO: 后置定语; 介词后跟宾语; 祈使句; if引导条件状语从句和
 能够充当主语的: 名词, 代词, 数词, 动词不定式, 动名词, 句子(主语从句)
 
 help 后面非谓语动词省略 to
+
+will be <doing> 将来进行时
+will be ... 将来变成(被动)
+have been <done> 完成时被动
+have been <doing> 完成进行时
+用完成时还是过去时? 1.看句子时态, 2.**一段时间用完成时**
+虚拟语气: 情态动词(should, ought to, need; 过去事实推测: can't/couldn't, must ) + have ...
+as if/as though 表虚拟(描述与事实不符时) / 表陈述(描述与事实相符时)
+
+分清主被动: Do you know how the war <u>was won</u>?
+分区句子时态: 过去的过去用过去完成时
+用不定式还是动名词: 看谓语动词
+like to do 想去做某事
+like doing 习惯于
+"go on"/continue to do 停下手上的活做其他的事请
+"go on"/continue doing 一直在做没有停止
+remember/forget to do 记得/忘记将要去做
+remember/forget doing 记得/忘记做过
+try to do 尽力,努力
+try doing 尝试
+mean to do 打算去做
+mean doing 意味着
+regret to do 抱歉(为将要发生的事请)
+regret doing 抱歉(已经发生的事请)
+begin/start to do 下意识的
+begin/start doing 自然发生的
+
+(除be外)系动词的否定用don't
+
+连系动词: be, 感官动词, 趋势动词这三类
+
+时态呼应:
+主句过去时态
+1. 从句的动作若在主句动作发生之前, 从句用过去完成时态; 若从句有表示具体时间的状语, 从句依然用一般过去时
+2. 从句动作发生在主句动作之后, 从句用过去将来时
+3. 普遍现象, 从句用一般现在时
+
+不能作被动的:
+1. 不及物动词和表状态动词
+   come true, consist of, take place, happen, become, rise, occur,
+   belong, break out, appear, arrive, die, fall, last, exist, fail, succeed
+2. 表示开始结束, 运动的动词
+主动表被动:
+1. lock, wash, sell, read, wear, blame, ride, write
+2. 连系动词: look, sound, feel, smell, taste, appear, seem, turn, keep
+3. 表示开始, 结束, 运动的: begin, finish, start, open, move
+4. want, need, require作谓语, 被动需用不定式 或 动名词一般式(动名词一般式作宾语表被动含义)
+5. 某些作表语的形容词 easy, difficult, light, heavy, fit, good, safe, comfortable, dangerous, pleasant 等后面作状语的不定式用主动表被动
+   如 She is easy to approach
+6. 过去分词作定语
 
 ## Words
 
@@ -249,10 +312,15 @@ hear of
 
 get used to (=be used to)
 
+distance from 远离
+
+cut in
+
 ## Proposition phrase
 
+for Or to?
 to后面常接对象
-for后面表示原因与目bai的
+for后面表示原因与目标
 
 be relevant to
 
