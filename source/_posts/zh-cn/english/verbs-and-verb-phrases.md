@@ -324,3 +324,9 @@ as还可引导:
    The door **won't** open!
 4. 让句子更灵活
    疑问、否定句中单独提前助动词, 除此之外倒装也有
+
+write in 用...(语言)写
+write with 用...(工具)写
+
+astonished (跟人有关形容词一般是ed)
+astonishing

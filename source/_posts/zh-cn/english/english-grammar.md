@@ -9,7 +9,45 @@ tags:
 
 难度: 即看型
 
+个人的想法: 英语的语法是一系列的规则, 只要理清和遵循这些规则, 就能写出正确的句子
+
 <!-- more -->
+
+TODO: 
+不定式作主语, 常用 it 作形式主语, 而把真正的主语放在后面作定语
+如 It is not easy for me <u>to learn English</u>.
+
+不定式作宾语, 前面不能跟介词(but, expect 除外), 此时的谓语动词常常表示命令, 打算;
+如 Would you like <u>to see a film this evening?</u>
+
+不定式常和疑问句 what, which, when, where, how 连用作宾语从句
+The kid doesn't know how to do it himself.
+
+谓语 tell, ask, want, allow, get, would like, encourage 常跟不定式作宾语补足语
+注意: 一些使役动词和感官动词也用不定式作宾补. 此时省略 to. 但当这些动词本身变被动语态时, 不定式必须加上 to
+这些动词有: 一感(feel), 二听(hear), 三让(let, make, have), 四看(look at, see, watch, notice)
+如:
+The boss made them <u>work the whole night</u>.
+They were made <u>to work the whole night</u> by the boss.
+
+不定式只能作后置定语. 且不定式是"动词+介词"结构时, 其介词不能省略
+Do you have any ink <u>to write with</u>?
+
+不定式作目的状语: 如果强调目的可在不定式前加 in order/so as, so as 不能用于句首
+不定式作结果状语: 往往表示出乎预料, 常与 only 连用
+
+have sb. do sth.; have 可用 let, make 代替. 不定式具有一次性动作, 且强调动作已经完成的含义
+have sb./sth. doing; have 可用 keep 代替, 现在分词具有持续、进行的含义
+have sth. done; 具有被动含义, 分两者情况, 1. 托某人做(如洗车); 2. 遭受某人做(如被偷)
+
+现在分词作补语, 被补足的宾语或主语是它的逻辑主语(即主动关系)
+过去分词作补语, 被补足的宾语或主语是它的逻辑宾语(即被动关系)
+Don't keep us <u>waiting</u> for a long time.
+I heard him <u>singing</u> in the classroom.
+He'll have his hair <u>cut</u> after school.
+
+be + v. = of + n.
+如 be important = of importance
 
 ## 句子结构
 
@@ -41,7 +79,7 @@ in Subject + Predicate + Object, remove the Object, the sentence meaning is stil
 
 #### 定语从句
 
-(修饰主语, 宾语)
+(修饰主语或宾语)
 **Appositive clause** can replace the position of Object, Attributive can't
 
 something 为先行词, 定语从句不能用which
@@ -50,14 +88,14 @@ something 为先行词, 定语从句不能用which
 
 #### 状语从句
 
-(修饰谓语)
+(修饰谓语或表语)
 The Adverbial Clause modifies the purpose or time attribute or accompanying action of the predicate
 
 ##### if引导条件状语
 
 #### 名词性从句
 
-(代替主语和宾语)
+(代替主语或宾语)
 
 ### 主从复合句
 
@@ -76,10 +114,12 @@ The Adverbial Clause modifies the purpose or time attribute or accompanying acti
 
 #### 时态呼应
 
+主句现在时态, 从句该用什么时态用什么
 主句过去时态
-1. 从句的动作若在主句动作发生之前, 从句用过去完成时态; 若从句有表示具体时间的状语, 从句依然用一般过去时
-2. 从句动作发生在主句动作之后, 从句用过去将来时
-3. 例外: 客观真理, 自然现象, 格言谚语, 从句用一般现在时
+1. 从句动作若在主句动作发生之前, 从句用过去完成时态; 若从句有表示具体时间的状语, 从句依然用一般过去时
+2. 从句的动作与主句动作同时发生, 用一般过去时或过去完成时.
+3. 从句动作发生在主句动作之后, 从句用过去将来时
+4. 客观真理, 自然现象, 格言谚语, 从句用一般现在时
 
 ### 特殊句式
 
@@ -224,8 +264,8 @@ TODO: 方位介词
 
 用 for 还是 to 还是 of?
 后接动作对象时, to 和 for 差不多
-接原因与目标或一段时间用for
-前面形容性格用of
+接表示事物性质特点或原因或目标或一段时间用for
+接形容人性格或品质用of
 
 #### 常见介词短语(介词+名词, 介词后跟宾语)
 
@@ -260,9 +300,11 @@ an integral part of ...不可或缺的一部分
 
 助动词: do, have, be, 情态动词
 
-助动词后跟动词原形(非谓语动词省略to/ing)
+助动词后跟动词原形(非谓语动词省略to/ing)组成复合谓语
 
 #### 情态动词
+
+情态动词属于组动词
 
 情态动词: can, may, must, need, ought to, dare, shall, will, have to
 
@@ -272,7 +314,7 @@ an integral part of ...不可或缺的一部分
 
 使役动词: have, make, let, help, use
 
-使役动词后跟动词原形(非谓语动词省略to/ing)
+使役动词后跟动词原形(非谓语动词省略to/ing)组成复合谓语
 
 have作使役动词不能直接跟动词
 
@@ -373,18 +415,22 @@ e.g. Look forward to doing
 </tbody>
 </table>
 
+动词不定式的 to 只是符号没有意义, 有时(在组动词, 使役动词后)可以省略 to 组成复合谓语
+
 #### 分清动名词还是现在分词
 
-#### 用不定式还是动名词
+1. 看句子结构, 只有现在分词能作补语
 
-用不定式还是动名词: 看谓语动词
+#### 用动词不定式还是动名词
+
+用动词不定式还是动名词: 看谓语动词
 
 TODO: 整理特点
 
 like to do 想去做某事
 like doing 习惯于
-"go on"/continue to do 停下手上的活做其他的事请
-"go on"/continue doing 一直在做没有停止
+go on/continue to do 停下手上的活做其他的事请
+go on/continue doing 一直在做没有停止
 remember/forget to do 记得/忘记将要去做
 remember/forget doing 记得/忘记做过
 try to do 尽力,努力
@@ -396,19 +442,27 @@ regret doing 抱歉(已经发生的事请)
 begin/start to do 下意识的
 begin/start doing 自然发生的
 
+need doing=need to be do: need 为情态动词; need to do: need 为实意
+
+hear sb doing 和 hear sb do: 前者进行时, 后置强调结果
+
+be worthy of being done = worthwhile to do
+
+
 #### 主被动
 
+被动是针对于主语而言的
+
 1. 不能作被动的:
-   1. 不及物动词和表状态动词
+   1. 不及物动词和表示状态动词
       come true, consist of, take place, happen, become, rise, occur,
       belong, break out, appear, arrive, die, fall, last, exist, fail, succeed
-   2. 表示开始结束, 运动的动词
 2. 主动表被动:
-   1. lock, wash, sell, read, wear, blame, ride, write
-   2. 连系动词: look, sound, feel, smell, taste, appear, seem, turn, keep
+   1. lock, wash, sell, read, wear, blame, ride, write (且这些常与 well, easily, badly 等副词连用)
+   2. 系动词: look, sound, feel, smell, taste, appear, seem, turn, keep
    3. 表示开始, 结束, 运动的: begin, finish, start, open, move
-   4. want, need, require作谓语, 被动需用不定式 或 动名词一般式(动名词一般式作宾语表被动含义)
-   5. 某些作表语的形容词 easy, difficult, light, heavy, fit, good, safe, comfortable, dangerous, pleasant 等后面作状语的不定式用主动表被动
+   4. want, need, require 作谓语, 动名词主动表被动(等价于动词不定式的被动形式)
+   5. 某些作表语的形容词 easy, difficult, light, heavy, fit, good, safe, comfortable, dangerous, pleasant 等后面(作状语)的动词不定式主动表被动
       如 She is easy to approach
    6. 过去分词作定语表被动
 3. 分清主被动
@@ -427,21 +481,21 @@ begin/start doing 自然发生的
 1. 主语: 名词, 动词不定式, 动名词, 名词性从句(主语从句)
 2. 谓语: 动词
 3. 宾语: 名词, 动词不定式, 动名词
-4. 表语: 名词, 形容词, 动词不定式, 动名词, 分词
+4. 表语: 名词, 形容词, 副词, 动词不定式, 动名词, 分词
 5. 补语(主语/宾语补足语): 名词, 形容词, 动词不定式, 分词
 6. 定语: 形容词, 动词不定式, 动名词, 分词
 7. 状语: 副词, 动词不定式, 分词
 
-定语和补语的区分: 补语强调补充, 定语在于限定范围
-
 方框表示该成分非必要
 
-[前置定语]+主语+[后置定语]+[状语]+谓语+[前置定语]+宾语+[后置定语]+[补语]
+补语修饰谁看具体含义
 
-其中状语可放在主语前, 谓语前, 句末都可以; 无论放在哪, 它只修饰谓语.
+[状语]+[前置定语]+主语+[后置定语]+[状语]+谓语+[前置定语]+宾语+[后置定语]+[补语]+[状语]
+
+状语可放在主语前, 谓语前, 句末都; 无论放在哪, 它只修饰谓语或表语. 表示谓语或表语的状态(时间, 地点, 程度, 目的, 结果)
 主语附近的定语修饰主语, 宾语附近的定语修饰宾语.
 
-主语+系动词+[前置定语]+表语+[后置定语]
+主语+系动词+[前置定语]+表语+[后置定语]+[补语]
 
 
 #### 定语
@@ -456,13 +510,7 @@ begin/start doing 自然发生的
 
 ##### 定语和补语的区分
 
-### 其他
-
-hear sb doing和hear sb do: 前者进行时, 后置强调结果
-
-need doing need表情态, need to do need实意
-
-be worthy of being done = worthwhile to do
+定语和补语的区分: 补语强调补充, 定语在于限定范围
 
 ## 考试特点
 
@@ -471,3 +519,8 @@ be worthy of being done = worthwhile to do
 ### 写作套路
 
 写作套路: 三段式写作(观点, 理由说明, 结论)
+
+2-3 审题
+想出框架结构
+中文稿子5-7min
+十几分钟翻译成英文
