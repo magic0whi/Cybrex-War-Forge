@@ -24,14 +24,15 @@ TODO:
 The kid doesn't know how to do it himself.
 
 谓语 tell, ask, want, allow, get, would like, encourage 常跟不定式作宾语补足语
-注意: 一些使役动词和感官动词也用不定式作宾补. 此时省略 to. 但当这些动词本身变被动语态时, 不定式必须加上 to
+注意: 一些使役动词和感官动词也用不定式作宾补(也只能用不定式). 此时省略 to. 但当这些动词本身变被动语态时, 不定式必须加上 to
 这些动词有: 一感(feel), 二听(hear), 三让(let, make, have), 四看(look at, see, watch, notice)
 如:
 The boss made them <u>work the whole night</u>.
 They were made <u>to work the whole night</u> by the boss.
 
-不定式只能作后置定语. 且不定式是"动词+介词"结构时, 其介词不能省略
-Do you have any ink <u>to write with</u>?
+不定式只能作后置定语. 且原本修饰宾语因是"动词+介词"结构时, 其介词不能省略
+Do you have any ink <u>to write with</u>?  (write with ink)
+It is a very good <u>school to study in</u>. (study in school)
 
 不定式作目的状语: 如果强调目的可在不定式前加 in order/so as, so as 不能用于句首
 不定式作结果状语: 往往表示出乎预料, 常与 only 连用
@@ -48,6 +49,9 @@ He'll have his hair <u>cut</u> after school.
 
 be + v. = of + n.
 如 be important = of importance
+
+当主句和从句主语不一致而要用分词作状语时, 在分词前面加上动作的逻辑主语
+<u>It</u> being a fine day, we decided to go swimming in the lake. (例子中分词为现在分词 being)
 
 ## 句子结构
 
@@ -125,6 +129,8 @@ The Adverbial Clause modifies the purpose or time attribute or accompanying acti
 
 #### 虚拟语气
 
+所有跟要求有关的动词后面宾语都用虚拟语气
+
 1. if 引导的虚拟语气: if条件句 + 结果句
    对现在虚拟 If were/did (过去式), would + 动词原型
    对过去虚拟 If had done (过去完成) , would have done
@@ -156,8 +162,13 @@ The Adverbial Clause modifies the purpose or time attribute or accompanying acti
 
 #### 独立主格
 
-独立主格 比如: her eyes moist and red, there be
+独立主格是没有谓语的特殊句子, 后面需要跟上主句, 不能独立存在.
+
+独立主格 比如: her eyes moist and red
+
 独立主格结构: 逻辑主语+分词+..., 主句. 其中逻辑主语就是独立主格
+
+there be 开头的句子也是独立主格
 
 ## 词语
 
@@ -296,6 +307,10 @@ be up to 取决于
 
 an integral part of ...不可或缺的一部分
 
+multitude of
+
+though thick and thin
+
 ### 助动词
 
 助动词: do, have, be, 情态动词
@@ -355,6 +370,16 @@ get used to (=be used to)
 distance from 远离
 
 cut in
+
+give up 的两种形式
+give up sth. 名词
+give it up 代词
+
+object to
+
+consist of
+be made up of
+be composed of
 
 ### 非谓语动词
 
@@ -423,7 +448,12 @@ e.g. Look forward to doing
 
 #### 用动词不定式还是动名词
 
-用动词不定式还是动名词: 看谓语动词
+工作内容用不定式
+兴趣爱好用动名词
+
+伴随动作用动名词
+如 We walked as fast as we could, <u>hoping</u> to catch the 9:30 train
+
 
 TODO: 整理特点
 
@@ -448,6 +478,33 @@ hear sb doing 和 hear sb do: 前者进行时, 后置强调结果
 
 be worthy of being done = worthwhile to do
 
+first 和 last 用不定式
+the first to do
+the last to do
+
+no good/use 用动名词
+
+please/happy/enough 用不定式
+
+cannot but 用动名词
+
+let alone 用动名词
+
+spend两种形式
+spend on sth.
+spend in doing
+
+plan 用不定式
+
+permit 用动名词
+
+miss 用动名词
+
+practice 用动名词
+
+have no ... but 用动名词
+
+worth 用动名词
 
 #### 主被动
 
@@ -492,21 +549,18 @@ be worthy of being done = worthwhile to do
 
 [状语]+[前置定语]+主语+[后置定语]+[状语]+谓语+[前置定语]+宾语+[后置定语]+[补语]+[状语]
 
-状语可放在主语前, 谓语前, 句末都; 无论放在哪, 它只修饰谓语或表语. 表示谓语或表语的状态(时间, 地点, 程度, 目的, 结果)
-主语附近的定语修饰主语, 宾语附近的定语修饰宾语.
-
 主语+系动词+[前置定语]+表语+[后置定语]+[补语]
 
+#### 状语
+
+状语是广义的副词, 
+状语可放在主语前, 谓语前, 句末都; 无论放在哪, 它只修饰谓语或表语的或表语的定语. 表示谓语或表语的状态(时间, 地点, 程度, 目的, 结果)
 
 #### 定语
 
-定语从句修饰主语或宾语, 限定了主语或宾语对象的范围
-
-##### 前置定语
-
-
-
-##### 后置定语
+定语是广义的形容词, 修饰主语或宾语
+主语附近的定语修饰主语, 宾语附近的定语修饰宾语.
+定语从句限定了主语或宾语对象的范围
 
 ##### 定语和补语的区分
 
