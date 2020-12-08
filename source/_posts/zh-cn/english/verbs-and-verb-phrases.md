@@ -310,20 +310,7 @@ as还可引导:
    choose (v.) choich (n.)
    succeed (v.) success (n.)
 
-## 万能的助动词
 
-1. 构成时态、语态
-   1. do 类: 现在、过去、虚拟
-   2. will 类: 将来
-   3. have 类: 完成
-   4. be 类: 进行、被动
-2. 构成虚拟语气(原来时态+did) TODO: 举例
-3. 表达情感
-   I wouder if I **might** use your bike.
-   You **mustn't** park here!
-   The door **won't** open!
-4. 让句子更灵活
-   疑问、否定句中单独提前助动词, 除此之外倒装也有
 
 write in 用...(语言)写
 write with 用...(工具)写

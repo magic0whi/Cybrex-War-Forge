@@ -11,40 +11,41 @@ toc: true
 
 <!-- more -->
 
-微分方程求解即根据微分信息求目标函数
+微分方程求解即根据已知的微分条件求目标函数
 
 ## 微分方程的基本概念
 
-1. 定义1. 微分方程: 含有导数或微分的方程
-   若微分方程中含一个自变量, 一个函数, 称为常微分方程
-2. 定义2. 微分方程的阶: 在微分方程中, 导数或微分的最高阶数
-3. 定义3. 微分方程的解: 
-   已知 y 关于 x 的微分方程 \\(F(y^{(n)}, y^{(n-1)}, \dots,y', y, x)=0\\)
-   若函数 \\(y=\varphi(x)\\) 满足 \\(F(y^{(n)}, y^{(n-1)}, \dots,y', y, x)=0\\)
+1. 微分方程: 含有导数或微分的方程
+   常微分方程: 只含一个自变量, 一个函数的微分方程, 如 \\(f'(x)+7f(x)=0\\)
+   (我们探讨的范围仅限于常微分方程)
+2. 微分方程的阶: 在微分方程中, 导数或微分的最高阶数
+3. 微分方程的解: 
+   已知 y 关于 x 的微分方程 \\(F(y^{(n)},y^{(n-1)},\dots,y',y,x)=0\\)
+   若代入函数 \\(y=\varphi(x)\\) 能够满足 \\(F(y^{(n)},y^{(n-1)},\dots,y',y,x)=0\\)
    称 \\(y=\varphi(x)\\) 为该微分方程的解
-   1. 通解: 设 \\(F(y^{(n)}, y^{(n-1)}, \dots,y', y, x)=0\\) 为 n 阶微分方程, 若该方程的解含 n 个相互独立的任意常数, 称该解为通解
+   1. 通解: 设 \\(F(y^{(n)},y^{(n-1)},\dots,y',y,x)=0\\) 为 n 阶微分方程, 若该方程的解含 n 个相互独立的任意常数, 称该解为通解
       如 \\(y=C_1e^x+C_2e^{2x}\\) 为 \\(y''-3y'+2y=0\\) 的通解
    2. 特解: 不含任意常数的解, 称为特解
 
 
-## 可分离变量的微分方程
+## 可分离变量微分方程
 
 1. 定义
-   \\(\frac{dy}{dx}=f(x, y)\\) (\*)
-   若 \\(f(x, y)=\varphi_1(x)\varphi_2(y)\\) , 称 (\*) 为可分离变量的微分方程
+   形如 \\(\frac{dy}{dx}=\varphi_1(x)\varphi_2(y)\\) 的方程
 2. 解法
-   \\(\frac{dy}{dx}=f(x, y) \rArr \frac{dy}{dx}=\varphi_1(x)\varphi_2(y) \rArr \frac{dy}{\varphi_2(y)}=\varphi_1(x)dx\\)
-   \\(\int\frac{dy}{\varphi_2(y)}=\int\varphi_1(x)dx+c\\) (不定积分中我们不要求+c, 但在微分方程中要加) 
+   \\(\frac{dy}{dx}=\varphi_1(x)\varphi_2(y)\rArr\frac{dy}{\varphi_2(y)}=\varphi_1(x)dx\\)
+   两边积分得:
+   \\(\int\frac{dy}{\varphi_2(y)}=\int\varphi_1(x)dx+C\\) (不定积分中我们可以省略加常数 C, 但在微分方程中自变量一端要加)
 
 ## 齐次微分方程
 
 1. 定义
-   设 \\(\frac{dy}{dx}=f(x, y)\\) (\*)
-   若 \\(f(x, y)=\varphi(\frac{y}{x})\\) , 称 (\*) 为齐次微分方程
+   形如 \\(\frac{dy}{dx}=\varphi(\frac{y}{x})\\) 的方程
 2. 解法
-   \\(\frac{dy}{dx}=f(x, y) \rArr \frac{dy}{dx}=\varphi(\frac{y}{x})\\)
-   令 \\(u=\frac{y}{x}\\) , 则 \\(y=ux \rArr y'=u'x+ux' \rArr \frac{dy}{dx}=x\frac{du}{dx}+u\\) 代入上面的方程 (这里把u看成是x的函数)
-   \\(u+x\frac{du}{dx}=\varphi(u) \rArr x\frac{du}{dx}=\varphi(u)-u \rArr \frac{du}{\varphi(u)-u}=\frac{dx}{x} \rArr \int\frac{dx}{x}=\int\frac{du}{\varphi(u)-u}+c\\)
+   换元法, 设 \\(u=\frac{y}{x}\\) , 则 \\(y=ux\rArr y'=u'x+ux'\rArr\frac{dy}{dx}=x\frac{du}{dx}+u\\)
+   将上式代入方程得到 \\(x\frac{du}{dx}+u=\varphi(u)\\)
+   然后就可以套用分离变量的方法, 最后两边积分: 
+   \\(\frac{dx}{x}=\frac{du}{\varphi(u)-u}\rArr\int\frac{dx}{x}=\int\frac{du}{\varphi(u)-u}+c\\)
 
 ## 一阶线性微分方程
 
@@ -54,24 +55,24 @@ toc: true
    形如 \\(\frac{dy}{dx}+P(x)y=0\\) 的方程称为一阶齐次线性方程
 2. 解法及通解公式
    \\(\frac{dy}{dx}=-P(x)y\\)
-   情况1 y=0 为方程的解
-   情况2 \\(y\neq0\\) 时 
-   \\(\begin{aligned} \rArr \frac{1}{y}dy=-P(x)dx &\rArr \ln|y|=-\int P(x)dx+c_0 \\\ &\rArr |y|=e^{-\int P(x)dx+c_0} \\\ &\rArr y=\pm e^{c_0}\cdot e^{-\int P(x)dx} \end{aligned}\\)
-   令 \\(\pm e^{c_0}=c\\)
-   \\(\therefore 通解 y=ce^{-\int P(x)dx}\\)
+   1. 情况1 \\(y=0\\) 为方程的解
+   2. 情况2 \\(y\neq0\\) 时, 先分离变量, 然后两边积分, 再套用积分公式求解
+      \\(\begin{aligned} \frac{1}{y}dy=-P(x)dx & \rArr\int\frac{1}{y}dy=\int -P(x)dx \\\ & \rArr\ln|y|=-\int P(x)dx+C_0 \\\ & \rArr|y|=e^{-\int P(x)dx+C_0} \\\ & \rArr y=\pm e^{C_0}\cdot e^{-\int P(x)dx} \end{aligned}\\)
+      令 \\(\pm e^{C_0}=C\\)
+      \\(\therefore 通解 y=Ce^{-\int P(x)dx}\\)
 
 ### 一阶非齐线性微分方程
 
 1. 定义
    形如 \\(\frac{dy}{dx}+P(x)y=Q(x)\\) 的方程称为一阶非齐线性微分方程
 2. 解法
-   通过常数易变法, 将上面齐次方程通解中的**常数项c换做未知函数 u(x)** , 得到
+   通过常数易变法, 将上面齐次方程通解中的**常数项 C 换做未知函数 u(x)** , 得到
    \\(y=u(x)e^{-\int P(x)dx}\\) ,
    然后对 y 求导得
-   \\(y'=\frac{dy}{dx}=u'(x)e^{-\int P(x)dx}-u(x)P(x)e^{-\int P(x)dx}\\) (注意复合函数求导法则)
-   以上两式带入原方程得
-   \\(\begin{aligned} &u'(x)e^{-\int P(x)dx}-u(x)P(x)e^{-\int P(x)dx}+P(x)u(x)e^{-\int P(x)dx}=Q(x) \\\ \rArr &u'(x)e^{-\int P(x)dx}=Q(x) \\\ \rArr &u'(x)=Q(x)e^{\int P(x)dx} \rArr \int u'(x)dx=\int Q(x)e^{\int P(x)dx}dx+c \\\ \rArr &u(x)=\int Q(x)e^{\int P(x)dx}dx+c \end{aligned}\\)
-   求得的 u(x) 再次带入通解式得 \\(y=[\int Q(x)e^{\int P(x)dx}dx+c]e^{-\int P(x)dx}\\)
+   \\(y'=\frac{dy}{dx}=u'(x)e^{-\int P(x)dx}-u(x)P(x)e^{-\int P(x)dx}\\) (这里注意复合函数求导法则, 且对积分求导的结果是原函数)
+   以上两式带入一阶非齐线性微分方程得
+   \\(\begin{aligned} &u'(x)e^{-\int P(x)dx}-u(x)P(x)e^{-\int P(x)dx}+P(x)u(x)e^{-\int P(x)dx}=Q(x) \\\ \rArr &u'(x)e^{-\int P(x)dx}=Q(x) \\\ \rArr &u'(x)=Q(x)e^{\int P(x)dx} \rArr \int u'(x)dx=\int Q(x)e^{\int P(x)dx}dx+C \\\ \rArr &u(x)=\int Q(x)e^{\int P(x)dx}dx+C \end{aligned}\\)
+   求得的 u(x) 再次带入通解式得 \\(y=[\int Q(x)e^{\int P(x)dx}dx+C]e^{-\int P(x)dx}\\)
 
 ## 可降阶的高阶微分方程
 
