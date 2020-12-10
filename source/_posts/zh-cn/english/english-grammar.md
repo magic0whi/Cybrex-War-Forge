@@ -15,6 +15,130 @@ tags:
 
 TODO:
 
+非谓语:
+1. 动词不定式(to do)
+   在句子中作主语、宾语、表语、补语、定语和状语
+2. 动名词
+   在句中作主语、宾语、表语、定语
+3. 分词: 现在分词(doing) 和过去分词(done)
+   在句子中作表语、补语、定语、状语
+
+动词不定式:
+构成: to + 动词原形, to 是不定式的符号, 没有意义, 有时候可省略.
+但是不定式具有动词的特点, 可以有自己的宾语和状语, 但没有人称和数的变化.
+
+句法功能:
+1. 作主语:
+   <u>To learn English</u> is not easy for me.
+   不定式作主语时, 常用 it 作为形式主语, 而把真正的不定式放后面.
+   其结构为: It + be + adj. (+for/of sb.) + 动词不定式
+   It is not easy for me <u>to learn English</u>.
+   It is very kind of you <u>to tell me the truth</u>.
+2. 作表语:
+   My work is <u>to clean the room everyday</u>.
+3. 作宾语:
+   What sport does he like <u>to play</u>? He likes <u>to play football</u>.
+   不定式只能作某些动词的宾语, 不能作介词的宾语(but, expect 除外).
+   这些动词常常表示命令、打算或希望. 如: would like, want, wish, hope, decide, plan, expect 等.
+   Would you like <u>to see a film this evening</u>?
+   如果动词为 find 或者 think 后跟不定式作宾语时, 常用 it 作形式宾语, 而将真正的宾语放在后面.
+   I find it hard <u>to write English articles</u>.
+   注意: 不定式常和疑问句 what, which, when, where, how 连用作宾语, 相当于一个宾语从句.
+   The kid doesn't know <u>how to do it himself</u>. (= how he should do it himself.)
+4. 作宾语补足语:
+   不定式作宾补时与宾语有逻辑上的主动关系.
+   Lucy asked him <u>to turn down the radio</u>.
+   tell, ask, want, allow, get, would like, encourage 等后面常跟不定式作**宾语补足语**.
+   注意: 还有一些使役动词和感官动词也用不定式作宾补. 这时要省略 to. 这些动词有:
+   这些动词有: 一感(feel), 二听(hear, listen to), 三让(let, make, have), 四看(look at, see, watch, notice), 但是这些动词变被动语态时, 作动词的不定式必须加上 to
+   The boss made them <u>work the whole night</u>.
+   They were made <u>to work the whole night</u> by the boss.
+5. 作定语:
+   不定式作定语应放在名词之后, 它与名词之间有逻辑上的被动关系.
+   We don't have enough food <u>to eat</u>.
+   如果是不及物动词, 且与所修饰的词之间有被动的关系, 需要在不定式后面加上适当的介词.
+   There is nothing <u>to worry about</u>.
+6. 作状语:
+   1. 作目的状语
+      <u>To save the time</u>, we took the plane to Beijing.
+      注意: 如果强调此目的, 可用 in order to/so as to + 动词原形. so as to 不能用于句首.
+      I will take notes <u>in order not to/so as not to forget these important points</u>.
+   2. 作结果状语
+      往往表示出乎意料的结果, 常与 only 连用
+      He hurried to the station <u>only to find that the train had left</u>.
+   3. 在某些形容词后面常表示喜怒哀乐的原因.
+      We are pround <u>to be the citizens of China</u>.
+   4. 在带有 enough 或 too 的句子里作状语
+      He is old enough <u>to go to school</u>.
+      We found the room too small <u>to hold so many people</u>.
+
+动名词
+构成: 动词原形+ing, 但是有不规则形式.
+用法:
+1. 作主语:
+   <u>Eating too much</u> is bad for your health.
+   非谓语作动词谓语动词用单数.
+2. 作宾语:
+   表示一般的习惯或抽象行为或经常性的动作.
+   A. 作动词宾语
+   I like <u>playing basketball</u> very much.
+   B. 作介词宾语
+   Stamps are used for <u>sending letters</u>.
+   英语中有一些动词(短语)后面常跟动名词作宾语. 常用的有 finish, enjoy, mind, miss, be worth, practice,
+   have trouble/problems/difficulty (in), spend some time/money (in), feel like, be/get used to
+
+
+分词
+构成: 现在分词由动词+ing构成; 过去分词由动词+ed构成, 但是有不规则形式.
+现在分词有主动、进行之意; 过去分词有被动、完成之意.
+句法功能:
+1. 作定语:
+   Do you know the girl <u>standing under the tree</u>?
+   Please hand in your <u>written</u> exercises.
+   现在分词作定语修饰其逻辑主语;
+   过去分词作定语修饰其逻辑宾语.
+2. 作状语:
+   The student went out of the classroom, <u>talking and laughing</u>.
+   现在分词作状语其逻辑主语为句子的主语.
+3. 作表语:
+   The book is so <u>interesting</u> that I will read it again.
+   The boy is too <u>frightened</u> to move.
+   现在分词表示主语的性质、特征;
+   过去分词表示某种状态.
+4. 作补语:
+   Don't keep us <u>waiting</u> for a long time.
+   I heard him <u>singing</u> in the classroom.
+   He'll have his hair <u>cut</u> after school.
+   现在分词作补语, 被补足的宾语或主语是它的逻辑主语(即主动关系)
+   过去分词作补语, 被补足的宾语或主语是它的逻辑宾语(即被动关系)
+易混淆点:
+1. 动词不定式复合结构用 of 或 for 的区别
+   在 kind, good, nice, clever 等表示人的品质、特征的形容词后, 不用 for 而用 of;
+   在表示事物性质特点的形容词后用 for.
+   It's very clever <u>of</u> you <u>to do it like this</u>.
+   It's very difficult <u>for</u> me <u>to finish the task in an hour</u>.
+2. 不定式符号 to 和介词 to 的区别
+   to 既可以是不定式的符号, 后面跟动词原形, 也可以是介词, 后面跟名词、代词或动名词作宾语.
+   常用的含有介词 to 的短语:
+   make a contribution to
+   devote...to...
+   prefer...to...
+   get/be used/accustomed to...
+   apply to
+3. 动词不定式作宾补和现在分词作宾补的区别
+   see, watch, hear, feel 等感官动词
+   后接省略 to 的不定式作宾补时, 表示动作的全过程已经结束;
+   后接现在分词作宾补, 表示动作正在进行.
+   I saw him <u>cross the street</u>.
+   I saw him <u>crossing the street</u>
+4. 某些动词后面接不定式和动名词有区别
+   stop, forget, remember, try, regret, mean, go on, can't help
+5. need, require, want 后面跟不定式和动名词作宾语的区别
+   当这三个词需要讲时, 后面接动名词的主动式表示被动含义, 也可跟不定式的被动式.
+   The window needs <u>cleaning</u>.
+   The window needs <u>to be cleaned</u>.
+
+
 并列句
 定义: 使用并列连词连接起来的两个以上的句子
 结构: 简单句+并列连词+简单句
@@ -213,7 +337,21 @@ TODO:
       5. 通常是事物(也可以是人)作 want, need, require 等动词的主语是, 表示事物(或人)客观上"需要"
          用动名词一般式的主动形式作宾语表示被动含义.
          若动名词是不及物动词, 后面还需跟上相应的介词.
-         
+      6. have sb. do sth., have sb./sth. doing 和 have sth. done 的区别
+         1. have sb. do sth.
+            让某人做某事, 可以用 let, make 代替 have. 不定式往往表示一次性的动作, 且强调动作已经完成或尚未发生.
+            The police had the boy <u>stand with back to his father</u>.
+         2. have sb./sth. doing
+            让某人或某物一直做某事, have 可用用 keep 代替, 现在分词 doing 往往具有持续、进行的含义.
+            The teacher <u>had the students reading aloud the text</u> for a quarter.
+            The two men <u>had their lights burning</u> all night long.
+         3. have sth. done
+            有两层含义:
+            A. 让某事被别人做即 ask sb. to do sth.
+            The driver <u>had hist car washed</u> once a week.
+            B. 某人遭受某种损失. 过去分词 done 这个动作由他人完成, 含义被动的意义且强调动作已完成.
+            He <u>had his wallet stolen</u> when he was shopping.
+
 
 
 定语从句
@@ -263,7 +401,6 @@ The house in which (where) Lu Xun used the live is now a museum.
 非限制性定语从句
 1. 先行词与定语从句往往有逗号隔开, 不能用 that 引导
 2. 起补充说明的作用, 如果去掉, 主句的意思仍然清楚
-
 Jim passed the driving test, which surprised everybody in the office
 
 as 引导的定语从句
@@ -319,7 +456,7 @@ It is a very good <u>school to study in</u>. (study in school)
 不定式作结果状语: 往往表示出乎预料, 常与 only 连用
 
 have sb. do sth.; have 可用 let, make 代替. 不定式具有一次性动作, 且强调动作已经完成的含义
-have sb./sth. doing; have 可用 keep 代替, 现在分词具有持续、进行的含义
+have sb./sth. doing; have 可用 keep 代替, 现在分词具有持续、进行的含义, 具有主动意义
 have sth. done; 具有被动含义, 分两者情况, 1. 托某人做(如洗车); 2. 遭受某人做(如被偷)
 
 现在分词作补语, 被补足的宾语或主语是它的逻辑主语(即主动关系)
