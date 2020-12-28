@@ -15,6 +15,143 @@ tags:
 
 TODO:
 
+名词性从句
+包括:
+宾语从句
+主语从句
+表语从句
+同位语从句
+
+## 引导名词性从句的连接词
+1. 连接代词: who, whose, whom, what, which. 有词义在从句中充当句子成分, 如主语、表语、宾语等
+2. 连接副词: when, where, why, how, 有词义, 在句子中充当句子成分, 作状语.
+3. 连结词: that, whether, if, as if. that 无词义, 在从句中不充当句子成分, 有时可以省略: if (whether) , as if 虽有词义, 但在句子中不充当句子成分.
+
+## 主语从句
+1. 主语从句在复合句中作主语.
+   Who will go is not important.
+2. 用 it 作为形式主义, 主语从句放在句末, 但 what 引导的主句从句表示...的东西时, 不用 it 做形式主语, whatever, whichever, whoever 一般也不用 it 做形式主语.
+   It doesn't matter so much whether you will come or not.
+   What he needs is more experience.
+3. that 引导主语从句时不能省略
+   That he suddenly fell ill made us surprised.
+
+## 表语从句
+在句中做表语的从句称为表语从句, 共分三类常考点:
+1. 若主句的主语是 advice, suggestion, order, request, requirement 等名词时, 则表语从句的谓语应用虚拟语气, 即 (should)+动词原形的形式.
+   His suggestion is that we (should) change our course.
+2. 主语为 reason 时, 表语从句的联接词要用 that, 而不用 why 或 because.
+   The reason for such a serious accident is that the driver was too careless and drunk.
+3. because, why, as if/as though, as, like 等连接词也可以连接表语从句.
+   He has lung cancer. That is because he has been smoking too much.
+
+## 宾语从句
+在主从复合句起宾语作用, 宾语从句分为三类; 动词的宾语从句、介词的宾语从句和形容词的宾语从句. 根据不同的作用, 宾语从句的连结词通常分为以下几类:
+1. that: 本身无意义, 只起连接作用, 口语中可以省略.
+   He said (that) Kate was good at swimming.
+2. what, which, who, whose, whom 等连接词, 在从句中作一定的成分, 如主语、宾语、表语、定语.
+   I don't know what they are going to do. (这里的 what 作宾语)
+   He asked me whose book it was. (这里的 whose 作定语)
+3. when, where, why, how 等连接副词, 在从句中充当状语.
+   Could you tell me where you live? 地点状语
+   Do you know how they found the place? 方式状语
+4. If, whether 意为是否, 不作句子成分, 但不能省略.
+   He asked me if Miss Zhao was a teacher.
+
+## 主语与从句时态一致的问题
+TODO
+
+虚拟语气
+## 虚拟语气在条件句中的用法
+
+在含有虚拟条件句的复合语句中, 主句和从句的谓语都要用虚拟语气
+
+1. 与现在事实相反
+   从句: 动词的过去式(be+were), 主句: would/should/could/might+动词原形
+2. 与过去事实相反
+   从句: had+过去分词, 主句: would/should/could/might+have+过去分词
+3. 与将来事实相反
+   从句: 动词过去式, should+动词原形, were to+动词原形, 主句: would/should/could/might+动词原形
+
+注意: 主句中的 should 只用于第一人称(但在美语中 should 常被 would 代替); 从句中的 should 可用于各种人称.
+
+1. 表示与现在事实相反的假设和结果
+   If my brother were here, everything would be all right.
+2. 表示与过去事实相反的假设和结果
+   If you had taken my device, you wouldn't (couldn't) have failed in the exam.
+3. 表示与将来事实相反的假设和结果
+   If it were Sunday tomorror, I should (would, could, might) go to see my grandma.
+   If it were to snow this evening, they would not go out.
+4. 表示错综时间的虚拟语气
+   有时条件从句中的动词和主语中的动作发生时间不一致, 这时动词的形式要根据它所表示的时间加以调整
+   If you had listened to doctor, you would be all right now. (从句动作指过去, 主句动作指现在)
+
+虚拟条件句可以转换成下列形式
+1. 省略连词 if
+   在书面中, 如果虚拟条件从句在中 were, had 或 should, 可以把 if 省略, 把这几个词放到主语之前, 构成主谓倒装.
+   Should he come (If he should come), tell him to ring me up.
+   Were I you (If I were you), I would not do it.
+2. 用介词短语代替条件状语从句
+   有时假设的情况并不用条件从句表示出来, 而是通过介词短语来表示.
+   Without air (If there were not air), there would be no living things.
+   But for your help (If it hadn't been for your help), I couldn't have done it.
+   假设的情况有时可以通过上下文或其他方式表达出来.
+   I was busy that day. Otherwise I would have gone with them.
+   (If I hadn't been busy that day, I would have gone there with them).
+   I would have finished the work, but I have been ill.
+   (If I hadn't been ill, I would have finished the work.)
+
+3. 省去条件状语从句
+   表示虚拟从句的主句或从句有时可以省略, 但其含义仍可以推知.
+   1. 省去条件从句
+      You could have washed your clothes yourself.
+   2. 省去主句(常用于表示愿望)
+      If my grandma were with me!
+      If only she had not left.
+
+## 虚拟语气的其他用法
+
+1. 虚拟语气在主语从句的用法
+   在 It is important (strange, natural, necessary)/suggested/desired/proposed...that... 句型中, that 所引导的主语从句的谓语动词常用 should+动词原形的结构.
+   It is important that every member (should) inform himself of these rules.
+2. 虚拟语气在宾语从句的用法
+   1. 在动词 wish 后的宾语从句中, 表示与现在或过去的事实相反, 或对将来的主观愿望, 从句通常省略连词 that
+      A. 表示对现在情况的虚拟: 从句动词用过去式或过去进行时(be+were)
+         I wish I knew the answer to the question.
+      B. 表示对过去情况的虚拟: 从句动词常用 had+过去分词.
+         I wish (wished) I hadn't spent so much money.
+      C. 表示对将来的主观愿望: 谓语动词为 would+动词原形. 此时要注意, 主句的主语与从句的主语不能相同, 因为主句的主语所期望的从句动作能否实现取决于主语的态度和意愿(非动物名称除外).
+         I wish it would stop.
+         I wish you would come soon.
+   2. 在 suggest, demand, order, propose, insist, command, request, desire 等动词后面的宾语从句中, 谓语动词用 should+动词原形.
+      I demand that he (should) answer me immediately.
+      注意:
+      当 suggest 表示暗示, 表明之意, insist 表示坚持认为之意时, 其后宾语从句不适用虚拟语气形式, 应使用陈述语气形式.
+      The smile on his face suggested that he was satisfied with our work.
+      The man insisted that he had never stolen the money.
+   3. 在 would rather 后的宾语从句中, 也用虚拟语气, 其构成为后续动词过去式(表示现在或将来动作)或过去完成时(表示过去动作)
+      I would rather she came tomorrow.
+      He would rather I had done the work for him.
+3. 虚拟语气在状语从句中的用法
+   1. 在带有 even if/even though 引导的让步状语从句的主从复合句中, 主句和从句都用虚拟语气, 动词形式与含有非真实条件的虚拟语气相同.
+      Even if he had been ill, he would have gone to his office.
+   2. 由 as if 或 as though 引导的状语从句表示比较或方式时. 从句谓语形式为动词的过去式(be+were)或 had+过去分词.
+      He treated me as if I were a stranger.
+      She talked about the film as if she had really seen it.
+   3. 在 in order to 或 so that 引导的目的状语从句中, 谓语动词多用 could 或 might (有时也用 should)+动词原形.
+      Mr. Green spoke slowly so that His students could (might) hear clearly.
+4. 虚拟语气在定语从句中的用法
+   在 it is time (that)... 句型中, 定语从句的谓语动词常用虚拟语气表示将来时, 动词原形一般用过去式, 意思是该做某事的时候了.
+   It's (high) time we did our homework.
+5. 虚拟语气在简单句中的用法
+   1. 情态动词的过去用于现在时态, 表示说话人的谦虚、客气、有礼貌, 或委婉的语气, 常见于日常会话中.
+      I would be better for you not to stay up too late.
+   2. 在一些习惯表达中.
+      I would rather not tell you.
+   3. 用 may+动词原形, 表示祝愿, 此时 may 必须置于句首(多用于正式文体中).
+      May you be happy!
+      May good luck be yours!
+
 非谓语:
 1. 动词不定式(to do)
    在句子中作主语、宾语、表语、补语、定语和状语
@@ -561,7 +698,7 @@ The Adverbial Clause modifies the purpose or time attribute or accompanying acti
 所有跟要求有关的动词后面宾语都用虚拟语气
 
 1. if 引导的虚拟语气: if条件句 + 结果句
-   对现在虚拟 If were/did (过去式), would + 动词原型
+   对现在虚拟 If were/did (过去式), would + 动词原形
    对过去虚拟 If had done (过去完成) , would have done
    对将来虚拟 If would do (过去将来时) , world do
 2. 情态动词(should, ought to, need; 过去事实推测: can't/couldn't, must ) + have ...
