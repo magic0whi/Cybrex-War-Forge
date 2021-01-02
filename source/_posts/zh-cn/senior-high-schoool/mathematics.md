@@ -9,6 +9,7 @@ tags:
 
 高中数学的内容
 省略了不重要的东西(比如集合、函数奇偶性, 弧度制(曲边三角形)等一些谁都懂的概念)
+基于 [基础版数学笔记](https://zhuanlan.zhihu.com/p/25471324)
 
 <!-- more -->
 
@@ -741,3 +742,235 @@ tags:
      且两圆相交于 \\(A\\)、\\(B\\) 两点
      则点 \\(A\\)、\\(B\\) 所在的直线方程为: \\((D_1-D_2)x+(E_1-E_2)y+F_1-F_2=0\\)
      经过两圆公共点的圆为: \\(x^2+y^2+D_1x+E_1y+F_1-\lambda(x^2+y^2+D_2x+E_2y+F_2)=0\enspace\\) (\\(\lambda\neq -1\\))
+
+### 圆锥曲线与方程
+
+1. 椭圆:
+   椭圆第二定义: 平面内到定点(焦点)的距离与到定直线(准线)距离之比为常数(离心率)的点的轨叫椭圆. 
+   椭圆的标准方程:
+   \\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\enspace\\) (\\(a>b>0\\)) , 此时焦点在 \\(x\\) 轴 (哪边分母大焦点就在哪个轴)
+   \\(\frac{y^2}{a^2}+\frac{x^2}{b^2}=1\enspace\\) (\\(a>b>0\\)) , 此时焦点在 \\(y\\) 轴
+   性质:
+   * 焦点在 \\(x\\) 轴, 定点为 \\((-c,0)\\)、\\((c,0)\\)
+     焦点在 \\(y\\) 轴, 定点为 \\((0,-c)\\)、\\((0,c)\\)
+     存在关系 \\(a^2=b^2+c^2\\)
+     椭圆准线方程: \\(x=\pm\frac{a^2}{c}\\) 或 \\(y=\pm\frac{a^2}{c}\\)
+   * 离心率 \\(e=\frac{c}{a}\enspace\\) (\\(0<e<1\\))
+     \\(e\\) 越大, 椭圆越扁;
+     \\(e\\) 越小, 椭圆越接近于圆
+   * 当椭圆焦点不确定在哪个轴上时可设该方程为 \\(mx^2+ny^2=1\enspace\\) (\\(m>0,n>0,m\neq n)\\)
+   * 若已知椭圆上一点为 \\(P\\) , \\(\angle{F_1PF_2}=\theta\\) , 则有 \\(S_{\triangle F_1PF_2}=b^2\tan\frac{\theta}{2}\\)
+2. 双曲线
+   (这里讨论的双曲线关于 \\(x\\) 轴、\\(y\\) 轴、原点对称)
+   双曲线第二定义: 平面内到定点(焦点)的距离到定直线(准线)的距离之比为常数(离心率)的点的迹叫双曲线.
+   双曲线的标准方程:
+   \\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\enspace\\) (\\(a>0\\) , \\(b>0\\)) , 此时焦点在 \\(x\\) 轴 , 渐近线方程为 \\(y=\pm\frac{b}{a}x\enspace\\) (被减数是哪个焦点就在哪个上)
+   \\(\frac{y^2}{a^2}-\frac{x^2}{b^2}=1\enspace\\) (\\(a>0\\) , \\(b>0\\)) , 此时焦点在 \\\(y\\) 轴 , 渐近线方程为 \\(y=\pm\frac{a}{b}x\\)
+   性质:
+   * 存在关系 \\(c^2=a^2+b^2\\)
+   * 离心率 \\(e=\frac{c}{a}\enspace\\) (\\(e>1\\))
+     \\(e\\) 越大, 开口越大;
+     \\(e\\) 越小, 开口越小
+   * 等轴双曲线: 实虚轴相等. 此时 \\(e=\sqrt{2}\\) , 渐近线方程为 \\(y=\pm x\\)
+   * 当双曲线的焦点不确定在哪个轴上时可设方程为 \\(mx^2+ny^2=1\enspace\\) (\\(mn<0\\))
+   * 若已知双曲线的渐近线方程为 \\(\frac{x}{a}\pm\frac{y}{b}=0\\) , 要求双曲线方程, 可设该双曲线方程为 \\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=\lambda\enspace\\) (\\(\lambda\neq0\\))
+     再根据题意求 \\(\lambda\\) 的值
+     若已知双曲线上一点为 \\(P\\) , \\(\angle F_1PF_2=\theta\\) , 则有 \\(S_{\triangle F_1PF_2}=b^2\cot\frac{\theta}{2}\\)
+   * 双曲线的左(右)焦点到左(右)顶点的距离为该焦点到双曲线的最短距离
+   * 直线与双曲线位置关系的处理方法:
+     联立两方程, 消去 \\(y\\) (或 \\(x\\)) , 得到一元二次方程. 在二次项系数不为 \\(0\\) 的情况下考察方程的判别式
+     1. \\(\varDelta>0\\) 时, 直线与双曲线有两个交点
+     2. \\(\varDelta=0\\) 时, 直线与双曲线有一个交点
+     3. \\(\varDelta<0\\) 时, 直线与双曲线没有交点
+3. 抛物线
+   定义: 抛物线上的点到焦点的距离等于该点到准线的距离
+   | 标准方程 | 焦点 | 准线 |
+   | ---- | --- | ---- |
+   | \\(y^2=2px\enspace\\) (\\(p>0\\)) | \\((\frac{p}{2},0)\\) | \\(x=-\frac{p}{2}\\) |
+   | \\(y^2=-2px\enspace\\) (\\(p>0\\)) | \\((-\frac{p}{2},0)\\) | \\(x=\frac{p}{2}\\) |
+   | \\(x^2=2py\enspace\\) (\\(p>0\\)) | \\((0,\frac{p}{2})\\) | \\(y=-\frac{p}{2}\\) |
+   | \\(x^2=-2py\enspace\\) (\\(p>0\\)) | \\((0,-\frac{p}{2})\\) | \\(y=\frac{p}{2}\\) |
+   性质: (设 \\(y=2px\enspace\\) (\\(p>0\\)), \\(F\\) 为其焦点, 点 \\(A(x_1,y_1)\\)、\\(B(x_2,y_2)\\) 且\\(AB\\) 为其焦点弦, 弦的倾斜角为 \\(\theta\\))
+   * 离心率 \\(e=1\\)
+   * 以抛物线的焦点弦为直径的圆与抛物线的准线相切
+   * \\(x_1x_2=\frac{p^2}{4}\\) , \\(y_1y_2=-p^2\\)
+   * \\(\frac{1}{|AF|}+\frac{1}{|BF|}=\frac{2}{p}\\)
+   * \\(|AB|=x_1+x_2+p\\)
+   * \\(|AB|=\frac{2p}{\sin{^2\theta}}\\)
+   * \\(S_{\triangle ABO}=\frac{p^2}{2\sin{^2\theta}}\\)
+   * 过 \\(A\\)、\\(B\\) 分别作准线的垂线, 垂足分别为 \\(A_1\\)、\\(B_1\\)
+     则 \\(A_1F\perp B_1F\\) 此时 \\(A_1\\)、\\(O\\)、\\(B_1\\) 三点共线
+   * 焦点弦中, <u>通经</u>最短 (指垂直于对称轴的焦点弦, 长为\\(2p\\))
+   * 当题中只有给一个点时, 不知对称性. 可设 \\(x^2=2my\enspace\\) (\\(m\neq 0)\\) 或 \\(y^2=2mx\enspace\\) (\\(m\neq 0\\))
+
+### 向量
+
+1. 平面向量
+   1. 向量的线性运算
+      加减: 有三角形法则及平行四边形法则、其满足的运算规律有交换率和结合率
+      数乘: 规定实数 \\(\lambda\\) 与 \\(\vec{a}\\) 的积是一个向量, 这种运算叫做向量的数乘. 记作 \\(\lambda\vec{a}\\)
+      * 性质: (设实数 \\(\lambda\\) , 向量 \\(\vec{a}\\))
+        * 结合律: \\(\lambda(\mu\vec{a})=(\lambda\mu)\vec{a}\\)
+        * 分配律:
+          \\((\lambda+\mu)\vec{a}=\lambda\vec{a}+\mu\vec{a}\\)
+          \\(\lambda(\vec{a}+\vec{b})=\lambda\vec{a}+\lambda\vec{b}\\)
+          \\(\lambda(\vec{a}-\vec{b})=\lambda\vec{a}-\lambda\vec{b}\\)
+        * \\((-\lambda)\vec{a}=-(\lambda\vec{a})=\lambda(-\vec{a})\\)
+   2. 向量的坐标表示和基本定理
+      * 向量的坐标表示
+        一个向量的坐标表示一条从原点到此坐标的有向线段(若始点坐标非零则是终点坐标减去始点坐标)
+        设 \\(\vec{a}=(x_1,y_1)\\) , \\(\vec{b}=(x_2,y_2)\\) , 则
+        \\(\vec{a}+\vec{b}=(x_1+x_2,y_1+y_2)\\)
+        \\(\vec{a}-\vec{b}=(x_1-x_2,y_1-y_2)\\)
+        \\(\lambda\vec{a}=(\lambda x_1,\lambda y_1)\\)
+      * 正交分解
+        把一个向量分解成两个相互垂直的向量, 叫做把向量正交分解
+        \\((x_i,y_i)\hArr(x_i,0)\\) , \\((0,y_i)\\)
+      * 向量共线基本定理
+        \\(\vec{a}\\) 与 \\(\vec{b}\\) 共线(\\(\vec{a}\parallel\vec{b}\\) , \\(\vec{b}\neq 0\\)) 当且仅当有唯一实数 \\(\lambda\\) 使 \\(\vec{b}=\lambda\vec{a}\\)
+      * 两向量平行或垂直的判定
+        设 \\(\vec{a}=(x_1,y_1)\\) , \\(\vec{b}=(x_2,y_2)\\)
+        若 \\(\vec{a}\parallel\vec{b}\enspace\\) (\\(\vec{b}\neq\vec{0}\\)) \\(\hArr\frac{x_1}{x_2}=\frac{y_1}{y_2}\hArr x_1y_2-x_2y_1=0\\) (内项积等于外项积)
+        若 \\(\vec{a}\perp\vec{b}\hArr\vec{a}\cdot\vec{b}=0\hArr x_1x_2+y_1y_2=0\\)
+   3. 数量积(向量点乘)
+      \\(\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|\cos{\theta}\\) , 其中 \\(\theta\\) 是 \\(\vec{a}\\) 与 \\(\vec{b}\\) 的夹角
+      性质:
+      * 交换律 \\(\vec{a}\cdot\vec{b}=\vec{b}\cdot\vec{a}\\)
+      * 当 \\(\vec{a}\\) 与 \\(\vec{b}\\) 同向时, \\(\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|\\)
+        当 \\(\vec{a}\\) 与 \\(\vec{b}\\) 反向时, \\(\vec{a}\cdot\vec{b}=-|\vec{a}||\vec{b}|\\)
+      * \\(\vec{a}\cdot\vec{a}=|\vec{a}|^2\hArr |\vec{a}|=\sqrt{\vec{a}\cdot\vec{a}}\\)
+      * \\(|\vec{a}\cdot\vec{b}\leqslant|\vec{a}|\cdot|\vec{b}|\\)
+      * 若 \\(\vec{a}=(x_1,y_1)\\) , \\(\vec{b}=(x_2,y_2)\\) , 则 \\(\vec{a}\cdot\vec{b}=x_1x_2+y_1y_2\\)
+        \\(\cos\theta=\frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}=\frac{x_1x_2+y_1y_2}{\sqrt{x_1^2+y_1^2}\sqrt{x_2^2+y_2^2}}\\)
+2. 空间向量
+   1. 空间向量及其运算
+      向量共线定理推论: 若 \\(A\\)、\\(B\\)、\\(C\\) 三点共线. 对空间任意一点 \\(P\\) , 都有 \\(\vec{PC}=\vec{PA}+\lambda\vec{AB}=\lambda\vec{PB}+(1-\lambda)\vec{PA}\\)
+      向量共面定理: 若两个向量 \\(\vec{a}\\)、\\(\vec{b}\\) 不共线, 则向量 \\(\vec{p}\\) 与向量 \\(\vec{a}\\)、\\(\vec{b}\\) 共面的充要条件是存在 \\((x,y)\\) 使 \\(\vec{p}=x\vec{a}+y\vec{b}\\)
+      推论:
+      若 \\(A\\)、\\(B\\)、\\(C\\)、\\(D\\) 四点共面, \\(P\\) 为空间中任意一点 
+      * 存在有序实数对 \\((x,y)\\) , 使 \\(\vec{BA}=x\vec{BC}+y\vec{BD}\\)
+      * 存在有序实数对 \\((x,y)\\) , 使 \\(\vec{PA}=\vec{PB}+x\vec{BC}+y\vec{BD}\\)
+      * 存在 \\(x\\)、\\(y\\)、\\(z\in R\\) , 使 \\(\vec{PA}=x\vec{PB}+y\vec{PC}+z\vec{PD}\enspace\\) (\\(x+y+z=1\\))
+      
+      定理:
+      如果三个变量不共面, 那么对空间任一向量 \\(\vec{p}\\) , 存在有序实数组 \\(\\{x,y,z\\}\\) 使得 \\(\vec{p}=x\vec{a}+y\vec{b}+z\vec{c}\\) .
+      其中集合 \\(\\{\vec{a},\vec{b},\vec{c}\\}\\) 称为空间的一个基底, \\(\vec{a},\vec{b},\vec{c}\\) 称为基向量
+      
+      空间向量的模长: 若 \\(\vec{a}=(x,y,z)\\) , 则 \\(|\vec{a}|=\sqrt{x^2+y^2+z^2}\\)
+      空间向量的数量积:
+      若 \\(\vec{a}=(x_1,y_1,z_1)\\)、\\(\vec{b}=(x_2,y_2,z_2)\\) , 则 \\(\cos<\vec{a},\vec{b}>=\frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}=\frac{x_1x_2+y_1y_2+z_1z_2}{\sqrt{x_1^2+y_1^2+z_1^2}+\sqrt{x_2^2+y_2^2+z_2^2}}\\)
+   2. 空间向量的应用
+      1. 直线的方向向量
+         设 \\(\vec{a}\\)、\\(\vec{b}\\) 分别是直线 \\(l\\)、\\(m\\) 的方向向量
+         1. \\(\vec{a}=\lambda\vec{b}\hArr\vec{a}\parallel\vec{b}\hArr l\parallel m\\)
+         2. \\(\vec{a}\cdot\vec{b}=0\hArr\vec{a}\perp\vec{b}\hArr l\perp m\\)
+      2. 平面的法向量
+         如果向量 \\(\vec{n}\\) 垂直于平面 \\(\alpha\\), 则向量 \\(\vec{n}\\) 叫做平面 \\(\alpha\\) 的法向量
+         应用:
+         * 点面距离向量公式
+           {% asset_img 2.png %}
+           设 \\(\vec{n}\\) 是平面 \\(\alpha\\) 的法向量, \\(PA\\) 是 \\(\alpha\\) 的斜线, 则点 \\(P\\) 到 \\(\alpha\\) 的距离 \\(d=\frac{|\vec{n}\cdot\vec{PA}|}{|\vec{n}|}\\)
+         * 直线与平面
+           设 \\(\vec{a}\\) 是 \\(l\\) 的方向向量, \\(\vec{n}\\) 是 \\(\alpha\\) 的法向量
+           1. \\(\vec{a}=\lambda\vec{n}\hArr\vec{a}\parallel\vec{n}\hArr l\perp\alpha\\)
+           2. \\(\vec{a}\cdot\vec{n}=0\hArr\vec{a}\perp\vec{n}\hArr l\parallel\alpha\\)
+         
+         * 平面与平面
+           设 \\(\vec{u}\\)、\\(\vec{n}\\) 分别为 \\(\alpha\\)、\\(\beta\\) 的法向量
+           1. \\(\vec{u}=\lambda\vec{n}\hArr\vec{u}\parallel\vec{n}\hArr\alpha\parallel\beta\\)
+           2. \\(\vec{u}\cdot\vec{n}=0\hArr\vec{u}\perp\vec{n}\hArr\alpha\perp\beta\\)
+      3. 三垂线定理
+         {% asset_img 1.png %}
+         在平面内的一条直线, 如果和这个平面的一条斜线的射影垂直, 那么它也和这条斜线垂直
+         符号语言: \\(PO\perp\alpha\\) , \\(l\subset\alpha\\) , \\(OA\\) 是 \\(PA\\) 在 \\(\alpha\\) 内的射影. 则 \\(l\perp OA\rArr l\perp PA\\)
+         
+         * 三垂线定理的逆定理: 在平面内的一条直线, 如果和这个平面的一条斜线垂直, 那么它也和这条直线在平面内的摄影垂直.
+           符号语言: \\(PO\perp\alpha\\) , \\(l<\alpha\\) , \\(OA\\) 是 \\(PA\\) 在 \\(\alpha\\) 内的摄影. 则 \\(l\perp PA\rArr l\perp OA\\)
+      5. 空间角的求法:
+         1. 异面直线所成的角 \\((0\degree,90\degree]\\)
+            设异面直线 \\(a\\) 与 \\(b\\) 所成角为 \\(\theta\\) . 且 \\(\vec{a}\\)、\\(\vec{b}\\) 分别 \\(a\\)、\\(b\\) 的方向向量
+            则 \\(\cos\theta=|\cos<\vec{a},\vec{b}>|=\frac{|\vec{a}\cdot\vec{b}|}{|\vec{a}||\vec{b}|}\\)
+         2. 二面角 \\((0\degree,180\degree)\\)
+            设二面角 \\(\theta\\) , \\(\vec{u}\\)、\\(\vec{v}\\) 分别是平面 \\(\alpha\\)、\\(\beta\\) 的法向量
+            则 \\(\cos\theta=\cos<\vec{a},\vec{b}>=\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|}\\) (锐二面角)
+            或 \\(\cos\theta=-\cos<\vec{u},\vec{v}>=-\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|}\\) (钝二面角)
+         3. 直线与平面所成角 \\((0\degree,90\degree]\\)
+            设斜线 \\(PA\\) 与平面 \\(\alpha\\) 所成角为 \\(\theta\\) , \\(\vec{n}\\) 为 \\(\alpha\\) 的法向量, \\(\vec{PA}\\) 是斜线 \\(PA\\) 的方向向量
+            则 \\(\sin\theta=|\cos<\vec{PA},\vec{n}>|=\frac{|\vec{PA}\cdot\vec{n}|}{|\vec{PA}||\vec{n}|}\\)
+      6. 点到直线距离(向量法):
+         例: 已知直线 \\(l\\) 过点 \\(P(0,0,0)\\) , 其方向向量 \\(\vec{a}=(1,1,1)\\) , 则点 \\(Q(3,4,5)\\) 到直线的距离为?
+         解: 点 \\(Q\\) 到直线 \\(l\\) 的距离为 \\(\sqrt{PQ^2-(\frac{\vec{a}\cdot\vec{PQ}}{|\vec{a}|})^2}=\sqrt{2}\\) (勾股定理)
+         {% asset_img 3.png %}
+
+## 坐标系与参数方程
+
+### 坐标系
+
+1. 伸缩变换: 设点 \\(P(x,y)\\) 是平面直角坐标系中的任意一点, 在变换
+   \\(\varphi\begin{cases} x'=\lambda\cdot x & (\lambda<0) \\\ y'=\mu\cdot y & (\mu>0) \end{cases}\\)
+   的作用下, 点 \\(P(x,y)\\) 对应到点 \\(P'(x',y')\\) 称<u> \\(\varphi\\) 为平面直角坐标系中的坐标伸缩变换</u>, 简称伸缩变换
+   经过伸缩变换后得到一条关于 \\(x',y'\\) 的曲线方程, 最后要将 \\(x',y'\\) 分别转化为具有普遍意义的 \\(x,y\\), 得到一条关于 \\(x,y\\) 的全新的曲线方程.
+2. 极坐标: 在平面内取一个定点 \\(O\\), 叫做<u>极点</u>, 自极点 \\(O\\) 引一条射线 \\(OX\\) , 叫做<u>极轴</u>, 再确定单位长度、角度单位、正方向, 就建立了一个极坐标系.
+   一般地, 极坐标 \\((P,\theta)\\) 与 \\((P,\theta+2k\pi)\enspace\\) (\\(k\in Z\\)) 表示同一个点
+   特别地, 极点 \\(O\\) 的坐标为 \\((0,\theta)\enspace\\) (\\(\theta\in R\\))
+   和直角坐标系不同, 平面内一个点的极坐标有无数种表示
+   
+   * 极坐标与直角坐标的互允公式
+     1. 互化公式的应用条件:
+        1. 极点与直角坐标系的原点重合
+        2. 极轴与直角坐标系的 \\(x\\) 轴正半轴重合
+        3. 两个坐标系的单位长度相同
+     2. 极坐标化为直角坐标 \\(\begin{cases} x=\rho\cos\theta \\\ y=\rho\sin\theta \end{cases}\\)
+        直角坐标化为极坐标: \\(\begin{cases} \rho^2=x^2+y^2 \\\ \tan\theta=\frac{y}{x} \end{cases}\\)
+   
+   * 极坐标内两点的距离公式:
+     若 \\(A(\rho_1,\theta_1)\\) , \\(B(\rho_2,\theta_2)\\), 则
+     \\(|AB|=\sqrt{\rho_1^2+\rho_2^2-2\rho_1\rho_2\cos(\theta_1-\theta_2)}\\)
+   
+   * 某些题目给出相关信息求极坐标方程可用三角函数进行求解.
+     取要求的曲线上任一点设为 \\(M(\rho,\theta)\\).
+     结合题意表示出关于变量 \\(\rho,\theta\\) 的极坐标方程, 即为题目所求的极坐标方程.
+     可用此方法推导得出:
+     * 设圆心为 \\((\rho_0,\theta_0)\\) , 半径为 \\(r\\).
+       则圆的极坐标方程为 \\(\rho^2+\rho_0^2-2\rho_0\rho\cos(\theta-\theta_0)=r^2\\)
+     * 过点 \\(P(\rho_1,\theta_1)\\) 且与极轴所成的角为 \\(\alpha\\) 的直线的极坐标方程为 \\(\rho\sin(\alpha-\theta)=\rho_1\sin(\alpha-\theta_1)\\)
+
+### 参数方程
+
+参数方程的求法:
+1. 建系, 设点 \\((x,y)\\)
+2. 选取参数
+3. 求出 \\(x,y\\) 与参数之间的表达式
+4. 结论
+
+参数方程化为普通方程: 要把参数消去, 还要注意 \\(x,y\\) 的取值范围, 即在消去参数的过程中一定要注意普通方程与参数方程的等价性.
+常用的消参技巧: 带入消元, 加减消元, 平方和(差)消元, 三角恒等式消元等
+常用消参公式: \\(\sin^2\alpha+\cos^2\alpha=1\\) , \\((t+\frac{1}{t})^2-(t-\frac{1}{t})^2=4\\)
+
+1. 直线的参数方程
+   经过点 \\(P_0(\rho_0,\theta_0)\\) , 且倾斜角为 \\(\alpha\\) 的直线的标准参数方程为 \\(\begin{cases} x=x_0+t\cos\alpha \\\ y=y_0+t\sin\alpha \end{cases}\\) (\\(t\\) 为参数)
+   参数 \\(t\\) 的几何意义是有向线段 \\(P_0P\\) 的位置下标. 即 \\(|t|=P_0P\\)
+
+   另一种:
+   直线的方向向量为 \\(\vec{P_0P}=(x_0,y_0)\\) , \\(\begin{cases} x=x_0+at \\\ y=y_0+bt \end{cases}\\) (\\(t\\) 为参数)
+   且\\(|P_0P|=\sqrt{a^2+b^2}|t|\\)
+   当 \\(a^2+b^2=1\\) , \\(t=|P_0P|\\)
+   当 \\(a^2+b^2\neq 1\\) , \\(t\\) 无明确意义
+2. 圆的参数方程
+   圆心坐标为 \\(M(a,b)\\), 半径 \\(r_0\\)
+   以圆心为顶点且与 \\(x\\) 轴同向的射线按逆时针方向旋转至角 \\(\alpha\\) 为参数的圆的参数方程为:
+   \\(\begin{cases} x=a+r\cos\alpha \\\ y=b+r\sin\alpha \end{cases}\\) (\\(\alpha\in[0,2\pi)\\))
+3. 圆锥曲线的参数方程
+   * 椭圆(\\(\varphi\\) 为离心角)
+     \\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\enspace\\) (\\(a>b>0\\)) 的一个参数方程为 \\(\begin{cases} x=a\cos\varphi \\\ y=b\sin\varphi \end{cases}\\) (\\(\varphi\\) 为参数, \\(a>b>0\\))
+     \\(\frac{x^2}{b^2}+\frac{y^2}{a^2}=1\enspace\\) (\\(a>b>0\\)) 的一个参数方程为 \\(\begin{cases} x=b\cos\varphi \\\ y=a\sin\varphi \end{cases}\\) (\\(\varphi\\) 为参数, \\(a>b>0\\))
+   * 双曲线
+     \\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\enspace\\) (\\(a,b>0\\)) 的一个参数方程为 \\(\begin{cases} x=a\sec\varphi=\frac{a}{\cos\varphi} \\\ y=b\tan\varphi \end{cases}\\) (\\(\varphi\\) 为参数, \\(a,b>0\\))
+     \\(\frac{y^2}{a^2}-\frac{x^2}{b^2}=1\enspace\\) (\\(a,b>0\\)) 的一个参数方程为 \\(\begin{cases} x=b\tan\varphi \\\ y=a\sec\varphi=\frac{a}{\cos\varphi} \end{cases}\\) (\\(\varphi\\) 为参数, \\(a,b>0\\))
+   * 抛物线
+     \\(y^2=2px\\) 的一个参数方程 \\(\begin{cases} x=2pt^2 \\\ y=2pt \end{cases}\\) (\\(t\\) 为参数)
+4. 平摆线和渐开线
+   * 平摆线: 某一个车轮上的一点 \\(P\\) 因车轮滚动而绘制的轨迹(或称旋轮线)
+     半径为 \\(r\\) 的车轮周上一点 \\(P\\) 的轨迹的参数方程是 \\(\begin{cases} x=r(\theta-\sin\theta) \\\ y=r(1-\cos\theta) \end{cases}\\) (\\(\theta\\) 为参数)
+   * 渐开线: 一条动直线(发生线)沿着一个固定的圆(基圆)作纯滚动时，此动直线上一点的轨迹
+     参数方程为 \\(\begin{cases} x=r(\cos\theta+\theta\sin\theta) \\\ y=r(\sin\theta-\theta\cos\theta) \end{cases}\\) (\\(\theta\\) 为参数)
