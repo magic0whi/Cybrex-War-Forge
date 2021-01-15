@@ -11,6 +11,8 @@ tags:
 省略了不重要的东西(比如集合、函数奇偶性, 弧度制(曲边三角形)等一些谁都懂的概念)
 基于 [基础版数学笔记](https://zhuanlan.zhihu.com/p/25471324)
 
+常见集合 自然数: \\(N\\) , 正整数 \\(N^+\\) , 整数 \\(Z\\) , 有理数 \\(Q\\) , 实数 \\(R\\) , 复数 \\(C\\)
+
 <!-- more -->
 
 ## 函数
@@ -59,7 +61,7 @@ tags:
 
 1. 二次函数 (Quadratic function)
    形如 \\(y=ax^2+bx+c\enspace\\) (\\(a \neq 0\\))
-   性质: TODO 补充 \\(\Delta\\) 的推导过程
+   性质:
    * 顶点坐标: \\((-\frac{b}{2a},\frac{4ac-b^2}{4a})\\)
    * 方程根: \\((\frac{-b - \sqrt{\Delta}}{2a}, 0)和(\frac{-b + \sqrt{\Delta}}{2a}, 0)\\)
    * \\(\Delta=b^2-4ac\\)
@@ -92,7 +94,6 @@ tags:
 3. 简谐运动 (Simple harmonic motion)
    形如 \\(y=A\sin(wx+\varphi)+k\\) 的函数
    (画这类函数的图像可用**五点法**)
-   TODO: 图像
    \\(A\\) 为这个简谐运动的振幅(影响函数的值域), \\(k\\) 为基准(影响函数初始高度)
    (\\(w\\) 影响函数的周期长度)这个简谐运动的周期为 \\(T=\frac{2\pi}{w}\\) , 所以频率 \\(f=\frac{1}{T}=\frac{w}{2\pi}\\)
    \\(wx+\varphi\\) 称为相位, \\(x=0\\) 时的相位 \\(\varphi\\) 称为初相(影响函数左右平移)
@@ -399,10 +400,8 @@ tags:
       \\(|ax+b|\leqslant c\hArr -c\leqslant ax+b\leqslant c\\)
       \\(|ax+b|\geqslant c\hArr ax+b\leqslant -c\\) 或 \\(ax+b\geqslant c\\)
       
-      三角不等式: TODO: 证明
-      1. \\(|a+b|\leqslant|a|+|b|\\)
-      2. \\(|a-b|\leqslant|a-c|+|c-b|\\)
-   2. 柯西不等式
+      三角不等式: \\(||a|-|b||\leqslant|a\pm b|\leqslant|a|+|b|\\)
+   1. 柯西不等式
       1. 代数形式: 设 \\(a,b,c\in R\\) , 则 \\((a^2+b^2)(c^2+d^2)\geqslant(ac+bd)^2\enspace\\) (当且仅当 \\(ad=bc\\) 时等号成立)
       2. 向量形式: 设 \\(\alpha\\)、\\(\beta\\) 为平面上的两个向量, 则 \\(|\alpha|\cdot|\beta|\geqslant|\alpha\cdot\beta|\enspace\\) (当且仅当 \\(\alpha\\)、\\(\beta\\) 共线时等号成立)
       3. 三角形不等式: 设 \\(x_1,y_2;x_2,y_2;x_3,y_3\in R\\) , 则
@@ -412,18 +411,18 @@ tags:
          设 \\(n\\) 为大于 \\(1\\) 的自然数, \\(a_i\\)、\\(b_i\enspace\\) (\\(i=1,2,\dots,n\\)) 为实数, 则
          \\(a_1^2+a_2^2+\dots+a_n^2)(b_1^2+b_2^2+\dots+b_n^2)\geqslant(a_1b_1+a_2b_2+\dots+a_nb_n)^2\\)
          \\(\hArr\displaystyle\sum_{i=1}^n a_i^2\cdot\displaystyle\sum_{i=1}^n b_i^2\geqslant(\displaystyle\sum_{i=1}^n a_ib_i)^2\\)
-   3. 排序不等式 TODO: 向量递归法讨论
+   2. 排序不等式 TODO: 向量递归法讨论
       设两组实数 \\(a_1,a_2,\dots,a_n\\) 与 \\(b_1,b_2,\dots,b_n\\) , 其中 \\(a_1\leqslant a_2\leqslant\dots\leqslant a_n\\) , \\(b_1\leqslant b_2\leqslant\dots\leqslant b_n\\)
       设 \\(c_1,c_2,\dots,c_n\\) 为 \\(b_1,b_2,\dots,b_n\\) 的任意一个排列,
       则和数 \\(a_1b_1+a_2b_2+\dots+a_nb_n\\) 在 \\(a_1,a_2,\dots,a_n\\) 与 \\(b_1,b_2,\dots,b_n\\) 同序时最大, 反序时最小
       即 \\(a_1b_1+a_2b_2+\dots+a_nb_n\geqslant a_1c_1+a_2c_2+\dots+a_nc_n\geqslant a_1b_n+a_2b_{n-1}+\dots+a_nb_1\\)
       (当且仅当 \\(a_1=a_2=\dots=a_n\\) 或 \\(b_1=b_2=\dots=b_n\\) 时等号成立)
-   4. 伯努利不等式
+   3. 伯努利不等式
       有 \\(x>-1\\)
       当 \\(n\geqslant 1\\) , 则 \\((1+x)^n\geqslant 1+nx\\)
       当 \\(0\leqslant n\leqslant 1\\) , 则 \\((1+x)^n\leqslant 1+nx\\)
       当且仅当 \\(n=0,1\\) 或 \\(x=0\\) 时等号成立
-   5. 用数学归纳法证明伯努利不等式:
+   4. 用数学归纳法证明伯努利不等式:
       (只考虑 \\(n\geqslant 1\\) 的情况)
       1. 当 \\(n=1\\) 时, 代入得 \\(1+x\geqslant 1+x\\) 显然成立 
       2. 假设 \\(n=k\\) 时 \\((1+x)^k\geqslant 1+kx\\) 成立,
@@ -432,12 +431,12 @@ tags:
          可化为 \\((1+x)^{k+1}\geqslant kx^2 + 1 + (k+1)x\\)
          显然 \\(kx^2 + 1 + (k+1)x\geqslant 1 + (k+1)x\\)
          所以假设 \\((1+x)^{k+1}\geqslant 1+(k+1)x\\) 成立
-   6. 平均值不等式
+   5. 平均值不等式
       基本不等式可推广到 \\(\frac{a_1+a_2+\dots+a_n}{n}\geqslant\sqrt[n]{a_1a_2\dots a_n}\\)
       (当且仅当 \\(a_1=a_2=\dots=a_n\\) 时等号成立)
       \\(\frac{a_1+a_2+\dots+a_n}{n}\\) 称为算术平均数
       \\(\sqrt[n]{a_1a_2\dots a_n}\\) 称为几何平均数
-7. 证明不等式的基本方法
+1. 证明不等式的基本方法
    1. 比较法
       比较法分比差法和比商法, 
       比差法利用基本事实 \\(a-b>0\hArr a>b\\)
@@ -468,7 +467,7 @@ tags:
       极差: 一组数据最大值与最小值
       组数: \\(\frac{极差}{组距}\\)
 2. 样本分析
-   * 频率分布直方图(以面积的形式反映数据落在各小组的频率情况) TODO: 补充图片
+   * 频率分布直方图(以面积的形式反映数据落在各小组的频率情况)
      小矩形的面积 \\(=\\) 组距 \\(\times\frac{\text{频率}}{\text{组距}}=\\) 频率
      频率分布直方图中, 各小矩形面积之和等于 \\(1\\)
      众数: 最高的矩形底边中点的横坐标
@@ -642,8 +641,7 @@ tags:
       5. 二项分布 \\(V(X)=np(1-p)\\)
    4. 超几何分布
       一般地, 在含有 \\(M\\) 件次品的 \\(N\\) 件产品中, 任取 \\(n\\) 件, 其中恰有 \\(x\\) 件次品.
-      则 \\(P(x=l)=\frac{C_M^k C_{N-M}^{n-k}}{C_N^n}\enspace\\) (\\(l=1,2,3,\dots,n\\))
-      (\\(n\leqslant N\\) , \\(M\leqslant N\\))
+      \\(P(x=l)=\frac{C_M^k C_{N-M}^{n-k}}{C_N^n}\enspace\\) (\\(l=1,2,3,\dots,n\\) ; \\(n\leqslant N\\) , \\(M\leqslant N\\))
       不合格数量恰有 \\(l\\) 件的概率分布表如下表所示:
       其中 \\(l=\text{min}(M,n)\\)
       | \\(X\\) | \\(0\\) | \\(1\\) | \\(2\\) | \\(\dots\\) | \\(l\\) |
@@ -651,6 +649,24 @@ tags:
       | \\(P\\) | \\(\frac{C_M^0 C_{N-M}^n}{C_N^n}\\) | \\(\frac{C_M^1 C_{N-M}^{n-1}}{C_N^n}\\) | \\(\frac{C_M^2 C_{N-M}^{n-2}}{C_N^n}\\) | \\(\dots\\) | \\(\frac{C_M^l C_{N-M}^{n-l}}{C_N^n}\\) |
       
       此时称随机变量 \\(X\\) 服从参数为 \\(n\\)、\\(M\\)、\\(N\\) 的二项分布, 记作 \\(X\sim H(n, M, N)\\)
+   5. 正态分布
+      正态分布密度曲线: \\(\varphi_{\mu,\sigma}(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\enspace\\) (\\(x\in R\\) , \\(\sigma>0\\))
+      其中实数 \\(\mu\\) 和 \\(\sigma\\) 为参数, 如果随机变量 \\(X\\) 服从正态分布记作 \\(X\sim N(\mu,\sigma^2)\\)
+      {% asset_img 4.png %}
+
+      正态分布的特点:
+      1. 曲线位于 \\(x\\) 轴上方, 与 \\(x\\) 轴不相交.
+      2. 曲线是单峰的, 关于 \\(x=\mu\\) 对称且在 \\(x=\mu\\) 达到峰值 \\(\frac{1}{\sqrt{2\pi}\sigma}\\)
+      3. 曲线与 \\(x\\) 轴之间的面积为 1
+      4. 当 \\(\sigma\\) 一定时, 曲线的位置由 \\(\mu\\) 确定(左右平移), \\(\mu\\) 称为位置参数
+      5. 当 \\(\mu\\) 一定时, 曲线的形状由 \\(\sigma\\) 确定, \\(\sigma\\) 称为形状参数
+         (\\(\sigma\\) 越小曲线越瘦高, 意味着总体分布越集中; \\(\sigma\\) 越大曲线越矮胖, 表示总体的分布越分散)
+      6. \\(P(\mu-\sigma<x\leqslant\mu+\sigma)=0.6826\\)
+         \\(P(\mu-2\sigma<x\leqslant\mu+2\sigma)=0.9544\\)
+         \\(P(\mu-3\sigma<x\leqslant\mu+3\sigma)=0.9974\\)
+         因此在实际应用中, 通常认为服从正态分布 \\(N(\mu,\sigma^2)\\) 的随机变量只取 \\((\mu-3\sigma,\mu+3\sigma)\\) 之间, 并简称之 \\(3\sigma\\) 原则
+      
+      标准正态分布: \\(\mu=0,\sigma=1\rArr f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}\enspace\\) (\\(x\in R\\))
 
 ## 几何
 
