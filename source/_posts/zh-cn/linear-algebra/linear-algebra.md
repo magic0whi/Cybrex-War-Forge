@@ -334,11 +334,155 @@ $$
    3. \\(AB=AC\\) , \\(A\neq 0\nRightarrow B=C\\)
 
    与零矩阵相乘: \\(A_{4\times 3}\times 0_{3\times 2}=0_{4\times 2}\\)
-   与单位矩阵相乘: \\(AE=EA=A\\)
 
    运算律:
    1. 结合律 \\((AB)C=A(BC)\\)
    2. 分配律 \\((A+B)C=AC+BC\\) , \\(C(A+B)=CA+CB\\)
    3. \\(k(AB)=(kA)B=A(kB)\\)
+4. 以矩阵表达方程组
+   例:
+   \\(\begin{cases} x_1=y_1-y_2 \\\ x_2=y_1+y_2 \end{cases}\hArr\begin{pmatrix} x_1 \\\ x_2 \end{pmatrix}=\begin{pmatrix} 1 & -1 \\\ 1 & 1 \end{pmatrix}\begin{pmatrix} y_1 \\\ y_2 \end{pmatrix}\\)
+   \\(\begin{cases} y_1=z_1+z_2+2z_3 \\\ y_2=z_1-2z_2+z_3 \end{cases}\hArr\begin{pmatrix} y_1 \\\ y_2 \end{pmatrix}=\begin{pmatrix} 1 & 1 & 2 \\\ 1 & -2 & 1 \end{pmatrix}\begin{pmatrix} z_1 \\\ z_2 \\\ z_3 \end{pmatrix}\\)
+   \\(\begin{cases} z_1=u_1+u_2 \\\ z_2=u_1 \\\ z_3=-u_1+u_2 \end{cases}\hArr\begin{pmatrix} z_1 \\\ z_2 \\\ z_3 \end{pmatrix}\begin{pmatrix} 1 & 1 \\\ 1 & 0 \\\ -1 & 1 \end{pmatrix}\begin{pmatrix} u_1 \\\ u_2 \end{pmatrix}\\)
+   三组方程可组合成:
+   \\(\begin{pmatrix} x_1 \\\ x_2 \end{pmatrix}=\begin{pmatrix} 1 & -1 \\\ 1 & 1 \end{pmatrix}\times\begin{pmatrix} 1 & 1 & 2 \\\ 1 & -2 & 1 \end{pmatrix}\times\begin{pmatrix} 1 & 1 \\\ 1 & 0 \\\ -1 & 1 \end{pmatrix}\times\begin{pmatrix} u_1 \\\ u_2 \end{pmatrix}\\)
+5. 幂 \\(A^k=\underbrace{A\dots A}_{k\text{个}}\\) , \\(A^0=E\\)
+   运算律:
+   1. \\(A^{k_1}A^{k_2}=A^{k_1+k_2}\\) (\\(A\\) 为方阵)
+   2. \\((A^{k_1})^{k_2}=A^{k_1k_2}\\)
+   3. 一般 \\((AB)^k\neq A^kB^k\\) , \\((A\pm B)^2\neq A^2\pm 2AB+B^2\\)
+      但 \\((A\pm E)^2=A^2\pm 2AE+E^2=A^2\pm 2A+E^2\\)
+6. 转置
+   定义: \\(A=\begin{pmatrix} 1 & 2 & 3 \\\ 1 & 1 & 1 \end{pmatrix}\_{2\times 3}\\) , \\(A^T=\begin{pmatrix} 1 & 1 \\\ 2 & 1 \\\ 3 & 1 \end{pmatrix}\_{3\times 2}\\) , \\((A^T)^T=A\\)
+   1. 性质1: \\((A^T)^T=A\\)
+   2. 性质2: \\((A+B)^T=A^T+B^T\\)
+   3. 性质3: \\((kA)^T=kA^T\\)
+   4. 性质4: \\((AB)^T=B^TA^T\\) , \\((A_1A_2A_3A_4)^T=A_4^TA_3^TA_2^TA_1^T\\)
+
+### 特殊矩阵
+
+1. 数量矩阵
+   <div>
+   $$
+   \begin{pmatrix}
+    a & & & & \\
+    & a & & & \\
+    & & a & & \\
+    & & & \ddots & \\
+    & & & & a
+   \end{pmatrix}
+   =aE
+   $$
+   </div>
+
+   零矩阵与单位矩阵为特殊的数量矩阵.
+   \\((aE)B=B(aE)=aB\\)
+   \\(AE=EA=A\\) (注意两边的 \\(E\\) 不一定相同, 如 \\(A_{2\times 3}E_3=E_2A_{2\times 3}\\)
+2. 对角形矩阵:
+   <div>
+   $$
+   \begin{pmatrix}
+    a_1 & & & & \\
+    & a_2 & & & \\
+    & & a_3 & & \\
+    & & & \ddots & \\
+    & & & & a_n
+   \end{pmatrix}
+   =\text{diag}(a_1,a_2,\dots,a_n)
+   $$
+   <div>
+   {% asset_img 10.png %}
+
+   数量矩阵是特殊的对角形矩阵
+3. 三角形矩阵:
+   {% asset_img 11.png %}
+4. 对称矩阵: \\(a_{ij}=a_{ji}\\) , \\(A^T=A\\)
+   * 若 \\(A\\)、\\(B\\) 同阶对称(\\(A^T=A\\) , \\(B^T=B\\)) , 则有:
+     \\((A\pm B)^T=A^T\pm B^T=A\pm B\\)
+     \\((kA)^T=kA^T=kA\\)
+     \\((AB)^T=B^T\cdot A^T=BA\neq AB\\)
+   * 定理: \\(A\\)、\\(B\\) 对称, \\(AB\\) 对称 \\(\hArr AB=BA\\)
+5. 反对称矩阵: \\(a_{ij}=-a_{ij}\\) 且主对角线全为 0, \\(A^T=-A\\)
+
+### 逆矩阵
+
+1. 方阵的行列式:
+   \\(A=\begin{pmatrix} 2 & 2 & 2 \\\ 3 & 3 & 3 \\\ 1 & 1 & 1 \end{pmatrix}\\) , \\(|A|=\begin{vmatrix} 2 & 2 & 2 \\\ 3 & 3 & 3 \\\ 1 & 1 & 1 \end{vmatrix}\\)
+2. 性质1: \\(|A^T|=|A|\\) (行列式转置值不变)
+   性质2: \\(|kA|=k^n|A|\\)
+   性质3: \\(|AB|=|A|\cdot|B|\\)
+3. 伴随矩阵: (只有方阵有伴随矩阵)
+   通过:
+   1. 求所有元素的代数余子式
+   2. 按行求得代数余子式**按列放**
+   
+   构成的矩阵
+   <div>
+   $$
+   A^*=
+   \begin{pmatrix}
+    A_{11} & A_{21} & \dots & A_{n1} \\
+    A_{12} & A_{22} & \dots & A_{n2} \\
+    \vdots & \vdots & \ddots & \vdots\\
+    A_{1n} & A_{2n} & \dots & A_{nn}
+   \end{pmatrix}
+   $$
+   </div>
+
+   * 定理: \\(AA^\*=A^\*A=|A|\cdot E\\)
+     * 推论:
+       \\(|AA^\*|=||A|\cdot E|\rArr|A|\cdot|A^\*|=|A|^n\cdot 1\rArr|A^\*|=|A|^{n-1}\\)
+4. 逆矩阵:
+   设 \\(n\\) 阶方阵 \\(A\\)、\\(B\\) , 若 \\(AB=BA=E\\) , 则 \\(A^{-1}=B\\)
+   1. 未必所有方阵均可逆
+      零矩阵 \\(0B=B0=0\neq E\\) 不可逆
+   2. 若可逆, 则逆矩阵唯一
+
+   如何判定可逆?
+   \\(|A|\neq 0\\) , 非奇异, 非退化, 满秩, 则可逆.
+
+   定理: \\(A^{-1}=\frac{1}{|A|}\cdot A^\*\\)
+
+### 分块矩阵
+
+### 初等变换
+
+### 矩阵的秩
+
 ## 向量组
 
+### n 维向量及其运算
+
+### 向量间的线性关系
+
+### 线性相关线性无关
+
+### 向量组的秩
+
+## 线性方程组
+
+### 线性方程组
+
+### 线性方程组有解判定
+
+### 齐次方程组的解
+
+### 方程组解的结构
+
+## 特征向量与特征值, 相似, 对角化
+
+### 矩阵的特征值与特征向量
+
+### 特征值和特征向量的性质
+
+### 相似矩阵和矩阵可对角化的条件
+
+### 实对称矩阵的对角化
+
+## 二次型
+
+### 二次型定义
+
+### 二次型化标准型(配方法)
+
+###　二次型化标准型(初等变换法和正交替换法)
