@@ -295,7 +295,7 @@ Notes:
 
 1. 导数定义
    设 \\(y=f(x)\enspace\\) (\\(x\in D\\)) , \\(\Delta y=f(x_0+\Delta x)-f(x_0)\enspace\\) (\\(x_0,(x_0+\Delta x)\in D\\))
-   若 \\(\lim\limits_{\Delta x\to 0}\frac{\Delta y}{\Delta x}\\) 存在, 称 \\(f(x)\\) 在 \\(x=x_0\\) 处可导, 该极限称为 \\(f(x)\\) 在 \\(x=x_0\\) 处的导数, 记 \\(f^\prime(x_0)\\) 或 \\(\frac{dy}{dx}|_{x=x_0}\\)
+   若 \\(\lim\limits_{\Delta x\to 0}\frac{\Delta y}{\Delta x}\\) 存在, 称 \\(f(x)\\) 在 \\(x=x_0\\) 处可导, 该极限称为 \\(f(x)\\) 在 \\(x=x_0\\) 处的导数, 记 \\(f^\prime(x_0)\\) 或 \\(\frac{\mathrm{d}y}{\mathrm{d}x}|_{x=x_0}\\)
 2. 注意:
    1. 可导一定连续, 连续不一定可导.
       (因为连续函数在点 \\(f^\prime(x)=0\\) 处不可导, 如正弦曲线的 \\(y=1\\) 处左右导数不同)
@@ -331,15 +331,30 @@ Notes:
 2. \\((a^x)^\prime=a^x\ln a\\) : 直接代入即可, 期间会用到 \\(x=e^{\ln x}\\) 和 \\(x\sim(e^x-1)\\)
    \*特别地 \\((e^x)^\prime=e^x\\)
 3. 用微分代替极限表示以显得简洁
-   \\(f^\prime(x)=\dfrac{dy}{dx}=\overbrace{\dfrac{\log_a(x+dx)-\log_a x}{dx}=\dfrac{\log_a(\frac{x+dx}{x})}{dx}}^{\log_a \frac{M}{N}=\log_a M - \log_a N}=\dfrac{\log_a(1+\frac{dx}{x})}{dx}=\overbrace{\dfrac{\frac{\ln(1+\frac{dx}{x})}{\ln a}}{dx}}^{\log_a N=\frac{\log_b N}{\log_b a}}=\overbrace{\dfrac{\frac{\frac{dx}{x}}{\ln a}}{dx}}^{x\sim\ln(1+x)}=\dfrac{1}{x\ln a}\\)
-4. \\(\lim\limits_{\Delta x\to0}\frac{\sin(x+\Delta x)-\sin x}{\Delta x}=\underbrace{\lim\limits_{\Delta x\to0}\frac{\sin x\cos\Delta x+\cos x\sin\Delta x-\sin x}{\Delta x}}_{\text{和差角公式}}=\lim\limits\_{\Delta x\to0}\frac{\sin x(\cos\Delta x-1)}{\Delta x}+\cos x\lim\limits\_{\Delta x\to0}\underbrace{\frac{\sin\Delta x}{\Delta x}}\_{x\sim\sin x}=\cos x \\) <!-- 这边katex和markdown兼容问题一些"_"前面加了"\" -->
+   <div>
+   $$
+   f^\prime(x)=\dfrac{\mathrm{d}y}{\mathrm{d}x}
+   =\overbrace{\dfrac{\log_a(x+\mathrm{d}x)-\log_a x}{\mathrm{d}x}=\dfrac{\log_a(\frac{x+\mathrm{d}x}{x})}{\mathrm{d}x}}^{\log_a \frac{M}{N}
+   =\log_a M-\log_a N}=\dfrac{\log_a(1+\frac{\mathrm{d}x}{x})}{\mathrm{d}x}
+   =\overbrace{\dfrac{\frac{\ln(1+\frac{\mathrm{d}x}{x})}{\ln a}}{\mathrm{d}x}}^{\log_a N=\frac{\log_b N}{\log_b a}}
+   =\overbrace{\dfrac{\frac{\frac{\mathrm{d}x}{x}}{\ln a}}{\mathrm{d}x}}^{x\sim\ln(1+x)}=\dfrac{1}{x\ln a}
+   $$
+   </div>
+4. <div>
+   $$
+   \lim\limits_{\Delta x\to 0}\frac{\sin(x+\Delta x)-\sin x}{\Delta x}
+   =\underbrace{\lim\limits_{\Delta x\to 0}\frac{\sin x\cos\Delta x+\cos x\sin\Delta x-\sin x}{\Delta x}}_{\text{和差角公式}}
+   =\lim\limits_{\Delta x\to 0}\frac{\sin x(\cos\Delta x-1)}{\Delta x}+\cos x\lim\limits_{\Delta x\to 0}\underbrace{\frac{\sin\Delta x}{\Delta x}}_{x\sim\sin x}=\cos x 
+   $$
+   </div>
+   
    \\((\cos x)'\\) 的推导也同理
    后面的都是将其化为\\(\sin x\\) 和 \\(\cos x\\)的形式然后利用求导的四则运算法则推导 (如 \\(\sec x=\frac{1}{\cos x}\\)、\\(\csc x=\frac{1}{\sin x}\\))
-5. 使用[反函数求导法则](#Derivation_of_inverse_function):
+5. 使用[反函数求导法则](#反函数求导法则):
    这里只证明 \\(\arcsin x\\)
    \\(f(x):y=\arcsin x\\) , \\(\varphi(y):x=\sin y\\)
    \\(f^\prime(x)=\frac{1}{\varphi^\prime(y)}\rArr(\arcsin x)^\prime=\dfrac{1}{\cos y}=\underbrace{\frac{1}{\sqrt{1-\sin^2 y}}}_{平方关系式}=\underbrace{\frac{1}{\sqrt{1-x^2}}}\_{带入 x=\sin y}\\)
-6. 使用[高阶导数归纳法](#induction_method)
+6. 使用高阶导数归纳法 <span id="induction_method"></span>
    1. \\(f(x)=\sin x\\)
       \\(f^\prime(x)=\cos x=\sin(x+\frac{\pi}{2})\\)
       \\(f^{\prime\prime}(x)=-\sin x=\sin(x+\frac{2\pi}{2})\\)
@@ -361,7 +376,7 @@ Notes:
    3. 乘: \\([u(x)v(x)]^\prime=u^\prime(x)v(x)+u(x)v^\prime(x)\\)
    4. 除: \\([\frac{u(x)}{v(x)}]^\prime=\frac{u^\prime(x)v(x)-u(x)v^\prime(x)}{v^2(x)}\enspace\\) (\\(v(x)\neq 0\\))
       推论: \\((uvw)^\prime=u^\prime vw+uv^\prime w+uvw^\prime\\)
-2. 证明:
+2. 四则法则证明:
    1. 令 \\(\varphi(x)=u(x)+v(x)\\)
       则 \\(\Delta\varphi=\varphi(x+\Delta x)-\varphi(x)=u(x+\Delta x)+v(x+\Delta x)-u(x)-v(x)=\Delta u+\Delta v\\)
       进而 \\(\lim\limits_{\Delta x\to0}\frac{\Delta\varphi}{\Delta x}=\lim\limits_{\Delta x\to0}\frac{\Delta u}{\Delta x}+\lim\limits_{\Delta x\to0}\frac{\Delta v}{\Delta x}=u'(x) + v'(x)\\)
@@ -395,107 +410,109 @@ Notes:
 
       \\(\lim\limits_{\Delta x\to 0}\frac{\Delta\varphi}{\Delta x}=\frac{\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}\cdot v(x)-u(x)\cdot\lim\limits_{\Delta x\to0}\frac{\Delta v}{\Delta x}}{v(x)\lim\limits_{\Delta x\to0}v(x+\Delta x)}=\frac{u'(x)v(x)-u(x)v'(x)}{v^2(x)}\\)
       提示: \\(\lim\limits_{\Delta x\to 0}v(x+\Delta x)=v(x)\\)
+3. 反函数求导法则
+   设 \\(y=f(x)\\) 可导且 \\(f(x)^\prime\neq 0\\) (导数不为零意味着严格单调),
+   则反函数 \\(x=\varphi(y)\\) 可导且 \\(\varphi^\prime(y)=\frac{1}{f^\prime(x)}\\)
+   证明:
+   \\(\varphi^\prime(y)=\lim\limits_{\Delta y\to 0}\frac{\Delta x}{\Delta y}=\lim\limits_{\Delta y\to 0}\frac{1}{\frac{\Delta y}{\Delta x}}=\underbrace{\lim\limits_{\Delta x\to 0}}\_{(1)}\frac{1}{\frac{\Delta y}{\Delta x}}=\frac{1}{f^\prime(x)}\\)
+   (1) \\(\lim\limits_{\Delta x\to0}\frac{\Delta y}{\Delta x}\neq 0 \rArr \Delta y=\bigcirc(\Delta x)\\) 同阶无穷小
+4. 复合函数求导法则
+   (如何判断复合函数: 观察有几个初等函数)
+   1. 复合函数求导法则:
+      设 \\(y=f(u)\\) 可导, \\(u=\varphi(x)\\) 可导且 \\(\varphi^\prime(x)\neq 0\\) , 则 \\(y=f(\varphi(x))\\) 可导
+      有 \\(f^\prime(\varphi(x))=f^\prime[\varphi(x)]\varphi^\prime(x)\\)
+   3. 证明:
+      1. 用极限:
+         <div>
+         $$
+         f^\prime(\varphi(x))=\lim\limits_{\Delta x\to 0}\frac{\Delta y}{\Delta x}
+         =\lim\limits_{\Delta x\to 0}(\frac{\Delta y}{\Delta u}\cdot\frac{\Delta u}{\Delta x})
+         =\lim\limits_{\Delta x\to 0}\frac{\Delta y}{\Delta u}\cdot\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}
+         =\underbrace{\lim\limits_{\Delta u\to 0}}_{(1)}\frac{\Delta y}{\Delta u}\cdot\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}
+         =f^\prime(u)\cdot\varphi^\prime(x)
+         $$
+         </div>
+         
+         (1) \\(\varphi'(x)=\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}\neq 0\rArr\Delta u=\bigcirc(\Delta x)\\) 同阶无穷小
+      2. 用微分: \\(f^\prime(\varphi(x))=\frac{\\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}y}{\mathrm{d}u}\cdot\frac{\mathrm{d}u}{dx}=f^\prime(u)\cdot\varphi^\prime(x)=f^\prime[\varphi(x)]\varphi^\prime(x)\\)
 
-### 反函数求导法则
-
-设 \\(y=f(x)\\) 可导且 \\(f(x)^\prime\neq 0\\) (导数不为零意味着严格单调),
-则反函数 \\(x=\varphi(y)\\) 可导且 \\(\varphi^\prime(y)=\frac{1}{f^\prime(x)}\\)
-
-证明:
-\\(\varphi^\prime(y)=\lim\limits_{\Delta y\to 0}\frac{\Delta x}{\Delta y}=\lim\limits_{\Delta y\to 0}\frac{1}{\frac{\Delta y}{\Delta x}}=\underbrace{\lim\limits_{\Delta x\to 0}}\_{(1)}\frac{1}{\frac{\Delta y}{\Delta x}}=\frac{1}{f^\prime(x)}\\)
-(1) \\(\lim\limits_{\Delta x\to0}\frac{\Delta y}{\Delta x}\neq 0 \rArr \Delta y=\bigcirc(\Delta x)\\) 同阶无穷小
-
-## 复合函数求导法则
-
-(如何判断复合函数: 自变量项外面是否还有初等函数)
-
-\\(y=f(u\\) 可导, \\(u=\varphi(x)\\) 可导且 \\(\varphi^\prime(x)\neq 0\\) , 则 \\(y=f(\varphi(x)\\) 可导
-且 \\(\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}=f^\prime(u)\cdot\varphi^\prime(x)=f^\prime[\varphi(x)]\varphi^\prime(x)\\)
-
-证明:
-\\(\frac{dy}{dx}=\lim\limits_{\Delta x\to 0}\frac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\to 0}\frac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\to 0}(\frac{\Delta y}{\Delta u}\cdot\frac{\Delta u}{\Delta x})=\lim\limits_{\Delta x\to 0}\frac{\Delta y}{\Delta u}\cdot\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}=\underbrace{\lim\limits_{\Delta u\to0}}\_{(1)}\frac{\Delta y}{\Delta u}\cdot\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}=f^\prime(u)\cdot\varphi^\prime(x)\\)
-(1) \\(\varphi'(x)=\lim\limits_{\Delta x}\frac{\Delta u}{\Delta x}\neq0 \rArr \boxed{\Delta u=\bigcirc(\Delta x)}\\) 同阶
-
-## 高阶导数
+### 高阶导数
 
 二阶及以上的导数称为高阶导数.
-对导数再求导一次就是二阶导数:
-\\([f'(x)]'=f''(x)=\dfrac{d(\frac{dy}{dx})}{dx}=\dfrac{d^2y}{dx^2}\\)
-同理三阶导数 \\(\dfrac{d^3y}{dx^3}\\) , n阶导数 \\(f^{(n)}=\dfrac{d^ny}{dx^n}\\)
 
-高阶导数求导方法:
-<span id="induction_method"></span>
-1. 归纳法
-2. 公式法
-   如:
-   \\((uv)'=u'v+uv' \rArr (uv)''=(u'v)'+(uv')'=u''v+2u'v'+uv''\\) <!-- 这边 '' 渲染错误 -->
-   莱布尼茨公式(请记住)
-   \\((uv)^{(n)}=C_n^0 u^{(n)}v + C_n^1 u^{(n-1)}v' + C_n^2 u^{(n-2)}v'' + \text{...} + C_n^n uv^{(n)}\\)
+1. 二阶导数: 对导数再求导一次就是二阶导数
+   \\(f^{\prime\prime}(x)=[f^\prime(x)]^\prime=\frac{\mathrm{d}(\frac{\mathrm{d}y}{\mathrm{d}x})}{\mathrm{d}x}=\frac{\mathrm{d}^2y}{\mathrm{d}x^2}\\)
+   同理三阶导数 \\(\frac{\mathrm{d}^3y}{\mathrm{d}x^3}\\) , \\(n\\) 阶导数 \\(f^{(n)}=\frac{\mathrm{d}^ny}{\mathrm{d}x^n}\\)
+2. 高阶导数求导方法:
+   1. [归纳法](#induction_method)
+   2. 公式法:
+      \\((uv)^\prime=u^\prime v+uv^\prime\rArr(uv)^{\prime\prime}=(u^\prime v)^\prime+(uv^\prime)^\prime=u^{\prime\prime}v+2u^\prime v^\prime+uv^{\prime\prime}\\)
+      莱布尼茨公式(请记住)
+      \\((uv)^{(n)}=C_n^0 u^{(n)}v+C_n^1 u^{(n-1)}v^\prime+C_n^2 u^{(n-2)}v^{\prime\prime}+\dots+C_n^n uv^{(n)}\\)
 
-## 隐函数及由参数方程确定的函数求导
+### 隐函数及由参数方程确定的函数求导
 
-### 隐函数求导
+1. 隐函数求导
+   * 显函数: \\(y=f(x)\\)
+   * 隐函数: \\(F(x,y)=0\enspace\underrightarrow{\text{显式化}}\enspace y=f(x)\\)
+   * 方法:
+     有 \\(F(x,y)=0\\) , 确定 \\(y\\) 为 \\(x\\) 的函数.
+     两边对 \\(x\\) 求导. 求导时 \\(y^\prime=f^\prime(x)=\frac{\mathrm{d}y}{\mathrm{d}x}\\) , 最终将一边化为 \\(\frac{\mathrm{d}y}{\mathrm{d}x}\\)
+   * 例: \\(e^{x+y}=x^2+y+1\\) 确定 \\(y\\) 为 \\(x\\) 的函数, 求 \\(\frac{\mathrm{d}y}{\mathrm{d}x}\\)
+     解: 两边对 \\(x\\) 求导得
+     <div>
+     $$
+     \begin{aligned}
+      & e^{x+y}(1+\frac{\mathrm{d}y}{\mathrm{d}x})=2x+\frac{\mathrm{d}y}{\mathrm{d}x} \\
+      \hArr & (e^{x+y}-1)\frac{\mathrm{d}y}{\mathrm{d}x}=2x-e^{x+y} \\
+      \hArr & \frac{\mathrm{d}y}{\mathrm{d}x}=\frac{2x-e^{x+y}}{e^{x+y}-1}
+     \end{aligned}
+     $$
+     </div>
+2. 参数方程确定的函数求导
+   设 \\(\begin{cases} x=\varphi(t) \\\ y=\psi(t) \end{cases}\\) , 其中 \\(\varphi(t) , \psi(t)\\) 可导, 则 \\(\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\psi^\prime(t)}{\varphi^\prime(t)}\enspace\\) (\\(\varphi(t)\neq 0\\))
+   证明: \\(\frac{\psi^\prime(t)}{\varphi^\prime(t)}=\frac{\frac{\mathrm{d}y}{\mathrm{d}t}}{\frac{\mathrm{d}x}{\mathrm{d}t}}=\frac{\mathrm{d}y}{\mathrm{d}x}\\)
 
-显函数: \\(y=f(x)\\)
-隐函数: \\(F(x,y)=0 \enspace\underrightarrow{显式化}\enspace y=f(x)\\)
-方法: \\(F(x,y)=0\\) 确定y为x的函数, 两边对x求导. 求导时, \\(y'\\) 可看成 \\(f(x)\\) , 最终化为 \\(\frac{dy}{dx}\\)
+### 微分
 
-### 参数方程确定的函数求导
-
-设 \\(\begin{cases} x=\varphi(t) \\\ y=\psi(t) \end{cases}\\) , 若其中 \\(\varphi(t) , \psi(t)\\) 可导,
-则 \\(\dfrac{\psi'(t)}{\varphi'(t)}=\dfrac{\frac{dy}{dt}}{\frac{dx}{dt}}=\dfrac{dy}{dx}\\) ,且 \\(\varphi(t)\neq0\\)
-
-## 微分
-
-### 微分的定义
-
-1. 什么是微分
-   设 \\(y=f(x) \quad(x\in D)\\) ,
-   \\(\Delta y=f(x_0+\Delta x)-f(x_0)\quad(x_0\in D)\\) , \\(x_0+\Delta x\in D\\)
-   若\\(\Delta y\\) 能最终化为 \\(\Delta y=A\Delta x+\circ(\Delta x)\\) 的形式
-   称 \\(y=f(x)\\) 在 \\(x=x_0\\) 可微, \\(dy|_{x=x_0}=A\Delta x=Adx\\) 为该函数在 \\(x=x_0\\) 的微分.
-2. 结合导数定义, 则 \\(A=f'(x)\\)可得:
-   * \\(dy=df(x)=f'(x)dx\\)
-   * \\(\Delta x=dx\\)
-   
-   可以发现: 可导 \\(\hArr\\) 可微
-   (一般情况下都是先有导数后求微分, 微分就是在知道导数的情况下求 \\(\Delta y\\) 的近似值)
-3. 近似计算:
-   要求 \\(f(x)\\) 的值, 可以找距离\\(x\\) 较近的点 \\(x_0\\) , 且已知 \\(f(x_0)\\) 的值
-   可用\\(f(x)=f(x_0+\Delta x)\approx f(x_0)+f'(x_0)\Delta x\\) 求出其近似值
-   
-   推导:
-   \\(\begin{cases} f(x)=f(x_0+\Delta x)=f(x_0) + \Delta y \quad&(由导数定义得到) \\\ \Delta y\approx (dy=f'(x_0)\Delta x) &(由微分定义得到) \end{cases}\\)
-
-   此外, 利用 0 的特殊性还能发现一些东西...
-   \\(x\to0\\) 时, \\(f(x)=f(0+x)\approx f(0)+f'(0)x\\)
-   1. \\(\sqrt[n]{1+x}\approx 1+\frac{x}{n}\\)
-   2. \\(e^x\approx 1+x\\)
-   3. \\(\ln(1+x)\approx x\\)
-
-### 微分工具
-
-1. 公式
-   1. \\(d\(c\)=c'dx=0\\)
-   2. \\(d(x^a)=ax^{a-1}dx\\)
-   3. \\(d(a^x)=a^x\ln a dx\\)
-   4. \\(d(\log_a x)=\frac{1}{x\ln a}dx\\)
-   5. \\(d(\sin x)=\cos x dx\\)
-      \\(d(\cos x)=-\sin x dx\\)
-      \\(d(\tan x)=\sec^2 x dx\\)
-      \\(d(\cot x)=-csc^2 x dx\\)
-      \\(d(\sec x)=\sec x\tan x dx\\)
-      \\(d(\csc x)=-\csc x\cot x dx\\)
-   6. \\(d(\arcsin x)=\frac{1}{\sqrt{1-x^2}}dx\\)
-      \\(d(\arccos x)=-\frac{1}{\sqrt{1-x^2}}dx\\)
-      \\(d(\arctan x)=\frac{1}{1+x^2}dx\\)
-      \\(d(\text{arccot } x)=-\frac{1}{1+x^2}dx\\)
-2. 四则
-   \\(u, v\\) 为函数
-   1. 加减: \\(d(u\pm v)=du\pm dv\\)
-   2. 乘: \\(d(uv)=du\cdot v + u\cdot dv\\)
-   3. 除: \\(d(\dfrac{u}{v})=\dfrac{du\cdot v-u\cdot dv}{v^2}\\)
-3. 复合
+1. 微分定义
+   1. 什么是微分
+      设 \\(y=f(x)\enspace\\) (\\(x\in D\\)) , \\(\Delta y=f(x_0+\Delta x)-f(x_0)\enspace\\) (\\(x_0,(x_0+\Delta x)\in D\\))
+      若 \\(\Delta y\\) 和 \\(\Delta x\\) 能化为线性形式: \\(\Delta y=A\Delta x+\circ(\Delta x)\\)
+      则该函数在点 \\(x=x_0\\) 可微, 记作 \\(\mathrm{d}y|_{x=x_0}=A\Delta x=A\mathrm{d}x\\)
+   2. 结合导数定义 \\(f^\prime(x)=\frac{\mathrm{d}y}{\mathrm{d}x}\\) 可得:
+      * \\(\mathrm{d}y=f^\prime(x)\mathrm{d}x\approx \lim\limits_{\Delta x\to 0}\Delta y\\)
+      * \\(\mathrm{d}x=\lim\limits_{\Delta x\to 0}\Delta x\\)
+      
+      可以发现: 可导 \\(\hArr\\) 可微
+      (一般情况下都是先有导数后求微分, 微分的主要应用是在知道导数的情况下求 \\(\Delta y\\) 的近似值 \\(\mathrm{d}y\\))
+2. 近似计算:
+   若要求 \\(f(x)\\) 的值, 可以找离 \\(x\\) 较近的点 \\(x_0\\) , 它们的距离是 \\(\Delta x\\), 且 \\(f(x_0)\\) 的值已知
+   则 \\(f(x)=f(x_0+\Delta x)=f(x_0)+\Delta y\approx f(x_0)+f^\prime(x_0)\Delta x\\)
+   * 求近似值还可利用 0 的特殊性, 即 \\(x\to 0\\) 时, \\(f(x)=f(0+x)\approx f(0)+f^\prime(0)x\\)
+     1. \\(\sqrt[n]{1+x}\approx 1+\frac{x}{n}\\)
+     2. \\(e^x\approx 1+x\\)
+     3. \\(\ln(1+x)\approx x\\)
+3. 微分公式
+   1. \\(\mathrm{d}\(c\)=c'\mathrm{d}x=0\\)
+   2. \\(\mathrm{d}(x^a)=ax^{a-1}\mathrm{d}x\\)
+   3. \\(\mathrm{d}(a^x)=a^x\ln a\mathrm{d}x\\)
+   4. \\(\mathrm{d}(\log_a x)=\frac{1}{x\ln a}\mathrm{d}x\\)
+   5. \\(\mathrm{d}(\sin x)=\cos x\mathrm{d}x\\)
+      \\(\mathrm{d}(\cos x)=-\sin x\mathrm{d}x\\)
+      \\(\mathrm{d}(\tan x)=\sec^2 x\mathrm{d}x\\)
+      \\(\mathrm{d}(\cot x)=-csc^2 x\mathrm{d}x\\)
+      \\(\mathrm{d}(\sec x)=\sec x\tan x\mathrm{d}x\\)
+      \\(\mathrm{d}(\csc x)=-\csc x\cot x\mathrm{d}x\\)
+   6. \\(\mathrm{d}(\arcsin x)=\frac{1}{\sqrt{1-x^2}}\mathrm{d}x\\)
+      \\(\mathrm{d}(\arccos x)=-\frac{1}{\sqrt{1-x^2}}\mathrm{d}x\\)
+      \\(\mathrm{d}(\arctan x)=\frac{1}{1+x^2}\mathrm{d}x\\)
+      \\(\mathrm{d}(\text{arccot } x)=-\frac{1}{1+x^2}\mathrm{d}x\\)
+4. 微分四则运算
+   设函数 \\(u\\)、\\(v\\)
+   1. 加减: \\(\mathrm{d}(u\pm v)=\mathrm{d}u\pm\mathrm{d}v\\)
+   2. 乘: \\(\mathrm{d}(uv)=\mathrm{d}u\cdot v+u\cdot\mathrm{d}v\\)
+   3. 除: \\(\mathrm{d}(\frac{u}{v})=\frac{\mathrm{d}u\cdot v-u\cdot \mathrm{d}v}{v^2}\\)
+5. 复合函数求微分
    设 \\(y=f(u)\\) , \\(u=\varphi(x)\\)
-   则 \\(dy=f'[\varphi(x)]\varphi'(x)dx=f'[\varphi(x)]d\varphi(x)=f'(u)du\\)
-   (证明: 由 \\(\dfrac{dy}{dx}=f'[\varphi(x)]\cdot \varphi'(x)\\) 变换)
+   则 \\(\mathrm{d}y=f^\prime[\varphi(x)]\varphi^\prime(x)\mathrm{d}x=f^\prime[\varphi(x)]\mathrm{d}\varphi(x)=f^\prime(u)\mathrm{d}u\\)
