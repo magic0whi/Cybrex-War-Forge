@@ -9,7 +9,6 @@ tags:
 
 同济高等数学笔记整合
 基于 [wmathor/Postgraduate-Advanced-Mathematics](https://github.com/wmathor/Postgraduate-Advanced-Mathematics)
-复合函数就是初等函数套初等函数
 补充了级数部分
 
 <!-- more -->
@@ -78,7 +77,7 @@ tags:
       不妨设 \\(A>B\\) , \\(\varepsilon=-\dfrac{A+B}{2}\\) (误差值的定义由 \\(\varepsilon + A=-\varepsilon - B\\) 解出, 目的是让下面两个\\(a_n\\)的值域没有交集)
       \\(\because\lim\limits_{n\to\infty}a_n=A\\) , \\(\therefore\exist N_1>0\\) , 当 \\(n>N_1\\) 时, \\(|a_n-A|<\varepsilon\Harr\frac{3A+B}{2}<a_n<\frac{A-B}{2}\\) (1)
       \\(\because\lim\limits_{n\to\infty}a_n=B\\) , \\(\therefore\exist N_2>0\\) , 当 \\(n>N_2\\) 时, \\(|a_n-B|<\varepsilon\Harr\frac{A-B}{2}<a_n<\frac{-A+B}{2}\\) (2)
-      取 \\(N=\text{max}\\{N_1,N_2\\}\\) , 当 \\(n<N_2\\) 时, (1)、(2) 都成立, 但这两个不等式没有交集, 矛盾, 所以 \\(A>B\\) 不对, 同理 \\(B>A\\) 也不对.
+      取 \\(N=\operatorname{max}\\{N_1,N_2\\}\\) , 当 \\(n<N_2\\) 时, (1)、(2) 都成立, 但这两个不等式没有交集, 矛盾, 所以 \\(A>B\\) 不对, 同理 \\(B>A\\) 也不对.
       \\(\therefore A=B\\), 极限值只有一个.
    2. 有界性:
       若 \\(\lim\limits_{n\to\infty}a_n=A\\) , 则 \\(\exist M>0\\) , 使得 \\(|a_n|\leqslant M\\) , **反之不成立**.
@@ -88,7 +87,7 @@ tags:
       \\(\therefore\exist N>0\\) , 当 \\(n>N\\) 时 , \\(|a_n-A|<1\\)
       \\(\because||a_n|-|A||\leqslant|a_n-A|\\) (三角不等式)
       \\(\therefore\\) 当 \\(n>N\\) 时, \\(||a_n|-|A_1||<1\rArr|a_n|<1+|A|\\) 在 \\(n>N\\) 时成立
-      取 \\(M=\text{max}\\{|a_1|,|a_2|,\dots,|a_n|,1+|A|\\}\\) , 对于 \\(\forall n\\) , 有 \\(|a_n|\leqslant M\\)
+      取 \\(M=\operatorname{max}\\{|a_1|,|a_2|,\dots,|a_n|,1+|A|\\}\\) , 对于 \\(\forall n\\) , 有 \\(|a_n|\leqslant M\\)
       \\(\nLeftarrow\\) 设 \\(a_n=1+(-1)^n\\) , 有 \\(|a_n|\leqslant 2\\) , 但 \\(\lim\limits_{n\to\infty}a_n\\) 不存在
    3. 保号性:
       若 \\(\lim\limits_{n\to\infty}a_n=A>0(<0)\\) , 则 \\(\exist N>0\\) , 当 \\(n>N\\) 时 , \\(a_n>0(<0)\\)
@@ -119,7 +118,7 @@ tags:
       \\(\therefore\exist\delta_1>0\\) , 当 \\(0<|x-a|<\delta_1\\) 时, \\(|f(x)-A|<\frac{A-B}{2}\hArr\frac{A+B}{2}<f(x)<\frac{3A-B}{2}\\) (1)
       又 \\(\because\lim\limits_{x\to a}f(x)=B\\)
       \\(\therefore\exist\delta_2>0\\) , 当 \\(0<|x-a|<\delta_2\\) 时, \\(|f(x)-B|<\frac{A-B}{2} \hArr \frac{3B-A}{2}<f(x)<\frac{A+B}{2}\\) (2)
-      取 \\(\delta=\text{min}\\{\delta_1,\delta_2\\}\\) , 当 \\(0<|x-a|<\delta\\) 时 (1)(2) 皆成立, 矛盾.
+      取 \\(\delta=\operatorname{min}\\{\delta_1,\delta_2\\}\\) , 当 \\(0<|x-a|<\delta\\) 时 (1)(2) 皆成立, 矛盾.
       \\(\therefore A>B\\) 不对, 同理 \\(A<B\\) 也不对.
       \\(\therefore A=B\\), 极限值只有一个.
    2. 局部有界性: 设 \\(\lim\limits_{x\to a}f(x)=A\\) , \\(\exist\delta>0\\) , \\(M>0\\) , 当 \\(0<|x-a|<\delta\\) 时, \\(|f(x)|\leqslant M\\)
@@ -140,7 +139,7 @@ tags:
          \\(\therefore\exist\delta>0\\) , 当 \\(0<|x-a|<\delta\\) 时 \\(|f(x)-A|<-\frac{A}{2}\rArr f(x)>\frac{A}{2}>0\\)
 
 Notes:
-1. \\(\\{x|0<|x-a|<\delta\\}\\) 可表示为 \\(\mathring{\text{U}}(a\cdot \delta)\\) (a的取心δ邻域)
+1. \\(\\{x|0<|x-a|<\delta\\}\\) 可表示为 \\(\mathring{\bigcup}(a\cdot\delta)\\) (\\(a\\) 的去心 \\(\delta\\) 邻域)
    {% asset_img 3.png %}
 
 2. \\(x\to a\\) 时 \\(\begin{cases} x\to a^- \\\ x\to a^+ \end{cases}\\)
@@ -284,7 +283,7 @@ Notes:
 3. 零点定理(高中数学中零点存在定理)
    设 \\(f(x)\in c[a,b]\\) , 若 \\(f(a)f(b)<0\\)
    则 \\(\exist c\in[a,b]\\) 使 \\(f\(c\)=0\\)
-4. 界值定理
+4. 介值定理
    设 \\(f(x)\in c[a, b]\\)
    则 \\(\forall\eta\in[m,M]\\) , \\(\exist\xi\in[a,b]\\) 使 \\(f(\xi)=\eta\\)
    (即介于 \\(m\\) 和 \\(M\\) 之间的 \\(f(x)\\) 皆可取到)
@@ -310,7 +309,7 @@ Notes:
 1. \\(C^\prime=0\\)
 2. \\((x^n)^\prime=nx^{n-1}\\)
 3. \\((a^x)^\prime=a^x\ln a\\)
-4. \\((\log_a x)^\prime=\frac{1}{x\ln a}\\)
+4. \\((\log_a x)^\prime=\frac{1}{x\ln a}\\) , \\((\ln x)^\prime=\frac{1}{x}\\)
 5. \\((\sin x)^\prime=\cos x\\)
    \\((\cos x)^\prime=-\sin x\\)
    \\((\tan x)^\prime=\sec^2x\\)
@@ -320,7 +319,7 @@ Notes:
 6. \\((\arcsin x)^\prime=\frac{1}{\sqrt{1-x^2}}\\)
    \\((\arccos x)^\prime=-\frac{1}{\sqrt{1-x^2}}\\)
    \\((\arctan x)^\prime=\frac{1}{1+x^2}\\)
-   \\((\text{arccot }x)^\prime=-\frac{1}{1+x^2}\\) <!-- katex好像没有\arccot -->
+   \\((\operatorname{arccot}x)^\prime=-\frac{1}{1+x^2}\\) <!-- katex好像没有\arccot -->
 7. \\((\sin x)^{(n)}=\sin(x+\frac{nx}{2})\\)
    \\((\cos x)^{(n)}=\cos(x+\frac{nx}{2})\\)
    \\((\frac{1}{ax+b})^{(n)}=(-1)^n n!\frac{a^n}{(ax+b)^{n+1}}\\)
@@ -348,7 +347,7 @@ Notes:
    $$
    </div>
    
-   \\((\cos x)'\\) 的推导也同理
+   \\((\cos x)^\prime\\) 的推导也同理
    后面的都是将其化为\\(\sin x\\) 和 \\(\cos x\\)的形式然后利用求导的四则运算法则推导 (如 \\(\sec x=\frac{1}{\cos x}\\)、\\(\csc x=\frac{1}{\sin x}\\))
 5. 使用[反函数求导法则](#反函数求导法则):
    这里只证明 \\(\arcsin x\\)
@@ -379,7 +378,7 @@ Notes:
 2. 四则法则证明:
    1. 令 \\(\varphi(x)=u(x)+v(x)\\)
       则 \\(\Delta\varphi=\varphi(x+\Delta x)-\varphi(x)=u(x+\Delta x)+v(x+\Delta x)-u(x)-v(x)=\Delta u+\Delta v\\)
-      进而 \\(\lim\limits_{\Delta x\to0}\frac{\Delta\varphi}{\Delta x}=\lim\limits_{\Delta x\to0}\frac{\Delta u}{\Delta x}+\lim\limits_{\Delta x\to0}\frac{\Delta v}{\Delta x}=u'(x) + v'(x)\\)
+      进而 \\(\lim\limits_{\Delta x\to0}\frac{\Delta\varphi}{\Delta x}=\lim\limits_{\Delta x\to0}\frac{\Delta u}{\Delta x}+\lim\limits_{\Delta x\to 0}\frac{\Delta v}{\Delta x}=u^\prime(x)+v^\prime(x)\\)
    2. 令 \\(\varphi(x)=u(x)v(x)\\)
       <div>
       $$
@@ -391,9 +390,8 @@ Notes:
       \end{aligned}
       $$
       </div>
-      进而
       
-      \\(\lim\limits_{\Delta x\to 0}\frac{\Delta\varphi}{\Delta x}=\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}\cdot\lim\limits_{\Delta x\to 0}v(x+\Delta x)+u(x)\lim\limits_{\Delta x\to0}\frac{\Delta v}{\Delta x}=u'(x)v(x)+u(x)v'(x)\\)
+      进而 \\(\lim\limits_{\Delta x\to 0}\frac{\Delta\varphi}{\Delta x}=\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}\cdot\lim\limits_{\Delta x\to 0}v(x+\Delta x)+u(x)\lim\limits_{\Delta x\to0}\frac{\Delta v}{\Delta x}=u^\prime(x)v(x)+u(x)v^\prime(x)\\)
       提示: \\(\lim\limits_{\Delta x\to0}v(x+\Delta x)=v(x)\\)
    3. 令 \\(\varphi(x)=\dfrac{u(x)}{v(x)}\enspace\\) (\\(v(x)\neq 0\\))
       <div>
@@ -406,9 +404,8 @@ Notes:
       \end{aligned}
       $$
       </div>
-      进而
-
-      \\(\lim\limits_{\Delta x\to 0}\frac{\Delta\varphi}{\Delta x}=\frac{\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}\cdot v(x)-u(x)\cdot\lim\limits_{\Delta x\to0}\frac{\Delta v}{\Delta x}}{v(x)\lim\limits_{\Delta x\to0}v(x+\Delta x)}=\frac{u'(x)v(x)-u(x)v'(x)}{v^2(x)}\\)
+      
+      进而 \\(\lim\limits_{\Delta x\to 0}\frac{\Delta\varphi}{\Delta x}=\frac{\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}\cdot v(x)-u(x)\cdot\lim\limits_{\Delta x\to0}\frac{\Delta v}{\Delta x}}{v(x)\lim\limits_{\Delta x\to0}v(x+\Delta x)}=\frac{u^\prime(x)v(x)-u(x)v^\prime(x)}{v^2(x)}\\)
       提示: \\(\lim\limits_{\Delta x\to 0}v(x+\Delta x)=v(x)\\)
 3. 反函数求导法则
    设 \\(y=f(x)\\) 可导且 \\(f(x)^\prime\neq 0\\) (导数不为零意味着严格单调),
@@ -433,8 +430,8 @@ Notes:
          $$
          </div>
          
-         (1) \\(\varphi'(x)=\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}\neq 0\rArr\Delta u=\bigcirc(\Delta x)\\) 同阶无穷小
-      2. 用微分: \\(f^\prime(\varphi(x))=\frac{\\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}y}{\mathrm{d}u}\cdot\frac{\mathrm{d}u}{dx}=f^\prime(u)\cdot\varphi^\prime(x)=f^\prime[\varphi(x)]\varphi^\prime(x)\\)
+         (1) \\(\varphi^\prime(x)=\lim\limits_{\Delta x\to 0}\frac{\Delta u}{\Delta x}\neq 0\rArr\Delta u=\bigcirc(\Delta x)\\) 同阶无穷小
+      2. 用微分: \\(f^\prime(\varphi(x))=\frac{\\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}y}{\mathrm{d}u}\cdot\frac{\mathrm{d}u}{\mathrm{d}x}=f^\prime(u)\cdot\varphi^\prime(x)=f^\prime[\varphi(x)]\varphi^\prime(x)\\)
 
 ### 高阶导数
 
@@ -494,7 +491,7 @@ Notes:
      2. \\(e^x\approx 1+x\\)
      3. \\(\ln(1+x)\approx x\\)
 3. 微分公式
-   1. \\(\mathrm{d}\(c\)=c'\mathrm{d}x=0\\)
+   1. \\(\mathrm{d}\(c\)=c^\prime\mathrm{d}x=0\\)
    2. \\(\mathrm{d}(x^a)=ax^{a-1}\mathrm{d}x\\)
    3. \\(\mathrm{d}(a^x)=a^x\ln a\mathrm{d}x\\)
    4. \\(\mathrm{d}(\log_a x)=\frac{1}{x\ln a}\mathrm{d}x\\)
@@ -507,7 +504,7 @@ Notes:
    6. \\(\mathrm{d}(\arcsin x)=\frac{1}{\sqrt{1-x^2}}\mathrm{d}x\\)
       \\(\mathrm{d}(\arccos x)=-\frac{1}{\sqrt{1-x^2}}\mathrm{d}x\\)
       \\(\mathrm{d}(\arctan x)=\frac{1}{1+x^2}\mathrm{d}x\\)
-      \\(\mathrm{d}(\text{arccot } x)=-\frac{1}{1+x^2}\mathrm{d}x\\)
+      \\(\mathrm{d}(\operatorname{arccot} x)=-\frac{1}{1+x^2}\mathrm{d}x\\)
 4. 微分四则运算
    设函数 \\(u\\)、\\(v\\)
    1. 加减: \\(\mathrm{d}(u\pm v)=\mathrm{d}u\pm\mathrm{d}v\\)
@@ -516,3 +513,534 @@ Notes:
 5. 复合函数求微分
    设 \\(y=f(u)\\) , \\(u=\varphi(x)\\)
    则 \\(\mathrm{d}y=f^\prime[\varphi(x)]\varphi^\prime(x)\mathrm{d}x=f^\prime[\varphi(x)]\mathrm{d}\varphi(x)=f^\prime(u)\mathrm{d}u\\)
+
+## 微分中值定理及导数应用
+
+### 微分中值定理
+
+1. 罗尔中值定理
+   {% asset_img 7.png %}
+   若:
+   1. \\(f(x)\in c[a,b]\\)
+   2. \\(f(x)\\) 在 \\((a,b)\\) 内可导
+   3. \\(f(a)=f(b)\\)
+
+   则 \\(\exist\xi\in(a,b)\\) , 使 \\(f^\prime(\xi)=0\\)
+2. 拉格朗日中值定理
+   {% asset_img 8.png %}
+   若:
+   1. \\(f(x)\in c[a,b]\\)
+   2. \\(f(x)\\) 在 \\((a,b)\\) 内可导
+   
+   则 \\(\exist\xi\in(a,b)\\) , 使 \\(f^\prime(\xi)=\frac{f(b)-f(a)}{b-a}\\)
+   (几何意义为 \\(a,b\\) 间存在某个点的斜率等于 \\(a,b\\) 两点所成直线的斜率. 某点导数就是该点切线的斜率)
+   
+   * 证明:
+     作虚线 \\(L_{ab}\\) 连接点 \\(a,b\\) , 带入直线点斜式方程可得:
+     \\(L_{ab}:y-f(a)=\frac{f(b)-f(a)}{b-a}(x-a)\rArr y=f(a)+\frac{f(b)-f(a)}{b-a}(x-a)\\\)
+     令 \\(\varphi(x)=\text{曲}-\text{直}=f(x)-y=f(x)-f(a)-\frac{f(b)-f(a)}{b-a}(x-a)\\)
+     \\(\varphi(x)\in c[a,b]\\) , \\(\varphi(x)\\) 在 \\((a,b)\\) 内可导且 \\(\varphi(a)=\varphi(b)=0\\)
+     根据罗尔中值定理, \\(\exist\xi\in(a,b)\\) , 使 \\(\varphi^\prime(\xi)=0\\)
+     \\(\therefore\varphi^\prime(\xi)=f^\prime(\xi)-\frac{f(b)-f(a)}{b-a}=0\rArr f^\prime(\xi)=\frac{f(b)-f(a)}{b-a}\\)
+3. 柯西中值定理
+   若:
+   1. \\(f(x),g(x)\in c[a,b]\\)
+   2. \\(f(x),g(x)\\) 在 \\((a,b)\\) 内可导
+   3. \\(g^\prime(x)\neq 0\enspace\\) (\\(x\in(a,b)\\))
+   
+   则 \\(\exist\xi\in(a,b)\\) , 使 \\(\frac{f^\prime(\xi)}{g^\prime(\xi)}=\frac{f(b)-f(a)}{g(b)-g(a)}\\)
+
+   证明:
+   构造辅助函数 \\(\varphi(x)=f(x)-f(a)-\frac{f(b)-f(a)}{g(b)-g(a)}[g(x)-g(a)]\\)
+   \\(\varphi(x)\in c[a,b]\\) , \\(\varphi(x)\\) 在 \\((a,b)\\) 内可导且可知 \\(\varphi(a)=\varphi(b)=0\\)
+   \\(\therefore\exist\xi\in(a,b)\\) , 使 \\(\varphi^\prime(\xi)=0\\)
+   \\(\therefore\varphi^\prime(\xi)=f^\prime(\xi)-\frac{f(b)-f(a)}{g(b)-g(a)}g^\prime(\xi)=0\rArr\frac{f^\prime(\xi)}{g^\prime(\xi)}=\frac{f(b)-f(a)}{g(b)-g(a)}\\)
+
+### 洛必达法则
+
+1. 问题的起源: 求 \\(\lim\limits_{x\to 0}\frac{\tan x-\sin x}{x^3}\\)
+   解:
+   法1: 原式 \\(=\lim\limits_{x\to 0}\frac{\tan x}{x}\cdot\frac{1-\cos x}{x^2}=\frac{1}{2}\enspace\\) (提示 \\(\tan x=\frac{\sin x}{\cos x}\\))
+   法2: 原式 \\(=\lim\limits_{x\to 0}\frac{x-x}{x^3}=0\\) (不行, 精确度不够)
+   同样使用等价无限小, 却得到了不同的结果.
+   说明对于存在 无穷小比无穷小(\\(\frac{0}{0}\\)) 的极限 , 用**等价无穷小解极限有局限性**, 分子分母经等价无穷小转化后不同阶, 导数精确度不够
+
+   洛必达法则的目标: 解 \\(\frac{0}{0}\\) , \\(\frac{\infty}{\infty}\\) 类极限新方法
+2. 洛必达法则:
+   若:
+   1. \\(f(x)\\)、\\(g(x)\\) 在点 \\(x=a\\) 的去心领域内可导且 \\(g^\prime(x)\neq 0\\)
+   2. \\(\frac{0}{0}\\) 型: \\(\lim\limits_{x\to a}f(x)=0\\) , \\(\lim\limits_{x\to a}g(x)=0\\)
+      \\(\frac{\infty}{\infty}\\) 型: \\(\lim\limits_{x\to a}f(x)=\infty\\) , \\(\lim\limits_{x\to a}g(x)=\infty\\)
+   3. \\(\lim\limits_{x\to a}\frac{f^\prime(x)}{g^\prime(x)}=A\\)
+
+   则 \\(\lim\limits_{x\to a}\frac{f(x)}{g(x)}=A\\)
+3. 洛必达法则证明:
+   设 \\(f(a)=0\\) , \\(g(a)=0\\)
+   则 \\(\frac{f^\prime(\xi)}{g^\prime(\xi)}=\frac{f(x)-f(a)}{g(x)-g(a)}=\frac{f(x)}{g(x)}\enspace\\) (\\(\xi\in(a,b)\\) , 使用柯西中值定理)
+   \\(\therefore\lim\limits_{x\to a}\frac{f(x)}{g(x)}=\lim\limits_{x\to a}\frac{f^\prime(\xi)}{g^\prime(\xi)}=\lim\limits_{\xi\to a}\frac{f^\prime(\xi)}{g^\prime(\xi)}=A\\) 
+(\\(x\\)趋向于\\(a\\) , \\(\xi\\) 介于 \\(a\\) 与 \\(x\\) 之间 \\(\rArr\xi\\) 也趋向于 \\(a\\))
+4. 注意
+   1. 若 \\(\lim\limits_{x\to a}\frac{f^\prime(x)}{g^\prime(x)}\\) 不存在, 只表明洛必达法则不能使用, 不代表极限 \\(\lim\limits_{x\to a}\frac{f(x)}{g(x)}\\) 一定不存在
+   2. \\(\lim\limits_{x\to+\infty}\frac{\ln x}{x^a}=0\enspace\\) (\\(a>0\\))
+      \\(\lim\limits_{x\to+\infty}\frac{x^a}{b^x}=0\enspace\\) (\\(a>0,b>1\\))
+
+### 泰勒公式
+
+1. 泰勒公式
+   设 \\(f(x)\\) 在 \\(x=x_0\\) 邻域内 \\(n+1\\) 阶可导
+   则 \\(f(x)=P_n(x)+R_n(x)\\)
+   其中:
+   \\(P_n(x)=f(x_0)+f^\prime(x_0)(x-x_0)+\frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^2+\dots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\\)
+   \\(R_n(x)=\circ((x-x_0)^n)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\enspace\\) (\\(\xi\\) 介于 \\(x_0\\) 与 \\(x\\) 之间)
+   如果 \\(x_0=0\\) , 这个式子被称为麦克劳林公式
+2. 泰勒公式证明:
+   设 \\(f(x)=a_0+a_1(x-x_0)+a_2(x-x_0)^2+a_3(x-x_0)^3+\dots+a_n(x-x_0)^n\\)
+   要使这个式子派用场, 得找到 \\(a_0,a_1,\dots\\) 这些系数的值, 怎么做呢?
+   要得到 \\(a_0\\) , 可以使 \\(x=x_0\\), 这样其他项就消除了
+   那其他的 \\(a_1,a_2,a_3\\) 呢? 我们可以不断对该式求它的一阶, 二阶, 三阶, ... 导数:
+   \\(f^\prime(x)=a_1+2a_2(x-x_0)+3a_3(x-x_0)^2+\dots+na_n(x-x_0)^{n-1}\\)
+   \\(f^{\prime\prime}(x)=2a_2+3\cdot 2a_3(x-x_0)^2+\dots+n(n-1)(x-x_0)^{n-2}\\)
+   \\(\dots\\)
+   发现规律了吗, 将 \\(x=x_0\\) 带入, 可以轻松得到对应项的系数值:
+   \\(a_1=\frac{f^\prime(x_0)}{1}\\) , \\(a_2=\frac{f^{\prime\prime}(x_0)}{1\cdot 2}\\) , \\(a_3=\frac{f^{\prime\prime\prime}(x_0)}{1\cdot 2\cdot 3}\rArr a_n=\frac{f^{(n)}(x_0)}{n!}\\)
+   然后式子就能写成 \\(f(x)=f(x_0)+f^\prime(x_0)(x-x_0)+\frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^2+\dots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\\)
+
+(常见泰勒展开式见章节: 无穷级数->函数展开成幂级数)
+
+### 导数与函数单调性和曲线凹凸性的关系
+
+1. 导数与函数单调性
+   导数可以判别函数的单调性: (导数就是函数变化的速度, 速度的正负代表函数变化方向)
+   设 \\(f(x)\enspace\\) (\\(x\in[a,b]\\) 且在 \\((a,b)\\) 内可导)
+   1. 若 \\(f^\prime(x)>0\enspace\\) (\\(a<x<b\\)) , 则 \\(f(x)\\) 在 \\([a,b]\\) 上单调递增
+   2. 若 \\(f^\prime(x)<0\enspace\\) (\\(a<x<b\\)) , 则 \\(f(x)\\) 在 \\([a,b]\\) 上单调递减
+2. 导数与曲线凹凸性
+   1. 曲线凹凸性的定义:
+      1. 若 \\(\forall x_1,x_2\in D\\) 且 \\(x_1\neq x_2\\) , 有
+         \\(f(\frac{x_1+x_2}{2})<\frac{f(x_1)+f(x_2)}{2}\\)
+         则 \\(f(x)\\) 在 \\(D\\) 内为凹函数
+         
+         {% asset_img 9.png %}
+      2. 若 \\(\forall x_1,x_2\in D\\) 且 \\(x_1\neq x_2\\) , 有
+         \\(f(\frac{x_1+x_2}{2})>\frac{f(x_1)+f(x_2)}{2}\\)
+         则 \\(f(x)\\) 在 \\(D\\) 内为凸函数
+
+         {% asset_img 10.png %}
+   2. 二阶导数判别法: (可理解为二阶导数就是函数变化的加速度, 加速度的变化代表函数凹凸)
+      设 \\(f(x)\enspace\\) (\\(x\in[a,b]\\) 且在 \\((a,b)\\) 内二阶可导)
+      1. 若 \\(f^{\prime\prime}(x)>0\enspace\\) (\\(a<x<b\\)) , 则 \\(y=f(x)\\) 图像在 \\([a,b]\\) 上是凹的
+      2. 若 \\(f^{\prime\prime}(x)<0\enspace\\) (\\(a<x<b\\)) , 则 \\(y=f(x)\\) 图像在 \\([a,b]\\) 上是凸的
+
+### 极值与最值
+
+一个函数中, 极大值、极小值可以有很多, 但最大值、最小值只能有一个
+
+1. 极大值与极小值
+   1. 定义:
+      设 \\(y=f(x)\enspace\\) (\\(x,x_0\in D\\))
+      若 \\(\exist\delta>0\\) , 当 \\(0<|x-x_0|<\delta\\) 时
+      1. 有 \\(f(x)>f(x_0)\\) , 称 \\(x_0\\) 为极小点, \\(f(x_0)\\) 为极小值
+      2. 有 \\(f(x)<f(x_0)\\) , 称 \\(x_0\\) 为极大点, \\(f(x_0)\\) 为极大值
+   2. 求极值的步骤:
+      1. 法一(利用目标点附近导数)
+         1. 若 \\(\begin{cases} x<x_0 & f^\prime(x)<0 \\\ x>x_0 & f^\prime(x)>0 \end{cases}\\) , \\(x=x_0\\) 为极小点
+         2. 若 \\(\begin{cases} x<x_0 & f^\prime(x)>0 \\\ x>x_0 & f^\prime(x)<0 \end{cases}\\) , \\(x=x_0\\) 为极大点
+      2. 法二(利用二阶导数)
+         设 \\(f^\prime(x_0)=0\\) , \\(f^{\prime\prime}(x_0)\begin{cases} >0 & x_0 \text{为极小点} \\\ < 0 & x_0 \text{为极大点} \end{cases}\\)
+2. 最大值与最小值
+   设 \\(f(x)\in c[a,b]\\)
+   则极小值和极大值可在 \\(f(a)\\)、\\(f(b)\\) 和其他使 \\(f'(x)=0\\) 或不存在的点之中找到
+
+### 函数图像描绘
+
+1. 渐近线
+   设函数 \\(f(x)\\)
+   1. 水平渐近线:
+      {% asset_img 11.png %}
+      
+      若 \\(\lim\limits_{x\to\infty}f(x)=A\\)
+      称 \\(f(x)\\) 有水平渐近线 \\(y=A\\)
+   2. 垂直渐近线:
+      {% asset_img 12.png %}
+
+      若 \\(\lim\limits_{x\to a}f(x)=\infty\\)
+      称 \\(f(x)\\) 有垂直渐近线 \\(x=a\\)
+   3. 斜渐近线:
+      若
+      1. \\(\lim\limits_{x\to\infty}\frac{f(x)}{x}=k \quad\\) (可以理解为斜率)
+      2. \\(\lim\limits_{x\to\infty}[f(x)-kx]=b\\)
+      
+      称 \\(f(x)\\) 有斜渐近线 \\(y=ax+b\\)
+2. 作图
+   (根据一阶和二阶导数的值描绘函数曲线)
+设函数 \\(f(x) , x\in D\\)
+1. 在定义域内:
+   找出满足 \\(f^\prime(x)=0\\) 或不存在的所有点
+   找出满足 \\(f^{\prime\prime}(x)=0\\) 不存在的所有点
+2. 画渐近线
+3. 作表
+   | \\(x\\) | () | ? | () | ? | \\(\dots\\) |
+   |-|-|-|-|-|-|
+   | \\(f^\prime(x)\\) | \\(+\\) |  | \\(-\\) |  |  |
+   | \\(f^{\prime\prime}(x)\\) | \\(+\\) |  | \\(+\\) |  |  |
+   | \\(f(x)\\) | \\(\nearrow\\) | 极大 | \\(\searrow\\) |  |  |
+4. 在坐标系上找到关键点, 描图
+
+### 弧微分与曲率
+
+1. 弧微分
+   前面的微分能让我们求 \\(\Delta y\\) 的近似值, 也就是从 \\(x\\) 到 \\(x_0\\) 后 \\(y\\) 轴的偏移量近似值
+   但如果我们想要求从 \\(x\\) 到 \\(x_0\\) 间这段函数曲线长度的近似值(即弧微分)呢?
+   {% asset_img 13.png %}
+
+   两种弧微分形式:
+   1. 普通函数
+      \\(L:f(x)\\)
+      \\(\mathrm{d}s=\sqrt{(\mathrm{d}x)^2+(\frac{\mathrm{d}y}{\mathrm{d}x})^2(\mathrm{d}x)^2}=\sqrt{1+(\frac{\mathrm{d}y}{\mathrm{d}x})^2}\mathrm{d}x=\sqrt{1+[f^\prime(x)]^2}\mathrm{d}x\\)
+   2. 参数方程
+      \\(L:\begin{cases} x=\varphi(t) \\\ y=\psi(t) \end{cases}\\)
+      \\(\mathrm{d}s=\sqrt{(\mathrm{d}x)^2+(\mathrm{d}y)^2}=\sqrt{(\frac{\mathrm{d}x}{\mathrm{d}t})^2+(\frac{\mathrm{d}y}{\mathrm{d}t})^2}\mathrm{d}t=\sqrt{[\varphi^\prime(t)]^2+[\psi^\prime(t)]^2}\mathrm{d}t\\)
+2. 曲率与曲率半径
+   1. 曲率大小的因素:
+      1. 
+         {% asset_img 14.png %}
+         
+         \\(\Delta\alpha\\) 一定, \\(|\stackrel\frown{M_1N_1}|<|\stackrel\frown{M_2N_2}|\\)
+         **角度一定, 弯曲度与两点间的弧长成反比**
+      2. 
+         {% asset_img 15.png %}
+
+         \\(|\stackrel\frown{MN}|\\) 一定, \\(\Delta\alpha_1>\Delta\alpha_2\\)
+         **弧长一定, 弯曲度与切线夹角成正比**
+3. 曲率定义:
+   {% asset_img 16.png %}
+   (切线夹角即切线的变化角度)
+   设 \\(L:f(x)\\) , \\(|\stackrel\frown{MM^\prime}|=\Delta s\\)
+   * 平均曲率 \\(\bar{k}=\dfrac{|\Delta\alpha|}{|\Delta s|}\\)
+   * 某点曲率 \\(k=\lim\limits_{\Delta x\to 0}|\frac{\Delta\alpha}{\Delta s}|=|\frac{\mathrm{d}\alpha}{\mathrm{d}s}|=\frac{|f^{\prime\prime}(x)|}{(1+[f^\prime(x)]^2)^\frac{3}{2}}\\)
+   * 曲率半径: \\(R=\frac{1}{k}\\)
+   * 证明:
+     {% asset_img 17.png %}
+     
+     可知 \\(f^\prime(x)=\lim\limits_{\Delta x\to 0}\tan\alpha\\) , 两边对 \\(x\\) 求导得 \\(f^{\prime\prime}(x)=\sec^2\alpha\cdot\frac{\mathrm{d}\alpha}{\mathrm{d}x}\\)
+     \\(\because\sec^2\alpha=1+\tan^2\alpha=1+[f^\prime(x)]^2\\)
+     \\(\therefore\frac{\mathrm{d}\alpha}{\mathrm{d}x}=\frac{f^{\prime\prime}(x)}{1+[f^\prime(x)]^2}\rArr\mathrm{d}\alpha=\frac{f^{\prime\prime}(x)}{1+[f^\prime(x)]^2}\mathrm{d}x\\)
+
+
+## 不定积分
+
+### 不定积分的概念与性质
+
+1. 原函数:
+   设 \\(f(x)\\) , \\(F(x)\enspace\\) (\\(x\in I)\\)
+   若 \\(\forall x\in I\\) , 有 \\(F^\prime(x)=f(x)\\) , 称 \\(F(x)\\) 为 \\(f(x)\\) 的**其中一个**原函数
+   注意:
+   1. 一个函数若有原函数, 则一定有无数个原函数
+      设 \\(F^\prime(x)=f(x)\\)
+      则 \\((F(x)+C)\\) 为 \\(f(x)\\) 的一切原函数
+   2. 一个函数的的任意两个原函数之差 \\(\in C\\) 
+2. 不定积分
+   设 \\(F(x)+C\\) 为 \\(f(x)\\) 的所有原函数
+   则 \\(F(x)+C\\) 就是 \\(f(x)\\) 的不定积分, 记作 \\(\int f(x)\mathrm{d}x\\)
+3. 不定积分公式
+   1. \\(\int k\mathrm{d}x=kx+C\\)
+   2. \\(\int x^a\mathrm{d}x=\begin{cases} \frac{1}{a+1}x^{a+1}+C & (a\neq -1) \\\ \ln|x|+C & (a=-1) \end{cases}\\)
+   1. \\(\int a^x\mathrm{d}x=\frac{a^x}{\ln a}+C\\)
+   2. \\(\int\sin x\mathrm{d}x=-\cos x+C\\)
+      \\(\int\cos x\mathrm{d}x=\sin x+C\\)
+      \\(\int\tan x\mathrm{d}x=-\ln|\cos x|+C\\)
+      \\(\int\cot x\mathrm{d}x=\ln|\sin x|+C\\)
+      \\(\int\csc x\mathrm{d}x=\ln|\csc x-\cot x|+C=\ln|\tan\frac{x}{2}|+C\\)
+      \\(\int\sec x\mathrm{d}x=\ln|\sec x+\tan x|+C\\)
+      \\(\int\sec^2x\mathrm{d}x=\tan x+C\\)
+      \\(\int\csc^2x\mathrm{d}x=-\cot x+C\\)
+      \\(\int\sec x\tan x\mathrm{d}x=\sec x+C\\)
+      \\(\int\csc x\cot x\mathrm{d}x=-\csc x+C\\)
+   3. \\(\int\frac{1}{\sqrt{1-x^2}}\mathrm{d}x=\arcsin x+C\\)
+      \\(\int\frac{1}{\sqrt{a^2-x^2}}\mathrm{d}x=\arcsin\frac{x}{a}+C\\)
+      \\(\int\frac{1}{1+x^2}\mathrm{d}x=\arctan x+C\\)
+      \\(\int\frac{1}{a^2+x^2}\mathrm{d}x=\frac{1}{a}\arctan\frac{x}{a}+C\\)
+      \\(\int\frac{1}{x^2-a^2}\mathrm{d}x=\frac{1}{2a}\ln|\frac{x-a}{x+a}|+C\\)
+      \\(\int\frac{1}{\sqrt{x^2+a^2}}\mathrm{d}x=\ln(x+\sqrt{x^2+a^2})+C\\)
+      \\(\int\frac{1}{\sqrt{x^2-a^2}}\mathrm{d}x=\ln|x+\sqrt{x^2-a^2}|+C\\)
+      \\(\int\frac{1}{\sqrt{a^2-x^2}}\mathrm{d}x=\frac{a^2}{2}\arcsin\frac{x}{a}+\frac{1}{2}x\sqrt{a^2-x^2}+C\\)
+
+   * 推导:
+     1. \\(\int x^a\mathrm{d}x\enspace(a=-1)\rArr\begin{cases} \int\frac{1}{x}\mathrm{d}x=\ln(-x)+C & (x<0) \\\ \int\frac{1}{x}\mathrm{d}x=\ln(x)+C & (x>0) \end{cases}\rArr\ln|x|+C\\)
+     2. \\(\int\tan x\mathrm{d}x=\int\frac{\sin x}{\cos x}\mathrm{d}x=-\int\frac{1}{\cos x}\mathrm{d}(\cos x)=-\ln|\cos x|+C\\)
+     3. \\(\int\cot x\mathrm{d}x=\int\frac{\cos x}{\sin x}\mathrm{d}x=\int\frac{1}{\sin x}\mathrm{d}(\sin x)=\ln|\sin x|+C\\)
+     4. 这里只证明 \\(\int\frac{1}{\sqrt{x^2+a^2}}\mathrm{d}x\\)
+        
+        {% asset_img 18.png %}
+        解: 令 \\(x=a\tan t\\) (第二类换元积分法)
+        <div>
+        $$
+        \begin{aligned}
+         \text{原式}=\int\frac{a\sec^2t}{a\sec t}\mathrm{d}t & =\int\sec t\mathrm{d}t \\
+         & =\ln|\sec t+\tan t|+C \\
+         & =\ln|\frac{\sqrt{x^2+a^2}}{a}+\frac{x}{a}|+C \\
+         & =\ln|x+\sqrt{x^2+a^2}|\cdot\frac{1}{a}+C \\
+         & =\ln|x+\sqrt{x^2+a^2}|+\ln\frac{1}{a}+C \\
+         & =\ln|x+\sqrt{x^2+a^2}|+C\enspace(\ln\frac{1}{a}\text{并入}C) \\
+         & =\ln|x+\sqrt{x^2+a^2}|+C \\
+         & =\ln(x+\sqrt{x^2+a^2})+C
+        \end{aligned}
+        $$
+        </div>
+
+### 不定积分性质
+
+1. \\(\int[f(x)\pm g(x)]\mathrm{d}x=\int f(x)\mathrm{d}x+\int g(x)\mathrm{d}x\\)
+2. \\(\int af(x)\mathrm{d}x=a\int f(x)\mathrm{d}x\\)
+
+### 积分方法
+
+1. 换元积分法
+   1. 第一类换元积分法
+      \\(f(u)\\) 存在原函数, \\(\varphi(x)\\) 可导, \\(F(u)\\) 为 \\(f(u)\\) 的原函数, 则
+      \\(\int f[\varphi(x)]\underbrace{\varphi^\prime(x)\mathrm{d}x}_{f^\prime(x)\mathrm{d}x=df(x)}=\int\underbrace{f[\varphi(x)]\mathrm{d}\varphi(x)}\_{\text{设}\varphi(x)=t}=\int f(t)\mathrm{d}t=F(t)+C=F[\varphi(x)]+C\\)
+   2. 第二类换元积分法
+      \\(x=\psi(t)\\) 可导且 \\(\psi^\prime(t)\neq 0\\)
+      \\(\int f(x)\mathrm{d}x=\int f[\psi(t)]\psi^\prime(t)\mathrm{d}t=\int g(t)\mathrm{d}t=G(t)+C=G[\psi^{-1}(x)]+C\enspace\\) (\\(t\\) 为反函数 \\(\psi^{-1}(x)\\))
+      例: \\(\int\frac{1}{\sqrt{x}+\sqrt[3]{x}}\mathrm{d}x\\)
+      解:
+      令 \\(x=t^6\\) , 有
+      <div>
+      $$
+      \begin{aligned}
+       & 6\int\frac{t^5}{t^3+t^2}\mathrm{d}t \\
+       & =6\int\frac{(t^3+1)-1}{t+1}\mathrm{d}t \\
+       & =6\int\frac{t^3+t^2+1-t^2}{t+1}-\frac{1}{t+1}\mathrm{d}t \\
+       & =6\int\frac{t^2(t+1)+(1+t)(1-t)}{t+1}-\frac{1}{t+1}\mathrm{d}t \\
+       & =6\int(t^2-t+1)-\frac{1}{t+1}\mathrm{d}t \\
+       & =6[\frac{1}{3}t^3-\frac{1}{2}t^2+t-\ln|t+1|]+C \\
+       & =2t^3-3t^2+6t-6\ln|t+1|+C \\
+       & =2\sqrt{x}-3\sqrt[3]{x}+6\sqrt[6]{x}-6\ln|\sqrt[6]{x}+1|+C
+      \end{aligned}
+      $$
+      </div>
+2. 分部积分法
+   第一步先用换元积分法将积分式子变成 \\(\int u\mathrm{d}v\\) 的形式
+   然后用分部积分公式: \\(\int u\mathrm{d}v=uv-\int v\mathrm{d}u\\)
+   * 推导:
+     结合导数四则运算和不定积分性质可得 \\(\int(uv)^\prime\mathrm{d}x=\int u^\prime v\mathrm{d}x+\int uv^\prime\mathrm{d}x\\)
+     结合第一类换元积分法进一步变换得 \\(\underbrace{uv}_{\int(uv)^\prime\mathrm{d}x}=\int v\mathrm{d}u+\int u\mathrm{d}v\\)
+   
+   例: \\(\int x^2\ln x\mathrm{d}x\\)
+   解:
+   <div>
+   $$
+   \begin{aligned}
+    \int x^2\ln x\mathrm{d}x & =\int\ln x\mathrm{d}(\frac{1}{3}x^3) \\
+    & =\frac{1}{3}x^3\ln x-\int\frac{1}{3}x^3\mathrm{d}(\ln x) \\
+    & =\frac{1}{3}x^3\ln x-\frac{1}{3}\int x^2\mathrm{d}x \\
+    & =\frac{1}{3}x^3\ln x-\frac{1}{9}x^3+C
+   \end{aligned}
+   $$
+   </div>
+
+## 定积分
+
+### 定积分的概念与性质
+
+1. 定积分定义
+   设 \\(f(x)\\) 在 \\([a,b]\\) 上有界(有界不一定可积) , \\(x_1,x_2,\dots,x_n\\) 为 \\([a,b]\\) 间的分段点
+   1. \\(a=x_0<x_1<x_2<\dots<x_n=b\\) , \\(\Delta x_i=x_i-x_{i-1}\enspace\\) (\\(1\leqslant i\leqslant n)\\)
+   2. \\(\exist s_i\in[x_{i-1},x_i]\\) , 作 \\(\displaystyle\sum_{i=1}^n f(\xi_i)\Delta x_i\\)
+   3. \\(\lambda=\operatorname{max}\\{\Delta x_1,\Delta x_2,\dots,\Delta x_n\\}\\)
+   
+   若 \\(\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n f(\xi_i)\Delta x_i\\) 存在, 称 \\(f(x)\\) 在 \\([a,b]\\) 上可积
+   该极限称为 \\(f(x)\\) 在 \\([a,b]\\) 上的定积分, 记作 \\(\int_a^b f(x)\mathrm{d}x\\)
+   即 \\(\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n f(\xi_1)\Delta x_i=\int_a^b f(x)\mathrm{d}x\\)
+   
+   注意:
+   1. \\(L:y=f(x)\geqslant 0\enspace\\) (\\(x\in[a,b]\\))
+      则 \\(A=\int_a^b f(x)\mathrm{d}x\\)
+      例: 物理中知道速度函数和时间求位移(\\(v\\) 为速度, \\(t\\) 为时间)
+      设 \\(v=V(t)\enspace\\) (\\(t\in[a,b]\\))
+      则 \\(S=\int_a^b V(t)\mathrm{d}t\\)
+   2. \\(\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n f(\xi_1)\Delta x_i\\) 与 \\([a,b]\\) 分法及 \\(\xi_i\\) 取法无关
+   3. \\(f(x)\\) 在 \\([a,b]\\) 上有界不一定可积
+      如分段函数 \\(f(x)=\begin{cases} 1 & x\in Q \\\ 0 & x\in R-Q \end{cases}\\)
+   4. 若 \\(f(x)\in c[a,b]\\) , 则 \\(f(x)\\) 在 \\([a,b]\\) 上可积
+      若 \\(f(x)\\) 在 \\([a,b]\\) 上只有有限个第一类间断点, 则 \\(f(x)\\) 在 \\([a,b]\\) 上可积
+2. 定积分的一般性质
+   1. \\(\int_a^a f(x)\mathrm{d}x=0\\)
+      \\(\int_a^b f(x)\mathrm{d}x=-\int_b^a f(x)\mathrm{d}x\\)
+   2. \\(\int_a^b[f(x)\pm g(x)]\mathrm{d}x=\int_a^b f(x)\mathrm{d}x\pm\int_a^b g(x)\mathrm{d}x\\)
+   3. \\(\int_a^b kf(x)\mathrm{d}x=k\int_a^b f(x)\mathrm{d}x\\)
+   4. \\(\int_a^b f(x)\mathrm{d}x=\int_a^c f(x)\mathrm{d}x+\int_c^b f(x)\mathrm{d}x\enspace\\) (\\(a<b\\))
+      (即使 \\(c<a<b\\) 也成立, 因为 \\(\int_a^c\\) 是负的, 正好减去了 \\(\int_c^b\\) 多出来的)
+   5. \\(\int_a^b 1\mathrm{d}x=b-a\\)
+   6. 定积分间的比较
+      1. \\(f(x)\geqslant 0\enspace\\) (\\(a\leqslant x\leqslant b\\)) , 则 \\(\int_a^b f(x)\mathrm{d}x\geqslant 0\\)
+      2. \\(f(x)\geqslant g(x)\enspace\\) (\\(a\leqslant x\leqslant b\\)) , 则 \\(\int_a^b f(x)\mathrm{d}x\geqslant\int_a^b g(x)\mathrm{d}x\\)
+      3. 若 \\(f(x)\\)、\\(|f(x)|\\) 在 \\([a,b]\\) 上可积, 则 \\(|\int_a^b f(x)\mathrm{d}x|\leqslant\int_a^b|f(x)|\mathrm{d}x\\)
+   7. 积分中值定理
+      {% asset_img 19.png %}
+      
+      设 \\(f(x)\in c[a,b]\\) , 则 \\(\exist\xi\in[a,b]\\) , 使 \\(\underbrace{\int_a^b f(x)\mathrm{d}x}\_{\text{曲边梯形面积}}=\underbrace{f(\xi)(b-a)}_{\text{矩形面积}}\\)
+      * 证明:
+        \\(\because f(x)\in c[a,b]\\)
+        \\(\therefore\exist m,M\in[a,b]\\) , 使 \\(m(b-a)\leqslant\int_a^b f(x)\mathrm{d}x\leqslant M(b-a)\\) (介值定理)
+        \\(\rArr m\leqslant\frac{1}{b-a}\int_a^b f(x)\mathrm{d}x\leqslant M\\)
+        \\(\therefore\exist\xi\in[a,b]\\) , 使 \\(f(\xi)=\frac{1}{b-a}\int_a^b f(x)\mathrm{d}x\rArr\int_a^b f(x)\mathrm{d}x=(b-a)f(\xi)\\)
+
+### 积分基本定理
+
+1. 积分上限函数及其与目标函数的关系:
+   设 \\(f(x)\in c[a,b]\\) , 令 \\(\varPhi(x)=\int_a^x f(t)\mathrm{d}t\\) , 则 \\(\varPhi^\prime(x)=\frac{\mathrm{d}}{\mathrm{d}x}\int_a^x f(t)\mathrm{d}t=f(x)\\)
+   复合函数推论: \\(\frac{\mathrm{d}}{\mathrm{d}x}\int_a^{\varphi(x)}f(t)\mathrm{d}t=f[\varphi(x)]\cdot\varphi^\prime(x)\\)
+
+* 证明:
+  1. 定积分与不定积分的比较:
+     \\(\int f(x)\neq\int f(t)\enspace\\) (\\(x\\) 与 \\(t\\) 可能是函数且是不同的函数, 值域不同)
+     \\(\int_a^b f(x)\mathrm{d}x=\int_a^b f(t)\mathrm{d}t\enspace\\) (\\(x\\) 与 \\(t\\) 可能不同, 但值域被限制在 \\([a,b]\\) 所以相等)
+     因此: 定积分由上下限、函数关系确定, 与积分变量无关
+     即存在积分上限函数 \\(\varPhi(x)=\int_a^x f(x)\mathrm{d}x=\int_a^x f(t)\mathrm{d}t\enspace\\) (注意自变量的 \\(x\\) 与积分上限的 \\(x\\) 不同) 
+  2. 因为 \\(\Delta\varPhi=\varPhi(x+\Delta x)-\varPhi(x)=\int_a^{x+\Delta x}f(t)\mathrm{d}t-\int_a^x f(t)\mathrm{d}t=\int_x^{x+\Delta x}f(t)\mathrm{d}t\\)
+     \\(\because f(x)\in c[a,b]\rArr f(x)\in c[x,x+\Delta x]\\)
+     \\(\therefore\exist\xi\in[x,x+\Delta x]\\) , 使: (积分中值定理)
+     <div>
+     $$
+     \begin{aligned}
+      f(\xi)\Delta x=\int_x^{x+\Delta x}f(t)\mathrm{d}t=\Delta\varPhi & \rArr\frac{\Delta\varPhi}{\Delta x}=f(\xi) \\
+      & \rArr\lim\limits_{\Delta x\to 0}\frac{\Delta\varPhi}{\Delta x}=\lim\limits_{\Delta x\to 0}f(\xi)\enspace(=\lim\limits_{\xi\to x}f(\xi)=f(x)) \\
+      & \rArr\varPhi^\prime(x)=f(x)
+     \end{aligned}
+     $$
+     </div>
+2. 牛顿莱布尼茨公式
+   \\(f(x)\in c[a,b]\\) , \\(F(x)\\) 为 \\(f(x)\\) 的一个原函数, 则 \\(\int_a^b f(x)\mathrm{d}x=F(b)-F(a)=F(x)|_a^b\\)
+   * 证明:
+     \\(F^\prime(x)=f(x)\\)
+     \\(\varPhi(x)=\int_a^x f(t)\mathrm{d}t\\) , \\(\varPhi^\prime(x)=f(x)\\)
+     (\\(F(x)\\) 与 \\(\varPhi(x)\\) 皆为 \\(f(x)\\) 的原函数)
+     \\(\therefore \begin{cases} F(a)-\varPhi(a)=C_0 \\\ F(b)-\varPhi(b)=C_0 \end{cases}\rArr F(a)-\varPhi(a)=F(b)-\varPhi(b)\\)
+     \\(\because\varPhi(a)=\int_a^a f(t)\mathrm{d}t=0\\)
+     \\(\therefore F(a)=F(b)-\varPhi(b)\rArr\varPhi(b)=F(b)-F(a)\\)
+     即 \\(\int_a^b f(x)\mathrm{d}x=F(b)-F(a)\\)
+3. 积分中值定理的推广
+   设 \\(f(x)\in c[a,b]\\) , 则 \\(\exist\xi\in(a,b)\\) (闭区间), 使 \\(\int_a^b f(x)\mathrm{d}x=f(\xi)(b-a)\\)
+   * 证明: 设 \\(F(x)=\int_a^x f(t)\mathrm{d}t\\) , \\(F^\prime(x)=f(x)\\)
+     \\(\exist\xi\in(a,b)\\) 使 \\(F^\prime(\xi)=\frac{F(b)-F(a)}{b-a}\\) (拉格朗日中值定理)
+     \\(\therefore\int_a^b f(x)\mathrm{d}x=F(b)-F(a)=F^\prime(\xi)(b-a)=f(\xi)(b-a)\enspace\\) (\\(a<\xi<b\\))
+
+### 定积分的换元积分法与分部积分法
+
+1. 换元积分法
+   若 \\(f(x)\in c[a,b]\\) , \\(x=\varphi(t)\\) 满足:
+   1. \\(\varphi(t)\\) 为单调函数且 \\(\varphi(\alpha)=a\\) , \\(\varphi(\beta)=b\\)
+   2. \\(x=\varphi(t)\\) 连续可导
+
+   则 \\(\int_a^b f(x)\mathrm{d}x=\int_\alpha^\beta f[\varphi(t)]\varphi^\prime(t)\mathrm{d}t\\)
+
+   * 证明:
+     设 \\(F(x)\\) 为 \\(f(x)\\) 的原函数
+     \\(\because(F[\varphi(t)])^\prime=F^\prime[\varphi(t)]\cdot\varphi^\prime(t)=f[\varphi(t)]\cdot\varphi^\prime(t)\\)
+     \\(\therefore\int_\alpha^\beta f[\varphi(t)]\varphi^\prime(t)\mathrm{d}t=F[\varphi(\beta)]-F[\varphi(\alpha)]=F(b)-F(a)=\int\_a^b f(x)\mathrm{d}x\\) (牛顿莱布尼茨公式)
+2. 分部积分法
+   \\(\int_a^b u\mathrm{d}v=(uv)|\_a^b-\int_a^b v\mathrm{d}u\\)
+   Notes:
+   \\(I_n=\int_0^{\frac{\pi}{2}}\sin^n x\mathrm{d}x=\int_0^{\frac{\pi}{2}}\cos^n x\mathrm{d}x=\frac{n-1}{n}I_{n-2}\\)
+   \\(I_0=\frac{\pi}{2} , I_1=1\\)
+
+### 反常积分
+
+1. 正常积分标准:
+   1. 区间有限
+   2. \\(f(x)\\) 在区间上连续或第一类间断点(有限个)
+2. 积分区间无限
+   1. \\(f(x)\in c[a,+\infty)\\)
+      有 \\(\lim\limits_{b\to+\infty}[F(b)-F(a)]=\int_a^{+\infty} f(x)\mathrm{d}x\\)
+      1. 若 \\(\lim\limits_{b\to+\infty}[F(b)-F(a)]\\) 存在, 称 \\(\int_a^{+\infty} f(x)\mathrm{d}x\\) 收敛
+         有 \\(\lim\limits_{b\to+\infty}[F(b)-F(a)]=\int_a^{+\infty} f(x)\mathrm{d}x=A\\)
+      2. 若 \\(\lim\limits_{b\to+\infty}[F(b)-F(a)]\\) 不存在, 称 \\(\int_a^{+\infty} f(x)\mathrm{d}x\\) 发散
+   2. \\(f(x)\in c(-\infty,a]\\)
+      有 \\(\lim\limits_{b\to-\infty}[F(a)-F(b)]=\int_{-\infty}^a f(x)\mathrm{d}x\\)
+      1. 若 \\(\lim\limits_{b\to-\infty}[F(a)-F(b)]\\) 存在, 称 \\(\int_{-\infty}^a f(x)\mathrm{d}x\\) 收敛
+         有 \\(\lim\limits_{b\to-\infty}[F(a)-F(b)]=\int_{-\infty}^a f(x)\mathrm{d}x=A\\)
+      2. 若 \\(\lim\limits_{b\to-\infty}[F(a)-F(b)]\\) 不存在, 称 \\(\int_{-\infty}^a f(x)\mathrm{d}x\\) 发散
+   3. \\(f(x)\in c(-\infty,+\infty)\\)
+      若 \\(\int_{-\infty}^{+\infty}f(x)\mathrm{d}x\\) 收敛 \\(\hArr\int_{-\infty}^{a}f(x)\mathrm{d}x\\) 与 \\(\int_{a}^{+\infty}f(x)\mathrm{d}x\\) 收敛
+      且 \\(\int_{-\infty}^{+\infty}f(x)\mathrm{d}x=\int_{-\infty}^a f(x)\mathrm{d}x+\int_a^{+\infty}f(x)\mathrm{d}x\\)
+   4. \\(\Gamma\\) 函数
+      1. 定义: \\(\Gamma(\alpha)=\int_0^{+\infty}x^{\alpha-1}\cdot e^{-x}\mathrm{d}x\\)
+      2. 特性:
+         1. \\(\Gamma(\alpha+1)=\alpha\Gamma(\alpha)\\)
+         2. \\(\Gamma(n+1)=n!\enspace\\) (\\(n\in Z\\))
+         3. \\(\Gamma(\frac{1}{2})=\sqrt{\pi}\\)
+3. 无界函数反常积分
+   1. 左无界: \\(f(x)\in c(a,b]\\) 且 \\(f(a+0)=\infty\enspace\\) (\\(a\\) 称作瑕点)
+      \\(\forall\varepsilon>0\\) , \\(\lim\limits_{\varepsilon\to 0^+}[F(b)-F(a+\varepsilon)]=\int_{a+\varepsilon}^b f(x)\mathrm{d}x\\)
+      1. 若 \\(\lim\limits_{\epsilon\to 0^+}[F(b)-F(a+\varepsilon)]\\) 存在, 称 \\(\int_a^b f(x)\mathrm{d}x\\) 收敛
+         若极限是有限实数, 则 \\(\lim\limits_{\varepsilon\to 0^+}[F(b)-F(a+\varepsilon)]=\int_a^b f(x)\mathrm{d}x=A\\)
+      2. 若 \\(\lim\limits_{\varepsilon\to 0^+}[F(b)-F(a+\varepsilon)]\\) 不存在, 称 \\(\int_a^b f(x)\mathrm{d}x\\) 发散
+   2. 右无界: \\(f(x)\in c[a,b)\\) 且 \\(f(b-0)=\infty\\)
+      \\(\forall\varepsilon>0\\) , \\(F(b-\varepsilon)-F(a)=\int_a^{b-\varepsilon}f(x)\mathrm{d}x\\)
+      1. 若 \\(\lim\limits_{\epsilon\to 0^+}[F(b-\varepsilon)-F(a)]\\) 存在, 称 \\(\int_a^b f(x)\mathrm{d}x\\) 收敛
+         若极限是有限实数, 则 \\(\lim\limits_{\varepsilon\to 0^+}[F(b-\varepsilon)-F(a)]=\int_a^b f(x)\mathrm{d}x=A\\)
+      2. 若 \\(\lim\limits_{\epsilon\to 0^+}[F(b-\varepsilon)-F(a)]\\) 不存在, 称 \\(\int_a^b f(x)\mathrm{d}x\\) 发散
+   3. 中无界: \\(f(x)\in c[a,c)\cup(c,b]\\) 且 \\(\lim\limits_{x\to c}f(x)=\infty\\)
+      若 \\(\int_a^b f(x)\mathrm{d}x\\) 收敛 \\(\hArr\int_a^c f(x)\mathrm{d}x\\) 与 \\(\int_c^b f(x)\mathrm{d}x\\) 收敛
+      且 \\(\int_a^b f(x)\mathrm{d}x=\int_a^c f(x)\mathrm{d}x+\int_c^b f(x)\mathrm{d}x\\)
+
+## 定积分应用
+
+### 元素法
+
+(看起来就是普通的解题套路)
+
+经典积分思想: 分成无数细小的段然后加起来, 得到 A
+
+元素法思想: 
+求A(或原函数)
+1. 取 \\([x, x+dx]\subset[a, b]\\)
+2. \\(dA=f(x)dx\\)
+3. \\(A=\int_a^b dA=\int_a^b f(x)dx\\)
+
+### 几何应用
+
+#### 面积
+
+1. 贴着x轴 TODO: 补充图片
+   1. 取 \\([x, x+dx]\subset[a, b]\\)
+   2. \\(dA=f(x)dx\\)
+   3. \\(A=\int_a^b f(x)dx\\)
+2. 浮空曲边 TODO: 补充图片
+   1. 取 \\([x, x+dx]\subset[a, b]\\)
+   2. \\(dA=[f(x)-g(x)]dx\\)
+   3. \\(A=\int_a^b[f(x)-g(x)]dx\\)
+3. 曲边扇形面积 \\(L=\Gamma(\theta) \quad(\alpha\leqslant\theta\leqslant\beta)\\) TODO: 补充图片
+   (这里的 \\(\Gamma\\) 不是指 \\(\Gamma\\) 函数)
+   1. 取 \\([\theta, \theta+d\theta]\subset[\alpha, \beta]\\)
+   2. \\(dA=\frac{1}{2}\Gamma^2(\theta)d\theta\\)
+   3. \\(A=\int_\alpha^\beta dA=\int_\alpha^\beta \frac{1}{2}\Gamma^2(\theta)d\theta\\)
+
+#### 体积
+
+1. 旋转体的体积 TODO: 补充图片
+   1. \\(V_x\\) : (旋转x轴)
+      1. 取 \\([x, x+dx]\subset[a, b]\\)
+      2. \\(dV_x=\pi f^2(x)dx\\)
+      3. \\(V_x=\pi\int_a^b f^2(x)dx\\)
+   2. \\(V_y\\) : (旋转y轴)
+      1. 取 \\([x, x+dx]\subset[a, b]\\)
+      2. \\(dV_y=2\pi|x|\cdot|f(x)|\cdot dx\\)
+      3. \\(V_y=2\pi\int_a^b |x|\cdot|f(x)|dx\\)
+2. 截口面积已知几何体体积 TODO: 补充图片
+   1. 取 \\([x, x+dx]\subset[a, b]\\)
+   2. \\(dV=A(x)dx\\)
+   3. \\(V=\int_a^b A(x)dx\\)
+
+#### 弧长
+
+TODO: 补充图片
+1. \\(L: y=f(x) \quad(a\leqslant x\leqslant b\\)
+   1. 取 \\([x, x+dx]\subset [a, b]\\)
+   2. \\(ds=\sqrt{(dx)^2+(dy)^2}=\sqrt{1+(\frac{dy}{dx})^2}dx=\sqrt{1+[f'(x)]^2}dx\\)
+   3. \\(l=\int_a^b\sqrt{1+[f'(x)]^2}dx\\)
+2. \\(L: \begin{cases} x=\varphi(t) \\\ y=\psi(t) \end{cases} \quad(\alpha\leqslant t\leqslant\beta)\\)
+   1. 取 \\([t, t+dt]\subset[\alpha, \beta]\\)
+   2. \\(ds=\sqrt{(dx)^2+(dy)^2}=\sqrt{[\varphi'(x)]^2+[\psi'(x)]^2}dt\\)
+   3. \\(\int_\alpha^\beta\sqrt{[\varphi'(x)]^2+[\psi'(x)]^2}dt\\)
