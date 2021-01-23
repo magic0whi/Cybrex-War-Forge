@@ -1172,114 +1172,134 @@ Notes:
 ### 高阶线性微分方程
 
 1. 基本概念
-   1. 二阶齐次线性微分方程: \\(y''+a(x)y'+b(x)y=0\\)
-      二阶非齐线性微分方程: \\(y''+a(x)y'+b(x)y=c(x)\\)
-   2. n阶齐次线性微分方程: \\(y^{(n)}+a_1(x)y^{(n-1)}+\dots+a_{n-1}y'+a_n(x)y=0\\)
-      n阶非齐线性微分方程: \\(y^{(n)}+a_1(x)y{(n-1)}+\dots+a_{n-1}y'+a_n(x)y=f(x)\\)
-   3. 设 \\(\varphi_1(x) , \varphi_2(x)\\) 为两个函数
-      1. 若 \\(\varphi_1(x) , \varphi_2(x)\\) 不成比例, 称 \\(\varphi_1(x) , \varphi_2(x)\\) 线性无关
-      2. 若 \\(\varphi_1(x) , \varphi_2(x)\\) 成比例, 称 \\(\varphi_1(x) , \varphi_2(x)\\) 线性相关
+   1. 二阶齐次线性微分方程: \\(y^{\prime\prime}+a(x)y^\prime+b(x)y=0\\)
+      二阶非齐线性微分方程: \\(y^{\prime\prime}+a(x)y^\prime+b(x)y=c(x)\\)
+   2. \\(n\\) 阶齐次线性微分方程: \\(y^{(n)}+a_1(x)y^{(n-1)}+\dots+a_{n-1}y^\prime+a_n(x)y=0\\)
+      \\(n\\) 阶非齐线性微分方程: \\(y^{(n)}+a_1(x)y^{(n-1)}+\dots+a_{n-1}y^\prime+a_n(x)y=f(x)\\)
+   3. 设 \\(\varphi_1(x)\\) , \\(\varphi_2(x)\\) 为两个函数
+      若 \\(\varphi_1(x)\\) , \\(\varphi_2(x)\\) 不成比例, 称 \\(\varphi_1(x)\\) , \\(\varphi_2(x)\\) 线性无关
+      若 \\(\varphi_1(x)\\) , \\(\varphi_2(x)\\) 成比例, 称 \\(\varphi_1(x)\\) , \\(\varphi_2(x)\\) 线性相关
       
-      如 \\(x^2 , \sin x\\) 线性无关, \\(x^2 , 3x^2\\) 线性相关
+      如 \\(x^2\\) 和 \\(\sin x\\) 线性无关, \\(x^2\\) 和 \\(3x^2\\) 线性相关
+2. 性质
+   设:
+   (1) \\(y^{\prime\prime}+a(x)y^\prime+b(x)y=0\\)
+   (2) \\(y^{\prime\prime}+a(x)y^\prime+b(x)y=c(x)\\)
+   (联立方程式代入可证)
+   1. 若 \\(\varphi_1(x)\\) , \\(\varphi_2(x)\\) 为 (1) 的解, 则 \\(y=C_1\varphi_1(x)+C_2\varphi_2(x)\\) 仍为 (1) 的解(线性组合)
+   2. 若 \\(\varphi_1(x)\\) , \\(\varphi_2(x)\\) 分别为 (1), (2) 的解, 则 \\(y=\varphi_1(x)+\varphi_2(x)\\) 为 (2) 的解
+   3. 若 \\(\varphi_1(x)\\) , \\(\varphi_2(x)\\) 为 (2) 的解, 则 \\(y=\varphi_2(x)-\varphi_1(x)\\) 为 (1) 的解
+   4. 1. 设 \\(\varphi_1(x) , \varphi_2(x)\\) 为 (1) 的两个线性无关解
+         则 (1) 通解为 \\(y=C_1\varphi_1(x)+C_2\varphi_2(x)\\)
+      1. 设 \\(\varphi_1(x)\\) , \\(\varphi_2(x)\\) 为 (1) 的两个线性无关解, \\(\varphi_0(x)\\) 为 (2) 的一个特解
+         则 (2) 的通解为 \\(y=C_1\varphi_1(x)+C_2\varphi_2(x)+\varphi_0(x)\\)
+   5. (3) \\(y^{\prime\prime}+a(x)y^\prime+b(x)y=f(x)\\)
+      若 \\(f(x)=f_1(x)+f_2(x)\\) 则
+      (3)' \\(\enspace y^{\prime\prime}+a(x)y^\prime+b(x)y=f_1(x)\\)
+      (3)'' \\(\enspace y^{\prime\prime}+a(x)y^\prime+b(x)y=f_2(x)\\)
+      若 \\(\varphi_1(x)\\) , \\(\varphi_2(x)\\) 为 (3)', (3)'' 的解, 则 \\(y=\varphi_1(x)+\varphi_2(x)\\) 为 (3) 的解
 
-### 结构
+   * 证明:
+     1. 第三条的证明:
+        \\(\begin{cases} \varphi_1^{\prime\prime}+a(x)\varphi_1^\prime+b(x)\varphi_1=c(x) \\\ \varphi_2^{\prime\prime}+a(x)\varphi_2^\prime+b(x)\varphi_2=c(x) \end{cases}\\)
+        将 \\(y=\varphi_2(x)-\varphi_1(x)\\) 代入 (2) 得
+        \\((\varphi_2-\varphi_1)^{\prime\prime}+a(x)(\varphi_2-\varphi_1)^\prime+b(x)(\varphi_2-\varphi_1)\\)
+        \\(=(\varphi_2^{\prime\prime}+a(x)\varphi_2^\prime+b(x)\varphi_2)-(\varphi_1^{\prime\prime}+a(x)\varphi_1^\prime+b(x)\varphi_1)\\)
+        \\(=c(x)-c(x)=0\\)
+        \\(\therefore y=\varphi_2(x)-\varphi_1(x)\\) 为 (1) 的解
+     2. 第五条的证明:
+        \\(\begin{cases} \varphi_1^{\prime\prime}+a(x)\varphi_1^\prime+b(x)\varphi_1=f_1(x) \\\ \varphi_2^{\prime\prime}+a(x)\varphi_2^\prime+b(x)\varphi_2=f_2(x) \end{cases}\\)
+        将 \\(y=\varphi_1(x)+\varphi_2(x)\\) 代入 (3) 得
+        \\((\varphi_1+\varphi_2)^{\prime\prime}+a(x)(\varphi_1+\varphi_2)^\prime+b(x)(\varphi_1+\varphi_2)=f(x)\\)
+        \\(\hArr(\varphi_1^{\prime\prime}+a(x)\varphi_1^\prime+b(x)\varphi_1)+(\varphi_1^{\prime\prime}+a(x)\varphi_2^\prime+b(x)\varphi_2)=f(x)\\)
+        \\(\hArr f_1(x)+f_2(x)=f(x)\\)
+        \\(\therefore y=\varphi_1(x)+\varphi_2(x)\\) 为 (3) 的解
 
-设:
-(1) \\(y''+a(x)y'+b(x)y=0\\)
-(2) \\(y''+a(x)y'+b(x)y=c(x)\\)
-(3) \\(y''+a(x)y'+b(x)y=f(x)\\)
-若 \\(f(x)=f_1(x)+f_2(x)\\) 则
-(3)'\\(\enspace y''+a(x)y'+b(x)y=f_1(x)\\)
-(3)''\\(\enspace y''+a(x)y'+b(x)y=f_2(x)\\)
+### 常系数齐次线性微分方程
 
-1. 若 \\(\varphi_1(x) , \varphi_2(x)\\) 为 (1) 的解, 则 \\(y=c_1\varphi_1(x)+c_2\varphi_2(x)\\) (线性组合)仍为 (1) 的解
-2. 若 \\(\varphi_1(x) , \varphi_2(x)\\) 分别为 (1), (2) 的解, 则 \\(y=\varphi_1(x)+\varphi_2(x)\\) 为 (2) 的解
-3. 若 \\(\varphi_1(x) , \varphi_2(x)\\) 为 (2) 的解, 则 \\(y=\varphi_2(x)-\varphi_1(x)\\) 为 (1) 的解
-4. 若 \\(\varphi_1(x) , \varphi_2(x)\\) 为 (3)', (3)'' 的解, 则 \\(y=\varphi_1(x)+\varphi_2(x)\\) 为 (3) 的解
-5. 1. 设 \\(\varphi_1(x) , \varphi_2(x)\\) 为 (1) 的两个线性无关解
-      则 (1) 通解为 \\(y=c_1\varphi_1(x)+c_2\varphi_2(x)\\)
-   1. 设 \\(\varphi_1(x) , \varphi_2(x)\\) 为 (1) 的两个线性无关解, \\(\varphi_0(x)\\) 为 (2) 的一个特解
-      则 (2) 的通解为
-      \\(y=c_1\varphi_1(x)+c_2\varphi_2(x)+\varphi_0(x)\\)
+1. 二阶常系数齐次线性微分方程: \\(y^{\prime\prime}+py^\prime+qy=0\\) , 特征方程: \\(\lambda^2+p\lambda+q=0\\)
+   1. \\(\Delta>0\\) , \\(y=C_1e^{\lambda_1x}+C_2e^{\lambda_2x}\\)
+   2. \\(\Delta=0\\) , \\(y=(C_1+C_2x)e^{\lambda_1x}\\)
+   3. \\(\Delta<0\\) , \\(y=e^{\alpha x}(C_1\cos\beta x+C_2\sin\beta x)\\)
+2. 解释:
+   设二阶常系数齐次线性微分方程 \\(y^{\prime}+py^\prime+qy=0\enspace\\) (\\(p\\)、\\(q\\) 为常数) (\*)
+   猜测: (\*) 解的形式? \\(\begin{cases} e^{\lambda x} \\\ \sin(\beta x)\cdot\cos(\beta x) \end{cases}\\)
+   令 \\(y=e^{\lambda x}\\) 为 (\*) 的解, 代入得
+   \\(\lambda^2e^{\lambda x}+p\lambda e^{\lambda x}+qe^{\lambda x}=0\rArr\lambda^2+p\lambda+q=0\\) , 称其为 (\*) 的特征方程
+   * 情况1 \\(\Delta=p^2-4q>0\\)
+     则 \\(\lambda^2+p\lambda+q=0\\) 有两个不同实根 \\(\lambda_1\\)、\\(\lambda_2\\)
+     因此 \\(y_1=e^{\lambda_1x}\\) , \\(y_2=e^{\lambda_2x}\\) 为 (\*) 的解
+     \\(\because\lambda_1\neq\lambda_2\\) , \\(\therefore y_1\\) 与 \\(y_2\\) 线性无关
+     \\(\therefore\\) (\*) 的通解为 \\(y=C_1e^{\lambda_1x}+C_2e^{\lambda_2x}\\) (高阶线性线性微分方程性质1)
+   * 情况2 \\(\Delta=p^2-4q=0\\)
+     则 \\(\lambda^2+p\lambda+q=0\\) 有两个相等的实根 \\(\lambda_1=\lambda_2\\)
+     \\(y_1=e^{\lambda_1x}\\) 为 (\*) 的解
+     令 \\(\frac{y_2}{y_1}=u(x)(\neq C)\\) 且 \\(y_2\\) 为 (\*) 的解, 得到
+     \\(y_2=ue^{\lambda_1x}\\)
+     \\(y_2^\prime=u^\prime e^{\lambda_1x}+\lambda_1ue^{\lambda_1x}\\)
+     \\(y_2^{\prime\prime}=u^{\prime\prime}e^{\lambda_1x}+2\lambda_1u^\prime e^{\lambda_1x}+\lambda_1^2ue^{\lambda_1x}\\)
+     将以上三式代入 \\(y^{\prime\prime}+py^\prime+qy=0\\) 得
+     \\(u^{\prime\prime}e^{\lambda_1x}+2\lambda_1u^\prime e^{\lambda_1x}+\lambda_1^2ue^{\lambda_1x}+pu^\prime e^{\lambda_1x}+p\lambda_1ue^{\lambda_1x}+que^{\lambda_1x}=0\\)
+     \\(\rArr u^{\prime\prime}+2\lambda_1u^\prime+\lambda_1^2u+pu^\prime+p\lambda_1u+qu=0\\)
+     \\(\rArr u^{\prime\prime}+(2\lambda_1+p)u^\prime+(\lambda_1^2+p\lambda_1+q)u=0\\)
+     \\(\because \begin{cases} \lambda_1^2+p\lambda_1+q=0 \\\ \lambda_1+\lambda_2=-p \rArr 2\lambda_1+p=0\enspace(\text{韦达定理}) \end{cases}\\)
+      \\(\therefore u^{\prime\prime}=0\\) , 取 \\(u(x)=C_1x+C_2\\)
+      \\(\therefore y_2=(C_1x+C_2)e^{\lambda_1x}=C_1xe^{\lambda_1x}+C_2e^{\lambda_1x}\\)
+      则通解 \\(y=C_0e^{\lambda_1x}+C_1xe^{\lambda_1x}+C_2e^{\lambda_1x}=(C_0+C_2)e^{\lambda_1x}+C_1xe^{\lambda_1x}=(C_3+C_1x)e^{\lambda_1x}\\)
+   * 情况3 \\(\Delta=p^2-4q<0\\)
+     则 \\(\lambda^2+p\lambda+q=0\\) 有两个虚数解 \\(\lambda_{1,2}=\alpha\pm i\beta\\)
+     \\(y_1=e^{(\alpha+\beta i)x}\\) 与 \\(y_2=e^{(\alpha-\beta i)x}\\) 为 (\*) 的解
+     \\(y_1=e^{\alpha x+\beta xi}=e^{\alpha x}\cdot e^{\beta xi}=e^{\alpha x}\cdot[\cos(\beta x)+i\sin(\beta x)]\enspace\\) (欧拉公式 \\(e^{i\theta}=\cos\theta+i\sin\theta\\))
+     \\(y_2=e^{\alpha x-\beta xi}=e^{\alpha x}\cdot e^{-\beta xi}=e^{\alpha x}\cdot[\cos(\beta x)-i\sin(\beta x)]\\)
+     \\(Y_1=\frac{1}{2}y_1+\frac{1}{2}y_2=e^{\alpha x}\cos(\beta x)\\) (高阶线性线性微分方程性质1)
+     \\(Y_2=\frac{1}{2i}y_1+(-\frac{1}{2i})y_2=\frac{1}{2i}(y_1-y_2)=e^{\alpha x}\sin(\beta x)\\)
+     \\(\therefore\\) (\*) 的通解为 \\(y=C_1e^{\alpha x}\cos(\beta x)+C_2e^{\alpha x}\sin(\beta x)=e^{\alpha x}[C_1\cos(\beta x)+C_2\sin(\beta x)]\\)
+3. 高阶常系数齐次线性微分方程
+例 \\(y^{\prime\prime\prime}+py^{\prime\prime}+qy^\prime+\Gamma y=0\\) , 它的特征方程 \\(\lambda^3+p\lambda^2+q\lambda+\Gamma=0\\)
+   1. \\(\lambda_1\\)、\\(\lambda_2\\)、\\(\lambda_3\\) 为实数且各不相等
+      \\(y=C_1e^{\lambda_1x}+C_2e^{\lambda_2x}+C_3e^{\lambda_3x}\\)
+   2. \\(\lambda_1\\)、\\(\lambda_2\\)、\\(\lambda_3\\) 为实数且 \\(\lambda_1=\lambda_2\neq\lambda_3\\)
+      \\(y=(C_1+C_2x)e^{\lambda_1x}+C_3e^{\lambda_3x}\\)
+   3. \\(\lambda_1\\)、\\(\lambda_2\\)、\\(\lambda_3\\) 为实数且相等
+      \\(y=(C_1+C_2x+C_3x^2)e^{\lambda_1x}\\)
+   4. \\(\lambda_1\in R\\) , \\(\lambda_{2,3}=\alpha\pm i\beta\\)
+      \\(y=C_1e^{\lambda_1x}+e^{\alpha x}[C_2\cos(\beta x)+C_3\sin(\beta x)]\\)
 
-证明: 
-1. \\(\begin{cases} \varphi_1''+a(x)\varphi_1'+b(x)\varphi_1=0 \\\ \varphi_2''+a(x)\varphi_2'+b(x)\varphi_2=0 \end{cases}\\)
-   将 \\(y=c_1\varphi_1(x)+c_2\varphi_2(x)\\) 代入 (1) 得
-   \\(\begin{aligned} &(c_1\varphi_1+c_2\varphi_2)''+a(x)(c_1\varphi_1+c_2\varphi_2)'+b(x)(c_1\varphi_1+c_2\varphi_2) \\\ =&c_1(\varphi_1''+a(x)\varphi_1'+b(x)\varphi_1)+c_2(\varphi_2''+a(x)\varphi_2'+b(x)\varphi_2) \\\ =&c_1\cdot0+c_2\cdot0=0 \end{aligned}\\)
-   \\(\therefore y=c_1\varphi_1(x)+c_2\varphi_2(x)\\) 为 (1) 的解
-2. \\(\begin{cases} \varphi_1''+a(x)\varphi_1'+b(x)\varphi_1=0 \\\ \varphi_2''+a(x)\varphi_2'+b(x)\varphi_2=c(x) \end{cases}\\)
-   将 \\(y=\varphi_1(x)+\varphi_2(x)\\) 代入 (2) 得
-   \\(\begin{aligned} (\varphi_1+\varphi_2)''+a(x)(\varphi_1+\varphi_2)'+b(x)(\varphi_1+\varphi_2)&=c(x) \\\ \rArr (\varphi_1''+a(x)\varphi_1'+b(x)\varphi_1)+(\varphi_2''+a(x)\varphi_2'+b(x)\varphi_2)&=c(x) \\\ 0+c(x)&=c(x)\end{aligned}\\)
-   \\(\therefore y=\varphi_1(x)+\varphi_2(x)\\) 为 (2) 的解
-3. \\(\begin{cases} \varphi_1''+a(x)\varphi_1'+b(x)\varphi_1=c(x) \\\ \varphi_2''+a(x)\varphi_2'+b(x)\varphi_2=c(x) \end{cases}\\)
-   将 \\(y=\varphi_2(x)-\varphi_1(x)\\) 代入 (2) 得
-   \\(\begin{aligned} &(\varphi_2-\varphi_1)''+a(x)(\varphi_2-\varphi_1)'+b(x)(\varphi_2-\varphi_1) \\\ =&(\varphi_2''+a(x)\varphi_2'+b(x)\varphi_2)-(\varphi_1''+a(x)\varphi_1'+b(x)\varphi_1) \\\ =&c(x)-c(x)=0 \end{aligned}\\)
-   \\(\therefore y=\varphi_2(x)-\varphi_1(x)\\) 为 (1) 的解
-4. \\(\begin{cases} \varphi_1''+a(x)\varphi_1'+b(x)\varphi_1(x)=f_1(x) \\\ \varphi_2''+a(x)\varphi_2'+b(x)\varphi_2(x)=f_2(x) \end{cases}\\)
-   将 \\(y=\varphi_1(x)+\varphi_2(x)\\) 代入 (3) 得
-   \\(\begin{aligned} (\varphi_1+\varphi_2)''+a(x)(\varphi_1+\varphi_2)'+b(x)(\varphi_1+\varphi_2)&=f(x) \\\ \rArr (\varphi_1''+a(x)\varphi_1'+b(x)\varphi_1)+(\varphi_1''+a(x)\varphi_2'+b(x)\varphi_2)&=f(x) \\\ \rArr f_1(x)+f_2(x)&=f(x) \end{aligned}\\)
-   \\(\therefore y=\varphi_1(x)+\varphi_2(x)\\) 为 (3) 的解
+### 常系数非齐次线性微分方程
 
-## 常系数齐次线性微分方程
 
-\\(y''+py'+qy=0\\) (\*)
-其中 p, q 为常数, 则称 (\*) 为二阶常系数齐次线性微分方程
+1. 通解思路:
+   \\(y^{\prime\prime}+py^\prime+qy=f(x)\\)
+   * 先求 \\(y^{\prime\prime}+py^\prime+qy=0\\) 通解
+   * 找 \\(y^{\prime\prime}+py^\prime+qy=f(x)\\) 的一个特解 \\(y_0(x)\\) (很困难, 接下来只谈两种情况)
+   
+   则有通解 \\(y=C_1e^{-x}+C_2e^{2x}+y_0(x)\\) (高阶线性微分方程性质5)
+2. \\(f(x)=P_n(x)e^{kx}\\)
+   若 \\(n=|\\{\lambda|k=\lambda_1=\dots\lambda_n\\}|\\)
+   令特解为 \\(y_0=x^n(ax+b)e^{kx}\\)
+   * 例1: 求 \\(y^{\prime\prime}-y^\prime-2y=(2x+1)e^x\\) 通解
+     解:
+     1. 特征方程: \\(\lambda^2-\lambda-2=0\rArr\lambda_1=-1\\) , \\(\lambda_2=2\\)
+        \\(y^{\prime\prime}-y^\prime-2y=0\\) 通解为 \\(y=C_1e^{-x}+C_2e^{2x}\\)
+     2. 令特解 \\(y_0(x)=(ax+b)e^xx\\) 代入得 \\(a=-1\\) , \\(b=-1\\)
+        即 \\(y_0(x)=-(x-1)e^x\\)
+      
+     \\(\therefore\\) 原方程通解为 \\(y=C_1e^{-x}+C_2e^{2x}-(x-1)e^x\\)
+   * 例2: 求 \\(y^{\prime\prime}-3y^\prime+2y=(2x+3)e^x\\) 通解
+     解:
+     1. 特征方程: \\(\lambda^2-3\lambda+2=0\rArr\lambda_1=1\\) , \\(\lambda_2=2\\)
+        \\(y^{\prime\prime}-3y^\prime+2y=0\\) 通解为 \\(y=C_1e^{x}+C_2e^{2x}\\)
+     2. 令特解 \\(y_0(x)=x(ax+b)e^x=(ax^2+bx)e^x\\) 代入得 \\(a=-1\\) , \\(b=-5\\)
+        即 \\(y_0(x)=-(x^2+5x)e^x\\)
 
-猜测: (\*) 解的形式? \\(\begin{cases} e^{\lambda x} \\\ \sin\beta x\cdot\cos\beta x \end{cases}\\)
-令 \\(y=e^{\lambda x}\\) 为 (\*) 的解, 代入得
-\\(\lambda^2e^{\lambda x}+p\lambda e^{\lambda x}+qe^{\lambda x}=0 \rArr \lambda^2+p\lambda+q=0\\) , 称其为 (\*) 的特征方程
-
-1. 情况1 \\(\Delta=p^2-4q>0 , \lambda^2+p\lambda+q=0\\) 有两个不同实根 \\(\lambda_1 , \lambda_2\\)
-   \\(y_1=e^{\lambda_1x} , y_2=e^{\lambda_2x}\\) 为 (\*) 的解
-   \\(\because \lambda_1\neq\lambda_2 \therefore y_1 与 y_2 线性无关\\)
-   \\(\therefore (\*) 的通解为 y=c_1e^{\lambda_1x}+c_2e^{\lambda_2x}\\)
-2. 情况2 \\(\Delta=p^2-4q=0 , \lambda^2+p\lambda+q=0\\) 有两个相等的实根 \\(\lambda_1=\lambda_2\\)
-   \\(y_1=e^{\lambda_1x}\\) 为 (\*) 的解
-   令 \\(\frac{y_2}{y_1}=u(x) \enspace(\neq c)\\) 且 \\(y_2\\) 为 (\*) 的解, 得到
-   \\(y_2=u(x)y_1=ue^{\lambda_1x}\\)
-   \\(y_2'=u'e^{\lambda_1x}+\lambda_1ue^{\lambda_1x}\\)
-   \\(y_2''=u''e^{\lambda_1x}+2\lambda_1u'e^{\lambda_1x}+\lambda_1^2ue^{\lambda_1x}\\)
-   以上三式代入 \\(y''+py'+qy=0\\) 得
-   \\(\begin{aligned} &u''e^{\lambda_1x}+2\lambda_1u'e^{\lambda_1x}+\lambda_1^2ue^{\lambda_1x}+pu'e^{\lambda_1x}+p\lambda_1ue^{\lambda_1x}+que^{\lambda_1x}=0 \\\ \rArr &u''+2\lambda_1u'+\lambda_1^2u+pu'+p\lambda_1u+qu=0 \\\ \rArr &u''+(2\lambda_1+p)u'+(\lambda_1^2+p\lambda_1+q)u=0 \end{aligned}\\)
-   \\(\because \begin{cases} \lambda_1^2+p\lambda_1+q=0 \\\ \lambda_1+\lambda_2=-p \rArr 2\lambda_1+p=0 \end{cases}\\) TODO 下面式子没弄懂
-   \\(\therefore u''=0\\)
-   取 u(x)=x
-   \\(\therefore y_2=xe^{\lambda_1x}\\)
-   则通解 \\(y=c_1e^{\lambda_1x}+c_2xe^{\lambda_1x}=(c_1+c_2x)e^{\lambda_1x}\\)
-3. 情况3 \\(\Delta=p^2-4q<0\\)
-   \\(\lambda^2+p\lambda+q=0 \rArr \lambda_{1,2}=\alpha\pm i\beta\\)
-   \\(y_1=e^{(\alpha+\beta i)x}\\) 与 \\(y_2=e^{(\alpha-\beta i)x}\\) 为两个解
-   \\(y_1=e^{\alpha x+\beta xi}=e^{\alpha x}\cdot e^{\beta xi}=e^{\alpha x}\cdot(\cos\beta x+i\sin\beta x)\\)
-   \\(y_2=e^{\alpha x-\beta xi}=e^{\alpha x}\cdot e^{-\beta xi}=e^{\alpha x}\cdot(\cos\beta x-i\sin\beta x)\\)
-   \\(Y_1=\frac{1}{2}y_1+\frac{1}{2}y_2=e^{\alpha x}\cos\beta x\\)
-   \\(Y_2=\frac{1}{2i}y_1+(-\frac{1}{2i})y_2=\frac{1}{2i}(y_1-y_2)=e^{\alpha x}\sin\beta x\\)
-   \\(\therefore\\) (\*) 的通解为 \\(y=c_1e^{\alpha x}\cos\beta x+c_2e^{\alpha x}\sin\beta x=e^{\alpha x}(c_1\cos\beta x+c_2\sin\beta x)\\)
-
-总结: \\(y''+py'+qy=0\\) (\*)
-1. 特征方程: \\(\lambda^2+p\lambda+q=0\\)
-2. 1. \\(\Delta>0 , y=c_1c^{\lambda_1x}+c_2e^{\lambda_2x}\\)
-   2. \\(\Delta=0 , y=(c_1+c_2x)e^{\lambda_1x}\\)
-   3. \\(\Delta<0 , y=e^{\alpha x}(c_1\cos\beta x+c_2\sin\beta x)\\)
-
-### 高阶常系数齐次线性微分方程
-
-\\(y'''+py''+qy'+\Gamma y=0\\)
-1. \\(\lambda^3+p\lambda^2+q\lambda+\Gamma=0\\) - 特征方程
-2. 1. \\(\lambda_1 , \lambda_2 , \lambda_3\\) 实, 单值
-      \\(y=c_1e^{\lambda_1x}+c_2e^{\lambda_2x}+c_3e^{\lambda_3x}\\)
-   2. \\(\lambda_1 , \lambda_2 , \lambda_3\\) 实且 \\(\lambda_1=\lambda_2\neq\lambda_3\\)
-      \\(y=(c_1+c_2x)e^{\lambda_1x}+c_3e^{\lambda_3x}\\)
-   3. \\(\lambda_1 , \lambda_2 , \lambda_3\\) 实且 \\(\lambda_1=\lambda_2=\lambda_3\\)
-      \\(y=(c_1+c_2x+c_3x^2)e^{\lambda_1x}\\)
-   4. \\(\lambda_1\in R , \lambda_{2,3}=\alpha\pm i\beta\\)
-      \\(y=c_1e^{\lambda_1x}+e^{\alpha x}(c_2\cos\beta x+c_3\sin\beta x)\\)
-
-## 常系数非齐次线性微分方程
-
-\\(y''+py'+qy=f(x)\\) (\*\*)
-(\*\*) 通解:
-1. \\(y''+py'+qy=0\\) 通解
-2. \\(y''+py'+qy=f(x)\\) 的一个特解 \\(y_0(x)\\)?
-
-3. \\(f(x)=P_n(x)e^{kx}\\)
-4. \\(f(x)=e^\alpha x\\) [\\(多项式\cdot\cos\beta x + 多项式\cdot\sin\beta x\\)]
+     \\(\therefore\\) 原方程通解为 \\(y=C_1e^x+C_2e^{2x}-(x^2+5x)e^x\\)
+3. \\(f(x)=e^{\alpha x}\\) [\\(\text{多项式}\cdot\cos(\beta x)+\text{多项式}\cdot\sin(\beta x)\\)]
+   若 \\(n=|\\{\lambda|(\alpha+i\beta)=\lambda_1=\dots\lambda_n\\}|\\)
+   特解为 \\(y_0(x)=x^ne^{\alpha x}[a\cdot\cos(\beta x)+b\cdot\sin(\beta x)]\enspace\\) (\\(a\\)、\\(b\\) 根据多项式内容决定)
+   * 例3: \\(y^{\prime\prime}-2y^\prime+2y=(x+1)e^x\cos x\\)
+     解:
+     1. 特征方程: \\(\lambda^2-2\lambda+2=0\rArr\lambda_{1,2}=1\pm i\\)
+        \\(y^{\prime\prime}-2y^\prime+2y=0\rArr y=e^x(\cos x+\sin x)\\)
+     2. \\(\alpha=1\\) , \\(\beta=1\rArr\alpha+i\beta=1+i\\) 有一个 \\(\lambda\\) 值与其相等
+        因此令特解 \\(y_0(x)=xe^x[(ax+b)\cos x+(cx+d)\sin x]\\)
+        \\(\dots\\) (接下来解出 \\(a,b,c,d\\) , 最后得出通解)
