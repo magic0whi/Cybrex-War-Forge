@@ -141,123 +141,158 @@ tags:
          推导:
          \\(\begin{aligned} S_\Delta & =\frac{1}{2}|\vec{a}|\cdot|\vec{b}|\cdot\sin(\widehat{\vec{a},\vec{b}}) \\\ & =\frac{1}{2}|\vec{a}\times\vec{b}| \end{aligned}\\)
 
-## 向量应用
+### 向量应用
 
-### 平面及其方程
+#### 平面及其方程
 
-#### 空间曲面
+1. 空间曲面
+   设 \\(F(x,y,z)=0\\) 为一个三元方程, \\(\Sigma\\) 为曲面
+   若 \\(F(x,y,z)=0\\) 的任一解 \\((x_0,y_0,z_0)\\) 对应的点 \\(M_0(x_0,y_0,z_0)\\) 在曲面 \\(\Sigma\\) 上
+   或者说曲面 \\(\Sigma\\) 上存在点 \\(M(x_0, y_0, z_0)\\) 使得 \\(F(x_0,y_0,z_0)=0\\)
+   称 \\(F(x,y,z)=0\\) 为曲面 \\(\Sigma\\) 的方程, \\(\Sigma\\) 为方程 \\(F(x,y,z)=0\\) 对应的曲面
+   记 \\(\Sigma:F(x,y,z)=0\\)
+2. 曲面的特殊情形--平面
+   1. 平面的点法式方程
+      
+      {% asset_img 10.png %}
+      设曲面某点 \\(M_0(x_0,y_0,z_0)\in\pi\\) , 法向量 \\(\vec{n}=\\{A,B,C\\}\perp\pi\\)
+      \\(\forall M(x,y,z)\in\pi\rArr\vec{n}\perp\overrightarrow{M_0M}\rArr\vec{n}\cdot\overrightarrow{M_0M}=0\\)
+      将 \\(\overrightarrow{M_0M}=\\{x-x_0,y-y_0,z-z_0\\}\\) 代入
+      得到 \\(\pi:A(x-x_0)+B(y-y_0)+C(z-z_0)=0\\)
+   2. 截距式方程
+      
+      {% asset_img 11.png %}
+      \\(\overrightarrow{AB}=\\{-a,b,0\\}\\) , \\(\overrightarrow{AC}=\\{-a,0,c\\}\\)
+      平面 \\(ABC\\) 的法向量 \\(\vec{n}=\overrightarrow{AB}\times\overrightarrow{AC}=\\{bc,ac,ab\\}\\)
+      将点 \\(C\\) 代入点法式方程:
+      \\(\pi:bc(x-a)+ac(y-0)+an(z-0)=0\rArr bc(x-a)+acy+abz=0\\)
+      \\(\hArr bcx+acy+abz=abc\hArr\frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1\\)
+      即 \\(\pi:\frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1\\)
+   3. 一般式方程
+      \\(\pi:Ax+By+Cz+D=0\\) , 法向量 \\(\vec{n}=\\{A, B, C\\}\\)
+2. 两个平面夹角
+   
+   {% asset_img 12.png %}
+   \\(\pi_1:A_1x+B_1y+C_1z+D_1=0\\) , \\(\vec{n_1}=\\{A_1,B_1,C_1\\}\\)
+   \\(\pi_2:A_2x+B_2y+C_2z+D_2=0\\) , \\(\vec{n_2}=\\{A_2,B_2,C_2\\}\\)
+   1. 若 \\((\widehat{\vec{n_1},\vec{n_2}})\in[0,\frac{\pi}{2}]\\) , 则平面夹角 \\(\theta=(\widehat{\vec{n_1},\vec{n_2}})\\)
+      \\(\cos\theta=\cos(\widehat{\vec{n_1},\vec{n_2}})=\frac{\vec{n_1}\cdot\vec{n_2}}{|\vec{n_1}|\cdot|\vec{n_2}|}\\)
 
-(概念, 了解一下就好)
-设 \\(F(x, y, z)=0\\) 为一个三元方程, \\(\Sigma\\) 为曲面
-若 \\(F(x, y, z)=0\\) 的任意解 \\((x_0, y_0, z_0)\\) 对应的点 \\(M_0(x_0, y_0, z_0)\\) 在曲面上
-或者反之, 曲面上任一点 \\(M(x_0, y_0, z_0)\\) 有 \\(F(x_0, y_0, z_0)=0\\)
-称 \\(F(x, y, z)=0\\) 为曲面 \\(\Sigma\\) 方程, \\(\Sigma\\) 为方程 \\(F(x, y, z)=0\\) 对应的曲面
-记 \\(\Sigma: F(x, y, z)=0\\)
+      {% asset_img 13.png %}
+   2. 若 \\((\widehat{\vec{n_1},\vec{n_2}})\in(\frac{\pi}{2},\pi]\\) , 则平面夹角 \\(\theta=\pi-(\widehat{\vec{n_1},\vec{n_2}})\\)
+      \\(\cos\theta=\cos(\pi-(\widehat{\vec{n_1},\vec{n_2}}))=-\cos(\widehat{\vec{n_1},\vec{n_2}})=-\frac{\vec{n_1}\cdot\vec{n_2}}{|\vec{n_1}|\cdot|\vec{n_2}|}\\)
 
-#### 曲面的特殊情形 -- 平面
+      {% asset_img 14.png %}
+   
+   平面夹脚应是锐角, 因此综合 1、2 得: \\(\cos\theta=|\frac{\vec{n_1}\vec{n_2}}{|\vec{n_1}|\cdot|\vec{n_2}|}|\\)
 
-1. 平面的点法式方程 TODO: 补充图片
-   设 \\(M_0(x_0, y_0, z_0)\in\pi \enspace,\enspace 法向量 \vec{n}=\\{A, B, C\\}\perp\pi\\)
-   \\(\forall M(x, y, z)\\) , 有 \\(M(x, y, z)\in\pi \rArr \vec{n}\perp\overrightarrow{M_0M} \rArr \vec{n}\cdot\overrightarrow{M_0M}=0\\)
-   而 \\(\overrightarrow{M_0M}=\\{x-x_0, y-y_0, z-z_0\\}\\)
-   \\(\therefore \pi: A(x-x_0)+B(y-y_0)+C(z-z_0)=0\\)
-2. 截距式方程 TODO: 补充图片
-   \\(\overrightarrow{AB}=\\{-a, b, 0\\} \enspace,\enspace \overrightarrow{AC}=\\{-a, 0, c\\}\\)
-   法向量 \\(\vec{n}=\overrightarrow{AB}\times\overrightarrow{AC}=\\{bc, ac, ab\\}\\)
-   平面:
-   \\(\begin{aligned} \pi: bc(x-a)+ac(y-0)+an(z-0)=0 \rArr bc(x-a)+acy+abz&=0 \\\ bcx+acy+abz&=abc \\\ \frac{x}{a}+\frac{y}{b}+\frac{z}{c}&=1 \end{aligned}\\)
-   即 \\(pi: \frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1\\)
-3. 一般式方程
-   平面 \\(\pi: Ax+By+Cz+D=0\\)
-   且 \\(\vec{n}=\\{A, B, C\\}\\)
+#### 空间直线
 
-#### 两个平面夹角
-
-TODO: 补充图片
-平面 \\(\pi_1: A_1x+B_1y+C_1z+D_1=0\\)
-平面 \\(\pi_2: A_2X+B_2y+C_2z+D_2=0\\)
-\\(\vec{n_1}=\\{A_1, B_1, C_1\\}\\)
-\\(\vec{n_2}=\\{A_2, B_2, C_2\\}\\)
-
-(取决于你从哪个面判断夹角 \\((\widehat{\vec{n_1}, \vec{n_2}})\\), 但是平面夹角必须是锐角)
-1. \\((\widehat{\vec{n_1}, \vec{n_2}})\in[0, \frac{\pi}{2}]\\) , 则 \\(\theta=(\widehat{\vec{n_1}, \vec{n_2}})\\)
-   \\(\cos\theta=\cos(\widehat{\vec{n_1}, \vec{n_2}})=\frac{\vec{n_1}\cdot\vec{n_2}}{|\vec{n_1}|\cdot|\vec{n_2}|}\\)
-2. \\((\widehat{\vec{n_1}, \vec{n_2}})\in[\frac{\pi}{2}, \pi]\\) , 则 \\(\theta=\pi-(\widehat{\vec{n_1}, \vec{n_2}})\\)
-   \\(\cos\theta=\cos(\pi-(\widehat{\vec{n_1}, \vec{n_2}}))=-\cos(\widehat{\vec{n_1}, \vec{n_2}})=-\frac{\vec{n_1}\cdot\vec{n_2}}{|\vec{n_1}|\cdot|\vec{n_2}|}\\)
-
-1, 2综合得: \\(\cos\theta=\frac{|\vec{n_1}\vec{n_2}|}{|\vec{n_1}|\cdot|\vec{n_2}|}\\)
-
-### 空间直线
-
-1. 点向式方程 TODO: 补充图片
-   直线上一点 \\(M_0(x_0, y_0, z_0)\in L\\)
-   有向量 \\(\vec{S}=\\{m, n, p\\}\parallel L\\)
-   \\(\forall M(x, y, z)\\)
-   若 \\(M\in L\\), 则 \\(\overrightarrow{M_0M}\parallel\vec{S}\qquad \overrightarrow{M_0M}=\\{x-x_0, y-y_0, z-z_0\\}\\)
-   \\(\because \overrightarrow{M_0M}\parallel\vec{S} \hArr \frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}\\)
-   \\(\therefore L: \frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}\\)
+1. 点向式(对称式)方程
+   
+   {% asset_img 15.png %}
+   设 \\(M_0(x_0,y_0,z_0)\in L\\) , \\(\vec{S}=\\{m,n,p\\}\parallel L\\)
+   \\(\forall M(x,y,z)\in L\\), 有 \\(\overrightarrow{M_0M}=\\{x-x_0,y-y_0,z-z_0\\}\\) 且 \\(\overrightarrow{M_0M}\parallel\vec{S}\\)
+   \\(\because\overrightarrow{M_0M}\parallel\vec{S}\hArr\frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}\\)
+   \\(\therefore L:\frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}\\)
 2. 参数式方程
-   设 \\(M_0(x_0, y_0, z_0) \qquad \vec{S}=\\{m, n, p\\}\parallel L\\)
+   设 \\(M_0(x_0,y_0,z_0)\in L\\) , \\(\vec{S}=\\{m,n,p\\}\parallel L\\)
    \\(L=\frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}\\)
    令 \\(\frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}=t\\)
-   则 L 的参数方程为
-   \\(L: \begin{cases} x=x_0+mt \\\ y=y_0+nt \\\ z=z_0+pt \end{cases}\\)
+   则 \\(L\\) 的参数方程为
+   \\(L:\begin{cases} x=x_0+mt \\\ y=y_0+nt \\\ z=z_0+pt \end{cases}\\)
 3. 一般式方程
+   \\(L:\begin{cases} A_1x+B_1y+C_1z+D_1=0 \\\ A_2x+B_2y+C_2z+D_2=0 \end{cases}\\)
    (两平面相交得到一条直线)
-   \\(L: \begin{cases} A_1x+B_1y+C_1z+D_1=0 \\\ A_2x+B_2y+C_2z+D_2=0 \end{cases}\\)
-4. 杂知识点
+
+   {% asset_img 16.png %}
+3. 杂知识点
    1. 夹角
       1. 两向量的夹角:
-         设 \\(\vec{a}=\\{a_1, b_1, c_1\\}, \vec{b}=\\{a_2, b_2, c_2\\}\\) 为两个向量, \\((\widehat{\vec{a}, \vec{b}})=\theta \enspace(0\leqslant\theta\leqslant\pi)\\)
+         设向量 \\(\vec{a}=\\{a_1,b_1,c_1\\}\\) , \\(\vec{b}=\\{a_2,b_2,c_2\\}\\) , \\((\widehat{\vec{a},\vec{b}})=\theta \enspace\\) (\\(0\leqslant\theta\leqslant\pi\\))
          由 \\(\vec{a}\cdot\vec{b}=|\vec{a}|\cdot|\vec{b}|\cdot\cos\theta\\)
          得 \\(\cos\theta=\frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}=\frac{a_1a_2+b_1b_2+c_1c_2}{\sqrt{a_1^2+b_1^2+c_1^2}\sqrt{a_2^2+b_2^2+c_2^2}}\\)
-      2. [两平面夹角](#两个平面夹角)
-      3. 两直线夹角: 同 [两平面夹角](#两个平面夹角)
-      4. 直线与平面夹角: TODO: 补充图片(提示, 图二作得不好, 三角形外切角)
-         设平面法向量 \\(\vec{n}\\), 直线对应向量 \\(\vec{s}\\)
-         1. \\((\widehat{\vec{n}, \vec{s}})\in[0, \frac{\pi}{2}]\\) 时
-            \\(\varphi+(\widehat{\vec{n}, \vec{s}})=\frac{\pi}{2} \rArr \varphi=\frac{\pi}{2}-(\widehat{\vec{n}, \vec{s}})\\)
-            \\(\sin\varphi=\cos(\widehat{\vec{n}, \vec{s}})\\)
-         2. \\((\widehat{\vec{n}, \vec{s}})\in[\frac{\pi}{2}, \pi]\\) 时
-            \\((\widehat{\vec{n}, \vec{s}})=\frac{\pi}{2}+\varphi\\)
-            \\(\sin\varphi=-\cos(\vec{n}, \vec{s})\\)
-            \\(\therefore 综合1, 2 得 \sin\varphi=|\cos(\vec{n}, \vec{s})|=\frac{|\vec{n}\cdot\vec{s}|}{|\vec{n}|\cdot|\vec{s}|}\\)
+      2. 两平面夹角:
+         
+         {% asset_img 17.png %}
+         \\(\pi_1:A_1x+B_1y+C_1z+D_1=0\\)
+         \\(\pi_2:A_2x+B_2y+C_2z+D_2=0\\)
+         设 \\(\pi_1\\) , \\(\pi_2\\) 夹角为 \\(\theta\\)
+         1. \\((\widehat{\vec{n_1},\vec{n_2}})\in[0,\frac{\pi}{2}]\\) 时 \\(\theta=(\widehat{\vec{n_1},\vec{n_2}})\\)
+         2. \\((\widehat{\vec{n_1},\vec{n_2}})\in(\frac{\pi}{2},\pi]\\) 时 \\(\theta=\pi-(\widehat{\vec{n_1},\vec{n_2}})\\)
+         
+         综合得 \\(\cos\theta=|\cos(\widehat{\vec{n_1},\vec{n_2}})|=\frac{|\vec{n_1}\cdot\vec{n_2}|}{|\vec{n_1}||\vec{n_2}|}=\frac{|A_1A_2+B_1B_2+C_1C_2|}{\sqrt{A_1^2+B_1^2+C_1^2}\sqrt{A_2^2+B_2^2+C_2^2}}\\)
+      3. 两直线夹角:
+         
+         {% asset_img 18.png %}
+         \\(L_1:\frac{x-x_1}{m_1}=\frac{y-y_1}{n_1}=\frac{z-z_1}{p_1}\\)
+         \\(L_2:\frac{x-x_2}{m_2}=\frac{y-y_2}{n_2}=\frac{z-z_1}{p_2}\\)
+         设 \\(L_1\\) , \\(L_2\\) 夹脚为 \\(\theta\enspace\\) (\\(0\leqslant\theta\leqslant\frac{\pi}{2}\\))
+         1. \\((\widehat{\vec{s_1},\vec{s_2}})\in[0,\frac{\pi}{2}]\\) , 则 \\(\theta=(\widehat{\vec{s_1},\vec{s_2}})\\)
+         2. \\((\widehat{\vec{s_1},\vec{s_2}})\in(\frac{\pi}{2},\pi]\\) , 则 \\(\theta=\pi-(\widehat{\vec{s_1},\vec{s_2}})\\)
+         
+         综合得 \\(\cos\theta=|\cos(\widehat{\vec{s_1},\vec{s_2}})|=\frac{|\vec{s_1}\cdot\vec{s_2}|}{|\vec{s_1}||\vec{s_2}|}=\frac{|m_1m_2+n_1n_2+p_1p_2|}{\sqrt{m_1^2+n_1^2+p_1^2}\sqrt{m_2^2+n_2^2+p_2^2}}\\)
+      4. 直线与平面夹角:
+         
+         {% asset_img 19.png %}
+         \\(L:\frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}\\) , \\(\vec{s}=\\{m,n,p\\}\parallel L\\)
+         \\(\pi:Ax+By+Cz+D=0\\) , \\(\vec{n}=\\{A,B,C\\}\\)
+         1. 若 \\((\widehat{\vec{n},\vec{s}})\in[0,\frac{\pi}{2}]\\)
+            \\(\varphi+(\widehat{\vec{n},\vec{s}})=\frac{\pi}{2}\rArr\varphi=\frac{\pi}{2}-(\widehat{\vec{n},\vec{s}})\\)
+            \\(\therefore\sin\varphi=\cos(\widehat{\vec{n},\vec{s}})\\)
+
+            {% asset_img 20.png %}
+         2. 若 \\((\widehat{\vec{n},\vec{s}})\in(\frac{\pi}{2},\pi]\\)
+            \\((\widehat{\vec{n},\vec{s}})=\frac{\pi}{2}+\varphi\rArr\varphi=-(\frac{\pi}{2}-(\widehat{\vec{n},\vec{s}}))\\)
+            \\(\sin\varphi=-\cos(\widehat{\vec{n},\vec{s}})\\)
+
+            {% asset_img 21.png %}
+         
+         综合 1、2 得 \\(\sin\varphi=|\cos(\vec{n},\vec{s})|=\frac{|\vec{n}\cdot\vec{s}|}{|\vec{n}|\cdot|\vec{s}|}\\)
    2. 距离
       1. 两点距离:
-         设 \\(A(x_1, y_1, z_1) , B(x_2, y_2, z_2)\\)
-         则 AB 距离 \\(d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2+z_1)^2}\\)
-      2. 点到平面距离 TODO: 补充图片
-         设平面 \\(\pi: Ax+By+Cz+D=0\\) , 点 \\(M_0(x_0, y_0, z_0)\notin\pi\\)
-         \\(\forall M_1(x_1, y_1, z_1)\in\pi\\)
-         \\(\overrightarrow{M_0M_1}=\\{x_1-x_0, y_1-y_0, z_1-z_0\\}\\)
-         \\(\begin{aligned} Prj_{\vec{n}}\overrightarrow{M_0M_1}=\frac{\vec{n}\cdot\overrightarrow{M_0M_1}}{|\vec{n}|}&=\frac{A(x_1-x_0)+B(y_1-y_0)+c(z_1-z_0)}{\sqrt{A^2+B^2+C^2}} \\\ &=\frac{(Ax_1+By_1+Cz_1)-(Ax_0+By_0+Cz_0)}{\sqrt{A^2+B^2+C^2}} \end{aligned}\\)
-         \\(\because M_1\in\pi\\)
-         \\(\therefore 代入平面\pi得 Ax_1+By_1+Cz_1=-D\\)
+         设 \\(A(x_1,y_1,z_1)\\) , \\(B(x_2,y_2,z_2)\\)
+         则 \\(AB\\) 距离 \\(d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2+z_1)^2}\\)
+      2. 点到平面距离
+         
+         {% asset_img 22.png %}
+         设 \\(\pi:Ax+By+Cz+D=0\\) , \\(M_0(x_0,y_0,z_0)\notin\pi\\) , \\(\forall M_1(x_1, y_1, z_1)\in\pi\\)
+         有 \\(\overrightarrow{M_0M_1}=\\{x_1-x_0, y_1-y_0, z_1-z_0\\}\\)
+         <div>
+         $$
+         \begin{aligned}
+          Prj_{\vec{n}}\overrightarrow{M_0M_1}=\frac{\vec{n}\cdot\overrightarrow{M_0M_1}}{|\vec{n}|} & =\frac{A(x_1-x_0)+B(y_1-y_0)+C(z_1-z_0)}{\sqrt{A^2+B^2+C^2}} \\
+          & =\frac{(Ax_1+By_1+Cz_1)-(Ax_0+By_0+Cz_0)}{\sqrt{A^2+B^2+C^2}}
+         \end{aligned}
+         $$
+         </div>
+
+         将 \\(M_1\\) 代入平面 \\(\pi\\) 得 \\(Ax_1+By_1+Cz_1=-D\\)
          \\(\therefore Prj_{\vec{n}}\overrightarrow{M_0M_1}=-\frac{Ax_0+By_0+Cz_0+D}{\sqrt{A^2+B^2+C^2}}\\)
+         \\(\therefore d=|Prj_{\vec{n}}\overrightarrow{M_0M_1}|=\frac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}\\)
    3. 平面束
-      L 为直线, 经过 L 的所有平面称为平面束
-      设 \\(L: \begin{cases} A_1x+B_1y+C_1z+D_1=0 \\\ A_2x+B_2y+C_2z+D_2=0 \end{cases}\\)
-      过 L 的平面束为 \\(\pi: A_1x+B_1y+C_1z+D_1+\lambda(A_2x+B_2y+C_2z+D_2)=0\\)
-      即 \\(\pi: (A_1+A_2\lambda)x+(B_1+B_2\lambda)y+(C_1+C_2\lambda)z+(D_1+D_2\lambda)=0\\)
+      \\(L\\) 为直线, 经过 \\(L\\) 的所有平面称为平面束
+      设 \\(L:\begin{cases} A_1x+B_1y+C_1z+D_1=0 \\\ A_2x+B_2y+C_2z+D_2=0 \end{cases}\\)
+      过 \\(L\\) 的平面束为 \\(\pi:A_1x+B_1y+C_1z+D_1+\lambda(A_2x+B_2y+C_2z+D_2)=0\\)
+      \\(\hArr\pi:(A_1+A_2\lambda)x+(B_1+B_2\lambda)y+(C_1+C_2\lambda)z+(D_1+D_2\lambda)=0\\)
 
-## 空间曲面及方程
+### 空间曲面及方程
 
-\\(\Sigma: F(x, y, z)=0\\)
+\\(\Sigma:F(x,y,z)=0\\)
 
-### 柱面
-
-方程: \\(x^2+y^2=4\\)
-二维: 半径为2的圆
-三维: 到z轴的距离为2的点形成的曲面
-推导:
-TODO: 补充图片
-设 \\(\forall M(x, y, z)\in\Sigma ,\enspace T(0, 0, z)\\)
-\\(|MT|=2 \rArr \sqrt{(x-0)^2+(y-0)^2+(z-z)^2}=2 \rArr x^2+y^2=4\\)
-\\(\therefore \Sigma: x^2+y^2=4\\)
-
-1. \\(\Sigma: F(x, y)=0\\) 为母线平行于 z 轴的柱面
-2. \\(\Sigma: G(y, z)=0\\) 为母线平行于 x 轴的柱面
-3. \\(\Sigma: H(x, z)=0\\) 为母线平行于 y 轴的柱面
+1. 柱面
+   方程: \\(x^2+y^2=4\\)
+   二维: 半径为 2 的圆
+   三维: 到 \\(z\\) 轴的距离为 2 的点形成的曲面
+   推导:
+   TODO: 补充图片
+   设 \\(\forall M(x, y, z)\in\Sigma ,\enspace T(0, 0, z)\\)
+   \\(|MT|=2 \rArr \sqrt{(x-0)^2+(y-0)^2+(z-z)^2}=2 \rArr x^2+y^2=4\\)
+   \\(\therefore \Sigma: x^2+y^2=4\\)
+   
+   1. \\(\Sigma: F(x, y)=0\\) 为母线平行于 z 轴的柱面
+   2. \\(\Sigma: G(y, z)=0\\) 为母线平行于 x 轴的柱面
+   3. \\(\Sigma: H(x, z)=0\\) 为母线平行于 y 轴的柱面
 
 ### 旋转曲面
 
