@@ -374,15 +374,15 @@ tags:
       设 \\(D\\) 为有界闭区域, \\(f(x,y)\\) 在 \\(D\\) 上连续
       则 \\(\forall\delta\in[m,M]\\) , \\(\exist(\xi,\eta)\in D\\) 使 \\(f(\xi,\eta)=\delta\\)
 
-## 偏导数
+### 偏导数
 
 1. 定义
    设 \\(z=f(x,y)\enspace\\) (\\((x,y)\in D)\\) , \\(M_0(x_0,y_0)\in D\\)
    1. 偏增量
-      * \\(f(x,y)\\) 在 \\(M_0\\) 处关于 \\(x\\) 的偏增量: \\(\Delta z_x=f(x_0+\Delta x,y_0)-f(x_0,y_0)\enspace(=f(x,y_0)-f(x_0,y_0))\\)
-      * \\(f(x,y)\\) 在 \\(M_0\\) 处关于 \\(y\\) 的偏增量: \\(\Delta z_y=f(x_0, y_0+\Delta y)-f(x_0, y_0)\enspace(=f(x_0,y)-f(x_0,y_0))\\)
-      * \\(f(x,y)\\) 在 \\(M_0\\) 处的全增量: \\(\Delta z=f(x_0+\Delta x,y_0+\Delta y)-f(x_0,y_0)\enspace(=f(x,y)-f(x_0,y_0))\\)
-   3. 偏导数
+      * \\(f(x,y)\\) 在 \\(M_0\\) 处关于 \\(x\\) 的偏增量: \\(\Delta z_x=f(x_0+\Delta x,y_0)-f(x_0,y_0)=f(x,y_0)-f(x_0,y_0)\\)
+      * \\(f(x,y)\\) 在 \\(M_0\\) 处关于 \\(y\\) 的偏增量: \\(\Delta z_y=f(x_0, y_0+\Delta y)-f(x_0, y_0)=f(x_0,y)-f(x_0,y_0)\\)
+      * \\(f(x,y)\\) 在 \\(M_0\\) 处的全增量: \\(\Delta z=f(x_0+\Delta x,y_0+\Delta y)-f(x_0,y_0)=f(x,y)-f(x_0,y_0)\\)
+   2. 偏导数
       * 若 \\(\lim\limits_{\Delta x\to 0}\frac{\Delta z_x}{\Delta x}\\) 存在, 称 \\(f(x,y)\\) 在 \\(M_0\\) 处关于 \\(x\\) 可偏导,
         该极限称为 \\(f(x,y)\\) 在 \\(M_0\\) 处关于 \\(x\\) 的偏导数, 记 \\(f_x^\prime(x_0,y_0)\\) 或 \\(\frac{\partial z}{\partial x}|_{(x_0,y_0)}\\)
       * 若 \\(\lim\limits_{\Delta y\to 0}\frac{\Delta z_y}{\Delta y}\\) 存在, 称 \\(f(x,y)\\) 在 \\(M_0\\) 处关于 \\(y\\) 可偏导,
@@ -402,44 +402,43 @@ tags:
      若 \\(z=f(x,y)\\) 的二阶混合偏导数 \\(\frac{\partial^2z}{\partial x\partial y}\\)、\\(\frac{\partial^2z}{\partial y\partial x}\\) 皆连续,
      则 \\(\frac{\partial^2z}{\partial x\partial y}=\frac{\partial^2z}{\partial y\partial x}\\) , 即 \\(f_{xy}^{\prime\prime}=f_{yx}^{\prime\prime}\\)
 
-## 全微分
+### 全微分
 
-### 二元函数全微分定义
+1. 二元函数全微分定义
+   设 \\(z=f(x,y)\enspace\\) (\\((x,y)\in D\\)) , \\(M_0(x_0,y_0)\in D\\) ,
+   全增量 \\(\Delta z=f(x_0+\Delta x,y_0+\Delta y)-f(x_0,y_0)=f(x,y)-f(x_0,y_0)\\)
+   若 \\(\Delta z=A\Delta x+B\Delta y+\circ(\rho)\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}\\) (误差为两点距离的高阶无穷小)
+   称 \\(f(x,y)\\) 在 \\((x_0,y_0)\\) 处可全微, \\(A\Delta x+B\Delta y\\) 为 \\(f(x,y)\\) 在 \\((x_0,y_0)\\) 处的全微分, 记 \\(\mathrm{d}z|_{(x_0,y_0)}=A\mathrm{d}x+B\mathrm{d}y\\)
 
-设 \\(z=f(x, y) \enspace((x, y)\in D)\\) , \\(M_0(x_0, y_0)\in D\\), 全增量 \\(\Delta z=f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0)(=f(x, y)-f(x_0, y_0))\\)
-若 \\(\Delta z=A\Delta x+B\Delta y+\circ(\rho)\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}\\) (误差为两点距离的高阶无穷小)
-称 \\(f(x, y)\\) 在 \\((x_0, y_0)\\) 处可全微
-称 \\(A\Delta x+B\Delta y\\) 为 \\(f(x, y)\\) 在 \\((x_0, y_0)\\) 处的全微分, 记 \\(dz|_{(x_0, y_0)}=Adx+Bdy\\)
+   全微分: \\(\mathrm{d}z|_{(x_0,y_0)}=f_x^\prime(x_0,y_0)\mathrm{d}x+f_y^\prime(x_0,y_0)\mathrm{d}y=\frac{\partial z}{\partial x}\mathrm{d}x+\frac{\partial z}{\partial y}\mathrm{d}y\\)
+2. 性质
+   设 \\(z=f(x,y)\enspace\\) (\\((x, y)\in D\\)) , \\(M_0(x_0,y_0)\in D\\)
+   1. 若 \\(f(x,y)\\) 在 \\(M_0\\) 处可微, 则 \\(f(x,y)\\) 在 \\(M_0\\) 连续且可偏导, 反之不对
+   2. 可微充分条件: 若 \\(z=f(x,y)\\) 连续可偏导, 则 \\(f(x,y)\\) 可微
+   
+   例: \\(z=f(x,y)=|x|+|y|\\) 在 \\((0,0)\\) 连续, 证 \\(f(x,y)\\) 在 \\((0,0)\\) 不可微
+   证: \\(\lim\limits_{x\to 0}\frac{f(x,0)-f(0,0)}{x}=\lim\limits_{x\to 0}\frac{|x|}{x}\\) 不存在 \\(\rArr f(x,y)\\) 在 \\((0,0)\\) 对 \\(x\\) 不可偏导.
+   同理 \\(f(x,y)\\) 在 \\((0,0)\\) 不可偏导
+   \\(\therefore f(x,y)\\) 在 \\((0,0)\\) 不可微
 
-结合偏导数的内容可得:
-\\(dz|_{(x_0, y_0)}=f_x^'(x_0, y_0)dx+f_y^'(x_0, y_0)dy=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy\\)
+### 多元复合函数求导法则
 
-### 结论
-
-设 \\(z=f(x, y) \enspace((x, y)\in D)\\) , \\(M_0(x_0, y_0)\in D\\)
-1. 若 \\(f(x, y)\\) 在 \\(M_0\\) 处可微, 则 \\(f(x, y)\\) 在 \\(M_0\\) 连续且可偏导, 反之不对
-2. (可微充分条件) 若 \\(z=f(x, y)\\) 连续可偏导(即导数是连续的) , 则 \\(f(x, y)\\) 可微
-
-## 多元复合函数求导法则
-
-1. 情形一: \\(z=f(u, v) \enspace\begin{cases} u=\varphi(t) \\\ v=\psi(t) \end{cases} \rArr z=f[\varphi(t), \psi(t)]\\)
-   z=f(u, v) 关于 u,v 连续可偏导, \\(\varphi(t) , \psi(t)\\) 可导
-   则 \\(z=f[\varphi(t), \psi(t)]\\) 可导,
-   且 \\(\frac{dz}{dt}=\frac{\partial f}{\partial u}\cdot\frac{du}{dt}+\frac{\partial f}{\partial v}\cdot\frac{dv}{dt}=f_{u}'\cdot\varphi(t)'+f_{v}'\cdot\psi'(t)\\)
-   证明:
-   \\(\Delta u=\varphi(t+\Delta t)-\varphi(t)\\)
-   \\(\Delta v=\psi(t+\Delta t)-\psi(t)\\)
-   \\(\because z=f(u, v)\\) 关于 u,v 连续可偏导
-   \\(\therefore z=f(u, v)\\) 可微
-   \\(\Delta z=\frac{\partial f}{\partial u}\Delta u+\frac{\partial f}{\partial v}\Delta v+\circ(\rho)\\) , \\(\rho=\sqrt{(\Delta u)^2+(\Delta v)^2}\\)
-   \\(\rArr \frac{\Delta z}{\Delta t}=\frac{\partial f}{\partial u}\frac{\Delta u}{\Delta t}+\frac{\partial f}{\partial v}\frac{\Delta v}{\Delta t}+\frac{\circ(\rho)}{\Delta t}\\)
-   \\(\rArr \frac{dz}{dt}=\frac{\partial f}{\partial u}\cdot\frac{du}{dt}+\frac{\partial f}{\partial v}\cdot\frac{dv}{dt}\\)
-2. 情形二: \\(z=f(u, v) \enspace\begin{cases} u=\varphi(x, y) \\\ v=\psi(x, y) \end{cases} \rArr z=f[\varphi(x, y), \psi(x,  y)]\\)
-   z=f(u, v) 关于 u,v 连续可偏导, \\(\begin{cases} u=\varphi(x, y) \\\ v=\psi(x, y) \end{cases}\\) 对 (x, y) 可偏导
-   则 \\(z=f[\varphi(x, y), \psi(x, y)]\\) 关于 x, y 可偏导,
-   且
-   \\(\frac{\partial z}{\partial x}=\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial x}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial x}\\) ,
-   \\(\frac{\partial z}{\partial y}=\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial y}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial y}\\)
+* 情形一: \\(z=f(u,v)\\) , \\(\begin{cases} u=\varphi(t) \\\ v=\psi(t) \end{cases}\rArr z=f[\varphi(t),\psi(t)]\\)
+  若 \\(z=f(u,v)\\) 关于 \\(u\\)、\\(v\\) 连续可偏导, \\(\varphi(t)\\) , \\(\psi(t)\\) 可导, 则 \\(z=f[\varphi(t),\psi(t)]\\) 可导,
+  且 \\(\frac{\mathrm{d}z}{\mathrm{d}t}=\frac{\partial f}{\partial u}\cdot\frac{\mathrm{d}u}{\mathrm{d}t}+\frac{\partial f}{\partial v}\cdot\frac{\mathrm{d}v}{\mathrm{d}t}=f_{u}^\prime\cdot\varphi(t)^\prime+f_{v}^\prime\cdot\psi^\prime(t)\\)
+  * 证明:
+    (\\(\Delta u=\varphi(t+\Delta t)-\varphi(t)\\) , \\(\Delta v=\psi(t+\Delta t)-\psi(t)\\))
+    \\(\because z=f(u,v)\\) 关于 \\(u\\)、\\(v\\) 连续可偏导
+    \\(\therefore z=f(u,v)\\) 可微
+    \\(\therefore\Delta z=\frac{\partial f}{\partial u}\Delta u+\frac{\partial f}{\partial v}\Delta v+\circ(\rho)\\) , \\(\rho=\sqrt{(\Delta u)^2+(\Delta v)^2}\\)
+    \\(\rArr\frac{\Delta z}{\Delta t}=\frac{\partial f}{\partial u}\frac{\Delta u}{\Delta t}+\frac{\partial f}{\partial v}\frac{\Delta v}{\Delta t}+\frac{\circ(\rho)}{\Delta t}\\)
+    \\(\rArr\frac{dz}{dt}=\frac{\partial f}{\partial u}\cdot\frac{du}{dt}+\frac{\partial f}{\partial v}\cdot\frac{dv}{dt}=f_{u}^\prime\cdot\varphi(t)^\prime+f_{v}^\prime\cdot\psi^\prime(t)\\)
+* 情形二: \\(z=f(u,v)\\) , \\(\begin{cases} u=\varphi(x,y) \\\ v=\psi(x,y) \end{cases}\rArr z=f[\varphi(x,y),\psi(x,y)]\\)
+  \\(z=f(u,v)\\) 关于 \\(u\\)、\\(v\\) 连续可偏导, \\(\begin{cases} u=\varphi(x,y) \\\ v=\psi(x,y) \end{cases}\\) 对 \\((x,y)\\) 可偏导
+  则 \\(z=f[\varphi(x,y),\psi(x,y)]\\) 关于 \\(x\\)、\\(y\\) 可偏导,
+  且
+  \\(\frac{\partial z}{\partial x}=\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial x}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial x}\\)
+  \\(\frac{\partial z}{\partial y}=\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial y}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial y}\\)
 
 ## 隐函数求导法则
 
