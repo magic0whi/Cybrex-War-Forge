@@ -278,56 +278,65 @@ tags:
 
 ### 空间曲面及方程
 
-\\(\Sigma:F(x,y,z)=0\\)
+形为 \\(\Sigma:F(x,y,z)=0\\) 的方程, 表达的是一个曲面
 
 1. 柱面
-   方程: \\(x^2+y^2=4\\)
-   二维: 半径为 2 的圆
-   三维: 到 \\(z\\) 轴的距离为 2 的点形成的曲面
-   推导:
-   TODO: 补充图片
-   设 \\(\forall M(x, y, z)\in\Sigma ,\enspace T(0, 0, z)\\)
-   \\(|MT|=2 \rArr \sqrt{(x-0)^2+(y-0)^2+(z-z)^2}=2 \rArr x^2+y^2=4\\)
-   \\(\therefore \Sigma: x^2+y^2=4\\)
+   1. \\(\Sigma:F(x,y)=0\\) 为母线平行于 \\(z\\) 轴的柱面
+   2. \\(\Sigma:G(y,z)=0\\) 为母线平行于 \\(x\\) 轴的柱面
+   3. \\(\Sigma:H(x,z)=0\\) 为母线平行于 \\(y\\) 轴的柱面
    
-   1. \\(\Sigma: F(x, y)=0\\) 为母线平行于 z 轴的柱面
-   2. \\(\Sigma: G(y, z)=0\\) 为母线平行于 x 轴的柱面
-   3. \\(\Sigma: H(x, z)=0\\) 为母线平行于 y 轴的柱面
+   例: 同一个方程 \\(x^2+y^2=4\\) , 在二维坐标系中是一个半径为 2 的圆(称作母线); 在三维坐标系中在 \\(z\\) 轴无限延申, 成为了到 \\(z\\) 轴的距离为 2 的点形成的曲面
 
-### 旋转曲面
+   {% asset_img 23.png %}
+   设 \\(T(0,0,z)\\) 为 \\(z\\) 轴上一点, \\(\forall M(x,y,z)\in\Sigma\\)
+   有 \\(|MT|=2\rArr\sqrt{(x-0)^2+(y-0)^2+(z-z)^2}=2\rArr x^2+y^2=4\\)
+   \\(\therefore\Sigma:x^2+y^2=4\\)
 
-设: \\(L:\begin{cases} F(x, y)=0 \\\ z=0 \end{cases}\\)
-1. TODO: 补充图片
-   设 L 绕 x 轴旋转一周形成的曲面为 \\(\Sigma_x\\)
-   设 \\(\forall M(x, y, z)\in\Sigma_x ,\enspace M_0(x, y_0, 0)\in L,\enspace T(x, 0, 0)\\)
-   由 \\(|M_0T|=|MT|\\) 得
-   \\(\sqrt{y_0^2}=\sqrt{y^2+z^2}\\)
-   \\(y_0=\pm\sqrt{y^2+z^2}\\)
-   \\(\because M_0(x, y_0, 0)\in L\\)
-   \\(\therefore f(x, y_0)=0\\)
-   \\(\therefore \Sigma_x: f(x, \pm\sqrt{y^2+z^2})=0\\)
-2. 设 L 绕 y 轴旋转一周形成的曲面为 \\(\Sigma_y\\)
-   (和绕 x 轴同理)
-   \\(\Sigma_y: f(\pm\sqrt{x^2+z^2}, y)=0\\)
+   * 柱面 \\(\Sigma:F(x,y)=0\\) 在 \\(xOy\\) 面内的投影曲线为
+     \\(L:\begin{cases} F(x,y)=0 \\\ z=0 \end{cases}\\)
 
-## 空间曲线及方程
+     {% asset_img 25.png %}
+2. 旋转曲面
+   设 \\(L:\begin{cases} F(x,y)=0 \\\ z=0 \end{cases}\\)
+   1. 设 \\(L\\) 绕 \\(x\\) 轴旋转一周形成的曲面为 \\(\Sigma_x\\)
 
-### 空间曲线的形式
+      {% asset_img 24.png %}
+      \\(\forall M(x,y,z)\in\Sigma_x\\) , \\(M_0(x,y_0,0)\in L\\) , \\(T(x, 0, 0)\\)
+      由 \\(|M_0T|=|MT|\\) 得
+      \\(\sqrt{(x-x)^2+(y_0-0)^2+(0-0)^2}=\sqrt{(x-x)^2+(y-0)^2+(z-0)^2}\\)
+      \\(\hArr\sqrt{y_0^2}=\sqrt{y^2+z^2}\\)
+      \\(\hArr y_0=\pm\sqrt{y^2+z^2}\\)
+      \\(\because M_0\in L\\)
+      \\(\therefore F(x,y_0)=0\\)
+      \\(\therefore\Sigma_x:F(x,\pm\sqrt{y^2+z^2})=0\\)
+   2. 设 \\(L\\) 绕 \\(y\\) 轴旋转一周形成的曲面为 \\(\Sigma_y\\)
+      \\(\Sigma_y:f(\pm\sqrt{x^2+z^2},y)=0\\) (参考绕 \\(x\\) 轴)
 
-1. 一般形式 TODO: 补充图片
-   \\(L: \begin{cases} F(x, y, z)=0 \\\ G(x, y, z)=0 \end{cases}\\\)
-2. 参数式
-   \\(L: \begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases}\\)
+### 空间曲线及方程
 
-### 曲线的特殊情形 -- 直线
+1. 空间曲线的形式
+   1. 一般形式
+      
+      {% asset_img 26.png %}
+      \\(L:\begin{cases} F(x,y,z)=0 \\\ G(x,y,z)=0 \end{cases}\\)
+   2. 参数式
+      \\(L:\begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases}\\)
+      如:
+      \\(L:\begin{cases} x^2+y^2=1 \\\ x+y-z-2=0 \end{cases}\rArr\\) 化为参数式 \\(L:\begin{cases} x=\cos t \\\ y=\sin t \\\ z=\sin t+\cos t-2 \end{cases}\\)
 
-参见 [空间直线](#空间直线)
-
-### 投影直线
-
-TODO: 补充图片(视频中还有阴影, 笔记上没画)
-设 \\(L: \begin{cases} F(x, y, z)=0 \\\ G(x, y, z)=0 \end{cases}\\)
-L向 xOy 面铅直投影得到投影曲线 \\(L_0\\)
-
-由 \\(\begin{cases} F(x, y, z)=0 \\\ G(x, y, z)=0 \end{cases} \xRightarrow{消\large z} H(x, y)=0\\)
-\\(L_0 \begin{cases} H(x, y)=0 \\\ z=0 \end{cases}\\)
+      {% asset_img 27.png %}
+2. 曲线的特殊情形--直线
+   1. 点向式(对称式): \\(L:\frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}\\)
+   2. 参数式: \\(\frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}=t\\) 则
+      \\(L:\begin{cases} x=mt+x_0 \\\ y=nt+y_0 \\\ z=pt+z_0 \end{cases}\\)
+   3. 一般式
+      \\(L:\begin{cases} A_1x+B_1y+C_1z+D_1=0 \\\ A_2x+B_2y+C_2z+D_2=0 \end{cases}\\)
+      
+      {% asset_img 28.png %}
+3. 投影曲线
+   
+   {% asset_img 29.png %}
+   设 \\(L:\begin{cases} F(x,y,z)=0 \\\ G(x,y,z)=0 \end{cases}\\)
+   曲线 \\(L\\) 向 \\(xOy\\) 面铅直投影得到投影曲线 \\(L_0\\)
+   由 \\(\begin{cases} F(x,y,z)=0 \\\ G(x,y,z)=0 \end{cases}\xRightarrow{\text{消}\large z}H(x,y)=0\\)
+   得到 \\(L_0:\begin{cases} H(x,y)=0 \\\ z=0 \end{cases}\\)
