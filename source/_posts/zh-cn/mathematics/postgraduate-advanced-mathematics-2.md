@@ -9,6 +9,7 @@ tags:
 
 同济高等数学笔记整合(下)
 基于 [wmathor/Postgraduate-Advanced-Mathematics](https://github.com/wmathor/Postgraduate-Advanced-Mathematics)
+建议先看一看线性代数的行列式
 补充了级数部分
 
 <!-- more -->
@@ -440,143 +441,261 @@ tags:
   \\(\frac{\partial z}{\partial x}=\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial x}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial x}\\)
   \\(\frac{\partial z}{\partial y}=\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial y}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial y}\\)
 
-## 隐函数求导法则
+### 隐函数求导法则
 
-### 一个约束条件的情形
-
-隐函数: f(x, y)=0
-隐函数显式化 \\(f(x, y)=0 \rArr y=\varphi(x)\\)
-
-1. 定理一:
-   设 \\(F(x, y)\\) 在点 \\(M_0(x_0, y_0)\\) 邻域内连续可偏导且 \\(F(x_0, y_0)=0\\) ,
-   若 \\(F_y^'(x_0, y_0)\neq0 \enspace\\) (表示y方向上连续),
-   则由 \\(F(x, y)=0\\) 在 \\(M_0\\) 邻域内确定唯一连续可导函数 \\(y=f(x)\\) ,
-   使 \\(y_0=f(x_0) , \dfrac{dy}{dx}=-\dfrac{F_x'}{F_y'}\\)
-   证明:
-   \\(F(x, y)=0\\) , 把 y 看成 x 的函数 \\(\varphi(x)\\) , 则 \\(F(x, \varphi(x))=0\\)
-   两边对 x 求导, \\(F_x^'+F_y^'\frac{dy}{dx}=0 \rArr \frac{dy}{dx}=-\frac{F_x'}{F_y'}\\)
-2. 定理二:
-   设 \\(F(x, y, z)\\) 在 \\(M_0(x_0, y_0, z_0)\\) 邻域内连续可偏导且 \\(F(x_0, y_0, z_0)=0\\)
-   若 \\(F_z^'(x_0, y_0, z_0)\neq0 \enspace\\) (表示z方向上连续),
-   则由 \\(F(x, y, z)=0\\) 在 \\(M_0\\) 邻域内确定唯一连续可偏导函数 \\(z=\varphi(x, y)\\) ,
-   使 \\(z_0=\varphi(x_0, y_0)\\) , \\(\dfrac{\partial z}{\partial x}=-\dfrac{F_x'}{F_z'}\\) , \\(\dfrac{\partial z}{\partial y}=-\dfrac{F_y'}{F_z'}\\)
-   证明:
-   \\(F(x, y, z)=0 \rArr z=\varphi(x, y)\\) , 把 z 看成 x 的函数 \\(\varphi(x)\\) , 则 \\(F(x, y, \varphi(x))=0\\)
-   两边对 x 求偏导, \\(F_x'+F_z'\frac{\partial z}{\partial x}=0 \rArr \frac{\partial z}{\partial x}=-\frac{F_x'}{F_z'} \enspace\\)
-   两边对 y 求偏导, \\(F_y'+F_z'\frac{\partial z}{\partial y}=0 \rArr \frac{\partial z}{\partial y}=-\frac{F_y'}{F_z'}\\)
-
-## 多元函数微分学的几何应用
-
-### 空间曲线
-
-(空间曲线有切线和法平面)
-
-\\(M_0(x_0, y_0, z_0)\in L\\)
-\\(M(x_0+\Delta x, y_0+\Delta y, z_0+\Delta z)\in L\\)
-\\(\overrightarrow{M_0M}=\\{\Delta x, \Delta y, \Delta z\\}\\)
-直线 \\(\overline{M_0M}: \frac{x-x_0}{\Delta x}=\frac{y-y_0}{\Delta y}=\frac{z-z_0}{\Delta z}\\)
-
-1. 情况一 \\(L: \begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases} , t=t_0 \rArr M_0(x_0, y_0, z_0)\in L\\)
-   \\(t=t_0+\Delta t \rArr M(x_0+\Delta x, y_0+\Delta y, z_0+\Delta z)\in L\\)
-   \\(\overline{M_0M}=\frac{x-x_0}{\Delta x}=\frac{y-y_0}{\Delta y}=\frac{z-z_0}{\Delta z} \hArr \frac{x-x_0}{\frac{\Delta x}{\Delta t}}=\frac{y-y_0}{\frac{\Delta y}{\Delta t}}=\frac{z-z_0}{\frac{\Delta z}{\Delta t}}\\)
-   当 \\(\Delta t\to0\\) 时, \\(\overline{M_0M}\\) 即为切线
-   \\(\therefore 切线: \frac{x-x_0}{\varphi'(t_0)}=\frac{y-y_0}{\psi'(t_0)}=\frac{z-z_0}{\omega'(t_0)}\\)
-2. 情况二 \\(L: \begin{cases} F(x, y, z)=0 \\\ G(x, y, z)=0 \end{cases} , M_0(x_0, y_0, z_0)\in L\\)
-   \\(\vec{T}=\\{F_y'G_z'-F_z'G_y', F_z'G_x'-F_x'G_z', F_x'G_y'-F_y'G_x'\\}\\)
-   若将 \\(M_0\\) 代入 \\(\vec{T}=\\{a, b, c\\}\\) , 则
-   切线 \\(\frac{x-x_0}{a}=\frac{y-y_0}{b}=\frac{z-z_0}{c}\\)
-   法平面 \\(a(x-x_0)+b(y-y_0)+c(z-z_0) \enspace\\) (平面的点法式方程, 法平面指在该点垂直于切线的平面)
-
-### 空间曲面
-
-(曲面有切平面和法线)
-
-求空间曲面上某一点的法向量:
-曲面 \\(\Sigma: F(x, y, z)=0 \enspace M_0(x_0, y_0, z_0)\in\Sigma\\)
-在 \\(\Sigma\\) 内过 \\(M_0\\) 任取一曲线 L
-\\(L: \begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases} \enspace M_0 \harr t=t_0\\)
-\\(\because L\subset\Sigma\\)
-\\(\therefore F[\varphi(t), \psi(t), \omega(t)]=0\\)
-两边对 t 求导得 \\(F_x'[\varphi(t), \psi(t), \omega(t)]\cdot\varphi'(t)+F_y'[\varphi(t), \psi(t), \omega(t)]\psi'(t)+F_z'[\varphi(t), \psi(t), \omega(t)]\omega'(t)=0 \enspace\\) (使用多元复合函数求导情形一)
-将 \\(t=t_0\\) 代入
-\\(F_x'(x_0, y_0, z_0)\varphi'(t_0)+F_y'(x_0, y_0, z_0)\psi'(t_0)+F_z'(x_0, y_0, z_0)\omega'(t_0)=0\\)
-可化为两个向量点乘 \\(\\{F_x', F_y', F_z'\\}_{M_0}\cdot\\{\varphi'(t_0), \psi'(t_0), \omega'(t_0)\\}=0\\)
-
-因此法向量 \\(\vec{n}=\\{F_x', F_y', F_z'\\}_{M_0}\\)
-
-## 方向导数与梯度
-
-### 方向导数
-
-1. 定义
-   1. 二元函数
-      TODO: 补充图片
-      设 \\(z=f(x, y) \enspace((x, y)\in D)\\) , \\(M_0(x_0, y_0)\in D\\)
-      在 xOy 面内过 \\(M_0\\) 作射线 L,
-      取 \\(M(x_0+\Delta x, y_0+\Delta y)\in L\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}\\)
-      \\(\Delta z=f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0)\\)
-      若 \\(\lim\limits_{\rho\to0}\frac{\Delta z}{\rho}\\) 存在,
-      称此极限为函数 \\(z=f(x, y)\\) 在 \\(M_0\\) 处沿射线 L 的方向导数, 记 \\(\dfrac{\partial z}{\partial L}|_{M_0}\\)
-   2. 三元函数
-      设 \\(u=f(x, y, z) \enspace((x, y, z)\in\Omega)\\) , \\(M_0(x_0, y_0, z_0)\in\Omega\\)
-      过 \\(M_0\\) 作射线 L,
-      取 \\(M(x_0+\Delta x, y_0+\Delta y, z_0+\Delta z)\in L\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2+(\Delta z)^2}\\)
-      \\(\Delta u=f(x_0+\Delta x, y_0+\Delta y, z_0+\Delta z)-f(x_0, y_0, z_0)\\)
-      若 \\(\lim\limits_{\rho\to0}\frac{\Delta u}{p}\\) 存在, 称此极限为 \\(u=f(x, y, z)\\) 在 \\(M_0\\) 处沿射线 L 的方向导数, 记 \\(\frac{\partial u}{\partial L}|_{M_0}\\)
-2. 方向导数计算方法
-   1. \\(z=f(x, y)\\) 在 \\(M_0(x_0, y_0)\\) 可微,
-      TODO:补充图片
-      在 xOy 面内过 \\(M_0\\) 作射线 L , 方向角为 \\(\alpha, \beta\\) ,
-      则 \\(\frac{\partial z}{\partial L}|_{M_0}=f_x'(x_0, y_0)\cdot\cos\alpha+f_y'(x_0, y_0)\cos\beta\\)
-      
+1. 一个约束条件的情形
+   隐函数显式化: \\(f(x,y)=0\rArr y=\varphi(x)\\)
+   * 定理一:
+     设 \\(F(x,y)\\) 在点 \\(M_0(x_0,y_0)\\) 邻域内连续可偏导且 \\(F(x_0,y_0)=0\\) ,
+     若 \\(F_y^\prime(x_0,y_0)\neq 0\enspace\\) (即 \\(y\\) 方向上连续),
+     则由 \\(F(x,y)=0\\) 在 \\(M_0\\) 邻域内确定唯一连续可导函数 \\(y=f(x)\\) 使 \\(y_0=f(x_0)\\) ,
+     则 \\(\dfrac{\mathrm{d}y}{\mathrm{d}x}=-\dfrac{F_x^\prime}{F_y^\prime}\\)
+     证明:
+     \\(F(x,y)=0\\) , 把 \\(y\\) 看成 \\(x\\) 的函数 \\(f(x)\\) , 则 \\(F(x,f(x))=0\\)
+     两边对 \\(x\\) 求导, \\(F_x^\prime+F_y^\prime f^\prime(x)=F_x^\prime+F_y^\prime\frac{\mathrm{d}y}{\mathrm{d}x}=0\rArr\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{F_x^\prime}{F_y^\prime}\\)
+   * 定理二:
+      设 \\(F(x,y,z)\\) 在 \\(M_0(x_0,y_0,z_0)\\) 邻域内连续可偏导且 \\(F(x_0,y_0,z_0)=0\\)
+      若 \\(F_z^\prime(x_0,y_0,z_0)\neq 0\enspace\\) (即 \\(z\\) 方向上连续),
+      则由 \\(F(x,y,z)=0\\) 在 \\(M_0\\) 邻域内确定唯一连续可偏导函数 \\(z=\varphi(x,y)\\) 使 \\(z_0=\varphi(x_0,y_0)\\) ,
+      则 \\(\dfrac{\partial z}{\partial x}=-\dfrac{F_x^\prime}{F_z^\prime}\\) , \\(\dfrac{\partial z}{\partial y}=-\dfrac{F_y^\prime}{F_z^\prime}\\)
       证明:
-      xOy 面内直线 L 的方向向量为 \\(\\{\cos\alpha, \cos\beta\\} \enspace\\) (向量的方向余弦)
-      可得直线 L 的参数方程 \\(L: \begin{cases} x=t\cos\alpha \\\ y=t\cos\beta \end{cases}\\)
-      代入 f(x, y) 关于 t 求导得 \\(\frac{\partial z}{\partial L}=f_L'(t\cos\alpha, t\cos\beta)=f_{x}'\cdot(t\cos\alpha)'+f_{y}\cdot(t\cos\beta)'=f_x'\cdot\cos\alpha+f_y'\cdot\cos\beta\\)
-   2. \\(u=f(x, y, z\\) 在 \\(M_0(x_0, y_0, z_0)\\) 可微,
-      过 \\(M_0\\) 作射线 L , 方向角为 \\(\alpha, \beta, \gamma\\) ,
-      则 \\(\frac{\partial u}{\partial L}|\_{M\_0}=\frac{\partial u}{\partial x}|\_{M\_0}\cos\alpha+\frac{\partial u}{\partial y}|\_{M\_0}\cos\beta+\frac{\partial u}{\partial z}|\_{M\_0}\cos\gamma\\)
+      \\(F(x,y,z)=0\rArr z=\varphi(x,y)\\)
+      两边对 \\(x\\) 求偏导, \\(F_x^\prime+F_z^\prime\frac{\partial z}{\partial x}=0\rArr\frac{\partial z}{\partial x}=-\frac{F_x^\prime}{F_z^\prime}\\)
+      两边对 \\(y\\) 求偏导, \\(F_y^\prime+F_z^\prime\frac{\partial z}{\partial y}=0\rArr\frac{\partial z}{\partial y}=-\frac{F_y^\prime}{F_z^\prime}\\)
 
-### 梯度
+### 多元函数微分学的几何应用
 
-\\(u=f(x, y, z)\\) , \\(M_0(x_0, y_0, z_0)\in\Omega\\) , 过 \\(M_0\\) 作射线 L, 方向角为 \\(\alpha, \beta, \gamma\\)
-\\(\frac{\partial u}{\partial L}|\_{M\_0}=\frac{\partial u}{\partial x}|\_{M\_0}\cos\alpha+\frac{\partial u}{\partial y}|\_{M\_0}\cos\beta+\frac{\partial u}{\partial z}|\_{M\_0}\cos\gamma\\)
-上式可分离为两个向量点乘:
-\\(\frac{\partial u}{\partial L}|\_{M\_0}=\\{\frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial u}{\partial z}\\}|\_{M\_0}\cdot\\{\cos\alpha, \cos\beta, \cos\gamma\\}\\)
+1. 空间曲线(求曲线切线和法平面)
+   
+   {% asset_img 32.png %}
+   设 \\(M_0(x_0,y_0,z_0)\in L\\) , \\(M(x_0+\Delta x,y_0+\Delta y,z_0+\Delta z)\in L\\)
+   \\(\overrightarrow{M_0M}=\\{\Delta x,\Delta y,\Delta z\\}\\)
+   直线 \\(\overline{M_0M}:\frac{x-x_0}{\Delta x}=\frac{y-y_0}{\Delta y}=\frac{z-z_0}{\Delta z}\\)
+   * 情况一 \\(L:\begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases}\\) , \\(t=t_0\rArr M_0(x_0,y_0,z_0)\in L\\)
+     \\(t=t_0+\Delta t\rArr M(x_0+\Delta x,y_0+\Delta y,z_0+\Delta z)\in L\\)
+     \\(\overline{M_0M}=\frac{x-x_0}{\Delta x}=\frac{y-y_0}{\Delta y}=\frac{z-z_0}{\Delta z}\hArr\frac{x-x_0}{\frac{\Delta x}{\Delta t}}=\frac{y-y_0}{\frac{\Delta y}{\Delta t}}=\frac{z-z_0}{\frac{\Delta z}{\Delta t}}\\)
+     当 \\(\Delta t\to 0\\) 时, \\(\overline{M_0M}\\) 即为切线
+     \\(\therefore\\) 切线: \\(\frac{x-x_0}{\varphi^\prime(t_0)}=\frac{y-y_0}{\psi^\prime(t_0)}=\frac{z-z_0}{\omega^\prime(t_0)}\\) ,
+     曲线方向向量 \\(\vec{T}=\\{\varphi^\prime,\psi^\prime,\omega^\prime\\}\\) ,
+     法平面 \\(\varphi^\prime(x-x_0)+\psi^\prime(y-y_0)+\omega^\prime(z-z_0)=0\\)
+   * 情况二 \\(L:\begin{cases} F(x,y,z)=0 \\\ G(x,y,z)=0 \end{cases}\\) , \\(M_0(x_0,y_0,z_0)\in L\\)
+     曲线方向向量 \\(\vec{T}=\\{\begin{vmatrix} F_y^\prime & F_z^\prime \\\ G_y^\prime & G_z^\prime \end{vmatrix},\begin{vmatrix} F_z^\prime & F_x^\prime \\\ G_z^\prime & G_x^\prime \end{vmatrix},\begin{vmatrix} F_x^\prime & F_y^\prime \\\ G_x^\prime & G_y^\prime \end{vmatrix}\\}\\)
+     接下来根据切线方向向量和 \\(M_0\\) 就可以得到切线和法平面方程(参考情况一)
+2. 空间曲面(求曲面切平面和法线)
+   求空间曲面上某一点的法向量:
+   设曲面 \\(\Sigma:F(x,y,z)=0\\) , \\(M_0(x_0,y_0,z_0)\in\Sigma\\)
+   在 \\(\Sigma\\) 内过 \\(M_0\\) 任取一曲线 \\(L:\begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases}\\) , \\(M_0\harr t=t_0\\)
+   \\(\because L\subset\Sigma\\)
+   \\(\therefore F[\varphi(t),\psi(t),\omega(t)]=0\\)
+   两边对 \\(t\\) 求导:
+   \\(F_x^\prime[\varphi(t),\psi(t),\omega(t)]\cdot\varphi^\prime(t)+F_y^\prime[\varphi(t),\psi(t),\omega(t)]\psi^\prime(t)+F_z^\prime[\varphi(t),\psi(t),\omega(t)]\omega^\prime(t)=0\enspace\\) (多元复合函数求导情形一)
+   将 \\(t=t_0\\) 代入:
+   \\(F_x^\prime(x_0,y_0,z_0)\varphi^\prime(t_0)+F_y^\prime(x_0,y_0,z_0)\psi^\prime(t_0)+F_z^\prime(x_0,y_0,z_0)\omega^\prime(t_0)=0\\)
+   可拆为两个向量点乘: \\(\\{F_x^\prime,F_y^\prime,F_z^\prime\\}_{M_0}\cdot\\{\varphi^\prime(t_0),\psi^\prime(t_0),\omega^\prime(t_0)\\}=0\\)
+   则法向量 \\(\vec{n}=\\{F\_x^\prime,F\_y^\prime,F\_z^\prime\\}\_{M\_0}\\) (后者是曲线在点 \\(M_0\\) 的方向向量, 那么与之垂直的前者就是法向量了)
 
-这两个向量中前者称作梯度, 即函数u的梯度:
-\\(\text{grad}u=\\{\frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial u}{\partial z}\\}|\_{M\_0}\\)
+### 方向导数与梯度
 
-后者是与 L 同向的单位向量, 设其为 \\(\vec{e}\\)
-则 \\(\frac{\partial u}{\partial L}|\_{M\_0}=\text{grad}u\cdot\vec{e}=\sqrt{(\frac{\partial u}{\partial x})^2+(\frac{\partial u}{\partial y})^2+(\frac{\partial u}{\partial z})^2}\cdot1\cdot\cos\theta \enspace\\) (\\(\theta\\) 为梯度u 与 \\(\vec{e}\\) 间的夹角)
-由该式可知当 \\(\cos\theta=1\\) , 即 \\(\theta=0\\) 时, \\(\frac{\partial u}{\partial L}|\_{M\_0}\\) 取最大值, 即这个点方向导数取最大值
-因此**梯度的方向即函数增大速度最快的方向, 或方向导数取最大值的方向**
+1. 方向导数
+   1. 定义
+      * 二元函数
+         
+        {% asset_img 33.png %}
+        {% asset_img 34.png %}
+        设 \\(z=f(x,y)\enspace\\) (\\((x,y)\in D\\)) , \\(M_0(x_0,y_0)\in D\\)
+        在 \\(xOy\\) 面内过 \\(M_0\\) 作射线 \\(L\\) ,
+        取 \\(M(x_0+\Delta x,y_0+\Delta y)\in L\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}\\)
+        \\(\Delta z=f(x_0+\Delta x,y_0+\Delta y)-f(x_0,y_0)\\)
+        若 \\(\lim\limits_{\rho\to 0}\frac{\Delta z}{\rho}\\) 存在, 称此极限为函数 \\(z=f(x,y)\\) 在 \\(M_0\\) 处沿射线 \\(L\\) 的方向导数, 记 \\(\frac{\partial z}{\partial L}|_{M_0}\\)
+      * 三元函数
+        设 \\(u=f(x,y,z)\enspace\\) (\\((x,y,z)\in\Omega\\)) , \\(M_0(x_0,y_0,z_0)\in\Omega\\)
+        过 \\(M_0\\) 作射线 \\(L\\),
+        取 \\(M(x_0+\Delta x,y_0+\Delta y,z_0+\Delta z)\in L\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2+(\Delta z)^2}\\)
+        \\(\Delta u=f(x_0+\Delta x,y_0+\Delta y,z_0+\Delta z)-f(x_0,y_0,z_0)\\)
+        若 \\(\lim\limits_{\rho\to 0}\frac{\Delta u}{p}\\) 存在, 称此极限为 \\(u=f(x,y,z)\\) 在 \\(M_0\\) 处沿射线 \\(L\\) 的方向导数, 记 \\(\frac{\partial u}{\partial L}|_{M_0}\\)
+   2. 方向导数计算方法
+      * 二元函数
+        \\(z=f(x,y)\\) 在 \\(M_0(x_0,y_0)\\) 可微,
+         
+        {% asset_img 35.png %}
+        在 \\(xOy\\) 面内过 \\(M_0\\) 作射线 \\(L\\) , 方向角为 \\(\alpha\\)、\\(\beta\\) ,
+        则 \\(\frac{\partial z}{\partial L}|_{M_0}=f_x^\prime(x_0,y_0)\cdot\cos\alpha+f_y^\prime(x_0,y_0)\cos\beta\\)
+      * 三元函数
+        \\(u=f(x, y, z)\\) 在 \\(M_0(x_0, y_0, z_0)\\) 可微,
+        过 \\(M_0\\) 作射线 \\(L\\) , 方向角为 \\(\alpha\\)、\\(\beta\\)、\\(\gamma\\) ,
+        则 \\(\frac{\partial u}{\partial L}|\_{M\_0}=\frac{\partial u}{\partial x}|\_{M\_0}\cos\alpha+\frac{\partial u}{\partial y}|\_{M\_0}\cos\beta+\frac{\partial u}{\partial z}|\_{M\_0}\cos\gamma\\)
+2. 梯度
+   \\(u=f(x,y,z)\\) , \\(M_0(x_0,y_0,z_0)\in\Omega\\) , 过 \\(M_0\\) 作射线 \\(L\\) , 方向角为 \\(\alpha\\)、\\(\beta\\)、\\(\gamma\\)
+   则有方向导数 \\(\frac{\partial u}{\partial L}|\_{M\_0}=\frac{\partial u}{\partial x}|\_{M\_0}\cos\alpha+\frac{\partial u}{\partial y}|\_{M\_0}\cos\beta+\frac{\partial u}{\partial z}|\_{M\_0}\cos\gamma\\)
+   上式可分离为两个向量点乘:
+   \\(\frac{\partial u}{\partial L}|\_{M\_0}=\\{\frac{\partial u}{\partial x},\frac{\partial u}{\partial y},\frac{\partial u}{\partial z}\\}|\_{M\_0}\cdot\\{\cos\alpha,\cos\beta,\cos\gamma\\}\\)
+   这两个向量中前者称作梯度, 即函数 \\(u\\) 的梯度: \\(\nabla u=\\{\frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial u}{\partial z}\\}|\_{M\_0}\\)
+   后者是与 \\(L\\) 同向的单位向量, 记 \\(\vec{e}=\\{\cos\alpha,\cos\beta,\cos\gamma\\}\\)
+   则 \\(\frac{\partial u}{\partial L}|\_{M\_0}=\nabla u\cdot\vec{e}=\sqrt{(\frac{\partial u}{\partial x})^2+(\frac{\partial u}{\partial y})^2+(\frac{\partial u}{\partial z})^2}\cdot1\cdot\cos\theta\enspace\\) (\\(\theta\\) 为 \\(\nabla u\\) 与 \\(\vec{e}\\) 间的夹角)
+   由该式可知当 \\(\cos\theta=1\\) , 即 \\(\theta=0\\) 时, 这个点的方向导数 \\(\frac{\partial u}{\partial L}|\_{M\_0}\\) 取最大值
+   因此**梯度的方向即函数增大速度最快的方向, 或方向导数取最大值的方向**
 
-## 代数应用 -- 多元函数的极值
+### 代数应用--多元函数的极值
 
 1. 定义:
-   设\\(z=f(x, y) \enspace(x, y)\in D\\) , \\(M_0(x_0, y_0)\in D\\)
-   若 \\(\exist\delta>0\\) , 当 \\((x, y)\in\mathring{U}(M_0, \delta)\\) 时,
-   1. \\(f(x, y)>f(x_0, y_0)\\) , 称 \\((x_0, y_0)\\) 为极小点
-   2. \\(f(x, y)<f(x_0, y_0)\\) , 称 \\((x_0, y_0)\\) 为极大点
+   设\\(z=f(x,y)\enspace\\) (\\((x, y)\in D\\)) , \\(M_0(x_0,y_0)\in D\\)
+   若 \\(\exist\delta>0\\) , \\(\forall (x,y)\in\mathring{\bigcup}(M_0,\delta)\\)
+   * \\(f(x,y)>f(x_0,y_0)\\) , 称 \\((x_0,y_0)\\) 为极小点
+   * \\(f(x,y)<f(x_0,y_0)\\) , 称 \\((x_0,y_0)\\) 为极大点
 2. 无条件极值
-   \\(z=f(x, y) \enspace(x, y)\in D\\) , D 为开区域
-   求 \\(z=f(x, y)\\) 在 D 内的极值称为无条件极值
-   1. 通过令 \\(\begin{cases} \frac{\partial z}{\partial x}=0 \\\ \frac{\partial z}{\partial y}=0 \end{cases}\\) 求对应 x, y 值
+   设 \\(z=f(x,y)\enspace\\) (\\((x, y)\in D\\)) , \\(D\\) 为开区域
+   求 \\(z=f(x,y)\\) 在 \\(D\\) 内的极值称为无条件极值
+   1. 通过令 \\(\begin{cases} \frac{\partial z}{\partial x}=0 \\\ \frac{\partial z}{\partial y}=0 \end{cases}\\) 求对应 \\(x\\)、\\(y\\) 值
    2. 判别法
-      设 \\((x_0, y_0)\\) 为驻点
-      \\(A=f_{xx}^{''}(x_0, y_0)\\) , \\(B=f_{xy}^{''}(x_0, y_0)\\) , \\(C=f_{yy}^{''}(x_0, y_0)\\)
-      1. 若 \\(AC-B^2>0 \rArr (x_0, y_0)\\) 为极值点
-         \\(\begin{cases} A<0 \rArr (x_0, y_0) 为极大点 \\\ A>0 \rArr (x_0, y_0) 为极小点 \end{cases}\\)
-      2. 若 \\(AC-B^2<0 \rArr (x_0, y_0)\\) 不是极值点
+      设 \\((x_0,y_0)\\) 为驻点, \\(A=f_{xx}^{\prime\prime}(x_0,y_0)\\) , \\(B=f_{xy}^{\prime\prime}(x_0,y_0)\\) , \\(C=f_{yy}^{\prime\prime}(x_0,y_0)\\)
+      1. 若 \\(AC-B^2>0\rArr(x_0,y_0)\\) 为极值点
+         \\(A<0\rArr(x_0,y_0)\\) 为极大点
+         \\(A>0\rArr(x_0,y_0)\\) 为极小点
+      2. 若 \\(AC-B^2<0\rArr(x_0,y_0)\\) 不是极值点
 3. 条件极值
-   1. 情况1 \\(z=f(x, y)\\) , 约束条件 \\(\varphi(x, y)=0\\)
-      解法:
-      设 \\(F=f(x, y)+\lambda\varphi(x, y)\\)
-      令 \\(\begin{cases} \frac{\partial F}{\partial x}=f_x'+\lambda\varphi_x'=0 \\\ \frac{\partial F}{\partial y}=f_y'+\lambda\varphi_y'=0 \\\ \frac{\partial F}{\partial\lambda}=\varphi(x, y)=0 \end{cases}\\)
-      解方程组, 求出 x,y 值
-   2. 情况2 \\(u=f(x, y, z)\\) , 约束条件 \\(\begin{cases} \varphi(x, y, z)=0 \\\ \psi(x, y, z)=0 \end{cases}\\)
-      解法:
-      设 \\(F=f+\lambda\varphi+\mu\psi\\)
-      令 \\(\begin{cases} F_x'=0 \\\ F_y'=0 \\\ F_z'=0 \\\ F_\lambda'=0 \\\ F_\mu'=0 \end{cases}\\)
-      解方程组, 求出 x,y,z 值
+   * 二元函数: \\(z=f(x,y)\\) , 约束条件 \\(\varphi(x,y)=0\\)
+     解法:
+     设 \\(F=f(x,y)+\lambda\varphi(x,y)\\)
+     令 \\(\begin{cases} F_x^\prime=\frac{\partial F}{\partial x}=f_x^\prime+\lambda\varphi_x^\prime=0 \\\ F_y^\prime=\frac{\partial F}{\partial y}=f_y^\prime+\lambda\varphi_y^\prime=0 \\\ F_\lambda^\prime=\frac{\partial F}{\partial\lambda}=\varphi(x,y)=0 \end{cases}\\)
+      解方程组, 求出 \\(x\\)、\\(y\\) 值
+      (之后的就不必多说了吧, 懂得都懂)
+   * 三元函数(以及更多元): \\(u=f(x,y,z)\\) , 约束条件 \\(\begin{cases} \varphi(x,y,z)=0 \\\ \psi(x,y,z)=0 \end{cases}\\)
+     解法:
+     设 \\(F=f+\lambda\varphi+\mu\psi\\)
+     令 \\(\begin{cases} F_x^\prime=0 \\\ F_y^\prime=0 \\\ F_z^\prime=0 \\\ F_\lambda^\prime=0 \\\ F_\mu^\prime=0 \end{cases}\\)
+     解方程组, 求出 \\(x\\)、\\(y\\)、\\(z\\) 值
+
+
+## 二重积分的概念与性质
+
+### 二重积分的定义
+
+设 f(x, y) 在 xOy 面有限闭区域 D 内有界
+1. D 划分为 \\(\Delta\sigma_1 , \Delta\sigma_2 , \dots , \Delta\sigma_n \\)
+2. \\(\forall(\xi_i, \eta_i)\in\Delta\sigma_i\\)
+   作 \\(\displaystyle\sum_{i=1}^n f(\xi_i, \eta_i)\Delta\sigma_i\\)
+3. \\(\lambda\\) 为 \\(\Delta\sigma_1 , \Delta\sigma_2 , \dots , \Delta\sigma_n\\) 最大值
+   若 \\(\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n f(\xi_i , \eta_i)\Delta\sigma_i\\) 存在, 称此极限为 f(x, y) 在 D 上的二重积分, 记 \\(\iint_D f(x, y)d\sigma\\)
+
+### 二重积分的性质
+
+1. 设 \\(f(x, y) , g(x, y)\\) 在区域 D 上可积, 则
+   \\(\iint_D[af(x, y)+bg(x, y)]d\sigma=a\iint_D f(x, y)d\sigma+b\iint_D g(x, y)d\sigma\\)
+2. \\(D=D_1+D_2\\) 且 \\(D_1\cap D_2=\varnothing\\) , 则
+   \\(\iint_D f(x, y)d\sigma=\iint_{D_1}f(x, y)d\sigma+\iint_{D_2}f(x, y)d\sigma\\)
+3. \\(\iint_D 1d\sigma=A\\)
+4. 1. 若 \\(f(x, y)\geqslant g(x, y) \enspace((x, y)\in D)\\) 则 \\(\iint_D f(x, y)d\sigma\geqslant\iint_D g(x, y)d\sigma\\)
+   2. \\(f(x, y)\\) 和 \\(|f(x, y)|\\) 在 D 上可积, 则 \\(|\iint_D f(x, y)d\sigma|\leqslant\iint_D|f(x, y)|d\sigma\\)
+5. 积分中值定理
+   D 为有限闭区域, f(x, y) 在 D 上连续
+   则 \\(\exist(\xi, \eta)\in D\\) , 使 \\(\iint_D f(x, y)d\sigma=f(\xi, \eta)A \quad\\) (A 为常数)
+   证明:
+   \\(\because f(x, y)\in c(D)\\)
+   \\(\therefore f(x, y)\\) 在 D 上有上下界 \\(m, M\\) , 使 \\(m\leqslant f(x, y)\leqslant M\\)
+   \\(\therefore mA\leqslant\iint_D f(x, y)d\sigma\leqslant MA\\)
+   \\(\mskip{1em}\rArr m\leqslant\frac{1}{A}\iint f(x, y)d\sigma\leqslant M\\)
+   \\(\mskip{1em}\exist(\xi, \eta)\in D\\) , 使 \\(f(\xi, \eta)=\frac{1}{A}\iint_D f(x, y)d\sigma \rArr \iint_D f(x, y)d\sigma=f(\xi, \eta)A\\)
+
+## 二重积分的计算法
+
+### 直角坐标法计算二重积分
+
+1. 情况1 TODO: 补充图片
+   \\(D=\\{(x, y)|a\leqslant x\leqslant b, \varphi_1(x)\leqslant y\leqslant \varphi_2(x)\\}\\)\
+   则 \\(\iint_D f(x, y)d\sigma=\int_a^b dx\int_{\varphi_1(x)}^{\varphi_2(x)}f(x, y)dy\\)
+2. 情况2 TODO: 补充图片
+   \\(D=\\{(x, y)|c\leqslant y\leqslant d, \varphi_1(y)\leqslant x\leqslant\varphi_2(y)\\}\\)
+   则 \\(\iint_D f(x, y)d\sigma=\int_c^d dx\int_{\varphi_1(y)}^{\varphi_2(y)}f(x, y)dx\\)
+
+### 极坐标法计算二重积分
+
+1. 特征:
+   1. 区域 D 的边界含 \\(x^2+y^2\\)
+   2. \\(f(x, y)\\) 含 \\(x^2+y^2\\)
+2. 变换: TODO; 补充图片
+   \\(\begin{cases} x=r\cos\theta \\\ y=r\sin\theta \end{cases} \alpha\leqslant\theta\leqslant\beta , r_1(\theta)\leqslant r\leqslant r_2(\theta)\\)
+3. \\(d\sigma\\)
+   取 \\([\theta, \theta+d\theta]\\)
+   取 \\([r, r+dx]\\)
+   \\(d\sigma=rdrd\theta\\)
+   \\(\therefore \iint_D f(x, y)d\sigma=\int_\alpha^\beta d\theta\int_{r_1(\theta)}^{r_2(\theta)}r\cdot f(r\cos\theta, r\sin\theta)dr\\)
+
+## 三重积分
+
+### 三重积分的定义
+
+设 \\(\Omega\\) 为空间有限几何体, \\(f(x, y, z)\\) 在 \\(\Omega\\) 上有界
+
+\\(\Omega\\) 划分为 \\(\Delta V_1, \Delta V_2, \dots, \Delta V_n\\)
+\\(\forall(\xi_i, \eta_i, \zeta_i)\in\Delta V_i\\) , 作 \\(\displaystyle\sum_{i=1}^n f(\xi_i, \eta_i, \zeta_i)\Delta V_i\\)
+
+\\(\lambda\\) 为 \\(\Delta V_1, \Delta V_2, \dots, \Delta V_n\\) 直径最大值
+若 \\(\lim\limits_{a\to0}\displaystyle\sum_{i=1}^n f(\xi_i, n_i, \zeta_i)\Delta V_i\\)
+称此极限为 \\(f(x, y, z)\\) 在 \\(\Omega\\) 上的三重积分
+记 \\(\iiint_{\Omega}f(x, y, z)dV\\)
+即 \\(\iiint_{\Omega}f(x, y, z)dV=\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n f(\xi_1, \eta_i, \zeta_i)\Delta V_i\\)
+
+### 三重积分的性质
+
+1. \\(\iiint_{\Omega} 1dV=V\\)
+2. \\(\Omega\\) 为有限闭区域, \\(f(x, y, z)\\) 在 \\(\Omega\\) 上连续, 则 \\(\exist(\xi, \eta, \zeta)\in\Omega\\) , 使 \\(\iiint_\Omega f(x, y, z)dV=f(\xi, \eta, \zeta)V\\)
+
+### 三重积分的计算方法
+
+1. 直角坐标法
+   1. 铅直投影法 TODO: 补充图片
+      \\(\Omega=\\{(x, y, z)|(x, y)\in Dxy , \varphi_1(x, y)\leqslant z\leqslant\varphi_2(x, y)\\}\\)
+      \\(\iiint_\Omega f(x, y, z)dv=\iint_{Dxy}dxdy\int_{\varphi_1(x, y)}^{\varphi_2(x, y)}f(x, y, z)dz\\)
+   2. 切片法 TODO: 补充图片
+      \\(\Omega=\\{(x, y, z)|(x, y)\in Dz, c\leqslant z\leqslant d\\}\\)
+      \\(\iiint_\Omega f(x, y, z)dv=\int_c^d dz\iint_{Dz} f(x, y, z)dxdy\\)
+2. 柱面坐标变换法
+   1. 特征: TODO: 补充图片
+      1. 区域 \\(\Omega\\) 的边界含 \\(x^2+y^2\\)
+      2. \\(f(x, y, z)\\) 含 \\(x^2+y^2\\)
+   2. 变换: TODO: 补充图片
+      \\(\Omega=\\{(x, y, z)|(x, y)\in Dxy , \varphi_1(x, y)\leqslant z\leqslant\varphi_2(x, y)\\}\\)
+      令 \\(\begin{cases} x=r\cos\theta \\\ y=r\sin\theta \\\ z=z \end{cases} \quad \begin{aligned} &\alpha\leqslant\theta\leqslant\beta \\\ &r_1(\theta)\leqslant r\leqslant r_2(\theta) \\\ &\varphi_1(r\cos\theta, r\sin\theta)\leqslant z\leqslant\varphi_2(r\cos\theta, r\sin\theta) \end{aligned}\\)
+   3. \\(dV=r dr d\theta dz\\) TODO: 补充图片
+      \\(\iiint_{\Omega}f(x, y, z)dV=\int_\alpha^\beta d\theta\int_{r_1(\theta)}^{r_2(\theta)}dr\int_{\varphi_1(r\cos\theta, r\sin\theta)}^{\varphi_2(r\cos\theta, r\sin\theta)}rf(r\cos\theta, r\sin\theta, z)dz\\)
+3. 球面坐标变换法
+   1. 特征:
+      1. \\(\Omega\\) 的表面含 \\(x^2+y^2+z^2\\)
+      2. \\(f(x, y, z)\\) 含 \\(x^2+y^2+z^2\\)
+   2. 变换
+      \\(\begin{cases} x=r\cos\theta\sin\varphi \\\ y=r\sin\theta\sin\varphi \\\ z=r\cos\varphi \end{cases}\\)
+   3. \\(dV=r^2\sin\varphi dr d\theta d\varphi\\)
+
+## 重积分的应用
+
+### 几何应用
+
+1. 面积
+   1. D 为 xOy 面内有限闭区域, 则 D 的面积为 \\(A=\iint_D 1d\sigma\\)
+   2. 空间曲面的面积 TODO: 补充图片
+      1. \\(\forall d\sigma\subset D\\)
+      2. \\(\vec{n}=\\{-f_x^', -f_y^', 1\\}\\)
+         \\(\cos r=\frac{1}{\sqrt{1+f_x^2'+f_y^2'}}\\)
+         \\(\because ds\cos r=d\sigma\\)
+         \\(\therefore ds=\sqrt{1+f_x^2'+f_y^2'}d\sigma\\)
+      3. \\(A=\iint_D ds=\iint_D\sqrt{1+f_x^2'+f_y^2'}d\sigma\\)
+
+### 物理应用
+
+1. 质心
+   1. 二维 TODO: 补充图片
+      \\(m=\iint_D \rho(x, y)d\sigma\\)
+      \\(\bar{x}=\frac{\iint_D x\rho(x, y)d\sigma}{\iint_D\rho(x, y)d\sigma} , \bar{y}=\frac{\iint_D y\rho(x, y)d\sigma}{\iint_D \rho(x, y)d\sigma}\\)
+   2. 三维 TODO: 补充图片
+      \\(m=\iiint_\Omega \rho(x, y, z)dV\\)
+      \\(\bar{x}=\frac{\iiint_\Omega x\rho(x, y, z)dV}{\iiint_\Omega \rho(x, y, z)dV} , \bar{y}=\frac{\iiint_\Omega y\rho(x, y, z)dV}{\iiint_\Omega \rho(x, y, z)dV} , \bar{z}=\frac{\iiint_\Omega z\rho(x, y, z)dV}{\iiint_\Omega \rho(x, y, z)dV}\\)
+2. 转动惯量
+   1. 二维 TODO: 补充图片
+      \\(I_L=\iint_D d^2\rho(x, y)d\sigma\\)
+      \\(I_x=\iint_D y^2\rho(x, y)d\sigma\\)
+      \\(I_y=\iint_D x^2\rho(x, y)d\sigma\\)
+      \\(I_0=\iint_D(x^2+y^2)\rho(x, y)d\sigma\\)
+   2. 三维 TODO: 补充图片
+      \\(I_x=\iint_\Omega(y^2+z^2)\rho(x, y, z)dV\\)
+      \\(I_y=\iint_\Omega(x^2+z^2)\rho(x, y, z)dV\\)
+      \\(I_z=\iint_\Omega(x^2+y^2)\rho(x, y, z)dV\\)
