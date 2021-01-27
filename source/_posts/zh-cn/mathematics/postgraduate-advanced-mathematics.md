@@ -9,6 +9,7 @@ tags:
 
 同济高等数学笔记整合(上)
 基于 [wmathor/Postgraduate-Advanced-Mathematics](https://github.com/wmathor/Postgraduate-Advanced-Mathematics)
+不定积分是为定积分服务的, 它的目的是找原函数
 
 <!-- more -->
 
@@ -889,7 +890,7 @@ Notes:
 
 1. 积分上限函数及其与目标函数的关系:
    设 \\(f(x)\in c[a,b]\\) , 令 \\(\varPhi(x)=\int_a^x f(t)\mathrm{d}t\\) , 则 \\(\varPhi^\prime(x)=\frac{\mathrm{d}}{\mathrm{d}x}\int_a^x f(t)\mathrm{d}t=f(x)\\)
-   复合函数推论: \\(\frac{\mathrm{d}}{\mathrm{d}x}\int_a^{\varphi(x)}f(t)\mathrm{d}t=f[\varphi(x)]\cdot\varphi^\prime(x)\\)
+   复合函数推论: \\(\varPhi^\prime(\varphi(x))=\frac{\mathrm{d}}{\mathrm{d}x}\int_a^{\varphi(x)}f(t)\mathrm{d}t=f[\varphi(x)]\cdot\varphi^\prime(x)\\)
 
 * 证明:
   1. 定积分与不定积分的比较:

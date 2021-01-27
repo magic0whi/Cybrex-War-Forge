@@ -565,106 +565,127 @@ tags:
      令 \\(\begin{cases} F_x^\prime=0 \\\ F_y^\prime=0 \\\ F_z^\prime=0 \\\ F_\lambda^\prime=0 \\\ F_\mu^\prime=0 \end{cases}\\)
      解方程组, 求出 \\(x\\)、\\(y\\)、\\(z\\) 值
 
+## 重积分
 
-## 二重积分的概念与性质
+### 二重积分的概念与性质
 
-### 二重积分的定义
+1. 二重积分的定义
+   设 \\(f(x,y)\\) 在 \\(xOy\\) 面有限闭区域 \\(D\\) 内有界
+   1. \\(D\\) 可划分为 \\(\Delta\sigma_1,\Delta\sigma_2,\dots,\Delta\sigma_n\\)
+   2. \\(\forall(\xi_i,\eta_i)\in\Delta\sigma_i\\)
+      作 \\(\displaystyle\sum_{i=1}^n f(\xi_i,\eta_i)\Delta\sigma_i\enspace\\) (\\(\Delta\sigma_i\\) 可视为底面面积)
+   3. \\(\lambda\\) 为 \\(\Delta\sigma_1,\Delta\sigma_2,\dots,\Delta\sigma_n\\) 中的最大值
+      若 \\(\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n f(\xi_i,\eta_i)\Delta\sigma_i\\) 存在, 称此极限为 \\(f(x,y)\\) 在 \\(D\\) 上的二重积分, 记 \\(\iint\limits_D f(x,y)\mathrm{d}\sigma\\)
+      
+      {% asset_img 36.png %}
+2. 二重积分的性质
+   1. 设 \\(f(x,y)\\)、\\(g(x,y)\\) 在区域 \\(D\\) 上可积, 则
+      \\(\iint\limits_D[af(x,y)+bg(x,y)]\mathrm{d}\sigma=a\iint\limits_D f(x,y)\mathrm{d}\sigma+b\iint\limits_D g(x,y)\mathrm{d}\sigma\\)
+   2. 若 \\(D=D_1+D_2\\) 且 \\(D_1\cap D_2=\varnothing\\) , 则
+      \\(\iint\limits_D f(x,y)\mathrm{d}\sigma=\iint\limits_{D_1}f(x,y)\mathrm{d}\sigma+\iint\limits_{D_2}f(x,y)\mathrm{d}\sigma\\)
+   3. \\(\iint\limits_D 1\mathrm{d}\sigma=A\\)
+   4. 若 \\(f(x,y)\geqslant g(x,y)\enspace\\) (\\((x, y)\in D\\)) 则 \\(\iint\limits_D f(x,y)\mathrm{d}\sigma\geqslant\iint\limits_D g(x,y)\mathrm{d}\sigma\\)
+   5. 若 \\(f(x,y)\\) 和 \\(|f(x,y)|\\) 在 \\(D\\) 上可积, 则 \\(|\iint\limits_D f(x,y)\mathrm{d}\sigma|\leqslant\iint\limits_D|f(x,y)|\mathrm{d}\sigma\\)
+   6. 二重积分中值定理
+      \\(D\\) 为有限闭区域, \\(f(x,y)\\) 在 \\(D\\) 上连续
+      则 \\(\exist(\xi,\eta)\in D\\) , 使 \\(\iint\limits_D f(x,y)\mathrm{d}\sigma=f(\xi,\eta)A\enspace\\) (\\(A\\) 为区域 \\(D\\) 的面积)
+      证明:
+      \\(\because f(x,y)\in c(D)\\)
+      \\(\therefore f(x,y)\\) 在 \\(D\\) 上有上下界 \\(m\\)、\\(M\\) , 使 \\(m\leqslant f(x,y)\leqslant M\\)
+      \\(\therefore \iint\limits_D m\mathrm{d}\rho\leqslant\iint\limits_D f(x,y)\mathrm{d}\sigma\leqslant \iint\limits_D M\mathrm{d}\rho\\)
+      \\(\rArr m\iint\limits_D 1\mathrm{d}\rho\leqslant\iint\limits_D f(x,y)\mathrm{d}\sigma\leqslant M\iint\limits_D 1\mathrm{d}\rho\\)
+      \\(\rArr mA\leqslant\iint\limits_D f(x,y)\mathrm{d}\sigma\leqslant MA\\)
+      \\(\rArr m\leqslant\frac{1}{A}\iint\limits_D f(x,y)\mathrm{d}\sigma\leqslant M\\)
+      \\(\exist(\xi,\eta)\in D\\) , 使 \\(f(\xi,\eta)=\frac{1}{A}\iint\limits_D f(x,y)\mathrm{d}\sigma\rArr\iint\limits_D f(x,y)\mathrm{d}\sigma=f(\xi,\eta)A\\)
 
-设 f(x, y) 在 xOy 面有限闭区域 D 内有界
-1. D 划分为 \\(\Delta\sigma_1 , \Delta\sigma_2 , \dots , \Delta\sigma_n \\)
-2. \\(\forall(\xi_i, \eta_i)\in\Delta\sigma_i\\)
-   作 \\(\displaystyle\sum_{i=1}^n f(\xi_i, \eta_i)\Delta\sigma_i\\)
-3. \\(\lambda\\) 为 \\(\Delta\sigma_1 , \Delta\sigma_2 , \dots , \Delta\sigma_n\\) 最大值
-   若 \\(\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n f(\xi_i , \eta_i)\Delta\sigma_i\\) 存在, 称此极限为 f(x, y) 在 D 上的二重积分, 记 \\(\iint_D f(x, y)d\sigma\\)
+### 二重积分的计算法
 
-### 二重积分的性质
+1. 直角坐标法计算二重积分
+   * 情况1 (沿着 \\(x\\) 轴扫 \\(y\\) 轴)
+     \\(D=\\{(x,y)|a\leqslant x\leqslant b,\varphi_1(x)\leqslant y\leqslant \varphi_2(x)\\}\\)\
+     则 \\(\iint\limits_D f(x,y)\mathrm{d}\sigma=\int_a^b[\int_{\varphi_1(x)}^{\varphi_2(x)}f(x,y)\mathrm{d}y]\mathrm{d}x\\)
+     
+     {% asset_img 37.png %}
+   * 情况2 (沿着 \\(y\\) 轴扫 \\(x\\) 轴)
+     \\(D=\\{(x,y)|c\leqslant y\leqslant d,\varphi_1(y)\leqslant x\leqslant\varphi_2(y)\\}\\)
+     则 \\(\iint\limits_D f(x,y)\mathrm{d}\sigma=\int_c^d[\int_{\varphi_1(y)}^{\varphi_2(y)}f(x,y)\mathrm{d}x]\mathrm{d}y\\)
 
-1. 设 \\(f(x, y) , g(x, y)\\) 在区域 D 上可积, 则
-   \\(\iint_D[af(x, y)+bg(x, y)]d\sigma=a\iint_D f(x, y)d\sigma+b\iint_D g(x, y)d\sigma\\)
-2. \\(D=D_1+D_2\\) 且 \\(D_1\cap D_2=\varnothing\\) , 则
-   \\(\iint_D f(x, y)d\sigma=\iint_{D_1}f(x, y)d\sigma+\iint_{D_2}f(x, y)d\sigma\\)
-3. \\(\iint_D 1d\sigma=A\\)
-4. 1. 若 \\(f(x, y)\geqslant g(x, y) \enspace((x, y)\in D)\\) 则 \\(\iint_D f(x, y)d\sigma\geqslant\iint_D g(x, y)d\sigma\\)
-   2. \\(f(x, y)\\) 和 \\(|f(x, y)|\\) 在 D 上可积, 则 \\(|\iint_D f(x, y)d\sigma|\leqslant\iint_D|f(x, y)|d\sigma\\)
-5. 积分中值定理
-   D 为有限闭区域, f(x, y) 在 D 上连续
-   则 \\(\exist(\xi, \eta)\in D\\) , 使 \\(\iint_D f(x, y)d\sigma=f(\xi, \eta)A \quad\\) (A 为常数)
-   证明:
-   \\(\because f(x, y)\in c(D)\\)
-   \\(\therefore f(x, y)\\) 在 D 上有上下界 \\(m, M\\) , 使 \\(m\leqslant f(x, y)\leqslant M\\)
-   \\(\therefore mA\leqslant\iint_D f(x, y)d\sigma\leqslant MA\\)
-   \\(\mskip{1em}\rArr m\leqslant\frac{1}{A}\iint f(x, y)d\sigma\leqslant M\\)
-   \\(\mskip{1em}\exist(\xi, \eta)\in D\\) , 使 \\(f(\xi, \eta)=\frac{1}{A}\iint_D f(x, y)d\sigma \rArr \iint_D f(x, y)d\sigma=f(\xi, \eta)A\\)
-
-## 二重积分的计算法
-
-### 直角坐标法计算二重积分
-
-1. 情况1 TODO: 补充图片
-   \\(D=\\{(x, y)|a\leqslant x\leqslant b, \varphi_1(x)\leqslant y\leqslant \varphi_2(x)\\}\\)\
-   则 \\(\iint_D f(x, y)d\sigma=\int_a^b dx\int_{\varphi_1(x)}^{\varphi_2(x)}f(x, y)dy\\)
-2. 情况2 TODO: 补充图片
-   \\(D=\\{(x, y)|c\leqslant y\leqslant d, \varphi_1(y)\leqslant x\leqslant\varphi_2(y)\\}\\)
-   则 \\(\iint_D f(x, y)d\sigma=\int_c^d dx\int_{\varphi_1(y)}^{\varphi_2(y)}f(x, y)dx\\)
-
-### 极坐标法计算二重积分
-
-1. 特征:
-   1. 区域 D 的边界含 \\(x^2+y^2\\)
-   2. \\(f(x, y)\\) 含 \\(x^2+y^2\\)
-2. 变换: TODO; 补充图片
-   \\(\begin{cases} x=r\cos\theta \\\ y=r\sin\theta \end{cases} \alpha\leqslant\theta\leqslant\beta , r_1(\theta)\leqslant r\leqslant r_2(\theta)\\)
-3. \\(d\sigma\\)
-   取 \\([\theta, \theta+d\theta]\\)
-   取 \\([r, r+dx]\\)
-   \\(d\sigma=rdrd\theta\\)
-   \\(\therefore \iint_D f(x, y)d\sigma=\int_\alpha^\beta d\theta\int_{r_1(\theta)}^{r_2(\theta)}r\cdot f(r\cos\theta, r\sin\theta)dr\\)
-
-## 三重积分
-
-### 三重积分的定义
-
-设 \\(\Omega\\) 为空间有限几何体, \\(f(x, y, z)\\) 在 \\(\Omega\\) 上有界
-
-\\(\Omega\\) 划分为 \\(\Delta V_1, \Delta V_2, \dots, \Delta V_n\\)
-\\(\forall(\xi_i, \eta_i, \zeta_i)\in\Delta V_i\\) , 作 \\(\displaystyle\sum_{i=1}^n f(\xi_i, \eta_i, \zeta_i)\Delta V_i\\)
-
-\\(\lambda\\) 为 \\(\Delta V_1, \Delta V_2, \dots, \Delta V_n\\) 直径最大值
-若 \\(\lim\limits_{a\to0}\displaystyle\sum_{i=1}^n f(\xi_i, n_i, \zeta_i)\Delta V_i\\)
-称此极限为 \\(f(x, y, z)\\) 在 \\(\Omega\\) 上的三重积分
-记 \\(\iiint_{\Omega}f(x, y, z)dV\\)
-即 \\(\iiint_{\Omega}f(x, y, z)dV=\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n f(\xi_1, \eta_i, \zeta_i)\Delta V_i\\)
-
-### 三重积分的性质
-
-1. \\(\iiint_{\Omega} 1dV=V\\)
-2. \\(\Omega\\) 为有限闭区域, \\(f(x, y, z)\\) 在 \\(\Omega\\) 上连续, 则 \\(\exist(\xi, \eta, \zeta)\in\Omega\\) , 使 \\(\iiint_\Omega f(x, y, z)dV=f(\xi, \eta, \zeta)V\\)
-
-### 三重积分的计算方法
-
-1. 直角坐标法
-   1. 铅直投影法 TODO: 补充图片
-      \\(\Omega=\\{(x, y, z)|(x, y)\in Dxy , \varphi_1(x, y)\leqslant z\leqslant\varphi_2(x, y)\\}\\)
-      \\(\iiint_\Omega f(x, y, z)dv=\iint_{Dxy}dxdy\int_{\varphi_1(x, y)}^{\varphi_2(x, y)}f(x, y, z)dz\\)
-   2. 切片法 TODO: 补充图片
-      \\(\Omega=\\{(x, y, z)|(x, y)\in Dz, c\leqslant z\leqslant d\\}\\)
-      \\(\iiint_\Omega f(x, y, z)dv=\int_c^d dz\iint_{Dz} f(x, y, z)dxdy\\)
-2. 柱面坐标变换法
-   1. 特征: TODO: 补充图片
-      1. 区域 \\(\Omega\\) 的边界含 \\(x^2+y^2\\)
-      2. \\(f(x, y, z)\\) 含 \\(x^2+y^2\\)
-   2. 变换: TODO: 补充图片
-      \\(\Omega=\\{(x, y, z)|(x, y)\in Dxy , \varphi_1(x, y)\leqslant z\leqslant\varphi_2(x, y)\\}\\)
-      令 \\(\begin{cases} x=r\cos\theta \\\ y=r\sin\theta \\\ z=z \end{cases} \quad \begin{aligned} &\alpha\leqslant\theta\leqslant\beta \\\ &r_1(\theta)\leqslant r\leqslant r_2(\theta) \\\ &\varphi_1(r\cos\theta, r\sin\theta)\leqslant z\leqslant\varphi_2(r\cos\theta, r\sin\theta) \end{aligned}\\)
-   3. \\(dV=r dr d\theta dz\\) TODO: 补充图片
-      \\(\iiint_{\Omega}f(x, y, z)dV=\int_\alpha^\beta d\theta\int_{r_1(\theta)}^{r_2(\theta)}dr\int_{\varphi_1(r\cos\theta, r\sin\theta)}^{\varphi_2(r\cos\theta, r\sin\theta)}rf(r\cos\theta, r\sin\theta, z)dz\\)
-3. 球面坐标变换法
+     {% asset_img 38.png %}
+2. 极坐标法计算二重积分
    1. 特征:
-      1. \\(\Omega\\) 的表面含 \\(x^2+y^2+z^2\\)
-      2. \\(f(x, y, z)\\) 含 \\(x^2+y^2+z^2\\)
-   2. 变换
-      \\(\begin{cases} x=r\cos\theta\sin\varphi \\\ y=r\sin\theta\sin\varphi \\\ z=r\cos\varphi \end{cases}\\)
-   3. \\(dV=r^2\sin\varphi dr d\theta d\varphi\\)
+      区域 \\(D\\) 的边界含 \\(x^2+y^2\\)
+      \\(f(x,y)\\) 含 \\(x^2+y^2\\)
+   2. 变换:
+      
+      {% asset_img 39.png %}
+      \\(\begin{cases} x=r\cos\theta \\\ y=r\sin\theta \end{cases}\\) , \\(\alpha\leqslant\theta\leqslant\beta\\) , \\(r_1(\theta)\leqslant r\leqslant r_2(\theta)\\)
+   3. \\(\mathrm{d}\sigma\\)
+      取 \\([\theta,\theta+d\theta]\\)
+      取 \\([r,r+dx]\\)
+      则 \\(\mathrm{d}\sigma=\mathrm{d}r\cdot r\mathrm{d}\theta\\)
+
+      {% asset_img 40.png %}
+   
+   \\(\therefore\iint\limits_D f(x,y)\mathrm{d}\sigma=\int_\alpha^\beta[\int_{r_1(\theta)}^{r_2(\theta)}r\cdot f(r\cos\theta, r\sin\theta)\mathrm{d}r]\mathrm{d}\theta\\)
+
+### 三重积分
+
+1. 三重积分的定义
+   设 \\(\Omega\\) 为空间有限几何体, \\(f(x,y,z)\\) 在 \\(\Omega\\) 上有界
+   将 \\(\Omega\\) 划分为 \\(\Delta V_1,\Delta V_2,\dots,\Delta V_n\\)
+   \\(\forall(\xi_i,\eta_i,\zeta_i)\in\Delta V_i\\) , 作 \\(\displaystyle\sum_{i=1}^n f(\xi_i,\eta_i,\zeta_i)\Delta V_i\\)
+   \\(\lambda\\) 为 \\(\Delta V_1,\Delta V_2,\dots,\Delta V_n\\) 直径最大值
+   若 \\(\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n f(\xi_i,n_i,\zeta_i)\Delta V_i\\) 存在, 称此极限为 \\(f(x,y,z)\\) 在 \\(\Omega\\) 上的三重积分, 记 \\(\iiint\limits_\Omega f(x,y,z)\mathrm{d}v\\)
+   即 \\(\iiint\limits_\Omega f(x,y,z)\mathrm{d}v=\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n f(\xi_1,\eta_i,\zeta_i)\Delta V_i\\)
+   (三重积分的几何意义是空间几何体的质量)
+2. 三重积分的性质
+   1. \\(\iiint\limits_\Omega 1\mathrm{d}v=V\\)
+   2. 三重积分中值定理: \\(\Omega\\) 为有限闭区域, \\(f(x,y,z)\\) 在 \\(\Omega\\) 上连续, 则 \\(\exist(\xi,\eta,\zeta)\in\Omega\\) 使 \\(\iiint\limits_\Omega f(x,y,z)\mathrm{d}v=f(\xi,\eta,\zeta)V\\)
+3. 三重积分的计算方法
+   1. 直角坐标法
+      1. 铅直投影法
+         
+         {% asset_img 41.png %}
+         (\\(\Sigma_1\\) 为下半球曲面, \\(\Sigma_2\\) 为上半球曲面)
+         \\(\Omega=\\{(x,y,z)|(x,y)\in Dxy,\varphi_1(x,y)\leqslant z\leqslant\varphi_2(x,y)\\}\\)
+         \\(\iiint\limits_\Omega f(x,y,z)\mathrm{d}v=\iint\limits_{Dxy}[\int_{\varphi_1(x,y)}^{\varphi_2(x,y)}f(x,y,z)\mathrm{d}z]\mathrm{d}x\mathrm{d}y\\)
+      2. 切片法
+         
+         {% asset_img 42.png %}
+         (每层切片的 \\(D\\) 都不同, 用 \\(Dz\\) 表示)
+         \\(\Omega=\\{(x,y,z)|(x,y)\in Dz, c\leqslant z\leqslant d\\}\\)
+         \\(\iiint\limits_\Omega f(x,y,z)\mathrm{d}v=\int_c^d[\iint\limits_{Dz} f(x,y,z)\mathrm{d}x\mathrm{d}y]\mathrm{d}z\\)
+   2. 柱面坐标变换法(柱面坐标=极坐标+\\(z\\) 轴)
+      1. 特征:
+         1. 区域 \\(\Omega\\) 的边界含 \\(x^2+y^2\\)
+         2. \\(f(x,y,z)\\) 含 \\(x^2+y^2\\)
+      2. 变换:
+         \\(\Omega=\\{(x,y,z)|(x,y)\in Dxy,\varphi_1(x,y)\leqslant z\leqslant\varphi_2(x,y)\\}\\)
+         令 \\(\begin{cases} x=r\cos\theta \\\ y=r\sin\theta \\\ z=z \end{cases}\\) ,
+         其中 \\(\alpha\leqslant\theta\leqslant\beta\\) , \\(r_1(\theta)\leqslant r\leqslant r_2(\theta)\\) , \\(\varphi_1(r\cos\theta,r\sin\theta)\leqslant z\leqslant\varphi_2(r\cos\theta,r\sin\theta)\\)
+         
+         {% asset_img 43.png %}
+      3. \\(\mathrm{d}v\\)
+         {% asset_img 44.png %}
+         \\(\mathrm{d}v=\mathrm{d}r\cdot r\mathrm{d}\theta\cdot\mathrm{d}z\\) (再乘上 \\(z\\) 轴的微分)
+         
+      \\(\iiint\limits_{\Omega}f(x,y,z)\mathrm{d}v=\int_\alpha^\beta\mathrm{d}\theta\int_{r_1(\theta)}^{r_2(\theta)}\mathrm{d}r\int_{\varphi_1(r\cos\theta,r\sin\theta)}^{\varphi_2(r\cos\theta,r\sin\theta)}r\cdot f(r\cos\theta, r\sin\theta,z)\mathrm{d}z\\)
+   3. 球面坐标变换法
+      1. 特征:
+         1. \\(\Omega\\) 的表面含 \\(x^2+y^2+z^2\\)
+         2. \\(f(x,y,z)\\) 含 \\(x^2+y^2+z^2\\)
+      2. 变换
+         
+         {% asset_img 45.png %}
+         (\\(OM\\) 跟 \\(Ox\\) 方向的夹角为 \\(\theta\\) ; 跟 \\(Oz\\) 方向的夹角为 \\(\varphi\\))
+         \\(\begin{cases} x=r\cos\theta\sin\varphi \\\ y=r\sin\theta\sin\varphi \\\ z=r\cos\varphi \end{cases}\\)
+      3. \\(\mathrm{d}v\\)
+         \\([\theta,\theta+\mathrm{d}\theta]\\)
+         \\([\varphi,\varphi+\mathrm{d}\varphi]\\)
+         \\([r,r+\mathrm{d}r]\\)
+         
+         {% asset_img 46.png %}
+         \\(\mathrm{d}v=\mathrm{d}r\cdot r\mathrm{d}\varphi\cdot r\sin\varphi\mathrm{d}\theta=r^2\sin\varphi\mathrm{d}r\mathrm{d}\theta\mathrm{d}\varphi\\)
 
 ## 重积分的应用
 
