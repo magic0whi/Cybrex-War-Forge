@@ -113,7 +113,24 @@ tags:
          设
          \\(\vec{a}=\\{a_1,b_1,c_1\\}=a_1\vec{i}+b_1\vec{j}+c_1\vec{k}\\)
          \\(\vec{b}=\\{a_2,b_2,c_2\\}=a_2\vec{i}+b_2\vec{j}+c_2\vec{k}\\)
-         则 \\(\vec{a}\times\vec{b}=\\{b_1c_2-b_2c_1,a_2c_1-a_1c_2,a_1b_2-a_2b_1\\}\\)
+         则
+         <div>
+         $$
+         \vec{a}\times\vec{b}=\{b_1c_2-b_2c_1,a_2c_1-a_1c_2,a_1b_2-a_2b_1\}=\{
+         \begin{vmatrix}
+          b_1 & c_1 \\
+          b_2 & c_2
+         \end{vmatrix}
+         ,\begin{vmatrix}
+          c_1 & a_1 \\
+          c_2 & a_2
+         \end{vmatrix}
+         ,\begin{vmatrix}
+          a_1 & b_1 \\
+          a_2 & b_2
+         \end{vmatrix}\}
+         $$
+         </div>
          推导:
          <div>
          $$
@@ -155,12 +172,12 @@ tags:
    2. \\(\Sigma:G(y,z)=0\\) 为母线平行于 \\(x\\) 轴的柱面
    3. \\(\Sigma:H(x,z)=0\\) 为母线平行于 \\(y\\) 轴的柱面
    
-   例: 同一个方程 \\(x^2+y^2=4\\) , 在二维坐标系中是一个半径为 2 的圆(称作母线); 在三维坐标系中在 \\(z\\) 轴无限延申, 成为了到 \\(z\\) 轴的距离为 2 的点形成的曲面
+   * 例: 同一个方程 \\(x^2+y^2=4\\) , 在二维坐标系中是一个半径为 2 的圆(称作母线); 在三维坐标系中在 \\(z\\) 轴无限延申, 成为了到 \\(z\\) 轴的距离为 2 的点形成的曲面
 
-   {% asset_img 10.png %}
-   设 \\(T(0,0,z)\\) 为 \\(z\\) 轴上一点, \\(\forall M(x,y,z)\in\Sigma\\)
-   有 \\(|MT|=2\rArr\sqrt{(x-0)^2+(y-0)^2+(z-z)^2}=2\rArr x^2+y^2=4\\)
-   \\(\therefore\Sigma:x^2+y^2=4\\)
+     {% asset_img 10.png %}
+     设 \\(T(0,0,z)\\) 为 \\(z\\) 轴上一点, \\(\forall M(x,y,z)\in\Sigma\\)
+     有 \\(|MT|=2\rArr\sqrt{(x-0)^2+(y-0)^2+(z-z)^2}=2\rArr x^2+y^2=4\\)
+     \\(\therefore\Sigma:x^2+y^2=4\\)
 
    * 柱面 \\(\Sigma:F(x,y)=0\\) 在 \\(xOy\\) 面内的投影曲线为
      \\(L:\begin{cases} F(x,y)=0 \\\ z=0 \end{cases}\\)
@@ -187,7 +204,7 @@ tags:
       {% asset_img 13.png %}
       设曲面某点 \\(M_0(x_0,y_0,z_0)\in\pi\\) , 法向量 \\(\vec{n}=\\{A,B,C\\}\perp\pi\\)
       \\(\forall M(x,y,z)\in\pi\rArr\vec{n}\perp\overrightarrow{M_0M}\rArr\vec{n}\cdot\overrightarrow{M_0M}=0\\)
-      将 \\(\overrightarrow{M_0M}=\\{x-x_0,y-y_0,z-z_0\\}\\) 代入
+      代入 \\(\overrightarrow{M_0M}=\\{x-x_0,y-y_0,z-z_0\\}\\)
       得到 \\(\pi:A(x-x_0)+B(y-y_0)+C(z-z_0)=0\\)
    2. 截距式方程
       
@@ -371,7 +388,7 @@ tags:
    2. 有界定理
       设 \\(D\\) 为有界闭区域, \\(f(x,y)\\) 在 \\(D\\) 上连续
       则 \\(\exist k>0,\forall(x,y)\in D\\) , 有 \\(|f(x,y)|\leqslant k\\)
-   3. 界值定理
+   3. 介值定理
       设 \\(D\\) 为有界闭区域, \\(f(x,y)\\) 在 \\(D\\) 上连续
       则 \\(\forall\delta\in[m,M]\\) , \\(\exist(\xi,\eta)\in D\\) 使 \\(f(\xi,\eta)=\delta\\)
 
@@ -388,8 +405,7 @@ tags:
         该极限称为 \\(f(x,y)\\) 在 \\(M_0\\) 处关于 \\(x\\) 的偏导数, 记 \\(f_x^\prime(x_0,y_0)\\) 或 \\(\frac{\partial z}{\partial x}|_{(x_0,y_0)}\\)
       * 若 \\(\lim\limits_{\Delta y\to 0}\frac{\Delta z_y}{\Delta y}\\) 存在, 称 \\(f(x,y)\\) 在 \\(M_0\\) 处关于 \\(y\\) 可偏导,
         该极限称为 \\(f(x,y)\\) 在 \\(M_0\\) 处关于 \\(y\\) 的偏导数, 记 \\(f_y^\prime(x_0,y_0)\\) 或 \\(\frac{\partial z}{\partial y}|_{(x_0,y_0)}\\)
-      
-      若 \\(\forall(x,y)\in D\\) , \\(f(x,y)\\) 对 \\(x\\)、\\(y\\) 皆可偏导, 称 \\(f_x^\prime(x,y)\\)、\\(f_y^\prime(x,y)\\) 为 \\(f(x,y)\\) 对 \\(x\\)、\\(y\\) 的偏导数
+      * 若 \\(\forall(x,y)\in D\\) , \\(f(x,y)\\) 对 \\(x\\)、\\(y\\) 皆可偏导, 称 \\(f_x^\prime(x,y)\\)、\\(f_y^\prime(x,y)\\) 为 \\(f(x,y)\\) 对 \\(x\\)、\\(y\\) 的偏导数
 2. 高阶偏导数
    设 \\(z=f(x,y)\\) 在 \\(D\\) 内对 \\(x\\)、\\(y\\) 可偏导,
    \\(f_x^\prime(x,y)=\frac{\partial z}{\partial x}\\) 为 \\(f(x,y)\\) 对 \\(x\\) 偏导数,
@@ -408,7 +424,7 @@ tags:
 1. 二元函数全微分定义
    设 \\(z=f(x,y)\enspace\\) (\\((x,y)\in D\\)) , \\(M_0(x_0,y_0)\in D\\) ,
    全增量 \\(\Delta z=f(x_0+\Delta x,y_0+\Delta y)-f(x_0,y_0)=f(x,y)-f(x_0,y_0)\\)
-   若 \\(\Delta z=A\Delta x+B\Delta y+\circ(\rho)\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}\\) (误差为两点距离的高阶无穷小)
+   若 \\(\Delta z=A\Delta x+B\Delta y+\circ(\rho)\\) , \\(\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}\\)
    称 \\(f(x,y)\\) 在 \\((x_0,y_0)\\) 处可全微, \\(A\Delta x+B\Delta y\\) 为 \\(f(x,y)\\) 在 \\((x_0,y_0)\\) 处的全微分, 记 \\(\mathrm{d}z|_{(x_0,y_0)}=A\mathrm{d}x+B\mathrm{d}y\\)
 
    全微分: \\(\mathrm{d}z|_{(x_0,y_0)}=f_x^\prime(x_0,y_0)\mathrm{d}x+f_y^\prime(x_0,y_0)\mathrm{d}y=\frac{\partial z}{\partial x}\mathrm{d}x+\frac{\partial z}{\partial y}\mathrm{d}y\\)
@@ -447,15 +463,15 @@ tags:
    隐函数显式化: \\(f(x,y)=0\rArr y=\varphi(x)\\)
    * 定理一:
      设 \\(F(x,y)\\) 在点 \\(M_0(x_0,y_0)\\) 邻域内连续可偏导且 \\(F(x_0,y_0)=0\\) ,
-     若 \\(F_y^\prime(x_0,y_0)\neq 0\enspace\\) (即 \\(y\\) 方向上连续),
-     则由 \\(F(x,y)=0\\) 在 \\(M_0\\) 邻域内确定唯一连续可导函数 \\(y=f(x)\\) 使 \\(y_0=f(x_0)\\) ,
+     若 \\(F_y^\prime(x_0,y_0)\neq 0\enspace\\)
+     则由 \\(F(x,y)=0\\) 在 \\(M_0\\) 邻域内确定唯一连续可导函数 \\(y=f(x)\\) 使 \\(y_0=f(x_0)\\) (隐函数显式化),
      则 \\(\dfrac{\mathrm{d}y}{\mathrm{d}x}=-\dfrac{F_x^\prime}{F_y^\prime}\\)
      证明:
      \\(F(x,y)=0\\) , 把 \\(y\\) 看成 \\(x\\) 的函数 \\(f(x)\\) , 则 \\(F(x,f(x))=0\\)
      两边对 \\(x\\) 求导, \\(F_x^\prime+F_y^\prime f^\prime(x)=F_x^\prime+F_y^\prime\frac{\mathrm{d}y}{\mathrm{d}x}=0\rArr\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{F_x^\prime}{F_y^\prime}\\)
    * 定理二:
       设 \\(F(x,y,z)\\) 在 \\(M_0(x_0,y_0,z_0)\\) 邻域内连续可偏导且 \\(F(x_0,y_0,z_0)=0\\)
-      若 \\(F_z^\prime(x_0,y_0,z_0)\neq 0\enspace\\) (即 \\(z\\) 方向上连续),
+      若 \\(F_z^\prime(x_0,y_0,z_0)\neq 0\enspace\\)
       则由 \\(F(x,y,z)=0\\) 在 \\(M_0\\) 邻域内确定唯一连续可偏导函数 \\(z=\varphi(x,y)\\) 使 \\(z_0=\varphi(x_0,y_0)\\) ,
       则 \\(\dfrac{\partial z}{\partial x}=-\dfrac{F_x^\prime}{F_z^\prime}\\) , \\(\dfrac{\partial z}{\partial y}=-\dfrac{F_y^\prime}{F_z^\prime}\\)
       证明:
@@ -471,8 +487,7 @@ tags:
    设 \\(M_0(x_0,y_0,z_0)\in L\\) , \\(M(x_0+\Delta x,y_0+\Delta y,z_0+\Delta z)\in L\\)
    \\(\overrightarrow{M_0M}=\\{\Delta x,\Delta y,\Delta z\\}\\)
    直线 \\(\overline{M_0M}:\frac{x-x_0}{\Delta x}=\frac{y-y_0}{\Delta y}=\frac{z-z_0}{\Delta z}\\)
-   * 情况一 \\(L:\begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases}\\) , \\(t=t_0\rArr M_0(x_0,y_0,z_0)\in L\\)
-     \\(t=t_0+\Delta t\rArr M(x_0+\Delta x,y_0+\Delta y,z_0+\Delta z)\in L\\)
+   * 情况一 \\(L:\begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases}\\) , \\(M_0(x_0,y_0,z_0)\hArr t=t_0\\) , \\(M(x_0+\Delta x,y_0+\Delta y,z_0+\Delta z)\hArr t=t_0+\Delta t\\)
      \\(\overline{M_0M}=\frac{x-x_0}{\Delta x}=\frac{y-y_0}{\Delta y}=\frac{z-z_0}{\Delta z}\hArr\frac{x-x_0}{\frac{\Delta x}{\Delta t}}=\frac{y-y_0}{\frac{\Delta y}{\Delta t}}=\frac{z-z_0}{\frac{\Delta z}{\Delta t}}\\)
      当 \\(\Delta t\to 0\\) 时, \\(\overline{M_0M}\\) 即为切线
      \\(\therefore\\) 切线: \\(\frac{x-x_0}{\varphi^\prime(t_0)}=\frac{y-y_0}{\psi^\prime(t_0)}=\frac{z-z_0}{\omega^\prime(t_0)}\\) ,
@@ -480,11 +495,11 @@ tags:
      法平面 \\(\varphi^\prime(x-x_0)+\psi^\prime(y-y_0)+\omega^\prime(z-z_0)=0\\)
    * 情况二 \\(L:\begin{cases} F(x,y,z)=0 \\\ G(x,y,z)=0 \end{cases}\\) , \\(M_0(x_0,y_0,z_0)\in L\\)
      曲线方向向量 \\(\vec{T}=\\{\begin{vmatrix} F_y^\prime & F_z^\prime \\\ G_y^\prime & G_z^\prime \end{vmatrix},\begin{vmatrix} F_z^\prime & F_x^\prime \\\ G_z^\prime & G_x^\prime \end{vmatrix},\begin{vmatrix} F_x^\prime & F_y^\prime \\\ G_x^\prime & G_y^\prime \end{vmatrix}\\}\\)
-     接下来根据切线方向向量和 \\(M_0\\) 就可以得到切线和法平面方程(参考情况一)
+     将曲线方向向量代入切线和法平面方程即可(方程参考情况一)
 2. 空间曲面(求曲面切平面和法线)
    求空间曲面上某一点的法向量:
    设曲面 \\(\Sigma:F(x,y,z)=0\\) , \\(M_0(x_0,y_0,z_0)\in\Sigma\\)
-   在 \\(\Sigma\\) 内过 \\(M_0\\) 任取一曲线 \\(L:\begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases}\\) , \\(M_0\harr t=t_0\\)
+   在 \\(\Sigma\\) 内过 \\(M_0\\) 任取一曲线 \\(L:\begin{cases} x=\varphi(t) \\\ y=\psi(t) \\\ z=\omega(t) \end{cases}\\) , \\(M_0\hArr t=t_0\\)
    \\(\because L\subset\Sigma\\)
    \\(\therefore F[\varphi(t),\psi(t),\omega(t)]=0\\)
    两边对 \\(t\\) 求导:
@@ -683,40 +698,161 @@ tags:
          \\([\theta,\theta+\mathrm{d}\theta]\\)
          \\([\varphi,\varphi+\mathrm{d}\varphi]\\)
          \\([r,r+\mathrm{d}r]\\)
+         (\\(\mathrm{d}v\\) 是一个立方体)
          
          {% asset_img 46.png %}
          \\(\mathrm{d}v=\mathrm{d}r\cdot r\mathrm{d}\varphi\cdot r\sin\varphi\mathrm{d}\theta=r^2\sin\varphi\mathrm{d}r\mathrm{d}\theta\mathrm{d}\varphi\\)
 
-## 重积分的应用
+### 重积分的应用
 
-### 几何应用
+1. 几何应用
+   1. 面积
+      1. \\(D\\) 为 \\(xOy\\) 面内有限闭区域, 则 \\(D\\) 的面积为 \\(A=\iint\limits_D 1\mathrm{d}\sigma\\)
+      2. 空间曲面的面积
+         \\(\Sigma:z=f(x,y)\enspace\\) (\\((x,y)\in Dxy\\))
 
-1. 面积
-   1. D 为 xOy 面内有限闭区域, 则 D 的面积为 \\(A=\iint_D 1d\sigma\\)
-   2. 空间曲面的面积 TODO: 补充图片
-      1. \\(\forall d\sigma\subset D\\)
-      2. \\(\vec{n}=\\{-f_x^', -f_y^', 1\\}\\)
-         \\(\cos r=\frac{1}{\sqrt{1+f_x^2'+f_y^2'}}\\)
-         \\(\because ds\cos r=d\sigma\\)
-         \\(\therefore ds=\sqrt{1+f_x^2'+f_y^2'}d\sigma\\)
-      3. \\(A=\iint_D ds=\iint_D\sqrt{1+f_x^2'+f_y^2'}d\sigma\\)
+         {% asset_img 47.png %}
+         1. \\(\forall\mathrm{d}\sigma\subset Dxy\\)
+         2. 法向量 \\(\vec{n}=\\{-f_x^\prime,-f_y^\prime,1\\}\\)
+            推导:
+            (来自多元函数微分学的几何应用-空间曲面上某一点的法向量)
+            若 \\(\Sigma:F(x,y,z)=0\\), 法向量 \\(\vec{n}=\\{F_x^\prime,F_y^\prime,F_z^\prime\\}_{M_0}\\) 
+            这里 \\(\Sigma:z=f(x,y)\rArr F(x,y,z)=z-f(x,y)=0\\)
+            因此 \\(\vec{n}=\\{-f_x^\prime,-f_y^\prime,1\\}\\)
+         3. \\(\mathrm{d}s=\sqrt{1+f_x^{\prime 2}+f_y^{\prime 2}}\mathrm{d}\sigma\\)
+            推导:
+            \\(\cos\gamma=\frac{1}{\sqrt{1+f_x^{\prime 2}+f_y^{\prime 2}}}\\) (法向量和 \\(z\\) 轴夹角, 参见向量及其线性运算-向量方向角和方向余弦)
+            \\(\because\mathrm{d}s\cos\gamma=\mathrm{d}\sigma\\)
+            \\(\therefore\mathrm{d}s=\sqrt{1+f_x^{\prime 2}+f_y^{\prime 2}}\mathrm{d}\sigma\\)
+         4. 面积 \\(A=\iint\limits_{Dxy}\mathrm{d}s=\iint\limits_{Dxy}\sqrt{1+f_x^{\prime 2}+f_y^{\prime 2}}\mathrm{d}\sigma\\)
+2. 物理应用
+   1. 质心
+      1. 二维
+         
+         {% asset_img 48.png %}
+         \\(m=\iint\limits_D\rho(x,y)\mathrm{d}\sigma\\)
+         \\(\bar{x}=\frac{\iint\limits_D x\rho(x,y)\mathrm{d}\sigma}{\iint\limits_D\rho(x,y)\mathrm{d}\sigma}\\) , \\(\bar{y}=\frac{\iint\limits_D y\rho(x,y)\mathrm{d}\sigma}{\iint\limits_D\rho(x,y)\mathrm{d}\sigma}\\)
+      2. 三维
+         
+         {% asset_img 49.png %}
+         \\(m=\iiint\limits_\Omega\rho(x,y,z)\mathrm{d}v\\)
+         \\(\bar{x}=\frac{\iiint\limits_\Omega x\rho(x,y,z)\mathrm{d}v}{\iiint\limits_\Omega\rho(x,y,z)\mathrm{d}v}\\) , \\(\bar{y}=\frac{\iiint\limits_\Omega y\rho(x,y,z)\mathrm{d}v}{\iiint\limits_\Omega\rho(x,y,z)\mathrm{d}v}\\) , \\(\bar{z}=\frac{\iiint\limits_\Omega z\rho(x,y,z)\mathrm{d}v}{\iiint\limits_\Omega\rho(x,y,z)\mathrm{d}v}\\)
+   2. 转动惯量(刚体绕轴转动时的惯性, 大小为质量乘以距离的平方 \\(I=mr^2\\))
+      1. 二维
+         
+         {% asset_img 50.png %}
+         绕直线 \\(L\\) 旋转: \\(I_L=\iint\limits_D d^2\rho(x,y)\mathrm{d}\sigma\\)
+         绕 \\(x\\) 轴旋转: \\(I_x=\iint\limits_D y^2\rho(x,y)\mathrm{d}\sigma\\)
+         绕 \\(y\\) 轴旋转: \\(I_y=\iint\limits_D x^2\rho(x,y)\mathrm{d}\sigma\\)
+         绕原点旋转: \\(I_o=\iint\limits_D(x^2+y^2)\rho(x,y)\mathrm{d}\sigma\\)
+      2. 三维
+         
+         {% asset_img 51.png %}
+         \\(I_x=\iiint\limits_\Omega(y^2+z^2)\rho(x,y,z)\mathrm{d}v\\)
+         \\(I_y=\iiint\limits_\Omega(x^2+z^2)\rho(x,y,z)\mathrm{d}v\\)
+         \\(I_z=\iiint\limits_\Omega(x^2+y^2)\rho(x,y,z)\mathrm{d}v\\)
 
-### 物理应用
+## 对弧长的曲线积分
 
-1. 质心
-   1. 二维 TODO: 补充图片
-      \\(m=\iint_D \rho(x, y)d\sigma\\)
-      \\(\bar{x}=\frac{\iint_D x\rho(x, y)d\sigma}{\iint_D\rho(x, y)d\sigma} , \bar{y}=\frac{\iint_D y\rho(x, y)d\sigma}{\iint_D \rho(x, y)d\sigma}\\)
-   2. 三维 TODO: 补充图片
-      \\(m=\iiint_\Omega \rho(x, y, z)dV\\)
-      \\(\bar{x}=\frac{\iiint_\Omega x\rho(x, y, z)dV}{\iiint_\Omega \rho(x, y, z)dV} , \bar{y}=\frac{\iiint_\Omega y\rho(x, y, z)dV}{\iiint_\Omega \rho(x, y, z)dV} , \bar{z}=\frac{\iiint_\Omega z\rho(x, y, z)dV}{\iiint_\Omega \rho(x, y, z)dV}\\)
-2. 转动惯量
-   1. 二维 TODO: 补充图片
-      \\(I_L=\iint_D d^2\rho(x, y)d\sigma\\)
-      \\(I_x=\iint_D y^2\rho(x, y)d\sigma\\)
-      \\(I_y=\iint_D x^2\rho(x, y)d\sigma\\)
-      \\(I_0=\iint_D(x^2+y^2)\rho(x, y)d\sigma\\)
-   2. 三维 TODO: 补充图片
-      \\(I_x=\iint_\Omega(y^2+z^2)\rho(x, y, z)dV\\)
-      \\(I_y=\iint_\Omega(x^2+z^2)\rho(x, y, z)dV\\)
-      \\(I_z=\iint_\Omega(x^2+y^2)\rho(x, y, z)dV\\)
+1. 定义: \\(\int_F f(x, y)ds\\)
+2. 性质
+   1. \\(\int_L \alpha f+\beta gds=\alpha\int_L fds+\beta\int_L gds\\)
+   2. \\(L=L_1+L_2\\) 且 \\(L_1\cap L_2=\varnothing\\) , 则 \\(\int_L f(x, y)ds=\int_{L_1} f(x, y)ds+\int_{L_2} f(x, y)ds\\)
+   3. \\(\int_L 1ds=L\\)
+   4. 在 L 上当 \\(f(x, y)\leqslant g(x, y)\\) , 则 \\(\int_L f(x, y)ds\geqslant\int_L g(x, y)ds\\)
+   5. \\(|\int_L f(x, y)ds|\leqslant\int_L|f(x, y)|ds\\)
+3. 对弧长曲线积分计算方法
+   对 \\(\int_L f(x, y)ds\\)
+   1. L 为直角坐标形式
+      1. \\(L: y=\varphi(x) \enspace(a\leqslant x\leqslant b)\\)
+      2. \\(ds=\sqrt{(dx)^2+(dy)^2}=\sqrt{1+(\frac{dy}{dx})^2}dx=\sqrt{1+[f'(x)]^2}dx\\)
+      3. \\(\int_L f(x, y)ds=\int_a^b f[x, \varphi(x)]\sqrt{1+[f'(x)]^2}dx\\)
+   2. L 为参数形式
+      \\(L: \begin{cases} x=\varphi(t) \\\ y=\psi(t) \end{cases} \enspace(\alpha\leqslant t\leqslant\beta)\\)
+      1. \\(L: \begin{cases} x=\varphi(t) \\\ y=\psi(t) \end{cases} \enspace(\alpha\leqslant t\leqslant\beta)\\)
+      2. \\(ds=\sqrt{[\varphi'(t)]^2+[\psi'(t)]^2}dt\\)
+         \\(\int_L f(x, y)ds=\int_\alpha^\beta f[\varphi(t), \psi(t)]\cdot\sqrt{[\varphi'(t)]^2+[\psi'(t)]^2}dt\\)
+
+## 对坐标的曲线积分(第二类曲线积分)
+
+1. 定义
+   * 二维: \\(\int_L P(x, y)dx+Q(x, y)dy\\) , 其中 \\(\int_L P(x, y)dx\\) 称为函数 \\(P(x, y)\\) 在有向曲线段 L 上对坐标 x 的曲线积分.
+   * 三维: \\(\int_L P(x, y, z)dx+Q(x, y, z)dy+R(x, y, z)dz\\)
+2. 性质
+   1. \\(\int_L [af_1(x, y)+bf_2(x, y)]dx=a\int_L f_1(x, y)dx+b\int_L f_2(x, y)dx\\)
+   2. \\(\int_{L^-}P(x, y)dx+Q(x, y)dy=-\int_L P(x, y)dx+Q(x, y)dy\\)
+3. 对坐标的曲线积分基本计算法(2维)
+   定积分法:
+   1. 直角坐标法
+      对 \\(\int_L P(x, y)dx+Q(x, y)dy\\)
+      1. \\(L: y=\varphi(x)\\) (起点 x=a, 终点 x=b)
+      2. \\(\int_L P(x, y)dx+Q(x, y)dy=\int_a^b P[x, \varphi(x)]dx+Q[x, \varphi(x)]\cdot\varphi'(x)dx\\)
+   2. 参数方程法
+      1. \\(L: \begin{cases} x=\varphi(x) \\\ y=\psi(t) \end{cases}\\) (起 \\(t=\alpha\\) , 终 \\(t=\beta\\)))
+      2. \\(\int_L P(x, y)dx+Q(x, y)dy=\int_\alpha^\beta P[\varphi(t), \psi(t)]\varphi'(t)dt+Q[\varphi(t), \psi(t)]\psi'(t)dt\\)
+
+## 格林公式及应用
+
+定义:
+1. 设 D 为连通区域, L 为 D 的<u>正向边界</u>
+2. \\(P(x, y), Q(x, y)\\) 在 D 上连续可偏导, 则
+   \\(\oint_L Pdx+Qdy=\iint_D\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}d\sigma\\)
+
+## 对面积的曲面积分
+
+计算方法: 二重积分法
+\\(\iint_\Sigma f(x, y, z)ds\\)
+1. \\(\Sigma: z=\varphi(x, y) \enspace(x, y)\in Dxy\\)
+2. \\(ds=\sqrt{1+[z_x^']^2+[z_y^']^2}d\sigma\\)
+3. \\(\iint_\Sigma f(x, y, z)ds=\iint_D f[x, y, \varphi(x, y)]\cdot\sqrt{1+[\varphi_x^']^2+[\varphi_y^']^2}d\sigma\\)
+
+## 对坐标的曲面积分
+
+### 对坐标的曲面积分的定义
+
+\\(\Sigma\\) 有侧曲面块, \\(P(x, y, z) , Q(x, y, z) , R(x, y, z)\\) 在有侧曲面上有界
+1. \\(\Sigma\\) 分为 \\(\overrightarrow{\Delta S_1} , \overrightarrow{\Delta S_2} , \dots , \overrightarrow{\Delta S_n}\\)
+2. \\(overrightarrow{\Delta S_i}\\) 在 yOz 面, xOz 面, xOy 面投影为
+   \\((\Delta S_i)yz , (\Delta S_i)xz , (\Delta S_i)xy , P(\xi_i, \eta_i, \zeta_i)\in\overrightarrow{\Delta S_i}\\) ,
+   作
+   \\(\displaystyle\sum_{i=1}^n P(\xi_i, \eta_i, \zeta_i)(\Delta S_i)yz\\)
+   \\(\displaystyle\sum_{i=1}^n Q(\xi_i, \eta_i, \zeta_i)(\Delta S_i)xz\\)
+   \\(\displaystyle\sum_{i=1}^n R(\xi_i, \eta_i, \zeta_i)(\Delta S_i)xy\\)
+3. 令 \\(\lambda\\) 为 \\(\overrightarrow{\Delta S_1} , \overrightarrow{\Delta S_2} , \dots , \overrightarrow{\Delta S_n}\\) 直径最大值
+   若 \\(\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n P(\xi_i, \eta_i, \zeta_i)(\Delta S_i)yz\\) 存在, 则
+   \\(\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n P(\xi_i, \eta_i, \zeta_i)(\Delta S_i)=\iint_\Sigma P(x, y, z)dydz \enspace\\) (P 在有侧曲面 \\(\Sigma\\) 上对坐标 y, z 的曲面积分)
+   \\(\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n Q(\xi_i, \eta_i, \zeta_i)(\Delta S_i)xz=\iint_\Sigma Q(x, y, z)dxdz\\)
+   \\(\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n R(\xi_i, \eta_i, \zeta_i)(\Delta S_i)xy=\iint_\Sigma R(x, y, z)dxdy\\)
+   \\(\iint_\Sigma Pdydz+\iint_\Sigma Qdxdz+\iint_\Sigma Rdxdy=\iint_\Sigma Pdydz+Qdxdz+Rdxdy\\)
+
+性质:
+1. \\(\iint_\Sigma=\iint_{\Sigma_1}+\iint_{\Sigma_2}\\)
+2. \\(\iint_{\Sigma^-}=-\iint_\Sigma\\)
+
+### 对坐标的曲面积分基本计算法-二重积分法
+
+TODO: 分析例题
+
+### 两类曲面积分关系
+
+TODO: 补充图片
+对 \\(\iint_\Sigma Pdyd+Qdzdx+Rdxdy\\)
+\\(dydz=ds\cdot\cos\alpha\\)
+\\(dxdz=ds\cdot\cos\beta\\)
+\\(dxdy=ds\cdot\cos\gamma\\)
+\\(\iint_\Sigma Pdydz+Qdxdz+Rdxdy=\iint_\Sigma (P\cos\alpha+Q\cos\beta+R\cos\gamma)ds\\)
+
+## 高斯公式
+
+定义:
+1. \\(\Omega\\) 为集合体, \\(\Sigma\\) 为 \\(\Omega\\) 的外表面
+2. \\(P, Q, R\\) 在 \\(\Omega\\) 上连续可偏导, 则
+   \\(\oiint_\Sigma Pdydz+Qdzdx+Rdxdy=\iiint_\Omega(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z})dV\\)
+
+## 斯托克斯公式
+
+定义:
+1. \\(\Sigma\\) 为光滑曲面块, \\(\Gamma\\) 为 \\(\Sigma\\) 的界, \\(\Sigma\\) 的侧与 \\(\Gamma\\) 的方向按右手确定
+2. \\(P, Q, R\\) 在 \\(\Sigma\\) 连续可偏导, 则
+   \\(\oint_L Pdx+Qdy+Rdz=\iint_\Sigma \begin{vmatrix} dydz & dzdx & dxdy \\\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\\ P & Q & R \end{vmatrix}=\iint_\Sigma \begin{vmatrix} \cos\alpha & \cos\beta & \cos\gamma \\\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\\ P & Q & R \end{vmatrix}ds\\)
+   其中 \\(\cos\alpha, \cos\beta, \cos\gamma\\) 为曲面 \\(\Sigma\\) 法向量的方向余弦
