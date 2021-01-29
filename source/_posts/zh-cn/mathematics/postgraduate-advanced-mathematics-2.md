@@ -168,7 +168,7 @@ tags:
    称 \\(F(x,y,z)=0\\) 为曲面 \\(\Sigma\\) 的方程, \\(\Sigma\\) 为方程 \\(F(x,y,z)=0\\) 对应的曲面
    记 \\(\Sigma:F(x,y,z)=0\\)
 2. 柱面
-   1. \\(\Sigma:F(x,y)=0\\) 为母线平行于 \\(z\\) 轴的柱面
+   1. \\(\Sigma:F(x,y)=0\\) 为母线(延伸方向)平行于 \\(z\\) 轴的柱面
    2. \\(\Sigma:G(y,z)=0\\) 为母线平行于 \\(x\\) 轴的柱面
    3. \\(\Sigma:H(x,z)=0\\) 为母线平行于 \\(y\\) 轴的柱面
    
@@ -751,6 +751,16 @@ tags:
          \\(I_x=\iiint\limits_\Omega(y^2+z^2)\rho(x,y,z)\mathrm{d}v\\)
          \\(I_y=\iiint\limits_\Omega(x^2+z^2)\rho(x,y,z)\mathrm{d}v\\)
          \\(I_z=\iiint\limits_\Omega(x^2+y^2)\rho(x,y,z)\mathrm{d}v\\)
+   3. 引力
+      
+      {% asset_img 59.png %}
+      求到质量为 \\(m\\) 的点 \\((0,0,c)\\) 的引力:
+      1. \\(\forall\mathrm{\sigma}\subset D\\)
+      2. \\(\mathrm{d}|\vec{F}|=k\frac{m\cdot\rho\mathrm{d}\sigma}{x^2+y^2+c^2}\\) (\\(k\\) 为引力常数)
+      3. \\(\mathrm{d}|\vec{F_x}|=\mathrm{d}|\vec{F}|\cdot\cos\theta\cdot\cos\alpha\\)
+         \\(\mskip{2.5em}=\mathrm{d}|\vec{F}|\cdot\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+c^2}}\cdot\frac{x}{\sqrt{x^2+y^2}}\\)
+         \\(\mskip{2.5em}=\frac{km\cdot\rho(x,y)\cdot x}{(x^2+y^2+c^2)^{\frac{3}{2}}}\mathrm{d}\sigma\\)
+      4. \\(x\\) 轴的分力 \\(|\vec{F_x}|=\iint\limits_{D}\mathrm{d}|\vec{F_x}|=km\iint\limits_{D}\frac{x\rho(x,y)}{(x^2+y^2+c^2)^{\frac{3}{2}}}\mathrm{d}\sigma\\)
 
 ## 曲线积分与曲面积分
 
@@ -764,7 +774,7 @@ tags:
    1. \\(L\\) 划分为 \\(\Delta S_1,\dots,\Delta S_n\\)
    2. \\(\forall(\xi_i,\eta_i)\in\Delta S_i\\)
       \\(\Delta m_i=\rho(\xi_i,\eta_i)\Delta S_i\\)
-   3. 取 \\(\lambda\\) 为 \\(\Delta S_1,\dots,\Delta S_n\\) 最大值
+   3. 令 \\(\lambda\\) 为 \\(\Delta S_1,\dots,\Delta S_n\\) 最大值
       曲线总质量 \\(m=\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n\rho(\xi_i,\eta_i)\Delta S_i\\)
    
    元素法思想:
@@ -833,82 +843,423 @@ tags:
 2. 格林公式:
    设 \\(D\\) 为连通区域, \\(L\\) 为 \\(D\\) 的**正向边界**
    若 \\(P(x,y)\\)、\\(Q(x,y)\\) 在 \\(D\\) 上连续可偏导, 则
-   \\(\oint_L P\mathrm{d}x+Q\mathrm{d}y=\iint\limits_D(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\mathrm{d}\sigma\enspace\\) (\\(\oint\\) 表示封闭边界, 和 \\(\int\\) 基本等价)
+   \\(\oint_L P\mathrm{d}x+Q\mathrm{d}y=\iint\limits_D(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\mathrm{d}\sigma\enspace\\) (\\(\oint\\) 表示封闭边界, 即边界是闭合的. 依旧用 \\(\int\\) 也行)
    证明:
-   * \\(\oint_L P\mathrm{d}x=-\iint\limits_D\frac{\partial P}{\partial y}\mathrm{d}\sigma\\)
-     {% asset_img 57.png %}
-     \\(\oint_L P\mathrm{d}x=\int_{L_1}P\mathrm{d}x+\int_{L_2}P\mathrm{d}x\\)
-     \\(=\int_a^b P[x,\varphi_1(x)]\mathrm{d}x+\int_b^a P[x,\varphi_2(x)]\mathrm{d}x\\)
-     \\(=\int_a^b\\{P[x,\varphi_1(x)]-P[x,\varphi_2(x)]\\}\mathrm{d}x\\)
-   
-     \\(\iint\limits_D\frac{\partial P}{\partial y}d\sigma=\int_a^b\mathrm{d}x\int_{\varphi_1(x)}^{\varphi_2(x)}\frac{\partial P}{\partial y}\mathrm{d}y\\)
-     \\(=\int_a^b P(x,y)|_{\varphi_1(x)}^{\varphi_2(x)}\mathrm{d}x=\int_a^b\\{P[x,\varphi_2(x)]-P[x,\varphi_1(x)]\\}\mathrm{d}x\\)
-     \\(\therefore\oint_L P\mathrm{d}x=-\iint\limits_D\frac{\partial P}{\partial y}\mathrm{d}\sigma\\)
-   * \\(\oint\_L Q\mathrm{d}y=\iint\limits\_{D}\frac{\partial Q}{\partial x}\mathrm{d}\sigma\\)
-     {% asset_img 58.png %}
-     \\(\oint_L Q\mathrm{d}y=\int_{L_1}Q\mathrm{d}y+\int_{L_2}Q\mathrm{d}y\\)
-     \\(=\int_d^c Q[\psi_1(y),y]\mathrm{d}y+\int_c^d Q[\psi_2(y),y]\mathrm{d}y\\)
-     \\(=\int_c^d\\{Q[\psi_2(y),y]-Q[\psi_1(y),y]\\}\mathrm{d}y\\)
+   1. 单连通区域
+      * \\(\oint_L P\mathrm{d}x=-\iint\limits_D\frac{\partial P}{\partial y}\mathrm{d}\sigma\\)
+        {% asset_img 57.png %}
+        \\(\oint_L P\mathrm{d}x=\int_{L_1}P\mathrm{d}x+\int_{L_2}P\mathrm{d}x\\)
+        \\(=\int_a^b P[x,\varphi_1(x)]\mathrm{d}x+\int_b^a P[x,\varphi_2(x)]\mathrm{d}x\\)
+        \\(=\int_a^b\\{P[x,\varphi_1(x)]-P[x,\varphi_2(x)]\\}\mathrm{d}x\\)
+      
+        \\(\iint\limits_D\frac{\partial P}{\partial y}d\sigma=\int_a^b\mathrm{d}x\int_{\varphi_1(x)}^{\varphi_2(x)}\frac{\partial P}{\partial y}\mathrm{d}y\\)
+        \\(=\int_a^b P(x,y)|_{\varphi_1(x)}^{\varphi_2(x)}\mathrm{d}x=\int_a^b\\{P[x,\varphi_2(x)]-P[x,\varphi_1(x)]\\}\mathrm{d}x\\)
+        \\(\therefore\oint_L P\mathrm{d}x=-\iint\limits_D\frac{\partial P}{\partial y}\mathrm{d}\sigma\\)
+      * \\(\oint\_L Q\mathrm{d}y=\iint\limits\_{D}\frac{\partial Q}{\partial x}\mathrm{d}\sigma\\)
+        {% asset_img 58.png %}
+        \\(\oint_L Q\mathrm{d}y=\int_{L_1}Q\mathrm{d}y+\int_{L_2}Q\mathrm{d}y\\)
+        \\(=\int_d^c Q[\psi_1(y),y]\mathrm{d}y+\int_c^d Q[\psi_2(y),y]\mathrm{d}y\\)
+        \\(=\int_c^d\\{Q[\psi_2(y),y]-Q[\psi_1(y),y]\\}\mathrm{d}y\\)
 
-     \\(\iint\limits_{D}\frac{\partial Q}{\partial x}\mathrm{d}\sigma=\int_c^d\mathrm{d}y\int_{\psi_1(y)}^{\psi_2(y)}\frac{\partial Q}{\partial x}\mathrm{d}x\\)
-     \\(=\int_c^d Q(x,y)|_{\psi_1(y)}^{\psi_2(y)}\mathrm{d}y=\int_c^d\\{Q[\psi_2(y),y]-Q[\psi_1(y),y]\\}\mathrm{d}y\\)
-     \\(\therefore\oint\_L Q\mathrm{d}y=\iint\limits\_{D}\frac{\partial Q}{\partial x}\mathrm{d}\sigma\\)
+        \\(\iint\limits_{D}\frac{\partial Q}{\partial x}\mathrm{d}\sigma=\int_c^d\mathrm{d}y\int_{\psi_1(y)}^{\psi_2(y)}\frac{\partial Q}{\partial x}\mathrm{d}x\\)
+        \\(=\int_c^d Q(x,y)|_{\psi_1(y)}^{\psi_2(y)}\mathrm{d}y=\int_c^d\\{Q[\psi_2(y),y]-Q[\psi_1(y),y]\\}\mathrm{d}y\\)
+        \\(\therefore\oint\_L Q\mathrm{d}y=\iint\limits\_{D}\frac{\partial Q}{\partial x}\mathrm{d}\sigma\\)
    
-   \\(\oint_L P\mathrm{d}x+Q\mathrm{d}y=\iint\limits_D(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\mathrm{d}\sigma\enspace\\)
+      \\(\oint_L P\mathrm{d}x+Q\mathrm{d}y=\iint\limits_D(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\mathrm{d}\sigma\enspace\\)
+   2. 多联通区域
+      {% asset_img 60.png %}
+      \\(\oint\limits_{\overline{AMB}+\overline{BD}+\overline{DEC}+\overline{CA}}P\mathrm{d}x+Q\mathrm{d}y=\iint\limits_{D_1}(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\mathrm{d}\sigma)\\)
+      \\(\oint\limits_{\overline{AC}+\overline{CFD}+\overline{DB}+\overline{BNA}}P\mathrm{d}x+Q\mathrm{d}y=\iint\limits_{D_2}(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\mathrm{d}\sigma\\)
+      \\(\because(\overline{AMB}+\overline{BD}+\overline{DEC}+\overline{CA})+(\overline{AC}+\overline{CFD}+\overline{DB}+\overline{BNA})\\)
+      \\(\mskip{1em}=\overline{AMB}+\overline{DEC}+\overline{CFD}+\overline{BNA}=L_1+L_2=L\\)
+      \\(\therefore\oint_{L}P\mathrm{d}x+Q\mathrm{d}y=\iint\limits_{D}(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\mathrm{d}\sigma\\)
 
 ### 对面积的曲面积分
 
-计算方法: 二重积分法
-1. \\(\Sigma:z=\varphi(x,y)\enspace\\) (\\((x,y)\in Dxy\\))
-2. \\(\mathrm{d}s=\sqrt{(\mathrm{d}x)^2+(\mathrm{d}y)^2}=\sqrt{1+z_x^{\prime 2}+z_y^{\prime^2}}\mathrm{d}\sigma\\)
-3. 面积 \\(\iint\limits_\Sigma f(x,y,z)\mathrm{d}s=\iint\limits_D f[x,y,\varphi(x,y)]\cdot\sqrt{1+\varphi_x^{\prime 2}+\varphi_y^{\prime 2}}\mathrm{d}\sigma\\)
+1. 背景
+   经典积分思想:
+   
+   {% asset_img 61.png %}
+   1. \\(\Sigma\\) 划分为 \\(\Delta S_1,\dots,\Delta S_n\\)
+   2. \\(\forall(\xi_i,\eta_i,\zeta_i)\in\Delta S_i\\)
+      \\(\Delta m_i\approx \rho(\xi_i,\eta_i,\zeta_i)\Delta S_i\\)
+   3. 令 \\(\lambda\\) 为 \\(\Delta S_1,\dots,\Delta S_n\\) 直径最大值
+      曲面总质量 \\(m=\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n\rho(\xi_i,\eta_i,\zeta_i)\Delta S_i\\)
+
+   元素法思想:
+
+   {% asset_img 62.png %}
+   1. \\(\forall\mathrm{d}s\subset\Sigma\\)
+   2. \\(\mathrm{d}m=\rho(x,y,z)\mathrm{d}s\\)
+   3. \\(m=\iint\limits_{\Sigma}\rho(x,y,z)\mathrm{d}s\\)
+2. 对面积的曲面积分的定义: \\(\iint\limits_{\Sigma}f(x,y,z)\mathrm{d}s\\)
+3. 计算方法: 二重积分法
+   {% asset_img 63.png %}
+   1. \\(\Sigma:z=\varphi(x,y)\enspace\\) (\\((x,y)\in Dxy\\))
+   2. \\(\mathrm{d}s=\sqrt{1+z_x^{\prime 2}+z_y^{\prime^2}}\mathrm{d}\sigma\\)
+      (参见重积分应用-空间曲面的面积)
+   3. 面积 \\(\iint\limits_\Sigma f(x,y,z)\mathrm{d}s=\iint\limits_{Dxy} f[x,y,\varphi(x,y)]\cdot\sqrt{1+\varphi_x^{\prime 2}+\varphi_y^{\prime 2}}\mathrm{d}\sigma\\)
 
 ### 对坐标的曲面积分
 
-1. 对坐标的曲面积分的定义
-   \\(\Sigma\\) 有侧曲面块, \\(P(x,y,z)\\)、\\(Q(x,y,z)\\)、\\(R(x,y,z)\\) 在有侧曲面上有界
-   1. \\(\Sigma\\) 分为 \\(\overrightarrow{\Delta S_1},\overrightarrow{\Delta S_2},\dots,\overrightarrow{\Delta S_n}\\)
-   2. \\(\overrightarrow{\Delta S_i}\\) 在 \\(yOz\\) 面、\\(xOz\\) 面、\\(xOy\\) 面投影为 \\((\Delta S_i)yz\\)、\\((\Delta S_i)xz\\)、\\((\Delta S_i)xy\\) , 
-      \\(P(\xi_i, \eta_i, \zeta_i)\in\overrightarrow{\Delta S_i}\\) ,
-      作
-      \\(\displaystyle\sum_{i=1}^n P(\xi_i, \eta_i, \zeta_i)(\Delta S_i)yz\\)
-      \\(\displaystyle\sum_{i=1}^n Q(\xi_i, \eta_i, \zeta_i)(\Delta S_i)xz\\)
-      \\(\displaystyle\sum_{i=1}^n R(\xi_i, \eta_i, \zeta_i)(\Delta S_i)xy\\)
-   3. 令 \\(\lambda\\) 为 \\(\overrightarrow{\Delta S_1} , \overrightarrow{\Delta S_2} , \dots , \overrightarrow{\Delta S_n}\\) 直径最大值
-      若 \\(\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n P(\xi_i, \eta_i, \zeta_i)(\Delta S_i)yz\\) 存在, 则
-      \\(\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n P(\xi_i, \eta_i, \zeta_i)(\Delta S_i)=\iint_\Sigma P(x, y, z)dydz \enspace\\) (P 在有侧曲面 \\(\Sigma\\) 上对坐标 y, z 的曲面积分)
-      \\(\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n Q(\xi_i, \eta_i, \zeta_i)(\Delta S_i)xz=\iint_\Sigma Q(x, y, z)dxdz\\)
-      \\(\lim\limits_{\lambda\to0}\displaystyle\sum_{i=1}^n R(\xi_i, \eta_i, \zeta_i)(\Delta S_i)xy=\iint_\Sigma R(x, y, z)dxdy\\)
-      \\(\iint_\Sigma Pdydz+\iint_\Sigma Qdxdz+\iint_\Sigma Rdxdy=\iint_\Sigma Pdydz+Qdxdz+Rdxdy\\)
+曲面分有侧和无侧(如莫比乌斯环)
+
+1. 背景: 求流体的流量
+   {% asset_img 64.png %}
+   流速 \\(\vec{v}=\\{P(x,y,z),Q(x,y,z),R(x,y,z)\\}\\)
+   则有通量 \\(\\Phi=\vec{v}\cdot\vec{s}=|\vec{v}|\mathrm{d}s\cdot\cos\theta\\)
+2. 对坐标的曲面积分的定义
+   设有侧曲面块 \\(\Sigma\\) , \\(P(x,y,z)\\)、\\(Q(x,y,z)\\)、\\(R(x,y,z)\\) 在有侧曲面上有界
+   1. \\(\Sigma\\) 分为 \\(\overrightarrow{\Delta s_1},\dots,\overrightarrow{\Delta s_n}\\)
+   2. \\(\overrightarrow{\Delta S_i}\\) 在 \\(yOz\\) 面、\\(xOz\\) 面、\\(xOy\\) 面投影为 \\((\Delta s\_i)\_{yz}\\)、\\((\Delta s\_i)\_{xz}\\)、\\((\Delta s\_i)\_{xy}\\) , 
+      \\(\forall(\xi_i,\eta_i,\zeta_i)\in\overrightarrow{\Delta S_i}\\) , 作
+      \\(\displaystyle\sum\_{i=1}^n P(\xi\_i,\eta\_i,\zeta\_i)(\Delta s\_i)\_{yz}\\)
+      \\(\displaystyle\sum\_{i=1}^n Q(\xi\_i,\eta\_i,\zeta\_i)(\Delta s\_i)\_{xz}\\)
+      \\(\displaystyle\sum\_{i=1}^n R(\xi\_i,\eta\_i,\zeta\_i)(\Delta s\_i)\_{xy}\\)
+   3. 令 \\(\lambda\\) 为 \\(\overrightarrow{\Delta s_1},\dots,\overrightarrow{\Delta s_n}\\) 直径最大值
+      (前提是极限存在)
+      * \\(\lim\limits\_{\lambda\to 0}\displaystyle\sum\_{i=1}^n P(\xi\_i,\eta\_i,\zeta\_i)(\Delta s\_i)\_{yz}=\iint\limits\_\Sigma P(x,y,z)\mathrm{d}y\mathrm{d}z\enspace\\) (称为 \\(P\\) 在有侧曲面 \\(\Sigma\\) 上对坐标 \\(y\\)、\\(z\\) 的曲面积分)
+      * \\(\lim\limits\_{\lambda\to 0}\displaystyle\sum\_{i=1}^n Q(\xi\_i,\eta\_i,\zeta\_i)(\Delta s\_i)\_{xz}=\iint\limits\_\Sigma Q(x,y,z)\mathrm{d}x\mathrm{d}z\enspace\\) (称为 \\(P\\) 在有侧曲面 \\(\Sigma\\) 上对坐标 \\(x\\)、\\(z\\) 的曲面积分)
+      * \\(\lim\limits\_{\lambda\to 0}\displaystyle\sum\_{i=1}^n R(\xi\_i,\eta\_i,\zeta\_i)(\Delta s\_i)\_{xy}=\iint\limits\_\Sigma R(x,y,z)\mathrm{d}x\mathrm{d}y\enspace\\) (称为 \\(P\\) 在有侧曲面 \\(\Sigma\\) 上对坐标 \\(x\\)、\\(y\\) 的曲面积分)
+      
+      因此有 \\(\iint\limits_\Sigma P\mathrm{d}y\mathrm{d}z+\iint\limits_\Sigma Q\mathrm{d}x\mathrm{d}z+\iint\limits_\Sigma R\mathrm{d}x\mathrm{d}y=\iint\limits_\Sigma P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}x\mathrm{d}z+R\mathrm{d}x\mathrm{d}y\\)
    
-   性质:
-   1. \\(\iint_\Sigma=\iint_{\Sigma_1}+\iint_{\Sigma_2}\\)
-   2. \\(\iint_{\Sigma^-}=-\iint_\Sigma\\)
+   * 性质:
+     1. \\(\iint\limits_\Sigma=\iint\limits_{\Sigma_1}+\iint\limits_{\Sigma_2}\\)
+     2. \\(\iint\limits_{\Sigma^-}=-\iint\limits_\Sigma\\)
+        (\\(\Sigma^-\\) 代表曲面的另一侧)
+3. 两类曲面积分关系
+   {% asset_img 65.png %}
+   对 \\(\iint\limits_\Sigma P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y\\) , 有
+   \\(\mathrm{d}y\mathrm{d}z=\mathrm{d}s\cdot\cos\alpha\\)
+   \\(\mathrm{d}x\mathrm{d}z=\mathrm{d}s\cdot\cos\beta\\)
+   \\(\mathrm{d}x\mathrm{d}y=\mathrm{d}s\cdot\cos\gamma\\)
+   \\(\iint\limits_\Sigma P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}x\mathrm{d}z+R\mathrm{d}x\mathrm{d}y=\iint\limits_\Sigma (P\cos\alpha+Q\cos\beta+R\cos\gamma)\mathrm{d}s\\)
+4. 计算方法: 二重积分法
+   1. \\(\Sigma:z=\varphi(x,y)\enspace\\) (\\((x,y)\in Dxy\\))
+   2. \\(\iint\limits_\Sigma R(x,y,z)\mathrm{d}x\mathrm{d}y=\pm\iint\limits_{Dxy}R[x,y,\varphi(x,y)]\mathrm{d}x\mathrm{d}y\\)
+      (\\(\Sigma\\) 取上侧为正, \\(\Sigma\\) 取下侧为负)
 
-### 对坐标的曲面积分基本计算法-二重积分法
-
-TODO: 分析例题
-
-### 两类曲面积分关系
-
-TODO: 补充图片
-对 \\(\iint_\Sigma Pdyd+Qdzdx+Rdxdy\\)
-\\(dydz=ds\cdot\cos\alpha\\)
-\\(dxdz=ds\cdot\cos\beta\\)
-\\(dxdy=ds\cdot\cos\gamma\\)
-\\(\iint_\Sigma Pdydz+Qdxdz+Rdxdy=\iint_\Sigma (P\cos\alpha+Q\cos\beta+R\cos\gamma)ds\\)
-
-## 高斯公式
+### 高斯公式
 
 定义:
-1. \\(\Omega\\) 为集合体, \\(\Sigma\\) 为 \\(\Omega\\) 的外表面
-2. \\(P, Q, R\\) 在 \\(\Omega\\) 上连续可偏导, 则
-   \\(\oiint_\Sigma Pdydz+Qdzdx+Rdxdy=\iiint_\Omega(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z})dV\\)
+1. \\(\Omega\\) 为几何体, 曲面 \\(\Sigma\\) 为 \\(\Omega\\) 的外表面
+2. 函数 \\(P\\)、\\(Q\\)、\\(R\\) 在 \\(\Omega\\) 上连续可偏导, 则
+   \\(\oiint\limits_\Sigma P\mathrm{d}y\mathrm{d}z+Q\mathrm{d}z\mathrm{d}x+R\mathrm{d}x\mathrm{d}y=\iiint\limits_\Omega(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z})\mathrm{d}v\\)
+    (\\(\oiint\\) 表示封闭曲面, 依旧用 \\(\iint\\) 同样可行)
+   * 证明: (仅证 \\(\oiint\limits_\Sigma R\mathrm{d}x\mathrm{d}y=\iiint\limits_\Omega\frac{\partial R}{\partial z}\mathrm{d}v\\))
+     
+     {% asset_img 66.png %}
+     1. \\(\oiint\limits_\Sigma R\mathrm{d}x\mathrm{d}y=\iint\limits_{\Sigma_1}R\mathrm{d}x\mathrm{d}y-\iint\limits_{\Sigma_2}R\mathrm{d}x\mathrm{d}y\\)
+        \\(\iint\limits_{\Sigma_1} R\mathrm{d}x\mathrm{d}y=-\iint\limits_{Dxy}R[x,y,\varphi_1(x,y)]\mathrm{d}x\mathrm{d}y\\)
+        \\(\iint\limits_{\Sigma_2} R\mathrm{d}x\mathrm{d}y=\iint\limits_{Dxy}R[x,y,\varphi_2(x,y)]\mathrm{d}x\mathrm{d}y\\)
+        \\(\therefore\oiint\limits_\Sigma R\mathrm{d}x\mathrm{d}y=\iint\limits_{Dxy}\\{R[x,y,\varphi_2(x,y)]-R[x,y,\varphi_1(x,y)]\\}\mathrm{d}x\mathrm{d}y\\)
+     2. \\(\Omega=\\{(x,y,z)|(x,y)\in Dxy,\varphi_1(x,y)\leqslant z\leqslant\varphi_2(x,y)\\}\\)
+        \\(\iiint\limits_\Omega\frac{\partial R}{\partial z}\mathrm{d}v=\iint\limits_{Dxy}\mathrm{d}x\mathrm{d}y\int_{\varphi_1(x,y)}^{\varphi_2(x,y)}\frac{\partial R}{\partial z}\mathrm{d}z\\)
+        \\(=\iint\limits_{Dxy}R(x,y,z)|_{\varphi_1(x,y)}^{\varphi_2(x,y)}\mathrm{d}x\mathrm{d}y\\)
+        \\(=\iint\limits\_{Dxy}\\{R(x,y,\varphi\_1(x,y))-R(x,y,\varphi\_2(x,y))\\}\mathrm{d}x\mathrm{d}y\\)
+   
+     \\(\therefore\oiint\limits_\Sigma R\mathrm{d}x\mathrm{d}y=\iiint\limits_\Omega\frac{\partial R}{\partial z}\mathrm{d}v\\)
 
 ## 斯托克斯公式
 
 定义:
-1. \\(\Sigma\\) 为光滑曲面块, \\(\Gamma\\) 为 \\(\Sigma\\) 的界, \\(\Sigma\\) 的侧与 \\(\Gamma\\) 的方向按右手确定
-2. \\(P, Q, R\\) 在 \\(\Sigma\\) 连续可偏导, 则
-   \\(\oint_L Pdx+Qdy+Rdz=\iint_\Sigma \begin{vmatrix} dydz & dzdx & dxdy \\\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\\ P & Q & R \end{vmatrix}=\iint_\Sigma \begin{vmatrix} \cos\alpha & \cos\beta & \cos\gamma \\\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\\ P & Q & R \end{vmatrix}ds\\)
-   其中 \\(\cos\alpha, \cos\beta, \cos\gamma\\) 为曲面 \\(\Sigma\\) 法向量的方向余弦
+\\(\Sigma\\) 为光滑曲面块, \\(\Gamma\\) 为 \\(\Sigma\\) 的界, \\(\Sigma\\) 的侧与 \\(\Gamma\\) 的方向按右手确定
+函数 \\(P, Q, R\\) 在 \\(\Sigma\\) 连续可偏导, 则
+<div>
+$$
+\oint_L P\mathrm{d}x+Q\mathrm{d}y+R\mathrm{d}z=\iint\limits_\Sigma
+\begin{vmatrix}
+ \mathrm{d}y\mathrm{d}z & \mathrm{d}z\mathrm{d}x & \mathrm{d}x\mathrm{d}y \\
+ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+ P & Q & R
+\end{vmatrix}
+=\iint\limits_\Sigma
+\begin{vmatrix}
+ \cos\alpha & \cos\beta & \cos\gamma \\
+ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+ P & Q & R
+\end{vmatrix}\mathrm{d}s
+$$
+</div>
+
+其中 \\(\cos\alpha, \cos\beta, \cos\gamma\\) 为曲面 \\(\Sigma\\) 法向量的方向余弦
+
+## 常数项级数的概念和性质
+
+1. 定义: 
+   设 \\(\{a_n\}\\) 常数列, 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 为常数项级数
+   \\(S_n=a_1 + a_2 + \dots + a_n\\) 为部分和
+   \\(\lim\limits_{n\to\infty}S_n \begin{cases} =A &, 收敛于A 且 S_n=\displaystyle\sum_{n=1}^\infty a_n \\\ 不存在 &, 发散  \end{cases}\\)
+2. 常数项级数性质:
+   1. \\(\displaystyle\sum_{n=1}^\infty a_n=A , \displaystyle\sum_{n=1}^\infty b_n=B\\) , 则 \\(\begin{cases} \displaystyle\sum_{n=1}^\infty (a_n+b_n)=A+B \\\ \displaystyle\sum_{n=1}^\infty (a_n-b_n)=A-B \end{cases}\\)
+   2. \\(\displaystyle\sum_{n=1}^\infty a_n=A\\) , 设 \\(k\in R\\) , 则 \\(\displaystyle\sum_{n=1}^\infty ka_n=kA\\)
+   3. 级数中添加、减少、改变有限项, 级数的收敛性质不变
+   4. 添加括号后收敛性不降低(即收敛性可能会提高)
+      如 \\(S_n=1-1+1-1+\dots\\) 发散
+      但 \\(S_n=(1-1)+(1-1)+\dots\\) 收敛于0
+   5. 收敛必要条件: 设 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛, 则 \\(\lim\limits_{n\to\infty} a_n=0\\) , <u>反之不对</u>(如[调和级数](#harmonic_series))
+
+Note: (几何级数) \\(\displaystyle\sum_{n=1}^\infty aq^n \begin{cases} |q|\geqslant1 , 发散 \\\ |q|<1 , =\frac{首项}{1-公比} \end{cases}\\) (公式推导参考等比数列)
+
+## 常数项级数的审敛法
+
+TODO: 前章讲过, 属于冗余内容
+对\\(\displaystyle\sum_{n=1}^\infty a_n\\) :
+1. \\(S_n=a_1+a_2+\dots+a_n\\)
+   \\(\lim\limits_{n\to\infty}S_n \begin{cases} =A , S_n=\displaystyle\sum_{n=1}^\infty a_n \\\ 无 , 发散 \end{cases}\\)
+2. \\(\lim\limits_{n\to\infty} a_n\neq0 \rArr \displaystyle\sum_{n=1}^\infty a_n\\) 发散
+
+### 正向级数及审敛法
+
+1. 定义: 设 \\(\displaystyle\sum_{n=1}^\infty a_n\\) , 若 \\(\forall n\\) , \\(a_n\geqslant0\\) , 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 为正向级数
+
+Note:
+\\(S_1\leqslant S_2\leqslant S_3\leqslant\dots\\) , 即 \\(\\{S_n\\}\uarr\\) (表示 \\(S_n\\) 单调递增);
+情况1：\\(\\{S_n\\}\\) 无上介 \\(\rArr \lim\limits_{n\to\infty} S_n=+\infty \rArr \displaystyle\sum_{n=1}^\infty a_n\\) 发散
+情况2: \\(S_n\leqslant M \rArr \lim\limits_{n\to\infty} S_n\\) 存在 \\(\rArr \displaystyle\sum_{n=1}^\infty a_n\\) 收敛
+2. 审敛法
+   1. 比较法
+      \\(a_n\leqslant b_n\\) 且 \\(\displaystyle\sum_{n=1}^\infty b_n\\) 收敛, 则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛
+      \\(a_n\geqslant b_n\\) 且 \\(\displaystyle\sum_{n=1}^\infty b_n\\) 发散, 则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 发散
+   2. 比较法(极限形式)
+      设正项级数 \\(\displaystyle\sum_{n=1}^\infty a_n\\) , \\(\displaystyle\sum_{n=1}^\infty b_n\\)
+      若 \\(\lim\limits_{n\to\infty}\dfrac{b_n}{a_n}=l \quad(0<l<+\infty)\\)
+      则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 与 \\(\displaystyle\sum_{n=1}^\infty b_n\\) 敛散性相同
+   3. 比值法
+      设正项级数 \\(\displaystyle\sum_{n=1}^\infty a_n\\)
+      (这里拓展了一下, 和 \\(\lim\limits_{n\to\infty}|\dfrac{a_{n+1}}{a_n}|\\) 是一样的)
+      若 \\(\lim\limits_{n\to\infty}\dfrac{a_{n+1}}{a_n}=P\\)
+      则 \\(P<1\\) 时, 级数收敛;
+      \\(\mskip{1em} P>1\\) 时, 级数发散.
+   4. 根值法
+      设正项级数 \\(\displaystyle\sum_{n=1}^\infty a_n\\)
+      若 \\(\lim\limits_{n\to\infty}\sqrt[n]{a_n}=P\\)
+      则 \\(P<1\\) 时, 级数收敛;
+      \\(\mskip{1em} P>1\\) 时, 级数发散.
+
+
+<span id="harmonic_series"></span>
+Notes:
+1. \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n^p}\\) 称为 p-级数
+   若 \\(p=1\\) , 称 \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n}\\) 为调和级数
+2. \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n^p} \begin{cases} p>1 , 收敛 \\\ p\leqslant 1 , 发散 \end{cases}\\) (敛散性使用根值法)
+
+### 交错级数及审敛法
+
+1. 定义
+   形如 \\(a_1-a_2+a_3-a_4+\dots\\) 或 \\(-a_1+a_2-a_3+a_4-\dots \quad(\forall n, a_n\geqslant0)\\)
+   即 \\(\displaystyle\sum_{n=1}^\infty (-1)^{n-1}a_n\\) 或 \\(\displaystyle\sum_{n=1}^\infty (-1)^n a_n \quad(\forall n, a_n\geqslant0)\\)
+2. 审敛性
+   1. 莱布尼茨法
+      对 \\(\displaystyle\sum_{n=1}^\infty (-1)^{n-1}a_n \quad(\forall n, a_n\geqslant0)\\)
+      若\\(\\{a_n\\}\darr\\) 且 \\(\lim\limits_{n\to\infty}a_n=0\\)
+      则 \\(\displaystyle\sum_{n=1}^\infty (-1)^{n-1}a_n\\) 收敛, 且 \\(S\leqslant a_1\\)
+
+### 绝对收敛与条件收敛
+
+0. 取绝对值(提高发散性): \\(\displaystyle\sum_{n=1}^\infty a_n \rarr \displaystyle\sum_{n=1}^\infty |a_n|\\)
+1. 定义
+   1. 当 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛, 而 \\(\displaystyle\sum_{n=1}^\infty |a_n|\\) 发散, 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 条件收敛
+      如 \\(\displaystyle\sum_{n=1}^\infty \dfrac{(-1)^{n-1}}{n}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\dots\\) 收敛
+      但 \\(\displaystyle\sum_{n=1}^\infty |\dfrac{(-1)^{n-1}}{n}|=\displaystyle\sum_{n=1}^\infty \frac{1}{n}\\) 发散 (原因见p-级数)
+   2. 当 \\(\displaystyle\sum_{n=1}^\infty |a_n|\\) 收敛, 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 绝对收敛
+2. 结论
+   若 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 绝对收敛 (即 \\(\displaystyle\sum_{n=1}^\infty |a_n|\\) 收敛), 则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛
+
+## 幂级数的概念与分析性质
+
+### 函数项级数的概念
+
+\\(\\{u_n(x)\\}\\) 为函数列, \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 称为函数项级数.
+对 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\)
+当 \\(x=x_0\\) 时, \\(\displaystyle\sum_{n=1}^\infty u_n(x_0)\\) 收敛, \\(x=x_0\\) 称为 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 收敛点
+当 \\(x=x_1\\) 时, \\(\displaystyle\sum_{n=1}^\infty u_n(x_1)\\) 发散, \\(x=x_1\\) 称为 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 发散点
+\\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 的一切收敛点而成的集合称为 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 的收敛域, 记为 \\(D\\)
+\\(\forall x\in D , \displaystyle\sum_{n=1}^\infty u_n(x)=S(x)\\) (S(x) 称为和函数)
+
+举个例子, 如 \\(x+x^2+x^3+x^4+\dots=\displaystyle\sum_{n=1}^\infty x^n\\)
+当 \\(x=\dfrac{2}{3}\\) 时, \\(\displaystyle\sum_{n=1}^\infty (\dfrac{2}{3})^n\\) 收敛, \\(x=\dfrac{2}{3}\\) 称为 \\(\displaystyle\sum_{n=1}^\infty x^n\\) 的收敛点;
+当 \\(x=2\\) 时, \\(\displaystyle\sum_{n=1}^\infty 2^n\\) 发散, \\(x=2\\) 称为 \\(\displaystyle\sum_{n=1}^\infty x^n\\) 的发散点;
+
+### 幂级数概念与基本定理
+
+1. 定义:
+   形如 \\(\displaystyle\sum_{n=0}^\infty a_n x^n=a_0+a_1x+a_2x^2+\dots\\)
+   或 \\(\displaystyle\sum_{n=0}^\infty a_n(x-x_0)^n=a_0+a_1(x-x_0)+a_2(x-x_0)^2+\dots\\)
+   称为幂级数
+2. 基本定理(abel定理)
+   对 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\)
+   1. 当 \\(x=x_0 (\neq0)\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x_0^n\\) 收敛. 则当 \\(|x|<|x_0|\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 绝对收敛;
+   2. 当 \\(x=x_1\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x_1^n\\) 发散. 则当 \\(|x|<|x_1|\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 发散;
+
+### 收敛半径与收敛域
+
+收敛域 \\(D\in(-R, +R)\\)
+
+收敛半径 \\(R\\) 的求法:
+对 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\)
+1. 定理1
+   设 \\(\lim\limits_{n\to\infty}|\dfrac{a_{n+1}}{a_n}|=\rho \quad\begin{cases} 1. &\rho=0 &\rArr R=+\infty \\\ 2. &\rho=+\infty &\rArr R=0 \\\ 3. &0<\rho<+\infty &\rArr R=\dfrac{1}{\rho} \end{cases}\\)
+2. 定理2
+   设 \\(\lim\limits_{n\to\infty}\sqrt[n]{|a_n|}=\rho \quad\begin{cases} 1. &\rho=0 &\rArr R=+\infty \\\ 2. &\rho=+\infty &\rArr R=0 \\\ 3. &0<\rho<+\infty &\rArr R=\dfrac{1}{\rho} \end{cases}\\)
+
+(原理: \\(x^n\\) 这边抵消级数 \\(a_n\\) 带来的收敛/发散影响)
+
+Note:
+对 \\(\displaystyle\sum_{n=0}^\infty a_n x^{2n+1}=a_0x+a_1x^3+a_2x^5+\dots\\)
+\\(\lim\limits_{n\to\infty}|\dfrac{a_{n+1}}{a_n}|=\rho \quad\begin{cases} 1. &\rho=0 &\rArr R=+\infty \\\ 2. &\rho=+\infty &\rArr R=0 \\\ 3. &0<\rho<+\infty &\rArr R=\sqrt{\dfrac{1}{\rho}} \end{cases}\\)
+
+### 幂级数和函数的分析性质
+
+设 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数为 \\(S(x)\\)
+1. 定理1
+   \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数 \\(S(x)\\) 在其收敛域上可积
+   则 \\(\int_0^x S(x)dx=\int_0^x (\displaystyle\sum_{n=0}^\infty a_n x^n)dx=\displaystyle\sum_{n=0}^\infty\int_0^x a_nx^ndx=\displaystyle\sum_{n=0}^\infty\dfrac{a_n}{n+1}x^{n+1}\\)
+   且 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 与 \\(\displaystyle\sum_{n=0}^\infty \dfrac{a_n}{n+1}x^{n+1}\\) 收敛半径相同(逐项可积性)
+2. 定理2
+   \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数 \\(S(x)\\) 在其收敛域上可导
+   则 \\((\displaystyle\sum_{n=0}^\infty a_n x^n)'=\displaystyle\sum_{n=0}^\infty (a_n x^n)'=\displaystyle\sum_{n=1}^\infty n a_n x^{n-1}\\)
+   且 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 与 \\(\displaystyle\sum_{n=1}^\infty n a_n x^{n-1}\\) 收敛半径相同(逐项可导性)
+
+## 函数展开成幂级数
+
+#### 直接法
+
+设 \\(f(x)\\)  在 \\(x=x_0\\) 邻域内任意阶可导.
+则 \\(f(x)\\) 在 \\(x=x_0\\) 邻域内展成 \\(\displaystyle\sum_{n=0}^\infty \dfrac{f^{(n)}(x_0)}{n!}(x-x_0)^n\\) 的充要条件是 \\(\lim\limits_{n\to\infty} R_n(x)=0\\)
+(参见泰勒级数)
+
+#### 间接法
+
+(基于直接法推导出来的已有公式进行展开)
+
+记(后面的展开不用记):
+1. \\(e^x=\displaystyle\sum_{n=0}^\infty \dfrac{x^n}{n!}=1+x+\frac{x^2}{2!}+\dots+\frac{x^n}{n!}+\circ(x^n) \quad(-1<x<1)\\)
+2. \\(\sin x=\displaystyle\sum_{n=0}^\infty \dfrac{(-1)^n}{(2n+1)!}x^{2n+1}=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dots+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+\circ(x^{2n+1}) \quad(-\infty<x<+\infty)\\)
+3. \\(\cos x=\displaystyle\sum_{n=0}^\infty \dfrac{(-1)^n}{(2n)!}x^{2n}=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots+(-1)^n\frac{x^{2n}}{(2n)!}+\circ(x^{2n}) \quad(-\infty<x<+\infty)\\)
+4. \\(\frac{1}{1-x}=\displaystyle\sum_{n=0}^\infty x^n=1+x+x^2+x^3+\dots+x^n+\circ(x^n) \quad(-1<x<1)\\)
+5. \\(\frac{1}{1+x}=\displaystyle\sum_{n=0}^\infty (-1)^n x^n=1-x+x^2-x^3+\dots+(-1)^nx^n+\circ(x^n) \quad(-1<x<1)\\)
+6. \\(\ln(1+x)=\displaystyle\sum_{n=1}^\infty \dfrac{(-1)^{n-1}}{n}x^n=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\dots+(-1)^{n-1}\frac{x^n}{n}+\circ(x^n) \quad(-1<x\leqslant1)\\)
+7. \\(-\ln(1-x)=\displaystyle\sum_{n=1}^\infty \dfrac{x^n}{n}=x+\frac{x^2}{2}+\frac{x^3}{3}+\frac{x^4}{4}+\dots+\frac{x^n}{n}+\circ(x^n) \quad(-1\leqslant x<1)\\)
+
+## 函数项级数的一致收敛性及一致收敛级数的基本性质
+
+## 傅里叶级数
+
+单一周期信号: \\(a_n\cos n\omega t+b_n\sin n\omega t\\)
+设 \\(f(x)\\) 以 \\(2\pi\\) 为周期的信号
+Q1: \\(f(x)\\) 可否分解为 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\)?
+\\(a_0=? \enspace a_n=? \enspace b_n=?\\)
+\\(\dfrac{a_0}{2}\\) - 直流成份
+\\(a_1\cos x+b_1\sin x\\) - 一次谐波
+\\(a_2\cos 2x+b_2\sin 2x\\) - 二次谐波
+
+Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) 何关系? (后面的级数被称作三角级数)
+
+### 三角函数 <span style="font-family: Consolas">ξ</span> 及正交性
+
+三角函数 \\(\xi\\) : \\(\cos 0x=\sin 0x=1 , \cos x , \sin x , \cos 2x , \sin 2x , \dots , \cos(nx) , \sin(nx)\\)
+
+正交性:
+1. \\(\int_{-\pi}^\pi 1\cdot\cos(nx) dx=0 \quad(n=1, 2, 3, \dots)\\)
+2. \\(\int_{-\pi}^\pi 1\cdot\cos(nx) dx=0 \quad(n=1, 2, 3, \dots)\\)
+3. \\(\int_{-\pi}^\pi \sin(mx)\cos(nx) dx=0 \quad(m, n=1, 2, 3, \dots)\\)
+4. \\(\int_{-\pi}^\pi \cos(mx)\cos(nx) dx=\begin{cases} 2\pi &, m=n=0 \\\ \pi &, m=n\geqslant 1 \\\ 0 &, m\neq n \end{cases}\\)
+5. \\(\int_{-\pi}^\pi \sin(mx)\sin(nx) dx=\begin{cases} \pi &, m=n\geqslant 1 \\\ 0 &, m\neq n \end{cases}\\)
+
+### 周期为 <span style="font-family: Consolas">2π</span> 的函数展开成傅里叶级数
+
+设 \\(f(x)\\) 以 \\(2\pi\\) 为周期
+Q1: \\(f(x)\\) 可否分解为三角级数 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) ?
+\\(a_0=? \enspace a_n=? \enspace b_n=?\\)
+Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) 什么关系?
+
+定理(狄利克雷充分条件):
+设 \\(f(x)\\) 是以 \\(2\pi\\) 为周期的周期级数. 若满足:
+1. \\(f(x)\\) 在 \\([-\pi, \pi]\\) 内连续或存在有限个第一类间断点;
+2. \\(f(x)\\) 在 \\([-\pi, \pi]\\) 内仅有有限个极值点.
+
+则:
+1. 结论1:
+   \\(f(x)\\) 可以展成 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) . 且
+   \\(a_0=\frac{1}{\pi}\int_{-\pi}^\pi f(x) dx\\)
+   \\(a_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\cos(nx) dx \quad(n=1, 2, 3, \dots)\\)
+   \\(b_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\sin(nx) dx \quad(n=1, 2, 3, \dots)\\\)
+2. 结论2:
+   1. \\(x\\) 为 \\(f(x)\\) 连续点时, 则
+      \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))=f(x)\\) ;
+   2. \\(x\\) 为 \\(f(x)\\) 间断点时, 则
+      \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))=\dfrac{f(x-0)+f(x+0)}{2}\\)
+
+### 定义于 <span style="font-family: Consolas">[−π, π]</span> 上函数的傅里叶级数(非周期函数)
+
+思想: \\(f(x)\\) 定义域 \\([-\pi, \pi]\\)
+1. TODO: 补充图片(周期延拓)
+2. \\(F(x)\\) 展成傅里叶级数
+   1. \\(a_0=\frac{1}{\pi}\int_{-\pi}^\pi F(x)dx=\frac{1}{\pi}\int_{-\pi}^\pi f(x) dx\\)
+      \\(a_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\cos(nx) dx\\)
+      \\(b_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\sin(nx) dx\\)
+   2. \\(F(x)=\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\cos(nx))\\)
+      \\((-\infty<x<+\infty , x\neq ?)\\) (问号表示间断点)
+3. \\(f(x)=\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\)
+   \\(\begin{pmatrix} -\pi \leqslant x \leqslant \pi , -\pi \leqslant x < \pi \\\ -\pi < x \leqslant \pi , -\pi < x < \pi \end{pmatrix}\\)
+
+Notes:
+1. 由 \\(0=\frac{\pi}{2}-\frac{4}{\pi}(\frac{1}{1^2}+\frac{1}{3^2}+\frac{1}{5^2}+\dots) \rArr \frac{1}{1^2}+\frac{1}{3^2}+\frac{1}{5^2}+\dots=\frac{\pi^2}{8}\\)
+   即 \\(\displaystyle\sum_{n=0}^\infty \frac{1}{(2n+1)^2}=\frac{\pi^2}{8}\\)
+2. \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n^2}=S\\)
+   \\(\begin{aligned} S&=\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\dots \\\ &=(\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{5^2}+\dots)+(\frac{1}{2^2}+\frac{1}{4^2}+\frac{1}{6^2}+\dots) \\\ &=\frac{\pi^2}{8}+\frac{1}{4}(\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\dots) \\\ &=\frac{\pi^2}{8}+\frac{1}{4}S \rArr S=\frac{\pi^2}{6} \end{aligned}\\)
+   即 \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n^2}=\frac{\pi^2}{6}\\)
+
+### 定义于 <span style="font-family: Consolas">[0, π]</span> 上函数的傅里叶级数
+
+思想: 先区间延拓, 再周期延拓.
+1. 区间延拓, 在 \\([-\pi, 0]\\) 上补充定义:
+   \\(\begin{cases} 奇延拓(补充后图像关于原点对称) \\\ 偶延拓(补充后图像关于y轴对称) \end{cases}\\)
+   TODO: 补充图片
+2. 周期延拓:
+   1. 奇延拓后的周期延拓
+      \\(a_0=0\\)
+      \\(a_n=0\\)
+      \\(b_n=\frac{2}{\pi}\int_0^\pi f(x)\sin x dx \quad(n=1, 2, 3, \dots)\\)
+      \\(f(x)=\displaystyle\sum_{n=1}^\infty b_n\sin(nx)\\) (正弦级数)
+      \\(\begin{pmatrix} 0 \leqslant x \leqslant \pi , 0 \leqslant x < \pi \\\ 0 < x \leqslant \pi , 0 < x < \pi \end{pmatrix}\\)
+   2. 偶延拓后的周期延拓
+      \\(a_0=\frac{2}{\pi}\int_0^\pi f(x) dx\\)
+      \\(a_n=\frac{2}{\pi}\int_0^\pi f(x)\cos(nx) dx\\)
+      \\(b_n=0\\)
+      \\(f(x)=\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty a_n\cos(nx)\\) (余弦级数)
+      \\((0 \leqslant x \leqslant \pi)\\)
+
+## 周期为 <span style="font-family: Consolas">2l</span> 的傅里叶级数
+
+### <span style="font-family: Consolas">f(x)</span> 以 <span style="font-family: Consolas">2π<span> 为周期
+
+\\(f(x) \xlongequal{x=\dfrac{l}{\pi}t} f(\frac{l}{\pi}t) \overset{\triangle}{=} F(t)\\)
+\\(F(t+2\pi) = f[\frac{l}{\pi}(t+2\pi)] = f(\frac{l}{\pi}t+2l) = f(\frac{l}{\pi}t+2l) = f(\frac{l}{\pi}t) = F(t)\\)
+\\(a_0 = \frac{1}{\pi}\int_{-\pi}^\pi F(t) dt \xlongequal{t=\dfrac{\pi}{l}x}=\frac{1}{\pi}\int_{-l}^l f(x)\cdot\frac{\pi}{l} dx = \frac{1}{l}\int_{-l}^l f(x) dx\\)
+\\(a_n=\frac{1}{\pi}\int_{-\pi}^\pi F(t)\cos(nt) dt \xlongequal{t=\dfrac{\pi}{l}x} \frac{1}{\pi}\int_{-l}^l f(x)\cos(\frac{n\pi x}{l})\cdot\frac{\pi}{l} dx = \frac{1}{l}\int_{-l}^l f(x)\cos(\frac{n\pi x}{l}) dx\\)
+\\(b_n=\frac{1}{l}\int_{-l}^l f(x)\sin(\frac{n\pi x}{l}) dx\\)
+
+\\(F(t)\\) 的傅里叶级数为
+\\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nt)+b_n\sin(nt)) \\\ =\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(\frac{n\pi x}{l})+b_n\sin(\frac{n\pi x}{l}))\\)
+
+定理: \\(f(x)\\) 以 \\(2l\\) 为周期, 在 \\([-l, l)\\) 上满足狄利克雷充分条件, 则:
+1. \\(f(x)\\) 可展成 \\(\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(\frac{n\pi x}{l})+b_n\sin(\frac{n\pi x}{l}))\\)
+   \\(a_0=\frac{1}{l}\int_{-l}^l f(x) dx\\)
+   \\(a_n=\frac{1}{l}\int_{-l}^l f(x)\cos(\frac{n\pi x}{l}) dx\\)
+   \\(b_n=\frac{1}{l}\int_{-l}^l f(x)\sin(\frac{n\pi x}{l}) dx\\)
+2. 1. 当 \\(x\\) 为 \\(f(x)\\) 连续点时
+      \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(\frac{n\pi x}{l})+b_n\sin(\frac{n\pi x}{l})) = f(x)\\)
+   2. 当 \\(x\\) 为 \\(f(x)\\) 间断点时
+      \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(\frac{n\pi x}{l})+b_n\sin(\frac{n\pi x}{l})) = \dfrac{f(?-0)+f(?+0)}{2}\\)
+
+### f(x) 定义于 [-l, l]
+
+解决思路: 周期延拓, 最后把 x 限制到 \\([-l, l]\\) , 左右端点是否存在看延拓后是否连续
+
+### f(x) 定义于 [-l, l]
+
+存在奇延拓和偶延拓
+解决思路同上面
