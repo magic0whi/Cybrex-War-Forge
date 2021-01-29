@@ -961,7 +961,7 @@ tags:
    
      \\(\therefore\oiint\limits_\Sigma R\mathrm{d}x\mathrm{d}y=\iiint\limits_\Omega\frac{\partial R}{\partial z}\mathrm{d}v\\)
 
-## 斯托克斯公式
+### 斯托克斯公式
 
 定义:
 \\(\Sigma\\) 为光滑曲面块, \\(\Gamma\\) 为 \\(\Sigma\\) 的界, \\(\Sigma\\) 的侧与 \\(\Gamma\\) 的方向按右手确定
@@ -985,212 +985,173 @@ $$
 
 其中 \\(\cos\alpha, \cos\beta, \cos\gamma\\) 为曲面 \\(\Sigma\\) 法向量的方向余弦
 
-## 常数项级数的概念和性质
+## 无穷级数
 
-1. 定义: 
-   设 \\(\{a_n\}\\) 常数列, 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 为常数项级数
-   \\(S_n=a_1 + a_2 + \dots + a_n\\) 为部分和
-   \\(\lim\limits_{n\to\infty}S_n \begin{cases} =A &, 收敛于A 且 S_n=\displaystyle\sum_{n=1}^\infty a_n \\\ 不存在 &, 发散  \end{cases}\\)
+### 常数项级数的概念和性质
+
+1. 定义: 设常数列 \\(\{a_n\}\\) , 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 为常数项级数
+   \\(S_n=a_1+\dots+a_n\\) 为部分和
+   若 \\(\lim\limits_{n\to\infty}S_n=S\\) 称级数收敛于 \\(S\\) ; 若极限不存在, 称级数发散
+   \\(S_n\neq\displaystyle\sum_{n=1}^\infty a_n\\) , \\(\lim\limits_{n\to\infty}S_n=\displaystyle\sum_{n=1}^\infty a_n\\)
 2. 常数项级数性质:
-   1. \\(\displaystyle\sum_{n=1}^\infty a_n=A , \displaystyle\sum_{n=1}^\infty b_n=B\\) , 则 \\(\begin{cases} \displaystyle\sum_{n=1}^\infty (a_n+b_n)=A+B \\\ \displaystyle\sum_{n=1}^\infty (a_n-b_n)=A-B \end{cases}\\)
-   2. \\(\displaystyle\sum_{n=1}^\infty a_n=A\\) , 设 \\(k\in R\\) , 则 \\(\displaystyle\sum_{n=1}^\infty ka_n=kA\\)
-   3. 级数中添加、减少、改变有限项, 级数的收敛性质不变
+   1. \\(\displaystyle\sum_{n=1}^\infty a_n=A\\) , \\(\displaystyle\sum_{n=1}^\infty b_n=B\\) , 则 \\(\begin{cases} \displaystyle\sum_{n=1}^\infty (a_n+b_n)=A+B \\\ \displaystyle\sum_{n=1}^\infty (a_n-b_n)=A-B \end{cases}\\)
+   2. \\(\displaystyle\sum_{n=1}^\infty ka_n=kS\\)
+   3. 级数中添加、减少、改变有限项, 级数的收敛性不变
    4. 添加括号后收敛性不降低(即收敛性可能会提高)
       如 \\(S_n=1-1+1-1+\dots\\) 发散
       但 \\(S_n=(1-1)+(1-1)+\dots\\) 收敛于0
-   5. 收敛必要条件: 设 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛, 则 \\(\lim\limits_{n\to\infty} a_n=0\\) , <u>反之不对</u>(如[调和级数](#harmonic_series))
+   5. 收敛必要条件: 设 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛, 则 \\(\lim\limits_{n\to\infty} a_n=0\\) , **反之不对**(如调和级数)
+3. 几何级数: \\(\displaystyle\sum_{n=1}^\infty aq^n\begin{cases} |q|\geqslant1 & \text{发散} \\\ |q|<1 & =\frac{\text{首项}}{1-\text{公比}} \end{cases}\\) (公式推导参考等比数列)
 
-Note: (几何级数) \\(\displaystyle\sum_{n=1}^\infty aq^n \begin{cases} |q|\geqslant1 , 发散 \\\ |q|<1 , =\frac{首项}{1-公比} \end{cases}\\) (公式推导参考等比数列)
+### 常数项级数的审敛法
 
-## 常数项级数的审敛法
+1. 正向级数及审敛法
+   1. 定义: 设 \\(\displaystyle\sum_{n=1}^\infty a_n\\) , 若 \\(\forall n\\) , \\(a_n\geqslant0\\) , 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 为正向级数
+      若 \\(S_1\leqslant S_2\leqslant S_3\leqslant\dots\\) , 记 \\(\\{S_n\\}\uarr\\) (表示 \\(S_n\\) 单调递增);
+      * 情况1：\\(\\{S_n\\}\\) 无上界 \\(\rArr \lim\limits_{n\to\infty} S_n=+\infty \rArr \displaystyle\sum_{n=1}^\infty a_n\\) 发散
+      * 情况2: \\(S_n\leqslant M\rArr\lim\limits_{n\to\infty}S_n\\) 存在 \\(\rArr\displaystyle\sum_{n=1}^\infty a_n\\) 收敛
+   2. 审敛法
+      1. 比较法
+         \\(a_n\leqslant b_n\\) 且 \\(\displaystyle\sum_{n=1}^\infty b_n\\) 收敛, 则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛
+         \\(a_n\geqslant b_n\\) 且 \\(\displaystyle\sum_{n=1}^\infty b_n\\) 发散, 则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 发散
+      2. 比较法(极限形式)
+         设正项级数 \\(\displaystyle\sum_{n=1}^\infty a_n\\)、\\(\displaystyle\sum_{n=1}^\infty b_n\\)
+         若 \\(\lim\limits_{n\to\infty}\frac{b_n}{a_n}=l\enspace\\) (\\(0<l<+\infty\\))
+         则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 与 \\(\displaystyle\sum_{n=1}^\infty b_n\\) 敛散性相同
+      3. 比值法
+         设正项级数 \\(\displaystyle\sum_{n=1}^\infty a_n\\)
+         若 \\(\lim\limits_{n\to\infty}\dfrac{a_{n+1}}{a_n}=\rho\\)
+         则 \\(\rho<1\\) 时, 级数收敛;
+         \\(\mskip{1em}\rho>1\\) 时, 级数发散.
+      4. 根值法
+         设正项级数 \\(\displaystyle\sum_{n=1}^\infty a_n\\)
+         若 \\(\lim\limits_{n\to\infty}\sqrt[n]{a_n}=\rho\\)
+         则 \\(\rho<1\\) 时, 级数收敛;
+         \\(\mskip{1em}\rho>1\\) 时, 级数发散.
+   
+2. \\(p-\\)级数:
+   1. \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n^p}\\) 称为 \\(p-\\)级数
+      若 \\(p=1\\) , 称 \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n}\\) 为调和级数
+   2. \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n^p} \begin{cases} p>1 & \text{收敛} \\\ p\leqslant 1 & \text{发散} \end{cases}\\) (审敛法使用根值法)
+3. 交错级数及审敛法
+   1. 交错级数:
+      形如 \\(a_1-a_2+a_3-a_4+\dots\\) 或 \\(-a_1+a_2-a_3+a_4-\dots\enspace\\) (\\(\forall n, a_n\geqslant 0\\))
+      即 \\(\displaystyle\sum_{n=1}^\infty (-1)^{n-1}a_n\\) 或 \\(\displaystyle\sum_{n=1}^\infty(-1)^n a_n\enspace(\forall n,a_n\geqslant 0)\\)
+   2. 莱布尼茨审敛法
+      对于 \\(\displaystyle\sum_{n=1}^\infty(-1)^{n-1}a_n\enspace\\) (\\(\forall n,a_n\geqslant 0\\))
+      若 \\(\\{a_n\\}\darr\\) 且 \\(\lim\limits_{n\to\infty}a_n=0\\)
+      则 \\(\displaystyle\sum_{n=1}^\infty(-1)^{n-1}a_n\\) 收敛, 且 \\(S\leqslant a_1\\)
+4. 绝对收敛与条件收敛
+   1. 取绝对值(提高发散性): \\(\displaystyle\sum_{n=1}^\infty a_n\rarr\displaystyle\sum_{n=1}^\infty|a_n|\\)
+   2. 定义
+      1. 当 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛, 而 \\(\displaystyle\sum_{n=1}^\infty|a_n|\\) 发散, 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 条件收敛
+         如 \\(\displaystyle\sum_{n=1}^\infty\frac{(-1)^{n-1}}{n}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\dots\\) 收敛
+         但 \\(\displaystyle\sum_{n=1}^\infty|\frac{(-1)^{n-1}}{n}|=\displaystyle\sum_{n=1}^\infty\frac{1}{n}\\) 发散 (\\(p-\\)级数)
+      2. 当 \\(\displaystyle\sum_{n=1}^\infty|a_n|\\) 收敛, 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 绝对收敛
+   3. 结论: 若 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 绝对收敛, 则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛
 
-TODO: 前章讲过, 属于冗余内容
-对\\(\displaystyle\sum_{n=1}^\infty a_n\\) :
-1. \\(S_n=a_1+a_2+\dots+a_n\\)
-   \\(\lim\limits_{n\to\infty}S_n \begin{cases} =A , S_n=\displaystyle\sum_{n=1}^\infty a_n \\\ 无 , 发散 \end{cases}\\)
-2. \\(\lim\limits_{n\to\infty} a_n\neq0 \rArr \displaystyle\sum_{n=1}^\infty a_n\\) 发散
+### 幂级数的概念与分析性质
 
-### 正向级数及审敛法
+1. 函数项级数的概念
+   设函数数列 \\(\\{u_n(x)\\}\\) , 称 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 为函数项级数
+   若 \\(x=x_0\\) 时 \\(\displaystyle\sum_{n=1}^\infty u_n(x_0)\\) 收敛, 称 \\(x=x_0\\) 为收敛点
+   若 \\(x=x_1\\) 时 \\(\displaystyle\sum_{n=1}^\infty u_n(x_1)\\) 发散, 称 \\(x=x_1\\) 为发散点
+   例: \\(x+x^2+x^3+x^4+\dots=\displaystyle\sum_{n=1}^\infty x^n\\)
+   当 \\(x=\frac{2}{3}\\) 时收敛; 当 \\(x=2\\) 时发散.
+2. 幂级数概念与基本定理
+   1. 幂级数定义:
+      \\(\displaystyle\sum_{n=0}^\infty a_n x^n=a_0+a_1x+a_2x^2+\dots\\)
+      或 \\(\displaystyle\sum_{n=0}^\infty a_n(x-x_0)^n=a_0+a_1(x-x_0)+a_2(x-x_0)^2+\dots\\)
+   1. 基本定理(Abel定理)
+      1. 若 \\(x=x_0(\neq 0)\\) 时 \\(\displaystyle\sum_{n=0}^\infty a_n x_0^n\\) 收敛. 则当 \\(|x|<|x_0|\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 绝对收敛
+      2. 若 \\(x=x_1\\) 时 \\(\displaystyle\sum_{n=0}^\infty a_n x_1^n\\) 发散. 则当 \\(|x|>|x_1|\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 发散
+3. 收敛半径与收敛域
+   \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 的所有收敛点组成的集合称为收敛域, 记为 \\(D\\)
+   收敛半径 \\((-R,R)\\) 内级数绝对收敛,
+   \\((-\infty,-R)\cup(R,+\infty)\\\) 内级数发散,
+   \\(x=\pm R\\) 时可能收敛可能发散
+   * 定理1: 对于 \\(\displaystyle\sum_{n=0}^\infty a_nx^n\\)
+     若 \\(\lim\limits_{n\to\infty}|\dfrac{a_{n+1}}{a_n}|=\rho\\)
+     1. \\(\rho=0\rArr R=+\infty\\)
+     2. \\(\rho=+\infty\rArr R=0\\)
+     3. \\(0<\rho<+\infty\rArr R=\frac{1}{\rho}\\)
+   * 定理2: 对于 \\(\displaystyle\sum_{n=0}^\infty a_nx^n\\)
+     若 \\(\lim\limits_{n\to\infty}\sqrt[n]{|a_n|}=\rho\\)
+     1. \\(\rho=0\rArr R=+\infty\\)
+     2. \\(\rho=+\infty\rArr R=0\\)
+     3. \\(0<\rho<+\infty\rArr R=\frac{1}{\rho}\\)
+   
+   * 对于 \\(\displaystyle\sum_{n=0}^\infty a_n x^{2n+1}=a_0x+a_1x^3+a_2x^5+\dots\\)
+     \\(\lim\limits_{n\to\infty}|\frac{a_{n+1}}{a_n}|=\rho\\)
+     1. \\(\rho=0\rArr R=+\infty\\)
+     2. \\(\rho=+\infty\rArr R=0\\)
+     3. \\(0<\rho<+\infty\rArr R=\sqrt{\frac{1}{\rho}}\\)
+4. 幂级数和函数的分析性质
+   \\(\forall x\in D\\) , 和函数 \\(S(x)=\displaystyle\sum_{n=1}^\infty u_n(x)\\)
+   * 逐项可积性
+      若 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数 \\(S(x)\\) 在其收敛域上可积
+      则 \\(\int_0^x S(x)dx=\int_0^x (\displaystyle\sum_{n=0}^\infty a_n x^n)dx=\displaystyle\sum_{n=0}^\infty\int_0^x a_nx^ndx=\displaystyle\sum_{n=0}^\infty\dfrac{a_n}{n+1}x^{n+1}\\)
+      且 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 与 \\(\displaystyle\sum_{n=0}^\infty \dfrac{a_n}{n+1}x^{n+1}\\) 收敛半径相同
+   * 逐项可导性
+      若 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数 \\(S(x)\\) 在其收敛域上可导
+      则 \\((\displaystyle\sum_{n=0}^\infty a_n x^n)^\prime=\displaystyle\sum_{n=0}^\infty(a_n x^n)^\prime=\displaystyle\sum_{n=1}^\infty n a_n x^{n-1}\\)
+      且 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 与 \\(\displaystyle\sum_{n=1}^\infty n a_n x^{n-1}\\) 收敛半径相同
 
-1. 定义: 设 \\(\displaystyle\sum_{n=1}^\infty a_n\\) , 若 \\(\forall n\\) , \\(a_n\geqslant0\\) , 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 为正向级数
+### 函数展开成幂级数
 
-Note:
-\\(S_1\leqslant S_2\leqslant S_3\leqslant\dots\\) , 即 \\(\\{S_n\\}\uarr\\) (表示 \\(S_n\\) 单调递增);
-情况1：\\(\\{S_n\\}\\) 无上介 \\(\rArr \lim\limits_{n\to\infty} S_n=+\infty \rArr \displaystyle\sum_{n=1}^\infty a_n\\) 发散
-情况2: \\(S_n\leqslant M \rArr \lim\limits_{n\to\infty} S_n\\) 存在 \\(\rArr \displaystyle\sum_{n=1}^\infty a_n\\) 收敛
-2. 审敛法
-   1. 比较法
-      \\(a_n\leqslant b_n\\) 且 \\(\displaystyle\sum_{n=1}^\infty b_n\\) 收敛, 则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛
-      \\(a_n\geqslant b_n\\) 且 \\(\displaystyle\sum_{n=1}^\infty b_n\\) 发散, 则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 发散
-   2. 比较法(极限形式)
-      设正项级数 \\(\displaystyle\sum_{n=1}^\infty a_n\\) , \\(\displaystyle\sum_{n=1}^\infty b_n\\)
-      若 \\(\lim\limits_{n\to\infty}\dfrac{b_n}{a_n}=l \quad(0<l<+\infty)\\)
-      则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 与 \\(\displaystyle\sum_{n=1}^\infty b_n\\) 敛散性相同
-   3. 比值法
-      设正项级数 \\(\displaystyle\sum_{n=1}^\infty a_n\\)
-      (这里拓展了一下, 和 \\(\lim\limits_{n\to\infty}|\dfrac{a_{n+1}}{a_n}|\\) 是一样的)
-      若 \\(\lim\limits_{n\to\infty}\dfrac{a_{n+1}}{a_n}=P\\)
-      则 \\(P<1\\) 时, 级数收敛;
-      \\(\mskip{1em} P>1\\) 时, 级数发散.
-   4. 根值法
-      设正项级数 \\(\displaystyle\sum_{n=1}^\infty a_n\\)
-      若 \\(\lim\limits_{n\to\infty}\sqrt[n]{a_n}=P\\)
-      则 \\(P<1\\) 时, 级数收敛;
-      \\(\mskip{1em} P>1\\) 时, 级数发散.
+1. 直接法
+   设 \\(f(x)\\)  在 \\(x=x_0\\) 邻域内任意阶可导.
+   则 \\(f(x)\\) 在 \\(x=x_0\\) 邻域内展成 \\(\displaystyle\sum_{n=0}^\infty\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\\) 的充要条件是 \\(\lim\limits_{n\to\infty} R_n(x)=0\\)
+   \\(x=0\\) 时, \\(\displaystyle\sum_{n=0}^\infty\frac{f^{(n)}(0)}{n!}(x-x_0)^n\\) 称作麦克劳灵级数
+   (参见泰勒级数)
+2. 间接法
+   (基于直接法推导出来的已有公式进行展开)
+   * 常用公式: (注意后面的值域范围)
+     1. \\(e^x=\displaystyle\sum_{n=0}^\infty\frac{x^n}{n!}=1+x+\frac{x^2}{2!}+\dots+\frac{x^n}{n!}+\circ(x^n)\enspace\\) (\\(-1<x<1\\))
+     2. \\(\sin x=\displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dots+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+\circ(x^{2n+1})\enspace\\) (\\(-\infty<x<+\infty\\))
+     3. \\(\cos x=\displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots+(-1)^n\frac{x^{2n}}{(2n)!}+\circ(x^{2n})\enspace\\) (\\(-\infty<x<+\infty\\))
+     4. \\(\frac{1}{1-x}=\displaystyle\sum_{n=0}^\infty x^n=1+x+x^2+x^3+\dots+x^n+\circ(x^n)\enspace\\) (\\(-1<x<1\\))
+     5. \\(\frac{1}{1+x}=\displaystyle\sum_{n=0}^\infty (-1)^n x^n=1-x+x^2-x^3+\dots+(-1)^nx^n+\circ(x^n)\enspace\\) (\\(-1<x<1\\))
+     6. \\(\ln(1+x)=\displaystyle\sum_{n=1}^\infty\frac{(-1)^{n-1}}{n}x^n=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\dots+(-1)^{n-1}\frac{x^n}{n}+\circ(x^n)\enspace\\) (\\(-1<x\leqslant1\\))
+     7. \\(-\ln(1-x)=\displaystyle\sum_{n=1}^\infty\frac{x^n}{n}=x+\frac{x^2}{2}+\frac{x^3}{3}+\frac{x^4}{4}+\dots+\frac{x^n}{n}+\circ(x^n)\enspace\\) (\\(-1\leqslant x<1\\))
+   * 利用幂级数和函数的逐项可导、可积性
 
+### 傅里叶级数
 
-<span id="harmonic_series"></span>
-Notes:
-1. \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n^p}\\) 称为 p-级数
-   若 \\(p=1\\) , 称 \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n}\\) 为调和级数
-2. \\(\displaystyle\sum_{n=1}^\infty \frac{1}{n^p} \begin{cases} p>1 , 收敛 \\\ p\leqslant 1 , 发散 \end{cases}\\) (敛散性使用根值法)
-
-### 交错级数及审敛法
-
-1. 定义
-   形如 \\(a_1-a_2+a_3-a_4+\dots\\) 或 \\(-a_1+a_2-a_3+a_4-\dots \quad(\forall n, a_n\geqslant0)\\)
-   即 \\(\displaystyle\sum_{n=1}^\infty (-1)^{n-1}a_n\\) 或 \\(\displaystyle\sum_{n=1}^\infty (-1)^n a_n \quad(\forall n, a_n\geqslant0)\\)
-2. 审敛性
-   1. 莱布尼茨法
-      对 \\(\displaystyle\sum_{n=1}^\infty (-1)^{n-1}a_n \quad(\forall n, a_n\geqslant0)\\)
-      若\\(\\{a_n\\}\darr\\) 且 \\(\lim\limits_{n\to\infty}a_n=0\\)
-      则 \\(\displaystyle\sum_{n=1}^\infty (-1)^{n-1}a_n\\) 收敛, 且 \\(S\leqslant a_1\\)
-
-### 绝对收敛与条件收敛
-
-0. 取绝对值(提高发散性): \\(\displaystyle\sum_{n=1}^\infty a_n \rarr \displaystyle\sum_{n=1}^\infty |a_n|\\)
-1. 定义
-   1. 当 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛, 而 \\(\displaystyle\sum_{n=1}^\infty |a_n|\\) 发散, 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 条件收敛
-      如 \\(\displaystyle\sum_{n=1}^\infty \dfrac{(-1)^{n-1}}{n}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\dots\\) 收敛
-      但 \\(\displaystyle\sum_{n=1}^\infty |\dfrac{(-1)^{n-1}}{n}|=\displaystyle\sum_{n=1}^\infty \frac{1}{n}\\) 发散 (原因见p-级数)
-   2. 当 \\(\displaystyle\sum_{n=1}^\infty |a_n|\\) 收敛, 称 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 绝对收敛
-2. 结论
-   若 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 绝对收敛 (即 \\(\displaystyle\sum_{n=1}^\infty |a_n|\\) 收敛), 则 \\(\displaystyle\sum_{n=1}^\infty a_n\\) 收敛
-
-## 幂级数的概念与分析性质
-
-### 函数项级数的概念
-
-\\(\\{u_n(x)\\}\\) 为函数列, \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 称为函数项级数.
-对 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\)
-当 \\(x=x_0\\) 时, \\(\displaystyle\sum_{n=1}^\infty u_n(x_0)\\) 收敛, \\(x=x_0\\) 称为 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 收敛点
-当 \\(x=x_1\\) 时, \\(\displaystyle\sum_{n=1}^\infty u_n(x_1)\\) 发散, \\(x=x_1\\) 称为 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 发散点
-\\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 的一切收敛点而成的集合称为 \\(\displaystyle\sum_{n=1}^\infty u_n(x)\\) 的收敛域, 记为 \\(D\\)
-\\(\forall x\in D , \displaystyle\sum_{n=1}^\infty u_n(x)=S(x)\\) (S(x) 称为和函数)
-
-举个例子, 如 \\(x+x^2+x^3+x^4+\dots=\displaystyle\sum_{n=1}^\infty x^n\\)
-当 \\(x=\dfrac{2}{3}\\) 时, \\(\displaystyle\sum_{n=1}^\infty (\dfrac{2}{3})^n\\) 收敛, \\(x=\dfrac{2}{3}\\) 称为 \\(\displaystyle\sum_{n=1}^\infty x^n\\) 的收敛点;
-当 \\(x=2\\) 时, \\(\displaystyle\sum_{n=1}^\infty 2^n\\) 发散, \\(x=2\\) 称为 \\(\displaystyle\sum_{n=1}^\infty x^n\\) 的发散点;
-
-### 幂级数概念与基本定理
-
-1. 定义:
-   形如 \\(\displaystyle\sum_{n=0}^\infty a_n x^n=a_0+a_1x+a_2x^2+\dots\\)
-   或 \\(\displaystyle\sum_{n=0}^\infty a_n(x-x_0)^n=a_0+a_1(x-x_0)+a_2(x-x_0)^2+\dots\\)
-   称为幂级数
-2. 基本定理(abel定理)
-   对 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\)
-   1. 当 \\(x=x_0 (\neq0)\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x_0^n\\) 收敛. 则当 \\(|x|<|x_0|\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 绝对收敛;
-   2. 当 \\(x=x_1\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x_1^n\\) 发散. 则当 \\(|x|<|x_1|\\) 时, \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 发散;
-
-### 收敛半径与收敛域
-
-收敛域 \\(D\in(-R, +R)\\)
-
-收敛半径 \\(R\\) 的求法:
-对 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\)
-1. 定理1
-   设 \\(\lim\limits_{n\to\infty}|\dfrac{a_{n+1}}{a_n}|=\rho \quad\begin{cases} 1. &\rho=0 &\rArr R=+\infty \\\ 2. &\rho=+\infty &\rArr R=0 \\\ 3. &0<\rho<+\infty &\rArr R=\dfrac{1}{\rho} \end{cases}\\)
-2. 定理2
-   设 \\(\lim\limits_{n\to\infty}\sqrt[n]{|a_n|}=\rho \quad\begin{cases} 1. &\rho=0 &\rArr R=+\infty \\\ 2. &\rho=+\infty &\rArr R=0 \\\ 3. &0<\rho<+\infty &\rArr R=\dfrac{1}{\rho} \end{cases}\\)
-
-(原理: \\(x^n\\) 这边抵消级数 \\(a_n\\) 带来的收敛/发散影响)
-
-Note:
-对 \\(\displaystyle\sum_{n=0}^\infty a_n x^{2n+1}=a_0x+a_1x^3+a_2x^5+\dots\\)
-\\(\lim\limits_{n\to\infty}|\dfrac{a_{n+1}}{a_n}|=\rho \quad\begin{cases} 1. &\rho=0 &\rArr R=+\infty \\\ 2. &\rho=+\infty &\rArr R=0 \\\ 3. &0<\rho<+\infty &\rArr R=\sqrt{\dfrac{1}{\rho}} \end{cases}\\)
-
-### 幂级数和函数的分析性质
-
-设 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数为 \\(S(x)\\)
-1. 定理1
-   \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数 \\(S(x)\\) 在其收敛域上可积
-   则 \\(\int_0^x S(x)dx=\int_0^x (\displaystyle\sum_{n=0}^\infty a_n x^n)dx=\displaystyle\sum_{n=0}^\infty\int_0^x a_nx^ndx=\displaystyle\sum_{n=0}^\infty\dfrac{a_n}{n+1}x^{n+1}\\)
-   且 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 与 \\(\displaystyle\sum_{n=0}^\infty \dfrac{a_n}{n+1}x^{n+1}\\) 收敛半径相同(逐项可积性)
-2. 定理2
-   \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 的和函数 \\(S(x)\\) 在其收敛域上可导
-   则 \\((\displaystyle\sum_{n=0}^\infty a_n x^n)'=\displaystyle\sum_{n=0}^\infty (a_n x^n)'=\displaystyle\sum_{n=1}^\infty n a_n x^{n-1}\\)
-   且 \\(\displaystyle\sum_{n=0}^\infty a_n x^n\\) 与 \\(\displaystyle\sum_{n=1}^\infty n a_n x^{n-1}\\) 收敛半径相同(逐项可导性)
-
-## 函数展开成幂级数
-
-#### 直接法
-
-设 \\(f(x)\\)  在 \\(x=x_0\\) 邻域内任意阶可导.
-则 \\(f(x)\\) 在 \\(x=x_0\\) 邻域内展成 \\(\displaystyle\sum_{n=0}^\infty \dfrac{f^{(n)}(x_0)}{n!}(x-x_0)^n\\) 的充要条件是 \\(\lim\limits_{n\to\infty} R_n(x)=0\\)
-(参见泰勒级数)
-
-#### 间接法
-
-(基于直接法推导出来的已有公式进行展开)
-
-记(后面的展开不用记):
-1. \\(e^x=\displaystyle\sum_{n=0}^\infty \dfrac{x^n}{n!}=1+x+\frac{x^2}{2!}+\dots+\frac{x^n}{n!}+\circ(x^n) \quad(-1<x<1)\\)
-2. \\(\sin x=\displaystyle\sum_{n=0}^\infty \dfrac{(-1)^n}{(2n+1)!}x^{2n+1}=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dots+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+\circ(x^{2n+1}) \quad(-\infty<x<+\infty)\\)
-3. \\(\cos x=\displaystyle\sum_{n=0}^\infty \dfrac{(-1)^n}{(2n)!}x^{2n}=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots+(-1)^n\frac{x^{2n}}{(2n)!}+\circ(x^{2n}) \quad(-\infty<x<+\infty)\\)
-4. \\(\frac{1}{1-x}=\displaystyle\sum_{n=0}^\infty x^n=1+x+x^2+x^3+\dots+x^n+\circ(x^n) \quad(-1<x<1)\\)
-5. \\(\frac{1}{1+x}=\displaystyle\sum_{n=0}^\infty (-1)^n x^n=1-x+x^2-x^3+\dots+(-1)^nx^n+\circ(x^n) \quad(-1<x<1)\\)
-6. \\(\ln(1+x)=\displaystyle\sum_{n=1}^\infty \dfrac{(-1)^{n-1}}{n}x^n=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\dots+(-1)^{n-1}\frac{x^n}{n}+\circ(x^n) \quad(-1<x\leqslant1)\\)
-7. \\(-\ln(1-x)=\displaystyle\sum_{n=1}^\infty \dfrac{x^n}{n}=x+\frac{x^2}{2}+\frac{x^3}{3}+\frac{x^4}{4}+\dots+\frac{x^n}{n}+\circ(x^n) \quad(-1\leqslant x<1)\\)
-
-## 函数项级数的一致收敛性及一致收敛级数的基本性质
-
-## 傅里叶级数
-
-单一周期信号: \\(a_n\cos n\omega t+b_n\sin n\omega t\\)
-设 \\(f(x)\\) 以 \\(2\pi\\) 为周期的信号
-Q1: \\(f(x)\\) 可否分解为 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\)?
-\\(a_0=? \enspace a_n=? \enspace b_n=?\\)
-\\(\dfrac{a_0}{2}\\) - 直流成份
-\\(a_1\cos x+b_1\sin x\\) - 一次谐波
-\\(a_2\cos 2x+b_2\sin 2x\\) - 二次谐波
-
-Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) 何关系? (后面的级数被称作三角级数)
-
-### 三角函数 <span style="font-family: Consolas">ξ</span> 及正交性
-
-三角函数 \\(\xi\\) : \\(\cos 0x=\sin 0x=1 , \cos x , \sin x , \cos 2x , \sin 2x , \dots , \cos(nx) , \sin(nx)\\)
-
-正交性:
-1. \\(\int_{-\pi}^\pi 1\cdot\cos(nx) dx=0 \quad(n=1, 2, 3, \dots)\\)
-2. \\(\int_{-\pi}^\pi 1\cdot\cos(nx) dx=0 \quad(n=1, 2, 3, \dots)\\)
-3. \\(\int_{-\pi}^\pi \sin(mx)\cos(nx) dx=0 \quad(m, n=1, 2, 3, \dots)\\)
-4. \\(\int_{-\pi}^\pi \cos(mx)\cos(nx) dx=\begin{cases} 2\pi &, m=n=0 \\\ \pi &, m=n\geqslant 1 \\\ 0 &, m\neq n \end{cases}\\)
-5. \\(\int_{-\pi}^\pi \sin(mx)\sin(nx) dx=\begin{cases} \pi &, m=n\geqslant 1 \\\ 0 &, m\neq n \end{cases}\\)
-
-### 周期为 <span style="font-family: Consolas">2π</span> 的函数展开成傅里叶级数
-
-设 \\(f(x)\\) 以 \\(2\pi\\) 为周期
-Q1: \\(f(x)\\) 可否分解为三角级数 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) ?
-\\(a_0=? \enspace a_n=? \enspace b_n=?\\)
-Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) 什么关系?
-
-定理(狄利克雷充分条件):
-设 \\(f(x)\\) 是以 \\(2\pi\\) 为周期的周期级数. 若满足:
-1. \\(f(x)\\) 在 \\([-\pi, \pi]\\) 内连续或存在有限个第一类间断点;
-2. \\(f(x)\\) 在 \\([-\pi, \pi]\\) 内仅有有限个极值点.
-
-则:
-1. 结论1:
-   \\(f(x)\\) 可以展成 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))\\) . 且
-   \\(a_0=\frac{1}{\pi}\int_{-\pi}^\pi f(x) dx\\)
-   \\(a_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\cos(nx) dx \quad(n=1, 2, 3, \dots)\\)
-   \\(b_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\sin(nx) dx \quad(n=1, 2, 3, \dots)\\\)
-2. 结论2:
-   1. \\(x\\) 为 \\(f(x)\\) 连续点时, 则
-      \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))=f(x)\\) ;
-   2. \\(x\\) 为 \\(f(x)\\) 间断点时, 则
-      \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty (a_n\cos(nx)+b_n\sin(nx))=\dfrac{f(x-0)+f(x+0)}{2}\\)
+1. 背景
+   单一周期信号: \\(a_n\cos n\omega t+b_n\sin n\omega t\\)
+   设 \\(f(x)\\) 是以 \\(2\pi\\) 为周期的信号
+   Q1: \\(f(x)\\) 可否分解为 \\(\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty(a_n\cos nx+b_n\sin nx)\\) 的形式? \\(a_0=\text{?}\enspace a_n=\text{?}\enspace b_n=\text{?}\\)
+   \\(\dfrac{a_0}{2}\\) 称为直流成份
+   \\(a_1\cos x+b_1\sin x\\) 称为一次谐波
+   \\(a_2\cos 2x+b_2\sin 2x\\) 称为二次谐波
+   
+   Q2: \\(f(x)\\) 与 \\(\dfrac{a_0}{2}+\underbrace{\displaystyle\sum_{n=1}^\infty(a_n\cos nx+b_n\sin nx)}_{\text{三角级数}}\\) 什么关系?
+2. 三角函数系及正交性
+   三角函数系: \\(1(=\cos 0x=\sin 0x),\cos x,\sin x,\cos 2x,\sin 2x,\dots,\cos(nx),\sin(nx)\\)
+   正交性:
+   1. \\(\int_{-\pi}^\pi 1\cdot\cos(nx)\mathrm{d}x=0\enspace\\) (\\(n=1,2,3,\dots\\))
+   2. \\(\int_{-\pi}^\pi 1\cdot\cos(nx)\mathrm{d}x=0\enspace\\) (\\(n=1,2,3,\dots\\))
+   3. \\(\int_{-\pi}^\pi\sin(mx)\cos(nx)\mathrm{d}x=0\enspace\\) (\\(m\\)、\\(n=1,2,3,\dots\\))
+   4. \\(\int_{-\pi}^\pi\cos(mx)\cos(nx)\mathrm{d}x=\begin{cases} 2\pi & m=n=0 \\\ \pi & m=n\geqslant 1 \\\ 0 & m\neq n \end{cases}\\)
+   5. \\(\int_{-\pi}^\pi\sin(mx)\sin(nx)\mathrm{d}x=\begin{cases} \pi & m=n\geqslant 1 \\\ 0 & m\neq n \end{cases}\\)
+3. 周期为 \\(2π\\) 的函数展开成傅里叶级数
+   设 \\(f(x)\\) 以 \\(2\pi\\) 为周期
+   Q1: \\(f(x)\\) 可否分解为三角级数 \\(\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty(a_n\cos nx+b_n\sin nx)\\) ? \\(a_0=\text{?}\enspace a_n=\text{?}\enspace b_n=\text{?}\\)
+   Q2: \\(f(x)\\) 与 \\(\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty(a_n\cos nx+b_n\sin nx)\\) 什么关系?
+   
+   定理(Dirichlet 充分条件):
+   设 \\(f(x)\\) 是以 \\(2\pi\\) 为周期的周期级数. 若满足:
+   1. \\(f(x)\\) 在 \\([-\pi,\pi]\\) 内连续或存在有限个第一类间断点
+   2. \\(f(x)\\) 在 \\([-\pi,\pi]\\) 内仅有有限个极值点
+   
+   则:
+   1. \\(f(x)\\) 可以展成 \\(\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty(a_n\cos nx+b_n\sin nx)\\) . 且
+      \\(a_0=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\mathrm{d}x\\)
+      \\(a_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\cos nx\mathrm{d}x\enspace\\) (\\(n=1,2,3,\dots)\\)
+      \\(b_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\sin nx\mathrm{d}x\enspace\\) (\\(n=1,2,3,\dots)\\\)
+   2. \\(x\\) 为 \\(f(x)\\) 连续点时, 则 \\(\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty(a_n\cos nx+b_n\sin nx)=f(x)\\)
+      \\(x\\) 为 \\(f(x)\\) 间断点时, 则 \\(\frac{a_0}{2}+\displaystyle\sum_{n=1}^\infty(a_n\cos nx+b_n\sin nx)=\frac{f(x-0)+f(x+0)}{2}\\)
 
 ### 定义于 <span style="font-family: Consolas">[−π, π]</span> 上函数的傅里叶级数(非周期函数)
 
