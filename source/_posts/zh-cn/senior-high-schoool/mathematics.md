@@ -160,31 +160,31 @@ tags:
    2. 将求到的各极值连同端点处的函数值 \\(f(a)\\)、\\(f(b)\\) 比较. 其中最大的是最大值; 最小的是最小值
 4. 定积分与微积分基本定理
    1. 微分
-      先来看看微分的概念 \\(dx=\lim\limits_{\varDelta x\to 0}\varDelta x\\)
-      结合导数的定义, 有 \\(f^\prime(x)=\dfrac{dy}{dx}\rArr dy=f^\prime(x)dx\\)
+      先来看看微分的概念 \\(\mathrm{d}x=\lim\limits_{\varDelta x\to 0}\varDelta x\\)
+      结合导数的定义, 有 \\(f^\prime(x)=\dfrac{\mathrm{d}y}{\mathrm{d}x}\rArr\mathrm{d}y=f^\prime(x)\mathrm{d}x\\)
       关于微分的公式:
-      1. \\(df(x)=f^\prime(x)dx\\)
-      2. \\(d(ax+b)=adx\\)
+      1. \\(\mathrm{d}f(x)=f^\prime(x)\mathrm{d}x\\)
+      2. \\(\mathrm{d}(ax+b)=a\mathrm{d}x\\)
    2. 定积分
       定积分四部曲: 分割->近似代替->求和->取极限
       定积分概念: 
-      \\(\int_a^b f(x)dx=\lim\limits_{n\to\infty}\displaystyle\sum_{i=1}^n\frac{b-a}{n}f(\xi_i)\\)
+      \\(\int_a^b f(x)\mathrm{d}x=\lim\limits_{n\to\infty}\displaystyle\sum_{i=1}^n\textstyle\frac{b-a}{n}f(\xi_i)\\)
       \\(a\\) 与 \\(b\\) 分别叫做积分下限和积分上限, 组成的区间 \\([a,b]\\) 叫做积分区间
-      函数 \\(f(x)\\) 叫做被积函数, \\(x\\) 叫做积分变量, \\(f(x)dx\\) 叫做被积式
-      上式中 \\(dx\\) 与 \\(\frac{b-a}{n}\\) 对应, 几何意义为被无穷分割的区间 \\([a,b]\\) 中的一小段, \\(\xi_i\\) 表示这一小段对应的位置
+      函数 \\(f(x)\\) 叫做被积函数, \\(x\\) 叫做积分变量, \\(f(x)\mathrm{d}x\\) 叫做被积式
+      上式中 \\(\mathrm{d}x\\) 与 \\(\frac{b-a}{n}\\) 对应, 几何意义为被无穷分割的区间 \\([a,b]\\) 中的一小段, \\(\xi_i\\) 表示这一小段对应的位置
       定积分性质:
       1. (线性性质)
-         \\(\int_a^b kf(x)dx=k\int_a^b f(x)dx\\)
-         \\(\int_a^b[f_1(x)\pm f_2(x)]dx=\int_a^b f_1(x)dx\pm\int_a^b f_2(x)dx\\)
-      2. (积分区间的可加性) \\(\int_a^b f(x)dx=\int_a^c f(x)dx+\int_c^b f(x)dx\enspace\\) (\\(a<c<b\\))
-      3. \\(\int_a^b f(x)dx=-\int_b^a f(x)dx\\)
+         \\(\int_a^b kf(x)\mathrm{d}x=k\int_a^b f(x)\mathrm{d}x\\)
+         \\(\int_a^b[f_1(x)\pm f_2(x)]\mathrm{d}x=\int_a^b f_1(x)\mathrm{d}x\pm\int_a^b f_2(x)\mathrm{d}x\\)
+      2. (积分区间的可加性) \\(\int_a^b f(x)\mathrm{d}x=\int_a^c f(x)\mathrm{d}x+\int_c^b f(x)\mathrm{d}x\enspace\\) (\\(a<c<b\\))
+      3. \\(\int_a^b f(x)\mathrm{d}x=-\int_b^a f(x)\mathrm{d}x\\)
       4. 函数值大于等于零时, 积分大于零; 函数值小于等于零时, 积分小于零
-         \\(f(x)\geqslant 0\rArr\int_a^bf(x)dx>0\\) , \\(f(x)\leqslant 0\rArr\int_a^b f(x)dx<0\\)
-      5. 若 \\(f(x)\\) 是奇函数, 则 \\(\int_{-a}^a f(x)dx=0\\) (奇函数沿原点对称, 正好抵消)
-         若 \\(f(x)\\) 是偶函数, 则 \\(\int_{-a}^a f(x)dx=2\int_0^a f(x)dx\\) (偶函数沿 \\(y\\) 轴对称)
+         \\(f(x)\geqslant 0\rArr\int_a^bf(x)\mathrm{d}x>0\\) , \\(f(x)\leqslant 0\rArr\int_a^b f(x)\mathrm{d}x<0\\)
+      5. 若 \\(f(x)\\) 是奇函数, 则 \\(\int_{-a}^a f(x)\mathrm{d}x=0\\) (奇函数沿原点对称, 正好抵消)
+         若 \\(f(x)\\) 是偶函数, 则 \\(\int_{-a}^a f(x)\mathrm{d}x=2\int_0^a f(x)\mathrm{d}x\\) (偶函数沿 \\(y\\) 轴对称)
    3. 微积分基本定理
       一般地, 如果 \\(f(x)\\) 是区间 \\([a, b]\\) 上的连续函数. 并且 \\(\exist F^\prime(x)=f(x)\\), 那么
-      \\(\int_a^b f(x)dx=F(b)-F(a)=F(x)|_a^b=[F(x)+c]|_a^b\\)
+      \\(\int_a^b f(x)\mathrm{d}x=F(b)-F(a)=F(x)|_a^b=[F(x)+c]|_a^b\\)
       这个结论叫做微积分基本定理, 也称牛顿⋅莱布尼茨公式.
 
 
@@ -410,7 +410,7 @@ tags:
       4. 柯西不等式可推广为如下一般形式:
          设 \\(n\\) 为大于 \\(1\\) 的自然数, \\(a_i\\)、\\(b_i\enspace\\) (\\(i=1,2,\dots,n\\)) 为实数, 则
          \\(a_1^2+a_2^2+\dots+a_n^2)(b_1^2+b_2^2+\dots+b_n^2)\geqslant(a_1b_1+a_2b_2+\dots+a_nb_n)^2\\)
-         \\(\hArr\displaystyle\sum_{i=1}^n a_i^2\cdot\displaystyle\sum_{i=1}^n b_i^2\geqslant(\displaystyle\sum_{i=1}^n a_ib_i)^2\\)
+         \\(\displaystyle\hArr\sum_{i=1}^n a_i^2\cdot\sum_{i=1}^n b_i^2\geqslant(\sum_{i=1}^n a_ib_i)^2\\)
    2. 排序不等式 TODO: 向量递归法讨论
       设两组实数 \\(a_1,a_2,\dots,a_n\\) 与 \\(b_1,b_2,\dots,b_n\\) , 其中 \\(a_1\leqslant a_2\leqslant\dots\leqslant a_n\\) , \\(b_1\leqslant b_2\leqslant\dots\leqslant b_n\\)
       设 \\(c_1,c_2,\dots,c_n\\) 为 \\(b_1,b_2,\dots,b_n\\) 的任意一个排列,
@@ -436,7 +436,7 @@ tags:
       (当且仅当 \\(a_1=a_2=\dots=a_n\\) 时等号成立)
       \\(\frac{a_1+a_2+\dots+a_n}{n}\\) 称为算术平均数
       \\(\sqrt[n]{a_1a_2\dots a_n}\\) 称为几何平均数
-1. 证明不等式的基本方法
+5. 证明不等式的基本方法
    1. 比较法
       比较法分比差法和比商法, 
       比差法利用基本事实 \\(a-b>0\hArr a>b\\)
@@ -623,7 +623,7 @@ tags:
       | \\(X\\) | \\(x_1\\) | \\(x_2\\) | \\(\dots\\) | \\(x_n\\) |
       | - | ----- | ----- | --- | ----- |
       | \\(P(X)\\) | \\(p_1\\) | \\(p_2\\) | \\(\dots\\) | \\(p_n\\) |
-      期望(离散均值): \\(\mu=E(X)=\displaystyle\sum_{i=1}^n x_ip_i\\)
+      期望(离散均值): \\(\displaystyle\mu=E(X)=\sum_{i=1}^n x_ip_i\\)
       期望的性质:
       1. \\(E(aX+b)=aE(X+b)\\)
       2. \\(E(X_1+X_2)=E(X_1)+E(X_2)\\)
@@ -632,7 +632,7 @@ tags:
       5. 超几何分布期望 \\(E(X)=\frac{nM}{N}\\)
       6. 二项分布期望 \\(E(X)=np\\)
       
-      离散方差: \\(\sigma^2=V(X)=\displaystyle\sum_{i=1}^n (x_i-\mu)^2p_i\\)
+      离散方差: \\(\displaystyle\sigma^2=V(X)=\sum_{i=1}^n (x_i-\mu)^2p_i\\)
       离散方差的性质:
       1. \\(V(aX+b)=a^2V(X)\\)
       2. \\(V(X)=E(X^2)-[E(X)]^2\\)

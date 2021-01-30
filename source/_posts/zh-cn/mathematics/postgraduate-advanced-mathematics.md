@@ -798,7 +798,7 @@ Notes:
 1. 换元积分法
    1. 第一类换元积分法
       \\(f(u)\\) 存在原函数, \\(\varphi(x)\\) 可导, \\(F(u)\\) 为 \\(f(u)\\) 的原函数, 则
-      \\(\int f[\varphi(x)]\underbrace{\varphi^\prime(x)\mathrm{d}x}_{f^\prime(x)\mathrm{d}x=df(x)}=\int\underbrace{f[\varphi(x)]\mathrm{d}\varphi(x)}\_{\text{设}\varphi(x)=t}=\int f(t)\mathrm{d}t=F(t)+C=F[\varphi(x)]+C\\)
+      \\(\int f[\varphi(x)]\underbrace{\varphi^\prime(x)\mathrm{d}x}_{f^\prime(x)\mathrm{d}x=\mathrm{d}f(x)}=\int\underbrace{f[\varphi(x)]\mathrm{d}\varphi(x)}\_{\text{设}\varphi(x)=t}=\int f(t)\mathrm{d}t=F(t)+C=F[\varphi(x)]+C\\)
    2. 第二类换元积分法
       \\(x=\psi(t)\\) 可导且 \\(\psi^\prime(t)\neq 0\\)
       \\(\int f(x)\mathrm{d}x=\int f[\psi(t)]\psi^\prime(t)\mathrm{d}t=\int g(t)\mathrm{d}t=G(t)+C=G[\psi^{-1}(x)]+C\enspace\\) (\\(t\\) 为反函数 \\(\psi^{-1}(x)\\))
@@ -849,9 +849,9 @@ Notes:
    2. \\(\exist s_i\in[x_{i-1},x_i]\\) , 作 \\(\displaystyle\sum_{i=1}^n f(\xi_i)\Delta x_i\\)
    3. \\(\lambda=\operatorname{max}\\{\Delta x_1,\Delta x_2,\dots,\Delta x_n\\}\\)
    
-   若 \\(\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n f(\xi_i)\Delta x_i\\) 存在, 称 \\(f(x)\\) 在 \\([a,b]\\) 上可积
+   若 \\(\displaystyle\lim\limits_{\lambda\to 0}\sum_{i=1}^n f(\xi_i)\Delta x_i\\) 存在, 称 \\(f(x)\\) 在 \\([a,b]\\) 上可积
    该极限称为 \\(f(x)\\) 在 \\([a,b]\\) 上的定积分, 记作 \\(\int_a^b f(x)\mathrm{d}x\\)
-   即 \\(\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n f(\xi_1)\Delta x_i=\int_a^b f(x)\mathrm{d}x\\)
+   即 \\(\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n\textstyle f(\xi_1)\Delta x_i=\int_a^b f(x)\mathrm{d}x\\)
    
    注意:
    1. \\(L:y=f(x)\geqslant 0\enspace\\) (\\(x\in[a,b]\\))
@@ -859,7 +859,7 @@ Notes:
       例: 物理中知道速度函数和时间求位移(\\(v\\) 为速度, \\(t\\) 为时间)
       设 \\(v=V(t)\enspace\\) (\\(t\in[a,b]\\))
       则 \\(S=\int_a^b V(t)\mathrm{d}t\\)
-   2. \\(\lim\limits_{\lambda\to 0}\displaystyle\sum_{i=1}^n f(\xi_1)\Delta x_i\\) 与 \\([a,b]\\) 分法及 \\(\xi_i\\) 取法无关
+   2. \\(\displaystyle\lim\limits_{\lambda\to 0}\sum_{i=1}^n f(\xi_1)\Delta x_i\\) 与 \\([a,b]\\) 分法及 \\(\xi_i\\) 取法无关
    3. \\(f(x)\\) 在 \\([a,b]\\) 上有界不一定可积
       如分段函数 \\(f(x)=\begin{cases} 1 & x\in Q \\\ 0 & x\in R-Q \end{cases}\\)
    4. 若 \\(f(x)\in c[a,b]\\) , 则 \\(f(x)\\) 在 \\([a,b]\\) 上可积
@@ -1096,7 +1096,7 @@ Notes:
    换元法, 设 \\(u=\frac{y}{x}\\) , 则 \\(y=ux\rArr y^\prime=u^\prime x+ux^\prime\rArr\frac{\mathrm{d}y}{\mathrm{d}x}=x\frac{\mathrm{d}u}{\mathrm{d}x}+u\\)
    将 \\(u=\frac{y}{x}\\) 和 \\(\frac{\mathrm{d}y}{\mathrm{d}x}=x\frac{\mathrm{d}u}{\mathrm{d}x}+u\\) 代入方程得到 \\(x\frac{\mathrm{d}u}{\mathrm{d}x}+u=\varphi(u)\\)
    然后就可以分离变量, 最后两边积分: 
-   \\(\frac{\mathrm{d}x}{x}=\frac{du}{\varphi(u)-u}\rArr\int\frac{\mathrm{d}x}{x}=\int\frac{\mathrm{d}u}{\varphi(u)-u}+C\\)
+   \\(\frac{\mathrm{d}x}{x}=\frac{\mathrm{d}u}{\varphi(u)-u}\rArr\int\frac{\mathrm{d}x}{x}=\int\frac{\mathrm{d}u}{\varphi(u)-u}+C\\)
 
 ### 一阶线性微分方程
 
@@ -1111,7 +1111,7 @@ Notes:
          \frac{1}{y}\mathrm{d}y=-P(x)\mathrm{d}x & \rArr\int\frac{1}{y}\mathrm{d}y=\int-P(x)\mathrm{d}x \\
          & \rArr\ln|y|=-\int P(x)\mathrm{d}x+C_0 \\
          & \rArr|y|=e^{-\int P(x)\mathrm{d}x+C_0} \\
-         & \rArr y=\pm e^{C_0}\cdot e^{-\int P(x)\mathrm{d}x}=Ce^{-\int P(x)dx}
+         & \rArr y=\pm e^{C_0}\cdot e^{-\int P(x)\mathrm{d}x}=Ce^{-\int P(x)\mathrm{d}x}
         \end{aligned}
         $$
         </div>
@@ -1133,7 +1133,7 @@ Notes:
 
 ### 可降阶的高阶微分方程
 
-1. \\(y^{(n)}=f(x)\quad(n\geqslant2)\\)
+1. \\(y^{(n)}=f(x)\enspace(n\geqslant2)\\)
    (解法较简单, 见例题)
    例: \\(y^{\prime\prime}=x^3+e^{2x}\\)
    解:
@@ -1164,7 +1164,7 @@ Notes:
    \\(yp\frac{\mathrm{d}p}{\mathrm{d}y}-p^2=0\\)
    \\(\because p\neq 0\\)
    \\(\therefore y\frac{\mathrm{d}p}{\mathrm{d}y}-p=0\rArr\dots\rArr p=C_1y\\)
-   即 \\(\frac{\mathrm{d}y}{\mathrm{d}x}=C_1y\rArr\frac{\mathrm{d}y}{C_1y}=\mathrm{d}x\rArr\int\frac{dy}{C_1y}=\int\mathrm{d}x+C_2\rArr\ln|C_1y|=x+C_2\rArr y=\frac{C_3e^x}{C_1}\\)
+   即 \\(\frac{\mathrm{d}y}{\mathrm{d}x}=C_1y\rArr\frac{\mathrm{d}y}{C_1y}=\mathrm{d}x\rArr\int\frac{\mathrm{d}y}{C_1y}=\int\mathrm{d}x+C_2\rArr\ln|C_1y|=x+C_2\rArr y=\frac{C_3e^x}{C_1}\\)
    \\(\because y(0)=1,y^\prime(0)=1\\)
    \\(\therefore C_1=1,C_3=1\\)
    特解为 \\(y=e^x\\)
