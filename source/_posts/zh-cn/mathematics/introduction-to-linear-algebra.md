@@ -45,7 +45,7 @@ The word "**unit**" is always indicating that some measurement equals "one".
      Their prices are \\((p_1,p_2,p_3)\\) for each unit--this is the "price vector" \\(p\\) .
      The quantities we buy or sell are \\((q_1,q_2,q_3)\\) : positive when we sell, negative when we buy.
      Selling \\(q_1\\) units at the price \\(p_1\\) brings in \\(q_1p_1\\) . The total income (quantities \\(q\\) times prices \\(p\\)) is **the dot product \\(q\cdot p\\) in three dimensions**:
-     \\[\text{\bf{Income}}=(q_1,q_2,q_3)\cdot(p_1,p_2,p_3)=q_1p_1+q_2p_2+q_3p_3\\]
+     \\[\textbf{Income}=(q_1,q_2,q_3)\cdot(p_1,p_2,p_3)=q_1p_1+q_2p_2+q_3p_3\\]
      > A zero dot product means that "the books balance". Total sales equal total purchases if \\(q\cdot p=0\\) . Then \\(p\\) is perpendicular to \\(q\\) (in three-dimensional space). A supermarket with thousands of goods goes quickly into high dimensions.
        Small note: Spreadsheets have become essential in management. They compute linear combinations and dot products. What you see on the screen is a matrix.
 3. Matrices
@@ -113,8 +113,8 @@ TODO: integrate the ideas in this chapter
 1. Vectors and Linear Equations
    * The Matrix Form of the Equations
      Matrix-vector multiplication \\(Ax\\) can be computed by dot products, a row at a time. But \\(Ax\\) must be understood as a *combination of the columns of \\(A\\)*
-     Multiplication by rows: \\(Ax=\begin{bmatrix} (\text{\bf{row 1}})\cdot x \\\ (\text{\bf{row 2}})\cdot x \\\ (\text{\bf{row 3}})\cdot x \end{bmatrix}\\)
-     Multiplication by columns: \\(Ax=x_1(\text{\bf{column 1}})+x_2(\text{\bf{column 2}})+x_3(\text{\bf{column 3}})\\)
+     Multiplication by rows: \\(Ax=\begin{bmatrix} (\textbf{row 1})\cdot x \\\ (\textbf{row 2})\cdot x \\\ (\textbf{row 3})\cdot x \end{bmatrix}\\)
+     Multiplication by columns: \\(Ax=x_1(\textbf{column 1})+x_2(\textbf{column 2})+x_3(\textbf{column 3})\\)
      The **identity matrix** \\(I=\begin{bmatrix} 1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & 0 & 1 \end{bmatrix}\\) always yields the multiplication \\(Ix=x\\)
 2. The Idea of Elimination
    Pivot: first nonzero in the row that does the elimination
@@ -133,5 +133,96 @@ TODO: integrate the ideas in this chapter
       The upper triangular \\(Ux=c\\) is solved by **back substitution** (starting at the bottom).
 3. Elimination Using Matrices
    The word "entry" for a matrix corresponds to "componend" for a vector. General rule: \\(a_{ij}=A(i,j)\\) is in row \\(i\\) , column \\(j\\).
-   The **identity matrix** has 1's on the diagonal and otherwise 0's. Then \\(Ib=b\\) for all b.
-   The **elementary matrix or elimination matrix** \\(E_{ij}\\) has the extra nonzero entry \\(-\ell\\) in the \\(i,j\\) position. Then \\(E_{ij}\\) subtracts a multiple \\(\ell\\) of row \\(j\\) from row \\(i\\).
+   1. The Matrix Form of One Elimination Step
+      The **identity matrix** has 1's on the diagonal and otherwise 0's. Then \\(Ib=b\\) for all b.
+      The **elementary matrix or elimination matrix** \\(E_{ij}\\) has the extra nonzero entry \\(-\ell_{ij}\\) in the \\(i,j\\) position. Then \\(E_{ij}\\) subtracts a multiple \\(\ell_{ij}\\) of row \\(j\\) from row \\(i\\).
+      The purpose of \\(E_{31}\\) is to product a zero in the \\((3,1)\\) position of the matrix.
+   2. Matrix Multiplication
+      Associative law is true: \\(A(BC)=(AB)C\\)
+      Commutative law is false: \\(\text{Often}\enspace AB\neq BA\\)
+      Matrix multiplication \\(AB=A\begin{bmatrix} b_1 & b_2 & b_3 \end{bmatrix}=\begin{bmatrix} Ab_1 & Ab_2 & Ab_3 \end{bmatrix}\\)
+   3. The Matrix \\(P_{ij}\\) for a Row Exchange
+      A row exchange is needed when zero is in the pivot position.
+      **Row Exchange Matrix**: \\(P_{ij}\\) is the identity matrix with rows \\(i\\) and \\(j\\) reversed.
+      When this "**permutation matrix**" \\(P_{ij}\\) multiplies a matrix, it exchanges rows \\(i\\) and \\(j\\)
+      for example: to exchange equations 1 and 3 multiply by \\(P_{13}=\begin{bmatrix} 0 & 0 & 1 \\\ 0 & 1 & 0 \\\ 1 & 0 & 0 \end{bmatrix}\\)
+   4. The Augmented Matrix
+      Elimination does the same row operations to \\(A\\) and to \\(b\\) . We can include \\(b\\) as an extra column and follow it through elimination. The matrix \\(A\\) is enlarged or "augmented" by the extra column \\(b\\) :
+      \\(\begin{bmatrix} A & b \end{bmatrix}=\begin{bmatrix} 2 & 4 & -2 & \mathbf{2} \\\ 4 & 9 & -3 & \mathbf{8} \\\ -2 & -3 & 7 & \mathbf{10} \end{bmatrix}\\)
+      For the augmented matrix \\(\begin{bmatrix} A & b \end{bmatrix}\\) , that first elimination step gives \\(\begin{bmatrix} E_{21}A & E_{21}b \end{bmatrix}\\)
+
+   Elimination multiplies \\(Ax=b\\) by \\(E_{21},E_{31},\dots,E_{n1}\\) , then \\(E_{32},E_{42},\dots,E_{n2}\\) , and onward.
+4. Rules for Matrix Operations
+   1. To multiply \\(AB\\) , if \\(A\\) has \\(n\\) columns, \\(B\\) must have \\(n\\) rows.
+   2. Matrices \\(A\\) with \\(n\\) columns multiply matrices \\(B\\) with \\(n\\) rows: \\(\boxed{A_{m\times n}B_{n\times p}=C_{m\times p}}\\)
+   3. Each entry in \\(AB=C\\) is a dot product: \\(C_{ij}=(\text{row }i\text{ of }A)\cdot(\text{column }j\text{ of }B))\\)
+   4. The second, third and fourth way to compute \\(AB\\):
+      * Matrix \\(A\\) times every column of \\(B\\) : \\(A\begin{bmatrix} b_1 & \cdots & b_p \end{bmatrix}=\begin{bmatrix} Ab_1 & \cdots & Ab_p \end{bmatrix}\\)
+      * Every row of \\(A\\) times matrix \\(B\\) : \\(\begin{bmatrix} \text{row }i\text{ of }A \end{bmatrix}B=\begin{bmatrix} \text{row }i\text{ of }AB \end{bmatrix}\\)
+      * Multiply columns 1 to \\(n\\) of \\(A\\) times rows 1 to \\(n\\) of \\(B\\). Add those matrices:
+        <div>
+        $$
+        \begin{bmatrix}
+         \text{col 1} & \text{col 2} & \text{col 3} \\
+         \cdot & \cdot & \cdot \\
+         \cdot & \cdot & \cdot
+        \end{bmatrix}
+        \begin{bmatrix}
+         \text{row 1} & \cdot & \cdot & \cdot \\
+         \text{row 2} & \cdot & \cdot & \cdot \\
+         \text{row 3} & \cdot & \cdot & \cdot
+        \end{bmatrix}
+        =(\text{col 1})(\text{row 1})+(\text{col 2})(\text{row 2})+(\text{col 3})(\text{row 3})
+        $$
+        </div>
+   5. Block multiplication: If blocks of \\(A\\) can multiply blocks of \\(B\\) , then block multiplication of \\(AB\\) is allowed. Cuts between columns of \\(A\\) match cuts between rows of \\(B\\):
+      \\(\begin{bmatrix} A_{11} & A_{12} \\\ A_{21} & A_{22} \end{bmatrix}\begin{bmatrix} B_{11} \\\ B_{21} \end{bmatrix}=\begin{bmatrix} A_{11}B_{11}+A_{12}B_{21} \\\ A_{21}B_{11}+A_{22}B_{21} \end{bmatrix}\\)
+   6. Block elimination: \\(\left[\begin{array}{c|c} I & 0 \\\ \hline -CA^{-1} & I \end{array}\right]\left[\begin{array}{c|c} A & B \\\ \hline C & D \end{array}\right]=\left[\begin{array}{c|c} A & B \\\ \hline 0 & D-CA^{-1}B \end{array}\right]\\)
+      The final block \\(D-CA^{-1}B\\) is called ***Schur complement***
+5. Inverse Matrices
+   1. The inverse matrix gives \\(A^{-1}A=I\\) and \\(AA^{-1}=I\\)
+   2. The *algorithm* to test invertibility is elimination: \\(A\\) must have \\(n\\) (nonzero) pivots.
+      The *algebra* test for invertibility is the determinant of \\(A\\) : det \\(A\\) must not be zero.
+   3. *Important*. If \\(Ax=0\\) for a nonzero vector \\(x\\) , then \\(A\\) has no inverse.
+      ***Suppose there is a nonzero vector \\(x\\) such that*** \\(Ax=0\\) . *Then \\(A\\) cannot have an inverse*. No matrix can bring 0 back to \\(x\\)
+   4. The Inverse of a Product \\(AB\\)
+      If \\(A\\) and \\(B\\) are invertible then so is \\(AB\\) . The inverse of a product \\(AB\\) is \\((AB)^{-1}=B^{-1}A^{-1}\\)
+   5. Calculating \\(A^{-1}\\) by Gauss-Jordan Elimination
+      \\(AA^{-1}=I\\) is \\(n\\) equations for \\(n\\) columns of \\(A^{-1}\\) . Gauss-Jordan eliminates \\(\begin{bmatrix} A & I \end{bmatrix}\\) to \\(\begin{bmatrix} I & A^{-1}\end{bmatrix}\\) :
+   6. Recognizing an Invertible Matrix
+      **Diagonally dominant matrices are invertible.** Each \\(a_{ii}\\) on the diagonal is larger than the total sum along the rest of row \\(i\\) . On every row,
+      \\[|a_{ii}|>\sum_{j\neq i}|a_{ij}\\]
+6. Elimination = Factorization: \\(A=LU\\)
+   1. Gaussian elimination (with no row exchanges) factors \\(A\\) into \\(L\\) times \\(U\\)
+   1. Each elimination step \\(E_{ij}\\) in inverted by \\(E_{ij}^{-1}=L_{ij}\\) . Off the main diagonal change \\(-\ell_{ij}\\) to \\(+\ell_{ij}\\)
+   2. The whole forward elimination process (with no row exchanges) is inverted by \\(L\\) :
+      \\[\bm{L}=(L_{21}L_{31}\dots L_{n1})(L_{32}\dots L_{n2})(L_{43}\dots L_{n3})\dots(L_{nn-1})\\]
+   3. That product matrix \\(L\\) is still lower trignaular. **Every multiplier \\(\bm{\ell_{ij}}\\) is in row \\(\bm{i}\\) , column \\(\bm{j}\\)**
+   4. The original \\(A\\) is recovered from \\(U\\) by \\(\bm{A=LU}=(\text{lower triangular})(\text{upper triangular})\\)
+      * **Better balance from LDU**
+        ***Divide \\(\bm{U}\\) by a diagonal matrix \\(\bm{D}\\) that contains the pivots:***
+        Split \\(U\\) into \\(\begin{bmatrix} d_1 & & & \\\ & d_2 & & \\\ & & \ddots & \\\ & & & d_n \end{bmatrix}\begin{bmatrix} 1 & \frac{u_{12}}{d_1} & \frac{u_{13}}{d_1} & \cdot \\\ & 1 & \frac{u_{23}}{d_2} & \cdot \\\ & & \ddots & \vdots \\\ & & & 1 \end{bmatrix}\\)
+
+   5. Elimination on \\(Ax=b\\) reaches \\(Ux=c\\) . Then back-substitution solves \\(Ux=c\\)
+      (\\(Ax=b\rArr LUx=b\rArr Ux=L^{-1}b=c\\))
+   6. Solving a triangular system takes \\(\frac{n^2}{2}\\) multiply-subtracts. Elimination to find \\(U\\) takes \\(\frac{n^3}{3}\\)
+7. Transposes and Permutations
+   1. Transpose exchange rows and columns: \\((A^T)\_{ij}=A\_{ji}\\)
+   2. The transposes of:
+      | | |
+      |-|-|
+      | Sum | The transpose of \\(A+B\\) is \\(A^T+B^T\\) |
+      | Product | The transpose of \\(AB\\) is \\((AB)^T=B^TA^T\\) |
+      | Inverse | The transpose of \\(A^{-1}\\) is \\((A^{-1})^T=(A^T)^{-1}\\) |
+      The reverse order rule extends to three or more factors: \\((ABC)^T\\) equals \\(C^TB^TA^T\\)
+      * Product proof:
+        To understand \\((AB)^T=B^TA^T\\) , start with \\((Ax)^T=x^TA^T\\) when \\(B\\) is just a vector:
+        ***\\(\bm{Ax}\\) combines the columns of \\(\bm{A}\\) while \\(\bm{x^TA^T}\\) combines the rows of \\(\bm{A^T}\\)***\\((x^TA^T=x_1\cdot(\textbf{row 1})+x_2\cdot(\textbf{row 2})+x_3\cdot(\textbf{row 3}))\\)
+        Now we can prove the formula \\((AB)^T=B^TA^T\\) , when \\(B\\) has several columns.
+        Transposing \\(AB=\begin{bmatrix} Ab_1 & Ab_2 & \cdots \end{bmatrix}\\) gives \\(\begin{bmatrix} b_1^TA^T \\\ b_2^TA^T \\\ \vdots \end{bmatrix}\\) which is \\(B^TA^T\\)
+      * Inverse proof:
+        Transpose of inverse \\(A^{-1}A=I\\) is transposed to \\(A^T(A^{-1})^T=I\rArr(A^{-1})^T=(A^T)^{-1}\\)
+   3. The dot product (inner product) is \\(x\cdot y=x^Ty\\) . This is \\((1\times n)(n\times 1)=(1\times 1)\\) matrix.
+      The outer product is \\(xy^T=\\) column times row \\(=(n\times 1)(1\times n)=n\times n\\) matrix.
+   4. The idea behind \\(A^T\\) is that \\(Ax\cdot y\\) equals \\(x\cdot A^Ty\\) because \\((Ax)^Ty=x^TA^Ty=x^T(A^Ty)\\)
+   5. A **symmetric matrix** has \\(S^T=S\\) (and the product \\(A^TA\\) is always symmetric, because the transpose of \\(A^TA\\) is \\(A^T(A^T)^T=A^TA\\))
