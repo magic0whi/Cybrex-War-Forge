@@ -224,5 +224,21 @@ TODO: integrate the ideas in this chapter
         Transpose of inverse \\(A^{-1}A=I\\) is transposed to \\(A^T(A^{-1})^T=I\rArr(A^{-1})^T=(A^T)^{-1}\\)
    3. The dot product (inner product) is \\(x\cdot y=x^Ty\\) . This is \\((1\times n)(n\times 1)=(1\times 1)\\) matrix.
       The outer product is \\(xy^T=\\) column times row \\(=(n\times 1)(1\times n)=n\times n\\) matrix.
-   4. The idea behind \\(A^T\\) is that \\(Ax\cdot y\\) equals \\(x\cdot A^Ty\\) because \\((Ax)^Ty=x^TA^Ty=x^T(A^Ty)\\)
+   4. The idea behind \\(A^T\\) is that \\(Ax\cdot y=x\cdot A^Ty\\) because \\((Ax)^Ty=x^TA^Ty=x^T(A^Ty)\\)
    5. A **symmetric matrix** has \\(S^T=S\\) (and the product \\(A^TA\\) is always symmetric, because the transpose of \\(A^TA\\) is \\(A^T(A^T)^T=A^TA\\))
+      ***If \\(S=S^T\\) is factored into \\(LDU\\) with no row exchanges, then \\(U\\) is exactly \\(L^T\\) , which is \\(S=LDL^T\\)***
+   6. Permutation Matrices
+      There are \\(n!\\) permutation matrices of size \\(n\\). *Half even, half odd.*
+      Permutation Matrices are even with Orthogonal Matrix \\(Q\\) (The columns of \\(Q\\) are orthogonal unit vectors.) 
+   7. Transpose in Permutation Matrices: **\\(\bm{P^{-1}=P^T}\\)**
+   8. The \\(PA=LU\\) Factorization with Row Exchanges
+      If \\(A\\) is invertible then a permutation \\(P\\) will reorder its rows for \\(PA=LU\\)
+      > Sometimes row exchanges are needed to produce pivots. Then \\(A=(E^{-1}\cdots P^{-1}\cdots E^{-1}\cdots P^{-1})U\\).
+      > (Every row exchange is carried out by a \\(P_{ij}\\) and inverted by that \\(P_{ij}\\)).
+      > The main question is where to collect the \\(P_{ij}\\)'s. There are two good possibilities:
+      > 1. The row exchanges can be done *in advance*. Their product \\(P\\) puts the rows of \\(A\\) in the right order, so that no exchanges are needed for \\(PA\\). ***Then \\(\bm{PA=LU}\\)***.
+      > 2. If we hold row exchanges until *after elimination*, the pivot rows are in a strange order. \\(P_1\\) puts them in the correct triangular order in \\(U_1\\). ***Then \\(\bm{A=L_1P_1U}\\)***
+      >
+      > \\(PA=LU\\) is constantly used in all computing. **We will concentrate on this form**.
+
+## Vector Spaces and Subspaces
