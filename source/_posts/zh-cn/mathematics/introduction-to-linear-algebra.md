@@ -11,6 +11,8 @@ Introduction to Linear Algebra by Gilbert Strang
 
 The word "**unit**" is always indicating that some measurement equals "one".
 
+TODO: keep all the vector symbols have a boldface style.
+
 <!-- more -->
 
 ## Introduction to Vectors
@@ -242,3 +244,41 @@ TODO: integrate the ideas in this chapter
       > \\(PA=LU\\) is constantly used in all computing. **We will concentrate on this form**.
 
 ## Vector Spaces and Subspaces
+
+1. Spaces of Vectors
+   1. The standard \\(n\\)-dimensional space \\(\textbf{R}^n\\) contains all real column vectors with \\(n\\) components.
+     (The components of \\(v\\) are real numbers, which is the reason for the letter \\(\textbf{R}\\). A vector whose \\(n\\) components are complex numbers lies in the space \\(\textbf{C}^n\\))
+   2. If \\(v\\) and \\(w\\) are in a **vector space** \\(\bm{S}\\) , every combination \\(c\\bm{v}+d\bm{v}\\) must be in \\(\bm{S}\\) .
+   3. \\(\textbf{M}\\) : The vector space of ***all real 2 by 2 matrices***.
+      \\(\textbf{F}\\) : The vector space of ***all real functions*** \\(f(x)\\) .
+      \\(\textbf{Z}\\) : The vector space that consists only of a ***zero vector***.
+   4. A **subspace** of \\(\textbf{R}^n\\) is a vector space inside \\(\textbf{R}^n\\).
+      Here is a list of all the possible subspaces of \\(\textbf{R}^3\\) :
+      <div>
+      $$
+      \boxed{\begin{array}{ll}
+      (\textbf{L}) \text{ Any line through } (0,0,0) & (\textbf{R}^3) \text{ The whole space} \\
+      (\textbf{P}) \text{ Any plane through } (0,0,0) & (\textbf{Z}) \text{ The single vector } (0,0,0)
+      \end{array}}
+      $$
+      </div>
+
+      ***A subspace containing \\(\bm{v}\\) and \\(\bm{w}\\) must contain all linear combinations \\(c\bm{v}+d\bm{w}\\)***
+   5. The **column space** of \\(A\\) (called \\(\bm{C}(A)\\)) contains all combinations of the columns of \\(A\\) (A subspace of \\(\textbf{R}^m\\)) .
+      Reverse, the column space is "spanned" by the columns of \\(A\\) .
+   6. The column space contains all the vectors \\(Ax\\) . So \\(A\bm{x}=b\\) is solvable when \\(b\\) is in \\(\bm{C}(A)\\)
+2. **The Nullspace of A: Solving \\(\bm{Ax=0}\\) and \\(\bm{Rx=0}\\)**
+   1. The **nullspace** \\(\bm{N}(A)\\) in \\(\bm{R}^n\\) contains all solutions \\(x\\) to \\(A\bm{x}=0\\) . This includes \\(\bm{x}=0\\)
+   2. Elimination (from \\(A\\) to \\(R\\)) does not change the nullspace: \\(\bm{N}(A)=\bm{N}(U)=\bm{N}\(R\)\\)
+   3. When \\(A\\) is rectangular, elimination will not stop at the uppertriangular \\(U\\) .
+      We can continue to make this matrix somplex, in two ways. These steps bring us to the best matrix -- reduced row echelon matrix \\(R\\) :
+      1. ***Produce zeros above the pivots*.** Use pivot rows to eliminate upward in \\(\bm{R}\\) .
+      2. ***Produce ones in the pivots.*** Divice the whole pivot row by its pivot
+      
+      The **reduced row echelon from \\(\bm{R=\textbf{rref}(A)}\\)** has all pivots \\(=1\\) , with zeros above and below.
+   4. Every free column leads to a special solution.
+      If column \\(j\\) of \\(R\\) is free (no pivot), there is a ***"special solution"*** to \\(Ax=0\\) with \\(x_j=1\\) , and the other free variables are 0.
+   5. Number of pivots \\(=\\) number of nonzero rows in \\(R=\textbf{rank r}\\) . There are \\(n-r\\) free columns.
+      The complete solution to \\(Ax=0\\) is a combination of the \\(n-r\\) special solutions.
+   6. Every matrix with \\(m<n\\) has nonzero solutions to \\(Ax=0\\) in nullspace.
+3. The Complete Solution to \\(Ax=b\\)
