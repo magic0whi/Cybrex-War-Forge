@@ -282,3 +282,22 @@ TODO: integrate the ideas in this chapter
       The complete solution to \\(Ax=0\\) is a combination of the \\(n-r\\) special solutions.
    6. Every matrix with \\(m<n\\) has nonzero solutions to \\(Ax=0\\) in nullspace.
 3. The Complete Solution to \\(Ax=b\\)
+   1. **Complete solution** to \\(A\bm{x}=\bm{b}\\) : \\(\bm{x}=(\text{one particular solution }\bm{x_p})+(\text{any }\bm{x_n}\text{ in the nullspace})\\) .
+   2. \\(A\bm{x}=\bm{b}\\) and \\(R\bm{x}=\bm{d}\\) are solvable only when all zero rows of \\(R\\) have zeros in \\(\bm{d}\\) .
+   3. When \\(R\bm{x}=\bm{d}\\) is solvable, ony very particular solution \\(\bm{x_p}\\) has all free variables qeual to zero.
+   4. ***The four possibilities for linear equations depend on the rank \\(\bm{r}\\)***
+      <div>
+      $$
+      \begin{array}{llll}
+       r=m\text{ and }r=m & \textit{Square and invertible} & R=\begin{bmatrix} I \end{bmatrix} & Ax=b\text{ has 1 solution} \\
+       r=m\text{ and }r\lt m & \textit{Short and wide} & R=\begin{bmatrix} I & F \end{bmatrix} & Ax=b\text{ has }\infty\text{ solutions} \\
+       r\lt m\text{ and }r=n & \textit{Tall and thin} & R=\begin{bmatrix} I \\ 0 \end{bmatrix} & Ax=b\text{ has 0 or 1 solution} \\
+       r\lt m\text{ and }r\lt n & \textit{Not full rank} & R=\begin{bmatrix} I & F \\ 0 & 0 \end{bmatrix} & Ax=b\text{ has 0 or }\infty\text{ solutions}
+      \end{array}
+      $$
+      </div>
+
+      \\(F\\) means free matrix.
+      Full column rank \\(r=n\\) means no free variables, its nullspace \\(\bm{N}(A)=\\) zero vector
+      Full row rank \\(r=m\\) means one solution if \\(m=n\\) or infinitely many if \\(m<n\\) , its column space \\(\bm{C}(A)\\) is \\(\textbf{R}^m\\) , \\(A\bm{x}=\bm{b}\\) is always solvable.
+4. Independence, Basis and Dimension
