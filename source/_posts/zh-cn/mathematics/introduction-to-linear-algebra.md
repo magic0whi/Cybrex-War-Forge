@@ -301,3 +301,23 @@ TODO: integrate the ideas in this chapter
       Full column rank \\(r=n\\) means no free variables, its nullspace \\(\bm{N}(A)=\\) zero vector
       Full row rank \\(r=m\\) means one solution if \\(m=n\\) or infinitely many if \\(m<n\\) , its column space \\(\bm{C}(A)\\) is \\(\textbf{R}^m\\) , \\(A\bm{x}=\bm{b}\\) is always solvable.
 4. Independence, Basis and Dimension
+   1. **Independent columns** of \\(A\\) : The only solution to \\(Ax=0\\) is \\(x=0\\) . The nullspace is \\(Z\\) .
+   2. Independent vectors: The only zero combination \\(c_1v_1+\dots+c_kv_k=0\\) has all \\(c\\)'s \\(=0\\)
+   3. A matrix with \\(m<n\\) has **dependnt columns**: At least \\(n-m\\) free variables/special solutions.
+   4. The vectors \\(v_1,\dots,v_k\\) **span the space S** if \\(S=\\) all combinations of the \\(v\\)'s.
+   5. The vectors \\(v_1,\dots,v_k\\) are a **basis for S** if they are independent and they span \\(S\\) .
+   6. The **dimension of a space S** is the number of vectors in every basis for **S**.
+   7. If \\(A\\) is 4 by 4 and invertible, its columns are a basis for \\(\textbf{R}^4\\) . The dimension of \\(\textbf{R}^4\\) is 4.
+5. Dimensions of the Four Subspaces
+   1. Four Fundamental Subspaces
+      1. The ***row space*** is \\(\bm{C}(A^T)\\) , a subspace of \\(\textbf{R}^n\\) .
+      2. The ***column space*** is \\(\bm{C}(A)\\) , a subspace of \\(\textbf{R}^m\\) .
+      3. The ***nullspace*** is \\(\bm{N}(A)\\) , a subspace of \\(\textbf{R}^n\\) .
+      4. The ***left nullspace*** is \\(\bm{N}(A^T)\\) , a subspace of \\(\textbf{R}^m\\) . This is our new space.
+   2. The column space \\(C(A)\\) and the row space \\(C(A^T)\\) both have *dimension* \\(r\\) (the rank of \\(A\\))
+   3. The nullspace \\(\bm{N}(A)\\) has *dimension* \\(n-r\\) . The left nullspace \\(\bm{N}(A^T)\\) has *dimension* \\(m-r\\) .
+   4. Elimination produces bases for the row space and nullspace of \\(A\\) :
+      They are the same as for \\(R\\) .
+      Notice \\(\bm{C}(A)\neq\bm{C}\(R\)\\) , elimination often changes the column space and left nullspace (but dimensions don't change).
+   5. **Rank one matrices** : 
+      \\(\bm{C}(A)\\) has basis \\(\bm{u}\\) , \\(\bm{C}(A^T)\\) has basis \\(v\\) , then \\(A=\bm{uv}^T=\\) column times row.
