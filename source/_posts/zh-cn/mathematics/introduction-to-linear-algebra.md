@@ -321,3 +321,31 @@ TODO: integrate the ideas in this chapter
       Notice \\(\bm{C}(A)\neq\bm{C}\(R\)\\) , elimination often changes the column space and left nullspace (but dimensions don't change).
    5. **Rank one matrices** : 
       \\(\bm{C}(A)\\) has basis \\(\bm{u}\\) , \\(\bm{C}(A^T)\\) has basis \\(v\\) , then \\(A=\bm{uv}^T=\\) column times row.
+
+## Orthogonality
+
+1. Orthogonality of the Four Subspaces
+   1. Orhogonal vectors have \\(\bm{v}^\mathrm{T}\bm{w}=0\\) .
+   2. Subspaces \\(\bm{V}\\) nad \\(\bm{W}\\) are orthogonal when \\(\bm{v}^\mathrm{T}\bm{w}=0\\) for every \\(\bm{v}\\) in \\(\bm{V}\\) and every \\(\bm{w}\\) in \\(\bm{W}\\) .
+   3. \\(\bm{V}\\) and \\(\bm{W}\\) are "orthogonal complements" if \\(\bm{W}\\) contains **all** vectors perpendicular to \\(\bm{V}\\) (and vice versa). Inside \\(\bm{R}^n\\) , the dimensions of complements \\(\bm{V}\\) and \\(\bm{W}\\) add to \\(n\\) .
+   4. The nullspace \\(\bm{N}(A)\\) and the row space \\(\bm{C}(A^\mathrm{T})\\) are orthogonal complements, with dimensions \\((n-r)+r=n\\) . Similarly \\(\bm{N}(A^\mathrm{T})\\) and \\(\bm{C}(A)\\) are orthogonal complements with \\((m-r)+r=m\\) .
+   5. And \\(n\\) independent vectors in \\(\bm{R}^n\\) span \\(\bm{R}^n\\) . Any \\(n\\) spanning vectors are independent.
+2. Projections
+   1. The projection of a vector \\(\bm{b}\\) onto the line through \\(\bm{a}\\) is the closest point \\(\bm{p=a\frac{a^\mathrm{T}b}{a^\mathrm{T}a}}\\)
+      > Projecting \\(\bm{b}\\) onto \\(\bm{a}\\) . The line from \\(\bm{b}\\) to \\(\bm{p}\\) is perpendicular to the vector \\(A\\) . This is the dotted line marked \\(\bm{e=b-p=b-\hat{x}a}\\) .
+      > \\(\bm{a\cdot e=a\cdot(b-\hat{x}a)=0 \rArr a\cdot b-\hat{x}a\cdot a=0 \rArr\boxed{\hat{x}=\frac{a\cdot b}{a\cdot a}=\frac{a^\mathrm{T}b}{a^\mathrm{T}a}}}\\) 
+      > Projection matrix \\(P\\) : \\(\boxed{\bm{p=a\hat{x}=a\frac{a^\mathrm{T}b}{a^\mathrm{T}a}=}P\bm{b}}\rArr\boxed{P=\bm{\frac{aa^\mathrm{T}}{a^\mathrm{T}a}}}\\)
+      > {% asset_img 3.png %}
+   2. The projection of \\(\bm{b}\\) onto a subspace \\(\bm{S}\\) is the closest vector \\(\bm{p}\\) in \\(\bm{S}\\) ; \\(b-p\\) is orthogonal to \\(S\\)
+      The equation \\(A^\mathrm{T}A\hat{\bm{x}}=A^\mathrm{T}\bm{b}\\) leads to \\(\hat{\bm{x}}\\) and \\(\bm{p}=A\hat{\bm{x}}\\)
+      > \\(n\\) vectors \\(a_1,\dots,a_n\\) in \\(\textbf{R}^m\\) are a basis of the subspace.
+      > ***The Problem is to find the combination \\(p=\hat{x_1}\bm{a}_1+\dots+\hat{x_n}\bm{a}_n\\) closest to a given vector \\(\bm{b}\\) .***
+      > We put these basis vectors into the columns of \\(A\\) , \\(A\\) has full rank \\(n\\) , the subspace is equal to \\(\bm{C}(A)\\).
+      > **The error vector \\(\bm{b-A\hat{x}}\\) is perpendicular to the subspace.** (See the Figure 4.6 above)
+      > Then \\(\begin{matrix} \bm{a}_1^\mathrm{T}(\bm{b}-A\hat{\bm{x}}))=0 \\\ \vdots \\\ \bm{a}_n^\mathrm{T}(\bm{b}-A\hat{\bm{x}}))=0 \end{matrix}\rArr\begin{bmatrix} \bm{a}_1^\mathrm{T} \\\ \vdots \\\ \bm{a}_n^\mathrm{T} \end{bmatrix}(\bm{b}-A\hat{\bm{x}})=\begin{bmatrix} \\\ 0 \\\ \\\ \end{bmatrix}\rArr A^\mathrm{T}(\bm{b}-A\hat{\bm{x}})=0\\)
+      > * Find \\(\hat{\bm{x}}(n\times 1)\\) : \\(A^\mathrm{T}(\bm{b}-A\hat{\bm{x}})=0\rArr A^\mathrm{T}A\hat{\bm{x}}=A^\mathrm{T}\bm{b}\rArr\hat{\bm{x}}=(A^\mathrm{T}A)^{-1}A^\mathrm{T}\bm{b}\\)
+      >   (The symmetric matrix \\(A^\mathrm{T}A\\) is \\(n\\) by \\(n\\) . It is invertible if the \\(\bm{a}\\)'s are independent)
+      > * Find \\(\bm{p}(m\times 1)\\) : \\(\bm{p}=A\hat{\bm{x}}=A(A^\mathrm{T}A)^{-1}A^\mathrm{T}\bm{b}=P\bm{b}\\)
+      > * Find \\(\bm{P}(m\times m)\\) : \\(\bm{p}=P\bm{b}\rArr P=A(A^\mathrm{T}A)^{-1}A^\mathrm{T}\\)
+   3. The projection matrix \\(P=A(A^\mathrm{T}A)^{-1}A^\mathrm{T}\\) has \\(P^2=P=P^T\\)
+      (\\(P=P^2\\) because a second projection doesn't change the first projection)
