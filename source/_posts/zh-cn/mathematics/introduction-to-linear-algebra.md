@@ -349,3 +349,20 @@ TODO: integrate the ideas in this chapter
       > * Find \\(\bm{P}(m\times m)\\) : \\(\bm{p}=P\bm{b}\rArr P=A(A^\mathrm{T}A)^{-1}A^\mathrm{T}\\)
    3. The projection matrix \\(P=A(A^\mathrm{T}A)^{-1}A^\mathrm{T}\\) has \\(P^2=P=P^T\\)
       (\\(P=P^2\\) because a second projection doesn't change the first projection)
+3. Least Squares Approximations
+   We cannot always get the error \\(\bm{e}=\bm{b}-A\bm{x}\\) down to zero.
+   When \\(\bm{e}\\) is zero, \\(\bm{x}\\) is an exact solution to \\(A\bm{x}=\bm{b}\\) .
+   When the length of \\(e\\) is as small as possible, \\(\hat{\bm{x}}\\) is a *least squares solution*.
+   1. The least squares solution \\(\hat{\bm{x}}\\) comes from the normal equations \\(A^\mathrm{T}A\hat{\bm{x}}=A^\mathrm{T}\bm{b}\\) .
+      It minimizes the sum of squares of the errors \\(E=||A\bm{x}-\bm{b}||^2\\) in the \\(m\\) equations (\\(m>n\\)).
+   2. To fit \\(m\\) points by a line \\(b=C+Dt\\) , the normal qeuations give \\(C\\) and \\(D\\) .
+      In that case \\(A^\mathrm{T}A\\) is the 2 by 2 matrix \\(\begin{bmatrix} m & \sum t_i \\\ \sum t_i & \sum t_i^2 \end{bmatrix}\\) and \\(A^\mathrm{T}\bm{b}\\) is the vector \\(\begin{bmatrix} \sum b_i \\\ \sum t_ib_i \end{bmatrix}\\)
+      > At times \\(t_1,\dots,t_m\\) those \\(m\\) points are at heights \\(b_1,\dots,b_m\\) .
+      > \\(A\bm{x}=\bm{b}\\) is \\(\begin{matrix} C+Dt_1=b_1 \\\ C+Dt_2=b_2 \\\ \vdots \\\ C+Dt_m=b_m \end{matrix}\\) with \\(A=\begin{bmatrix} 1 & t_1 \\\ 1 & t_2 \\\ \vdots & \vdots \\\ 1 & t_m \end{bmatrix}\\)
+      > Solve \\(A^\mathrm{T}A\hat{\bm{x}}=A^\mathrm{T}\bm{b}\\) for \\(\hat{\bm{x}}=(C,D)\\) :
+      > * \\(A^\mathrm{T}A=\begin{bmatrix} 1 & \dots & 1 \\\ t_1 & \dots & t_m \end{bmatrix}\begin{bmatrix} 1 & t_1 \\\ \vdots & \vdots \\\ 1 & t_m \end{bmatrix}=\begin{bmatrix} m & \sum t_i \\\ \sum t_i & \sum t_i^2 \end{bmatrix}\\)
+      > * \\(A^\mathrm{T}b=\begin{bmatrix} 1 & \dots & 1 \\\ t_1 & \dots & t_m \end{bmatrix}\begin{bmatrix} b_1 \\\ \vdots \\\ b_m \end{bmatrix}=\begin{bmatrix} \sum b_i \\\ \sum t_ib_i \end{bmatrix}\\)
+      >
+      > then \\(A^\mathrm{T}A\hat{\bm{x}}=A^\mathrm{T}\bm{b}\hArr\begin{bmatrix} m & \sum t_i \\\ \sum t_i & \sum t_i^2 \end{bmatrix}\begin{bmatrix} C \\\ D \end{bmatrix}=\begin{bmatrix} \sum b_i \\\ \sum t_ib_i \end{bmatrix}\\)
+   3. Setting partial derivatives of \\(E=||A\bm{x}-\bm{b}||^2\\) to zero (\\(\frac{\partial E}{\partial x_i}=0\\)) also produces \\(A^\mathrm{T}A\hat{\bm{x}}=A^\mathrm{T}\bm{b}\\)
+4. Orthonormal Bases and Gram-Schmidt
