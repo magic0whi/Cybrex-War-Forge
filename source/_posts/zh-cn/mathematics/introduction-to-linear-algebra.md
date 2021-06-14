@@ -366,3 +366,15 @@ TODO: integrate the ideas in this chapter
       > then \\(A^\mathrm{T}A\hat{\bm{x}}=A^\mathrm{T}\bm{b}\hArr\begin{bmatrix} m & \sum t_i \\\ \sum t_i & \sum t_i^2 \end{bmatrix}\begin{bmatrix} C \\\ D \end{bmatrix}=\begin{bmatrix} \sum b_i \\\ \sum t_ib_i \end{bmatrix}\\)
    3. Setting partial derivatives of \\(E=||A\bm{x}-\bm{b}||^2\\) to zero (\\(\frac{\partial E}{\partial x_i}=0\\)) also produces \\(A^\mathrm{T}A\hat{\bm{x}}=A^\mathrm{T}\bm{b}\\)
 4. Orthonormal Bases and Gram-Schmidt
+   1. If the orthonormal vectors \\(\bm{q_1},\dots,\bm{q_2}\\) are the columns of \\(Q\\) , then \\(\bm{q_i^\mathrm{T}q_j}=0\\) and \\(\bm{q_i^\mathrm{T}q_i}=1\\) translate into the matrix multiplication \\(Q^\mathrm{T}Q=I\\) , \\(Q\\) is called **orthogonal matrix**
+   2. The least squares solution to \\(Q\bm{x}=\bm{b}\\) is \\(\hat{\bm{x}}=Q^\mathrm{T}\bm{b}\\) . Projection of \\(\bm{b}:\bm{p}=QQ^\mathrm{T}\bm{b}=\bm{q_1}(\bm{q_1}^\mathrm{T}\bm{b})+\dots+\bm{q_n}(\bm{q_n}^\mathrm{T}\bm{b})=P\bm{b}\\)
+      > \\(\bm{p}=\begin{bmatrix} | & & | \\\ \bm{q_1} & \cdots & \bm{q_n} \\\ | & & | \end{bmatrix}\begin{bmatrix} \bm{q_1^\mathrm{T}b} \\\ \vdots \\\ \bm{q_n^\mathrm{T}b} \end{bmatrix}=\bm{q_1}(\bm{q_1}^\mathrm{T}\bm{b})+\dots+\bm{q_n}(\bm{q_n}^\mathrm{T}\bm{b})\\)
+
+      So the projection onto the column space of \\(Q\\) spanned by the \\(\bm{q}\\)'s is \\(P=QQ^\mathrm{T}\\)
+      If \\(Q\\) is square then \\(Q^\mathrm{T}=Q^{-1}\\) (***transpose = inverse***), \\(P=QQ^\mathrm{T}=I\\) and \\(\bm{b=p}\\)
+   4. The **Gram-Schmidt** process takes independent \\(\bm{a_i}\\) to orthonormal \\(\bm{q_i}\\) . Start with \\(\bm{q_1}=\frac{a_1}{||a_1||}\\)
+      \\(\bm{q_i}\\) is \\(\frac{\bm{a_i}-\text{projection }\bm{p_i}}{||\bm{a_i}-\bm{p_i}||}\\) ; \\(\text{projection }\bm{p_i}=(\bm{a_i}^\mathrm{T}\bm{q_1})\bm{q_1}+\dots+(\bm{a_i}^\mathrm{T}\bm{q_{i-1}})\bm{q_{i-1}}\\)
+   5. Each \\(a_i\\) will be a combination of \\(\bm{q_1}\\) to \\(\bm{q_i}\\) , Then \\(\bm{A=QR}\\) : orthogonal \\(Q\\) and triangular \\(R\\)
+      > \\(\bm{A=QR}\hArr\begin{bmatrix} | & | & | \\\ \bm{a} & \bm{b} & \bm{c} \\\ | & | & |\end{bmatrix}=\begin{bmatrix} | & | & | \\\ \bm{q_1} & \bm{q_2} & \bm{q_3} \\\ | & | & | \end{bmatrix}\begin{bmatrix} \bm{q_1^\mathrm{T}a} & \bm{q_1^\mathrm{T}b} & \bm{q_1^\mathrm{T}c} \\\ & \bm{q_2^\mathrm{T}b} & \bm{q_2^\mathrm{T}c} \\\ & & \bm{q_3^\mathrm{T}c} \end{bmatrix}\\)
+        Multiply by \\(Q^T\\) to recognize \\(\bm{R=Q^\mathrm{T}A}\\) above.
+        We must not forget why this is useful for least squares: \\(\bm{A^\mathrm{T}A=(QR)^\mathrm{T}QR=R^\mathrm{T}Q^\mathrm{T}QR=R^\mathrm{T}R}\\) . The least squares equation \\(A^\mathrm{T}A\hat{\bm{x}}=A^\mathrm{T}\bm{b}\\) simplifies to \\(R^\mathrm{T}R\hat{\bm{x}}=R^\mathrm{T}Q^\mathrm{T}\bm{b}\rArr R\hat{\bm{x}}=Q^\mathrm{T}\bm{b}\\)
