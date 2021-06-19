@@ -378,3 +378,99 @@ TODO: integrate the ideas in this chapter
       > \\(\bm{A=QR}\hArr\begin{bmatrix} | & | & | \\\ \bm{a} & \bm{b} & \bm{c} \\\ | & | & |\end{bmatrix}=\begin{bmatrix} | & | & | \\\ \bm{q_1} & \bm{q_2} & \bm{q_3} \\\ | & | & | \end{bmatrix}\begin{bmatrix} \bm{q_1^\mathrm{T}a} & \bm{q_1^\mathrm{T}b} & \bm{q_1^\mathrm{T}c} \\\ & \bm{q_2^\mathrm{T}b} & \bm{q_2^\mathrm{T}c} \\\ & & \bm{q_3^\mathrm{T}c} \end{bmatrix}\\)
         Multiply by \\(Q^T\\) to recognize \\(\bm{R=Q^\mathrm{T}A}\\) above.
         We must not forget why this is useful for least squares: \\(\bm{A^\mathrm{T}A=(QR)^\mathrm{T}QR=R^\mathrm{T}Q^\mathrm{T}QR=R^\mathrm{T}R}\\) . The least squares equation \\(A^\mathrm{T}A\hat{\bm{x}}=A^\mathrm{T}\bm{b}\\) simplifies to \\(R^\mathrm{T}R\hat{\bm{x}}=R^\mathrm{T}Q^\mathrm{T}\bm{b}\rArr R\hat{\bm{x}}=Q^\mathrm{T}\bm{b}\\)
+
+## Determinants
+
+> The **determinant** of \\(A=\begin{vmatrix} a & b \\\ c & d \end{vmatrix}\\) is \\(ad-bc\\)
+
+1. The Properties of Determinants
+   1. ***The determinant of the \\(\bm{n}\\) by \\(\bm{n}\\) identity matrix is*** 1
+      \\(\begin{vmatrix} 1 & 0 \\\ 0 & 1\end{vmatrix}=1\\) and \\(\begin{vmatrix} 1 & & \\\ & \ddots & \\\ & & 1 \end{vmatrix}=1\\)
+   2. ***The determinant changes sign when two rows are exchanged*** (sign reversal):
+      Check: \\(\begin{vmatrix} a & b \\\ c & d \end{vmatrix}=-\begin{vmatrix} c & d \\\ a & b \end{vmatrix}\\)
+      Because of this rule, we can find \\(\operatorname{det} P\\) for any permutation matrix. Just exchange rows of \\(I\\) until you reach \\(P\\) . Then \\(\operatorname{det} P=+1\\) for an ***even*** number of row exchanges and \\(\operatorname{det} P=-1\\) for an ***odd** number.
+   3. ***The determinant is a linear function of each row separately*** (all other rows stay fixed)
+      **multiply row 1 by any number \\(\bm{t}\\) , \\(\operatorname{det}\\) is multiplied by \\(\bm{t}\\)**: \\(\begin{vmatrix} ta & tb \\\ c & d \end{vmatrix}=t\begin{vmatrix} a & b \\\ c & d \end{vmatrix}\\)
+      **add row 1 of \\(A\\) to row 1 of \\(A^\prime\\) , then determinants add**: \\(\begin{vmatrix} a+a^\prime & b+b^\prime \\\ c & d \end{vmatrix}=\begin{vmatrix} a & b \\\ c & d \end{vmatrix}+\begin{vmatrix} a^\prime & b^\prime \\\ c & d \end{vmatrix}\\)
+   4. ***If two rows of \\(A\\) are equal, then \\(\operatorname{\textbf{det}}\bm{A=0}\\)***
+      Check 2 by 2: \\(\begin{vmatrix} a & b \\\ a & b \end{vmatrix}=0\\)
+      > Rule 4 follows from rule 2. Exchange the two equal rows. The determinant \\(D\\) is supposed to change sign. But also \\(D\\) has to stay the same, because the matrix is not changed. The only number with \\(-D=D\\) is \\(D=0\\)
+   5. ***Subtracting a multiple of one row from another row leaves \\(\operatorname{\textbf{det}}A\\) unchanged.***
+      \\(\ell\\) times row 1 from row 2: \\(\begin{vmatrix} a & b \\\ c-\ell a & d-\ell b \end{vmatrix}=\begin{vmatrix} a & b \\\ c & d \end{vmatrix}+\begin{vmatrix} a & b \\\ -\ell a & -\ell b \end{vmatrix}=\begin{vmatrix} a & b \\\ c & d \end{vmatrix}\\) (Rule 5 follows from rule 3 and rule 4)
+      The determinant is not changed by the usual elimination steps from \\(A\\) to \\(U\\) . But every row exchange reverses the sign, so always \\(\operatorname{det} A=\pm\operatorname{det}U\\) . Rule 5 has narrowed the problem to triangular matrics.
+   6. ***A Matrix with a row of zeros has \\\(\operatorname{\textbf{det}}A=0\\\)***
+      Rule 6 follows from rule 5 and rule 4: \\(\begin{vmatrix} a & b \\\ 0 & 0\end{vmatrix}=\begin{vmatrix} a & b \\\ a & b \end{vmatrix}=0\\)
+   7. ***If \\(\bm{A}\\) is triangular then \\(\operatorname{\textbf{det}}\bm{A=a_{11}a_{22}\cdots a_{nn}=}\\) product of diagonal entries***
+      Rule 7 follows rule 5, rule 3 and rule 1: \\(\begin{vmatrix} a & b \\\ 0 & d \end{vmatrix}=\begin{vmatrix} a & 0 \\\ 0 & d \end{vmatrix}=ad\begin{vmatrix} 1 & 0 \\\ 0 & 1 \end{vmatrix}=ad\\)
+   8. ***If \\(\bm{A}\\) is singular then \\(\operatorname{\textbf{det}}\bm{A=0}\\) . If \\(A\\) is invertible then \\(\operatorname{\textbf{det}}\bm{A\neq 0}\\)***
+      ***Proof*** Elimination goes from \\(A\\) to \\(U\\) . If \\(A\\) is singular then \\(U\\) has a zero row. The rules give \\(\operatorname{det}A=\operatorname{det}U=0\\) . If \\(A\\) is invertible then \\(U\\) has the pivots along its diagonal. The product of nonzero pivots (using rule 7) gives a nonzero determinant
+   9. ***The determinant of \\(\bm{AB}\\) is \\(\operatorname{\textbf{det}}\bm{A}\\) times \\(\operatorname{\textbf{det}}\bm{B}\\) : \\(|AB|=|A||B|\\)***
+      For the \\(n\\) by \\(n\\) case, here is a snappy proof. When \\(|B|\\) is not zero, consider the ratio \\(D(A)=\frac{|AB|}{|B|}\\) . Check that this ratio \\(D(A)\\) has properties 1,2,3. Then \\(D(A)\\) has to be the \\(\operatorname{det}A\\) and we have \\(\frac{|AB|}{|B|}=|A|\\)
+      * Property 1 (Determinant of \\(I\\)) If \\(A=I\\) then the ratio \\(D(A)\\) becomes \\(\frac{|B|}{|B|}=1\\)
+      * Property 2 (Sign reversal) When two rows of \\(A\\) are exchanged, so are the same two rows of \\(AB\\) . Therefore \\(|AB|\\) changes sign and so does the ratio \\(\frac{|AB|}{|B|}\\)
+      * Property 3 (Linearity)
+        When row 1 of \\(A\\) is multiplied by \\(t\\) , so is row 1 of \\(AB\\) . This multiplies the determinant \\(|AB|\\) by \\(t\\) . So the ratio \\(\frac{|AB|}{|B|}\\) is multiplied by \\(t\\)
+        Add row 1 of \\(A\\) to row 1 of \\(A^\prime\\) . Then row 1 of \\(AB\\) adds to row 1 of \\(A^\prime B\\) . By rule 3, determinants add. After dividing by \\(|B|\\) , the ratios add--as desired.
+      
+      Conclusion This ratio \\(\frac{|AB|}{|B|}\\) has the same three properties that define \\(|A|\\) . Therefore it equals \\(|A|\\) . This proves the product rule \\(|AB|=|A||B|\\) . The case \\(|B|=0\\) is separate and easy, because \\(AB\\) is singular when \\(B\\) is singular. Then \\(|AB|=|A||B|\\) is \\(0=0\\)
+   10. ***The transpose \\(A^\mathrm{T}\\) has the same determinant as \\(A\\)***
+       The proof of \\(|A|=|A^\mathrm{T}|\\) comes by using rule 9 for products:
+       Compare \\(\operatorname{det}P\operatorname{det}A=\operatorname{det}L\operatorname{det}U\\) with \\(\operatorname{det}A^\mathrm{T}\operatorname{det}P^\mathrm{T}=\operatorname{det}U^\mathrm{T}\operatorname{det}L^\mathrm{T}\\)
+       First, \\(\operatorname{det}L=\operatorname{det}L^\mathrm{T}=1\\) (both have 1's on the diagonal). Second, \\(\operatorname{det}U=\operatorname{det}U^\mathrm{T}\\) (those triangular matrices have the same diagonal). Third, \\(\operatorname{det}P=\operatorname{det}P^\mathrm{T}\\) (permutations have \\(P^\mathrm{T}P=I\\) , so \\(|P^\mathrm{T}||P|=1\\) by rule 9; thus \\(|P|\\) and \\(|P^\mathrm{T}|\\) both equal 1 or both eual -1). So \\(L\\), \\(U\\), \\(P\\) have the same determinants as \\(L^\mathrm{T}\\), \\(U^\mathrm{T}\\), \\(P^\mathrm{T}\\) and this leaves \\(\operatorname{det}A=\operatorname{det}A^\mathrm{T}\\)
+2. Permutations and Cofactors
+   1. The Pivot Formula: \\((\operatorname{det}P)(\operatorname{det}A)=(\operatorname{det}L)(\operatorname{det}U)\\) gives \\(\operatorname{det}A=\pm(d_1d_2\cdots d_n)\\)
+   2. The Big Formula:
+      \\(\operatorname{det}A=\\) sum over all \\(n!\\) column permutations \\(P=(\alpha,\beta,\dots,\omega)=\sum(\operatorname{det}P)a_{1\alpha}a_{2\beta}\cdots a_{n\omega}\\)
+      > A order 2 determinant can splits into 4 simpler determinants (by rule 3):
+      > \\(\begin{vmatrix} a & b \\\ c & d \end{vmatrix}=\begin{vmatrix} a & 0 \\\ c & d \end{vmatrix}+\begin{vmatrix} 0 & b \\\ c & d \end{vmatrix}=\begin{vmatrix} a & 0 \\\ c & 0 \end{vmatrix}+\begin{vmatrix} a & 0 \\\ 0 & d \end{vmatrix}+\begin{vmatrix} 0 & b \\\ c & 0 \end{vmatrix}+\begin{vmatrix} 0 & b \\\ 0 & d \end{vmatrix}\\)
+      > Try \\(n=3\\) . Each row splits into 3 simpler rows like \\(\begin{bmatrix} a_{11} & 0 & 0 \end{bmatrix}\\) . Using linearity in each row, \\(\operatorname{det}A\\) splits into \\(3^3=27\\) simple determinants. If a column choice is repeated--for example if we also choose the row \\(\begin{vmatrix} a_{11} & 0 & 0 \\\ a_{21} & 0 & 0 \\\ 0 & a_{32} & 0 \end{vmatrix}=\begin{vmatrix} a_{11} & 0 & 0 \\\ 0 & 0 & 0 \\\ 0 & a_{32} & 0 \end{vmatrix}\\) , then the simple determinant is zero.
+      > We pay attention only when ***the entries \\(\bm{a_{ij}}\\) come from different columns***, like col 3, 1, 2:
+      > <div>
+      > $$
+      > \begin{array}{rl}
+      > \begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{vmatrix}= & \begin{vmatrix} a_{11} & & \\ & a_{22} & \\ & & a_{33} \end{vmatrix}+\begin{vmatrix} & a_{21} & \\ & & a_{23} \\ a_{31} & & \end{vmatrix}+\begin{vmatrix} & & a_{13} \\ a_{21} & & \\ & a_{32} & \end{vmatrix} \\
+      > & +\begin{vmatrix} a_{11} & & \\\ & & a_{23} \\\ & a_{32} & \end{vmatrix}+\begin{vmatrix} & a_{12} & \\ a_{21} & & \\ & & a_{33} \end{vmatrix}+\begin{vmatrix} & & a_{13} \\ & a_{22} & \\ a_{31} & & \end{vmatrix} \\
+      > = & a_{11}a_{22}a_{33}\begin{vmatrix} 1 & & \\ & 1 & \\ & & 1 \end{vmatrix}+a_{12}a_{23}a_{31}\begin{vmatrix} & 1 & \\ & & 1 \\ 1 & & \end{vmatrix}+a_{13}a_{21}a_{32}\begin{vmatrix} & & 1 \\ 1 & & \\ & 1 & \end{vmatrix} \\
+      > & +a_{11}a_{23}a_{32}\begin{vmatrix} 1 & & \\ & & 1 \\ & 1 & \end{vmatrix}+a_{12}a_{21}a_{33}\begin{vmatrix} & 1 & \\ 1 & & \\ & & 1 \end{vmatrix}+a_{13}a_{22}a_{31}\begin{vmatrix} & & 1 \\ & 1 & \\ 1 & & \end{vmatrix}
+      > \end{array}
+      > $$
+      > </div>
+      >
+      > The formula has \\(n!\\) terms. For \\(n=3\\) there are \\(3!=6\\) terms.
+      > The last three are *odd permutations(one exchange)*. The first three are *even permutations(0 or 2 exchanges)*.
+      > Now you can see the \\(n\\) by \\(n\\) formula. There are \\(n!\\) orderings of the columns. The columns (\\(1, 2, \dots, n\\)) go in each possible order (\\(\alpha, \beta, \dots, \omega\\)) . Taking \\(a_{1\alpha}\\) from row 1 and \\(a_{2\beta}\\) from row 2 and eventually \\(a_{n\omega}\\) from row \\(n\\) , the determinant contains the product \\(a_{1\alpha}a_{2\beta}\cdots a_{n\omega}\\) time +1 or -1. Half the column orderings have sign -1.
+   3. Determinant by Cofactors:
+      The determinant is the dot product of any row \\(i\\) of \\(A\\) with its cofactors: \\(\operatorname{det}A=a_{i1}C_{i1}+a_{i2}C_{i2}+\cdots+a_{in}C_{in}\\)
+      Each cofactor \\(C_{ij}\\) (order \\(n-1\\) , without row \\(i\\) and column \\(j\\)) includes its correct sign: \\(C_{ij}=(-1)^{i+j}\operatorname{det}M_{ij}\\)
+      > Split an order 3 determinant into 3 simpler determinants (by rule 3 and rule 5):
+      > <div>
+      > $$
+      > \begin{array}{rl}
+      > \begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{vmatrix}= & \begin{vmatrix} a_{11} & & \\ & a_{22} & a_{23} \\ & a_{32} & a_{33} \end{vmatrix}+\begin{vmatrix} & a_{12} & \\ a_{21} & & a_{23} \\ a_{31} & & a_{33} \end{vmatrix}+\begin{vmatrix} & & a_{13} \\ a_{21} & a_{22} & \\ a_{31} & a_{32} & \end{vmatrix} \\
+      > = & a_{11}\begin{vmatrix} 1 & & \\ & a_{22} & a_{23} \\ & & a_{33}-\frac{a_{32}}{a_{22}}a_{23} \end{vmatrix}-a_{12}\begin{vmatrix} a_{21} & & a_{23} \\ & 1 & \\  & & a_{33}-\frac{a_{31}}{a_{21}}a_{23} \end{vmatrix}+a_{13}\begin{vmatrix} a_{21} & a_{22} & \\ & a_{32}-\frac{a_{31}}{a_{21}}a_{22} \\ & & 1 \end{vmatrix} \\
+      > = & a_{11}(a_{22}a_{33}-a_{23}a_{32})-a_{12}(a_{21}a_{33}-a_{23}a_{31})+a_{13}(a_{21}a_{32}-a_{22}a_{31}) \\
+      > = & a_{11}\begin{vmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{vmatrix}-a_{12}\begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix}+a_{13}\begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix} \\
+      > = & a_{11}M_{11}-a_{12}M_{12}+a_{13}M_{13}
+      > \end{array}
+      > $$
+      > </div>
+      >
+      > Whatever is possible for row 1 is possible for row \\(i\\) . The  sign \\((-1)^{i+j}\\) multiplies the determinant of \\(M_{ij}\\) to give \\(C_{ij}\\)      
+3. Cramer's Rule, Inverses, and Volumes
+   1. \\(A^{-1}\\) equals \\(\frac{C^\mathrm{T}}{\operatorname{det}A}\\) . Then \\(A^{-1}\_{ij}=\\) cofactor \\(C\_{ji}\\) divided by the determinant of \\(A\\) .
+   2. **Cramer's Rule** computes \\(\bm{x}=A^{-1}\bm{b}\\) from \\(x_j=\frac{\operatorname{det}(A\text{ with column }j\text{ changed to }\bm{b})}{\operatorname{det}A}\\)
+   3. **Area of papallelogram** \\(=|ad-bc|\\) if the four corners are \\((0, 0)\\) , \\((a, b)\\) , \\((c, d)\\) , and \\((a+c, b+d)\\)
+   4. **Volume of box** \\(=\operatorname{det}A\\) if the rows of \\(A\\) (or the columns of \\(A\\)) give the sides of the box.
+   5. The **cross product** \\(\bm{w}=\bm{u}\times\bm{v}\\) is \\(\operatorname{det}\begin{bmatrix} \bm{i} & \bm{j} & \bm{k} \\\ u_1 & u_2 & u_3 \\\ v_1 & v_2 & v_3 \end{bmatrix}\\)
+      \\(\bm{u}\times\bm{v}=-(\bm{v}\times\bm{u})\\)
+      \\(w_1\\) , \\(w_2\\) , \\(w_3\\) are cofactors of row 1
+      \\(\bm{w}^\mathrm{T}\bm{u}=0\\) and \\(\bm{w}^\mathrm{T}\bm{v}=0\\)
+
+
+## Eigenvalues and Eigenvectors
+
+1. Introduction to Eigenvalues
+2. Diagonalizing a Matrix
+3. Systems of Differential Equations
+4. Symmetric Matrices
+5. Positive Definite Matrices
